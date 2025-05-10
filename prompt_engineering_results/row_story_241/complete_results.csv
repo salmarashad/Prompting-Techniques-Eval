@@ -1,0 +1,1468 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule, including course name, meeting times (day and time), and location, within 3 seconds of the student logging in.
+
+FR-2: The system shall display a list of upcoming deadlines for each course, including assignment name, due date, and due time, sorted by due date, within 3 seconds of the student selecting a course.
+
+FR-3: The system shall allow students to filter deadlines by course.
+
+FR-4: The system shall display deadlines up to 30 days in the future.
+
+FR-5: The system shall allow students to view past deadlines for up to one year.
+
+NFR-1: The system shall be accessible on desktop and mobile devices (iOS and Android) with a responsive design.
+
+NFR-2: The system shall maintain a 99.9% uptime during peak usage hours (8 AM - 8 PM local time).
+
+NFR-3: The system shall authenticate users via secure password storage using bcrypt hashing.
+
+NFR-4: The system shall load the course schedule and deadlines page within 3 seconds on a network connection with a minimum bandwidth of 1 Mbps.
+",586,1047,9,4,4,2,4,2.25,152,251,403,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule, including course name, meeting times (day and time), and location, within 3 seconds of the student logging in.
+
+FR-2: The system shall display a list of upcoming deadlines for each course the student is enrolled in, including assignment name, due date, and due time.
+
+FR-3: The system shall allow students to filter deadlines by course.
+
+FR-4: The system shall allow students to sort deadlines by due date (ascending and descending).
+
+FR-5: The system shall highlight deadlines that are within 48 hours of the current time.
+
+FR-6: The system shall retrieve schedule and deadline data from the student information system (SIS) daily at 00:00 UTC.
+
+NFR-1: The course schedule and deadline information shall be accessible on desktop and mobile devices (iOS and Android) with a responsive design.
+
+NFR-2: The system shall maintain a 99.9% uptime during peak student usage hours (8:00 AM - 8:00 PM local time).
+
+NFR-3: The system shall be accessible to students with disabilities, adhering to WCAG 2.1 Level AA accessibility guidelines.
+
+NFR-4: The system shall protect student data, complying with all relevant privacy regulations (e.g., FERPA).
+",586,1202,10,4,3,1,2,2.32,152,289,441,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule, including course name, meeting days, start time, end time, and location, fetched from the student information system, upon successful login.
+
+FR-2: The system shall display a list of upcoming assignment deadlines for each enrolled course within 7 calendar days.
+
+FR-3: Each assignment deadline displayed shall include the assignment name, due date, due time, and course name.
+
+FR-4: The system shall allow students to filter assignment deadlines by course.
+
+NFR-1: The course schedule and assignment deadlines shall load within 3 seconds of the page being accessed.
+
+NFR-2: The system shall be accessible on desktop and mobile devices (responsive design).
+
+NFR-3: The displayed schedule and deadline information shall be accurate and consistent with the source student information system (data synchronization should occur every 24 hours).
+",586,900,7,3,3,2,2,1.74,152,188,340,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+","Okay, here's the breakdown of the user story ""As a student, I want to be able to view my course schedule and deadlines so that I can stay organized"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Schedule Display:** The system shall display the student's course schedule in a clear and easily readable format (e.g., calendar view, list view).
+*   **FR-2: Schedule Content:** The displayed schedule shall include the following information for each course:
+    *   Course Name
+    *   Course Code
+    *   Instructor Name
+    *   Meeting Days and Times
+    *   Location (e.g., building and room number)
+*   **FR-3: Deadline Display:** The system shall display a list of upcoming deadlines for all enrolled courses.
+*   **FR-4: Deadline Content:** The displayed deadlines shall include the following information for each assignment/task:
+    *   Assignment/Task Name
+    *   Course Name
+    *   Due Date and Time
+    *   Submission Type (e.g., online, in-person)
+*   **FR-5: Filtering and Sorting:** The system shall allow students to filter deadlines by course and sort them by due date.
+*   **FR-6: Integration with Course Management System (CMS):** The system shall automatically retrieve course schedule and deadline information from the integrated CMS (e.g., Canvas, Blackboard, Moodle) at least once every 24 hours.
+*   **FR-7: Manual Deadline Addition:** The system shall allow students to manually add deadlines for tasks not automatically imported from the CMS.
+*   **FR-8: Deadline Reminders:** The system shall allow students to set reminders for deadlines, with customizable notification preferences (e.g., email, push notification).
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Performance - Schedule Loading:** The student's course schedule shall load within 3 seconds under normal load conditions (defined as up to 50 concurrent users accessing schedule information).
+*   **NFR-2: Performance - Deadline Loading:** The student's deadline list shall load within 2 seconds under normal load conditions (defined as up to 50 concurrent users accessing deadline information).
+*   **NFR-3: Usability - Accessibility:** The schedule and deadline display shall be accessible to users with disabilities, adhering to WCAG 2.1 Level AA guidelines.
+*   **NFR-4: Reliability - Data Synchronization:** The system shall maintain data synchronization with the CMS with a maximum delay of 24 hours. If synchronization fails, the system shall log an error and attempt to re-synchronize.
+*   **NFR-5: Security - Data Privacy:** Student schedule and deadline data shall be protected according to the university's data privacy policies.
+*   **NFR-6: Responsiveness:** The schedule and deadline display shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+*   **NFR-7: Availability:** The schedule and deadline viewing functionality shall be available 99.9% of the time, excluding scheduled maintenance windows (to be communicated at least 72 hours in advance).
+",1478,3099,15,7,4,2,2,4.81,338,701,1039,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+","Okay, let's break down the user story ""As a student, I want to be able to view my course schedule and deadlines so that I can stay organized"" into specific, measurable, achievable, relevant, and time-bound (SMART) functional and non-functional requirements.
+
+**Functional Requirements:**
+
+*   **FR-1: Course Schedule Display:** The system shall display the student's course schedule in a clear, visual format (e.g., calendar view, list view, or table view).
+*   **FR-2: Schedule Details:** For each course entry in the schedule, the system shall display the course name, course code, instructor's name, meeting times, location (building and room), and any relevant notes (e.g., ""Lab Section"").
+*   **FR-3: Deadline Display:** The system shall display a list of upcoming deadlines for assignments, quizzes, exams, and other graded activities for all enrolled courses.
+*   **FR-4: Deadline Details:** For each deadline, the system shall display the assignment name, course name, due date, due time, submission instructions (if applicable), and any associated resources (e.g., links to assignment descriptions, rubrics).
+*   **FR-5: Schedule Filtering:** The system shall allow students to filter their course schedule and deadlines by:
+    *   Date range (e.g., ""This Week,"" ""Next Week,"" ""Custom Range"")
+    *   Course name
+*   **FR-6: Synchronization:** The system shall allow students to synchronize their course schedule and deadlines with external calendar applications (e.g., Google Calendar, Outlook Calendar) via iCalendar (.ics) format or other suitable API.
+*   **FR-7: Deadline Reminders:** The system shall allow students to set reminders for upcoming deadlines.
+
+**Non-Functional Requirements:**
+
+*   **NFR-1: Performance - Schedule Load Time:** The system shall load the student's course schedule and deadlines within 3 seconds under normal load conditions (defined as 100 concurrent users).
+*   **NFR-2: Performance - Deadline Update Frequency:** The system shall update the student's displayed deadlines at least every 15 minutes to reflect any changes made by instructors.
+*   **NFR-3: Usability - Schedule Clarity:** The course schedule display shall be easily readable and understandable on a variety of screen sizes (desktop, tablet, mobile). Font sizes must be appropriate for readability.
+*   **NFR-4: Accessibility - Schedule Accessibility:** The course schedule and deadline display shall adhere to WCAG 2.1 Level AA accessibility guidelines to ensure usability for students with disabilities.
+*   **NFR-5: Security - Data Privacy:** The system shall protect student's schedule and deadline data from unauthorized access by using role-based access control and encryption where applicable.
+*   **NFR-6: Reliability - Uptime:** The system shall maintain an uptime of 99.9% during the academic year.
+*   **NFR-7: Scalability - Concurrent Users:** The system shall be able to support at least 1,000 concurrent users accessing their course schedules and deadlines without significant performance degradation.
+",1478,3025,14,7,3,2,1,4.79,338,673,1011,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+","Okay, here's the breakdown of the user story ""As a student, I want to be able to view my course schedule and deadlines so that I can stay organized"" into specific, measurable, achievable, relevant, and time-bound (SMART) functional and non-functional requirements.
+
+**Requirements:**
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Schedule Display:** The system shall display the student's enrolled course schedule in a clear and easily readable format (e.g., calendar view, list view, or a combination).
+
+*   **FR-2: Schedule Content:** The displayed schedule shall include, at minimum, the following information for each course:
+    *   Course name
+    *   Course code/identifier
+    *   Meeting days and times
+    *   Location (e.g., building and room number)
+    *   Instructor's name
+    *   Instructor's Contact Information(e.g., email, office location)
+
+*   **FR-3: Deadline Display:** The system shall display a list of upcoming deadlines for assignments, quizzes, exams, and other course-related activities.
+
+*   **FR-4: Deadline Content:** The deadline information shall include, at minimum:
+    *   Assignment/Activity Name
+    *   Course Name
+    *   Due Date and Time
+    *   Link to assignment details (if applicable).
+
+*   **FR-5: Schedule Filtering:** The system shall allow students to filter their schedule view by:
+    *   Date Range (e.g., Today, This Week, Next Week, Specific Dates)
+    *   Course (to view schedule and deadlines for a specific course).
+
+*   **FR-6: Deadline Sorting:** The system shall allow students to sort their deadline list by:
+    *   Due Date (Ascending or Descending)
+    *   Course Name
+
+*   **FR-7: Accessibility:** The schedule and deadline information shall be accessible to students on various devices (e.g., desktop, laptop, tablet, smartphone). It should also follow accessibility guidelines such as providing alternative text for images, using sufficient color contrast, and providing keyboard navigation.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Performance - Schedule Load Time:** The system shall load the student's course schedule within 2 seconds under normal load conditions (defined as up to 50 concurrent users accessing schedule information).
+
+*   **NFR-2: Performance - Deadline Load Time:** The system shall load the deadline list within 2 seconds under normal load conditions (defined as up to 50 concurrent users accessing deadline information).
+
+*   **NFR-3: Reliability:** The system shall maintain 99.9% uptime for accessing and displaying course schedule and deadline information during the academic semester.
+
+*   **NFR-4: Security:** Only authenticated students shall be able to access their own course schedule and deadlines. The system shall prevent unauthorized access to student data.
+
+*   **NFR-5: Usability:** The user interface for viewing schedule and deadlines shall be intuitive and easy to navigate, requiring minimal training for students to use effectively. The target for usability is a System Usability Scale (SUS) score of 70 or higher based on user testing with students.
+
+*   **NFR-6: Scalability:** The system shall be able to handle an increase of 20% in student enrollment without significant performance degradation (i.e., maintaining load times within acceptable thresholds).
+
+**Explanation of how these Requirements meet the SMART Criteria:**
+
+*   **Specific:** Each requirement clearly defines what the system should do or how it should perform.
+*   **Measurable:**  Requirements include quantifiable metrics (e.g., load times, uptime percentage, SUS score).
+*   **Achievable:** These requirements are realistic and can be implemented within the scope of a typical student information system.
+*   **Relevant:** These requirements directly address the user story's goal of helping students stay organized with their course schedules and deadlines.
+*   **Time-bound:** The performance requirements (NFR-1 and NFR-2) have specific time constraints.
+
+This detailed breakdown will help the development team understand the user's needs and build a feature that effectively meets those needs. Remember to tailor these requirements based on the specific context of your system and user base.
+",1478,4198,13,6,3,1,1,5.83,338,919,1257,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow students to view a list of all courses they are currently enrolled in.
+FR-2: For each course, the system shall display the course name, course code, instructor name, and meeting times (day and time).
+FR-3: The system shall display a list of all deadlines associated with each course, including assignment name, due date, and due time.
+FR-4: The system shall allow students to filter deadlines by course.
+FR-5: The system shall allow students to sort deadlines by due date (ascending and descending).
+FR-6: The system shall display deadlines that are within the next 7 days in a highlighted manner.
+FR-7: The system shall provide a visual indicator (e.g., color-coding or icon) to differentiate between assignment types (e.g., homework, quiz, exam).
+FR-8: The system shall allow students to access the course schedule and deadlines from any device with internet access.
+
+NFR-1: The course schedule and deadlines shall load within 3 seconds.
+NFR-2: The system shall be accessible 24/7, with a guaranteed uptime of 99.9%.
+NFR-3: The system shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+NFR-4: The user interface for viewing the course schedule and deadlines shall be intuitive and easy to navigate, as measured by a System Usability Scale (SUS) score of at least 70.
+NFR-5: Student data, including course schedule and deadlines, shall be protected using encryption at rest and in transit.
+NFR-6: The system shall comply with all relevant data privacy regulations (e.g., GDPR, FERPA).
+NFR-7: The system shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+",1645,1657,15,7,3,1,1,2.67,382,397,779,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow students to view a list of all courses they are currently enrolled in.
+FR-2: For each course, the system shall display the course name, course code, instructor name, and meeting times.
+FR-3: The system shall display a list of all upcoming deadlines for each course, sorted by due date.
+FR-4: For each deadline, the system shall display the assignment name, due date, due time, and a link to the assignment details.
+FR-5: The system shall allow students to filter deadlines by course.
+FR-6: The system shall allow students to view their schedule in a calendar format (daily, weekly, monthly views).
+FR-7: The system shall allow students to export their schedule in iCalendar format (.ics).
+FR-8: The system shall display a visual indicator (e.g., color-coding or icon) to differentiate between assignments, exams, and other types of deadlines.
+
+NFR-1: The course schedule and deadlines shall load within 3 seconds.
+NFR-2: The system shall be accessible on desktop and mobile devices (responsive design).
+NFR-3: The system shall be available 24/7, with scheduled maintenance occurring during off-peak hours (12:00 AM - 2:00 AM local time).
+NFR-4: The system shall authenticate students using their existing university credentials.
+NFR-5: The user interface shall be intuitive and easy to navigate, requiring minimal training.
+NFR-6: The system shall adhere to WCAG 2.1 Level AA accessibility guidelines.
+NFR-7: All student data shall be encrypted both in transit and at rest.
+",1645,1503,15,7,3,1,1,2.53,382,364,746,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow students to view a list of their enrolled courses.
+FR-2: For each course, the system shall display the course name, course code, instructor's name, and meeting times (day, start time, and end time).
+FR-3: The system shall display a calendar view of the student's schedule, highlighting class meeting times.
+FR-4: The system shall allow students to view a list of upcoming assignments and deadlines for all enrolled courses.
+FR-5: For each assignment, the system shall display the assignment name, course name, due date, and submission status (e.g., Not Submitted, Submitted, Graded).
+FR-6: The system shall allow students to sort the list of assignments by due date (ascending and descending).
+FR-7: The system shall allow students to filter the list of assignments by course.
+FR-8: The system shall display a notification to the student 72 hours, 24 hours, and 6 hours before an assignment due date.
+FR-9: The student's course schedule and deadlines shall be displayed upon login to the system.
+
+NFR-1: The system shall load the student's course schedule and deadlines within 3 seconds.
+NFR-2: The system shall be accessible on desktop and mobile devices (responsive design).
+NFR-3: The system shall be available 24/7, with a guaranteed uptime of 99.9%.
+NFR-4: The system shall ensure that student data is protected in compliance with all applicable data privacy regulations.
+NFR-5: The system shall be user-friendly and intuitive, requiring minimal training for students to use the schedule and deadline viewing functionalities, achieving a System Usability Scale (SUS) score of at least 70.
+",1645,1623,14,5,3,2,2,2.97,382,384,766,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements, followed by the evaluation and final recommendation, formatted as requested.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve course schedule data from the ""Courses"" database table.
+FR-2: The system shall display deadlines retrieved from the ""Assignments"" database table.
+FR-3: The system shall use the ""Date"" data type for all deadline fields.
+FR-4: The system shall implement a caching mechanism to store schedule data for 5 minutes.
+NFR-1: The system shall respond to schedule requests within 2 seconds.
+NFR-2: The system shall use HTTPS for all data transmission.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The system shall display the student's course schedule in a weekly calendar view.
+FR-2: The system shall display assignment deadlines with the assignment name and course name.
+FR-3: The system shall allow students to filter the schedule by course.
+FR-4: The system shall provide a notification to the student 24 hours before each deadline.
+NFR-1: The user interface shall be accessible on desktop and mobile devices.
+NFR-2: The system shall have a user-friendly interface with a clear and intuitive layout.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall only display courses for which the student is currently enrolled.
+FR-2: The system shall calculate deadlines based on the course syllabus and instructor input.
+FR-3: The system shall prevent students from viewing schedules of other students.
+FR-4: The system shall automatically update the schedule when a course is added or dropped.
+NFR-1: The system shall maintain data integrity by validating all deadline inputs.
+NFR-2: The system shall comply with FERPA regulations regarding student data privacy.
+",1260,1819,18,6,3,2,2,3.11,277,411,688,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of requirements, followed by the evaluation and final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve course schedule data from the 'Courses' database table.
+FR-2: The system shall display deadlines retrieved from the 'Assignments' database table.
+FR-3: The system shall use the 'Date' data type for all deadline values.
+FR-4: The system shall use a caching mechanism to store schedule data for 5 minutes to reduce database load.
+NFR-1: The system shall respond to schedule requests within 2 seconds.
+NFR-2: The system shall be deployed on an Apache Tomcat server.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The system shall display the user's course schedule in a weekly calendar view.
+FR-2: The system shall allow users to filter the schedule by course.
+FR-3: The system shall visually highlight deadlines that are within 48 hours.
+FR-4: The system shall display the deadline name, course, and due date/time.
+NFR-1: The user interface shall be accessible on desktop and mobile devices.
+NFR-2: The user interface shall be intuitive and easy to navigate, as measured by a System Usability Scale (SUS) score of 70 or higher.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall only display courses for which the student is officially enrolled.
+FR-2: The system shall calculate deadlines based on the course's start and end dates, as defined in the 'CourseCatalog' table.
+FR-3: The system shall prioritize deadlines based on their proximity to the current date.
+FR-4: The system shall adhere to the university's academic calendar for holiday exclusions.
+NFR-1: The system shall comply with FERPA regulations regarding student data privacy.
+NFR-2: The system shall maintain an audit log of all schedule access events.
+",1260,1855,18,6,3,3,2,3.13,277,438,715,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements, followed by the evaluation and final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve course schedule data from the ""courses"" database table.
+FR-2: The system shall display deadlines retrieved from the ""assignments"" database table.
+FR-3: The system shall use the ""java.time"" library for date and time calculations.
+NFR-1: The system shall retrieve and display the course schedule within 1 second.
+NFR-2: The system shall use HTTPS protocol for all data communication.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The student shall be able to view a weekly calendar displaying course schedule and deadlines.
+FR-2: The student shall be able to filter deadlines by course.
+FR-3: The student shall be able to view detailed information for each course, including instructor and location.
+FR-4: The student shall be able to view deadlines in a list format, sorted by due date.
+NFR-1: The application shall be accessible on desktop and mobile devices.
+NFR-2: The application shall have a user-friendly interface as evaluated by a System Usability Scale (SUS) score of at least 70.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall only display courses in which the student is currently enrolled.
+FR-2: The system shall calculate deadlines based on the course start date and assignment due date as set by the instructor.
+FR-3: The system shall only display deadlines that are within the current academic term.
+FR-4: The system shall update the 'assignments' table with instructor changes to deadline dates within 5 minutes of the change.
+NFR-1: Student data shall be encrypted using AES-256 encryption at rest and in transit.
+NFR-2: The system shall adhere to FERPA regulations regarding student data privacy.
+",1260,1864,17,6,3,2,1,3.07,277,428,705,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule, including course name, instructor, classroom location, and meeting times, within 1 second of the student logging in, and the schedule shall be updated daily at 5:00 AM to reflect any changes made by the registrar.
+
+FR-2: The system shall display a list of upcoming deadlines for each course, including assignment name, due date, and due time, within 1 second of the student selecting a specific course from their schedule, and the deadline information shall be updated in real-time as instructors modify assignment details.
+
+FR-3: The system shall allow students to filter their deadlines by course, date range (e.g., next week, next month), and assignment type (e.g., homework, quiz, exam) within 2 seconds of applying the filter.
+
+FR-4: The system shall provide a visual indicator (e.g., color-coding) to highlight deadlines that are approaching within 48 hours, updated every 15 minutes.
+
+NFR-1: The system shall be accessible on desktop and mobile devices (iOS and Android) with a responsive design that adapts to different screen sizes, achieving a page load time of less than 3 seconds on a 4G network.
+
+NFR-2: The system shall maintain a 99.9% uptime during peak usage hours (8:00 AM - 8:00 PM) to ensure students can access their schedules and deadlines reliably.
+
+NFR-3: The system shall protect student data, including course schedules and deadlines, using encryption at rest and in transit, adhering to FERPA regulations, and undergoing a security audit every 6 months.
+
+NFR-4: The system shall be able to handle a concurrent user load of 5,000 students accessing their schedules and deadlines simultaneously without performance degradation (response time exceeding 5 seconds), as measured by load testing conducted quarterly.
+",802,1798,8,4,4,2,4,2.96,191,406,597,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a student to log in using their unique student ID and password with successful authentication occurring within 2 seconds, as verified by system logs, by the end of the next sprint.
+
+FR-2: The system shall display the student's course schedule, including course name, instructor, classroom location, and meeting times, retrieved from the course database within 3 seconds, as measured by system response time, by the end of the next sprint.
+
+FR-3: The system shall display a list of upcoming deadlines for assignments and exams for each enrolled course, sorted by due date, retrieved from the assignment database within 3 seconds, as measured by system response time, by the end of the next sprint.
+
+FR-4: The system shall allow students to view deadline details, including assignment description and submission instructions, for each listed deadline, retrieved from the assignment database within 2 seconds, as measured by system response time, by the end of the next sprint.
+
+FR-5: The system shall allow the student to filter the displayed deadlines by course, with filtering results displayed within 2 seconds, as measured by system response time, by the end of the next sprint.
+
+FR-6: The system shall display a visual indicator (e.g., color-coding) for deadlines that are approaching within the next 7 days, as verified through visual inspection, by the end of the next sprint.
+
+NFR-1: The system shall be accessible on desktop and mobile devices (iOS and Android) with consistent functionality, as verified through testing on supported devices, by the end of the next sprint.
+
+NFR-2: The system shall maintain a 99.9% uptime during the academic year (September to June), as monitored by system monitoring tools, by the end of the academic year.
+
+NFR-3: The system shall protect student data with encryption at rest and in transit, verified through security audits, by the end of the next sprint.
+
+NFR-4: The system shall be able to handle 10,000 concurrent student users without performance degradation (response time exceeding 5 seconds), as measured through load testing, by the end of the next sprint.
+
+NFR-5: The user interface shall adhere to accessibility guidelines (WCAG 2.1 Level AA), as verified through accessibility testing, by the end of the next sprint.
+",802,2302,11,5,5,2,4,3.47,191,495,686,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a student to view their course schedule, displaying the course name, instructor, classroom location, and meeting times for each enrolled course. The schedule shall be displayed in a user-friendly format (e.g., calendar view, list view) within 3 seconds of the student logging in, as validated by UI testing.
+
+FR-2: The system shall display deadlines for assignments, quizzes, and exams for each course the student is enrolled in. Each deadline shall include the assignment name, due date, due time, and any associated instructions. These deadlines will be visible in the course schedule view or a dedicated ""Deadlines"" section, no more than 5 seconds after selecting to see these deadlines.
+
+FR-3: The system shall allow students to filter their schedule view by course. This filter will be applied within 2 seconds of the student selecting a course filter, as confirmed via performance testing.
+
+FR-4: The system shall provide a mechanism for students to export their schedule in a common format such as .ics or .pdf by December 31, 2024, verified by manual inspection.
+
+NFR-1: The system shall be accessible from a variety of devices (desktops, laptops, tablets, and smartphones) with a responsive design that adapts to different screen sizes, tested by UI testing across multiple device simulations, and must be completed by December 31, 2024.
+
+NFR-2: The system shall maintain data integrity by ensuring that course schedules and deadlines are accurately reflected from the registrar's system and updated daily, with a data consistency check reporting any discrepancies, which must be resolved within 24 hours of detection, as tested during daily automated data consistency testing.
+
+NFR-3: The system shall be available 24/7, except for scheduled maintenance windows of no more than 2 hours per month, to ensure students can access their schedules at any time, measured by system uptime monitoring.
+
+NFR-4: The system shall authenticate students using secure password storage practices (e.g., hashing with salt) and multi-factor authentication by the end of Q4 2024, as verified through penetration testing and security audits.
+",802,2162,8,4,4,1,2,3.71,191,461,652,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule, including course name, meeting times (day, start time, end time), and location, upon successful student login.
+
+FR-2: The system shall allow students to view their course schedule in a weekly calendar format.
+
+FR-3: The system shall display assignment deadlines for each course, including assignment name, due date, and due time.
+
+FR-4: The system shall allow students to filter assignment deadlines by course.
+
+FR-5: The system shall allow students to sort assignment deadlines by due date (ascending and descending).
+
+FR-6: The system shall provide a mechanism for students to view assignment details, including instructions and any attached files.
+
+FR-7: The system shall integrate with the existing student authentication system to verify student identity.
+
+FR-8: The system shall retrieve course schedule data from the central course registration system.
+
+FR-9: The system shall retrieve assignment deadline data from the Learning Management System (LMS).
+
+FR-10: The system shall provide a mechanism for students to export their course schedule and deadlines in a common format (e.g., iCalendar, CSV).
+
+NFR-1: The system shall respond to student requests for schedule and deadline information within 3 seconds under normal load (defined as up to 500 concurrent users).
+
+NFR-2: The system shall be available 24/7, with a maximum downtime of 4 hours per month for scheduled maintenance.
+
+NFR-3: The system shall protect student data, including course schedule and assignment information, in accordance with FERPA regulations.
+
+NFR-4: The system shall be accessible to students with disabilities, adhering to WCAG 2.1 Level AA accessibility guidelines.
+
+NFR-5: The system shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge web browsers.
+
+NFR-6: The system shall be designed to handle a peak load of 1000 concurrent users during registration periods.
+
+NFR-7: All data transmitted between the student's browser and the server shall be encrypted using HTTPS.
+
+NFR-8: The system shall log all student access to course schedules and deadlines for auditing purposes.
+
+NFR-9: The system shall be maintainable, with clear and well-documented code, and follow established coding standards.
+",1057,2275,19,9,3,2,1,3.44,231,496,727,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule in a calendar view, showing the day, time, and location of each scheduled class.
+
+FR-2: The system shall allow students to filter their course schedule view by course.
+
+FR-3: The system shall display assignment deadlines associated with each course in a list view, sorted by due date.
+
+FR-4: The system shall allow students to view the details of each assignment deadline, including the assignment name, description, associated course, due date, and time.
+
+FR-5: The system shall provide a mechanism for students to export their course schedule and deadlines to a personal calendar application (e.g., Google Calendar, Outlook Calendar) in iCalendar format.
+
+FR-6: The system shall automatically update the course schedule and deadlines upon changes made by instructors or administrators, reflecting these updates to the student within 5 minutes.
+
+FR-7: The system shall provide a notification mechanism (e.g., email, in-app notification) to remind students of upcoming deadlines. The notification settings (frequency, method) shall be configurable by the student.
+
+FR-8: The system shall integrate with the student authentication system to ensure that only authorized students can access their schedules and deadlines.
+
+FR-9: The system shall provide a search function enabling students to locate specific courses or assignments by keyword.
+
+FR-10: The system shall provide a printable view of the course schedule and deadlines.
+
+NFR-1: The system shall respond to student requests for schedule and deadline information within 3 seconds under normal load (defined as up to 500 concurrent users).
+
+NFR-2: The system shall be available 24 hours a day, 7 days a week, excluding scheduled maintenance windows (maximum 2 hours per month).
+
+NFR-3: The system shall protect student data, including course schedules and deadlines, in compliance with relevant data privacy regulations (e.g., FERPA, GDPR).
+
+NFR-4: The system shall be designed with a responsive user interface that is accessible on various devices (desktops, tablets, smartphones) and screen sizes.
+
+NFR-5: The system shall maintain an audit log of all changes to course schedules and deadlines, including the user who made the change and the timestamp.
+
+NFR-6: The system shall be designed to be scalable to support a growing number of students and courses.
+
+NFR-7: The system shall be tested for accessibility compliance with WCAG 2.1 Level AA guidelines.
+
+NFR-8: The system shall be designed for ease of maintenance and updates, utilizing modular architecture and well-documented code.
+
+NFR-9: The system shall encrypt all sensitive data, both in transit and at rest, using industry-standard encryption algorithms (e.g., AES-256).
+
+NFR-10: The system shall be monitored for performance and security vulnerabilities, with regular security audits conducted at least annually.
+",1057,2893,20,10,3,1,1,4.05,231,620,851,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow students to view their current course schedule, displaying course name, meeting times (day, start time, end time), and location (building, room number).
+
+FR-2: The system shall allow students to view a list of deadlines for each course in their schedule, including assignment name, due date, and due time.
+
+FR-3: The system shall allow students to filter their deadlines by course.
+
+FR-4: The system shall display deadlines in chronological order, with the closest deadline appearing first.
+
+FR-5: The system shall visually differentiate between upcoming deadlines (e.g., within the next 7 days) and deadlines further in the future.
+
+FR-6: The system shall provide a mechanism for students to navigate between different weeks of their course schedule (e.g., using ""Previous Week"" and ""Next Week"" buttons).
+
+FR-7: The system shall integrate with the existing student information system (SIS) to retrieve course schedule and deadline information.
+
+FR-8: The system shall allow students to access their course schedule and deadlines from any device with a supported web browser.
+
+FR-9: The system shall support authentication using the existing student login credentials.
+
+FR-10: The system shall provide an option for students to export their deadlines to a personal calendar application (e.g., iCalendar format).
+
+NFR-1: The system shall respond to schedule and deadline requests within 3 seconds for 95% of requests under normal load.
+
+NFR-2: The system shall be available 24/7, with a planned downtime not exceeding 4 hours per month for maintenance.
+
+NFR-3: The system shall protect student data by complying with all relevant data privacy regulations (e.g., FERPA).
+
+NFR-4: The system shall be accessible to users with disabilities, adhering to WCAG 2.1 Level AA accessibility guidelines.
+
+NFR-5: The system shall be scalable to support a peak load of 20,000 concurrent users.
+
+NFR-6: The system shall log all user access and data modification events for auditing purposes, retaining logs for a minimum of 1 year.
+
+NFR-7: The system shall be designed with a modular architecture to facilitate future enhancements and integrations.
+
+NFR-8: The system shall provide role-based access control, ensuring that students can only access their own course schedules and deadlines.
+
+NFR-9: The system shall be tested for security vulnerabilities, including but not limited to OWASP Top 10 vulnerabilities, before deployment.
+
+NFR-10: The system shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge web browsers.
+",1057,2563,20,10,3,1,1,4.43,231,570,801,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Contextual,precise,"
+BUSINESS CONTEXT:
+Learning management system
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule, including course name, instructor, meeting times, and location, within 1 second of the student logging in.
+
+FR-2: The system shall display all upcoming assignment deadlines for a student's enrolled courses, sorted by due date, within 2 seconds of the student accessing the ""Course Schedule"" page.
+
+FR-3: The system shall allow students to filter their course schedule by course name.
+
+FR-4: The system shall integrate with the existing student information system (SIS) to retrieve course enrollment data daily at 00:00 UTC.
+
+FR-5: The system shall allow students to export their course schedule and deadlines in iCalendar (.ics) format.
+
+NFR-1: The system shall maintain a page load time of less than 3 seconds for the course schedule page during peak usage (defined as 500 concurrent users).
+
+NFR-2: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-3: The system shall log all errors encountered while retrieving or displaying course schedule data, including the student ID, error message, and timestamp.
+
+NFR-4: The system shall provide a clear and concise error message to the student if course schedule data cannot be retrieved, along with instructions on how to contact support.
+
+NFR-5: The course schedule interface shall be responsive and accessible on desktop, tablet, and mobile devices, adhering to WCAG 2.1 Level AA accessibility guidelines.
+
+NFR-6: The system shall send automated email reminders to students 24 hours before each assignment deadline.
+",760,1561,11,6,4,2,3,2.75,179,348,527,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Contextual,default,"
+BUSINESS CONTEXT:
+Learning management system
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule, including course name, instructor, meeting times (day, start time, end time), and location, within 1 second of the student logging in, for 99% of users.
+
+FR-2: The system shall display a list of all upcoming deadlines for assignments, quizzes, and exams for each enrolled course, sorted by due date, with the closest deadline appearing first. Each deadline shall include the assignment/quiz/exam name, course name, and due date/time.
+
+FR-3: The system shall allow students to filter deadlines by course.
+
+FR-4: The system shall integrate with the existing course catalog system to retrieve course information (name, instructor, meeting times, location) within 2 seconds.
+
+FR-5: The system shall integrate with the existing grading system to display assignment/quiz/exam details (name, description, due date/time) within 2 seconds.
+
+NFR-1: The system shall handle 500 concurrent student logins without exceeding an average page load time of 3 seconds during peak hours (8 AM - 10 AM and 6 PM - 8 PM).
+
+NFR-2: The system shall provide error messages to the student if course schedule or deadline data cannot be retrieved, with clear instructions on how to resolve the issue (e.g., contact support).
+
+NFR-3: The system shall log all errors related to data retrieval (course information, assignment details) with severity levels (e.g., warning, error, critical) for monitoring purposes.
+
+NFR-4: The course schedule and deadline display shall be responsive and accessible on devices with screen sizes ranging from 320px to 1920px.
+
+NFR-5: The system shall adhere to WCAG 2.1 Level AA accessibility guidelines for color contrast, keyboard navigation, and screen reader compatibility for the course schedule and deadline display.
+
+NFR-6: The system shall provide a mechanism for students to provide feedback on the usability of the course schedule and deadline display, which will be reviewed monthly.
+",760,1955,11,6,4,3,2,3.06,179,444,623,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Contextual,creative,"
+BUSINESS CONTEXT:
+Learning management system
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule upon login, showing course name, instructor, and meeting times for the current week within 3 seconds.
+
+FR-2: The system shall list all upcoming assignments and deadlines for each enrolled course, sorted by due date, and accessible within 2 clicks from the course schedule view.
+
+FR-3: The system shall allow students to filter assignments and deadlines by course.
+
+FR-4: The system shall integrate with the existing student information system (SIS) to automatically populate the course schedule and enrollment information daily at 00:00 UTC.
+
+FR-5: The system shall allow instructors to set deadlines with a granularity of one minute, and these deadlines shall be accurately reflected in the student's view.
+
+NFR-1: The system shall maintain a response time of under 5 seconds for displaying the course schedule and deadlines to 95% of users during peak usage (defined as 500 concurrent users).
+
+NFR-2: The system shall log all errors encountered while retrieving or displaying course schedule and deadline information with sufficient detail for debugging, and notify the system administrator via email for errors with severity level ""critical"" or higher within 5 minutes.
+
+NFR-3: The system shall maintain an average page load time of less than 3 seconds for the course schedule and deadlines view on desktop and mobile devices with varying network speeds (3G, 4G, WiFi).
+
+NFR-4: The user interface for the course schedule and deadlines view shall conform to WCAG 2.1 Level AA accessibility guidelines, specifically regarding color contrast and keyboard navigation.
+
+NFR-5: The system shall be available 99.9% of the time, excluding scheduled maintenance windows (maximum 2 hours per week, notified 7 days in advance).
+
+FR-6: The system shall provide a visual indicator (e.g., color-coding) to highlight assignments that are due within 24 hours, 72 hours, and past the due date.
+
+NFR-6: The system shall monitor CPU utilization, memory usage, and disk I/O on the servers hosting the LMS every 5 minutes and generate alerts if any of these metrics exceed 80% of their maximum capacity.
+",760,2145,12,6,5,1,3,3.69,179,475,654,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display the student's course schedule, including course name, meeting times (day and time), and location, within 2 seconds of the student logging in.
+FR-2: The system shall display a list of upcoming deadlines for each course, including assignment name, due date, and due time.
+FR-3: The system shall allow students to filter deadlines by course.
+FR-4: The system shall display deadlines in chronological order.
+FR-5: The system shall indicate whether a deadline has passed.
+FR-6: The system shall retrieve course schedule and deadline information from the student information system (SIS).
+FR-7: The system shall allow students to view their schedule and deadlines on desktop and mobile devices.
+
+NFR-1: The system shall be available 99.9% of the time during peak usage hours (8 AM - 8 PM).
+NFR-2: The system shall be accessible to students with disabilities, adhering to WCAG 2.1 Level AA guidelines.
+NFR-3: The system shall protect student data, complying with FERPA regulations.
+NFR-4: The system shall load the course schedule and deadlines within 3 seconds on a mobile device with a 4G connection.
+",1741,1127,11,4,3,2,2,2.01,393,267,660,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule upon successful login, showing course name, meeting times (days and hours), and location (building and room number) for the current semester.
+FR-2: The system shall display a list of deadlines for all courses in the student's schedule, including assignment name, due date, and due time.
+FR-3: Students shall be able to filter deadlines by course.
+FR-4: The system shall allow students to view deadlines up to one year in the future.
+FR-5: The system shall provide a visual indicator (e.g., color coding) for deadlines that are approaching within the next 7 days.
+FR-6: The system shall allow students to mark deadlines as ""completed"".
+FR-7: The system shall display a confirmation message when a student marks a deadline as complete.
+
+NFR-1: The course schedule and deadlines shall load within 3 seconds.
+NFR-2: The system shall be accessible on desktop and mobile devices (responsive design).
+NFR-3: The system shall adhere to WCAG 2.1 Level AA accessibility standards.
+NFR-4: Student schedule and deadline data shall be encrypted both in transit and at rest using AES-256 encryption.
+NFR-5: The system shall maintain an audit log of all student actions related to marking deadlines as complete or incomplete.
+NFR-6: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+",1741,1359,13,6,3,2,2,2.49,393,322,715,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display the student's enrolled courses with course name, course code, and instructor name.
+FR-2: The system shall display the start and end dates for each course in the schedule.
+FR-3: The system shall display all deadlines associated with each course, including assignment titles, due dates, and submission status (e.g., submitted, not submitted, graded).
+FR-4: The system shall allow students to filter deadlines by course.
+FR-5: The system shall allow students to sort deadlines by due date (ascending and descending).
+FR-6: The system shall visually differentiate between past, present, and future deadlines.
+FR-7: The system shall integrate with the existing student authentication system.
+FR-8: The system shall provide a clear visual indication if there are any upcoming deadlines within the next 7 days.
+FR-9: The system should allow students to mark deadlines as completed for their personal tracking.
+
+NFR-1: The course schedule and deadlines shall load within 3 seconds.
+NFR-2: The system shall be accessible on desktop and mobile devices (responsive design).
+NFR-3: The system shall comply with accessibility standards (WCAG 2.1 AA).
+NFR-4: Student data shall be encrypted in transit and at rest.
+NFR-5: The system shall maintain an uptime of 99.9%.
+NFR-6: The system shall be able to handle 1000 concurrent student users without performance degradation.
+",1741,1390,15,6,3,1,2,2.55,393,324,717,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display the student's course schedule, including course name, meeting times, and location.
+FR-2: The system shall display a list of deadlines for each course, including assignment name, due date, and due time.
+FR-3: The system shall require the student to log in with valid credentials before accessing their course schedule and deadlines.
+FR-4: The system shall allow students to filter deadlines by course.
+FR-5: The system shall display an error message if the student's course schedule or deadlines cannot be retrieved.
+FR-6: The system shall send a notification to the student 24 hours before a deadline.
+NFR-1: The system shall display the course schedule and deadlines within 3 seconds of the student requesting it.
+NFR-2: The course schedule and deadlines shall be displayed in a clear and easily readable format.
+NFR-3: The system shall be accessible to students with disabilities, adhering to WCAG 2.1 Level AA guidelines.
+",1807,956,9,3,3,3,2,1.63,431,217,648,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule, showing course name, meeting times (day, start time, end time, location), and instructor for each enrolled course.
+
+FR-2: The system shall display a list of deadlines for assignments and exams associated with each enrolled course, including the task name, description, due date, and due time.
+
+FR-3: The system shall require the user to log in with valid credentials before displaying the course schedule and deadlines.
+
+FR-4: The system shall retrieve course schedule and deadline information from the student information system (SIS) upon user login or on a schedule configurable by administrators.
+
+FR-5: If the system cannot retrieve course schedule or deadline information from the SIS, it shall display an error message to the user indicating that the information is unavailable and instruct them to contact support.
+
+FR-6: The system shall send a notification to the student 24 hours before each deadline.
+
+NFR-1: The course schedule and deadlines shall be displayed within 3 seconds of the user logging in.
+
+NFR-2: The course schedule and deadline information shall be presented in a clear, organized, and easily readable format, with clear visual distinctions between different courses and deadlines.
+
+NFR-3: The system shall be accessible to users with disabilities, adhering to WCAG 2.1 Level AA guidelines.
+",1807,1379,9,3,4,3,2,2.19,431,286,717,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.', 'context': 'Learning management system'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a student, I want to be able to view my course schedule and deadlines so that I can stay organized.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a student's course schedule, including course name, meeting times (day and time), and location.
+FR-2: The system shall display a list of deadlines for assignments, exams, and other graded activities for each course in the student's schedule, including the due date and time.
+FR-3: The system shall require the user to be authenticated before displaying the course schedule and deadlines.
+FR-4: The system shall retrieve course schedule and deadline information from a central course management system.
+FR-5: The system shall display an error message to the user if course schedule or deadline information cannot be retrieved, and provide instructions to contact support.
+FR-6: The system shall send a notification to the student 24 hours before each deadline.
+NFR-1: The system shall display the course schedule and deadlines within 3 seconds of the user requesting it.
+NFR-2: The user interface shall be intuitive and easy to navigate, allowing the user to quickly find and view their course schedule and deadlines.
+NFR-3: The system shall adhere to WCAG 2.1 Level AA accessibility standards.
+
+FINAL REQUIREMENTS:
+FR-1: The system shall display a student's course schedule, including course name, meeting times (day and time), and location.
+FR-2: The system shall display a list of deadlines for assignments, exams, and other graded activities for each course in the student's schedule, including the due date and time.
+FR-3: The system shall require the user to be authenticated before displaying the course schedule and deadlines.
+FR-4: The system shall retrieve course schedule and deadline information from a central course management system.
+FR-5: The system shall display an error message to the user if course schedule or deadline information cannot be retrieved, and provide instructions to contact support.
+FR-6: The system shall send a notification to the student 24 hours before each deadline.
+NFR-1: The system shall display the course schedule and deadlines within 3 seconds of the user requesting it.
+NFR-2: The user interface shall be intuitive and easy to navigate, allowing the user to quickly find and view their course schedule and deadlines.
+NFR-3: The system shall adhere to WCAG 2.1 Level AA accessibility standards.
+",1807,2271,18,6,3,3,2,2.93,431,492,923,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

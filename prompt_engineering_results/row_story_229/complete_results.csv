@@ -1,0 +1,1472 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to create a profile including a section to specify their health goals, selecting from a pre-defined list of goals (e.g., weight loss, increased activity, improved sleep) or entering a custom goal (limited to 50 characters).
+
+FR-2: The system shall provide a search function that allows users to find other users based on shared health goals. Users can filter search results by goal type and location (optional).
+
+FR-3: The system shall display a list of users matching the search criteria, showing their profile picture, username, and shared health goals.
+
+FR-4: The system shall allow users to send connection requests to other users.
+
+FR-5: The system shall notify users when they receive a connection request.
+
+FR-6: The system shall allow users to accept or decline connection requests.
+
+FR-7: The system shall provide a ""Connections"" page where users can view a list of their accepted connections.
+
+FR-8: The system shall provide a direct messaging feature allowing connected users to exchange text-based messages.
+
+NFR-1: The system shall return search results for users with similar health goals within 3 seconds for 95% of searches.
+
+NFR-2: The system shall support a maximum of 10,000 concurrent users without performance degradation (defined as response times exceeding 5 seconds).
+
+NFR-3: The system shall ensure that user profile information and messaging data are encrypted both in transit and at rest.
+
+NFR-4: The system shall be accessible on devices with screen sizes ranging from 320x568 pixels to 1920x1080 pixels.
+",616,1568,12,4,3,2,1,2.54,157,358,515,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to search for other users based on specified health goals (e.g., weight loss, running a marathon, managing diabetes).
+FR-2: The system shall display a list of users matching the search criteria, including their username and a brief summary of their health goals (maximum 50 characters).
+FR-3: The system shall allow users to send connection requests to other users.
+FR-4: The system shall notify users when they receive a connection request.
+FR-5: The system shall allow users to accept or reject connection requests.
+FR-6: The system shall provide a ""Connections"" page displaying a list of a user's accepted connections (i.e., connected users).
+FR-7: The system shall allow connected users to send direct messages to each other.
+FR-8: The system shall limit the number of connections a user can have to a maximum of 500.
+
+NFR-1: The search functionality (FR-1 & FR-2) shall return results within 3 seconds for 95% of searches.
+NFR-2: The system shall maintain a 99.9% uptime for the connection features (FR-3 to FR-8).
+NFR-3: All communication between users (FR-7) shall be encrypted using TLS 1.3 or higher.
+NFR-4: The system shall be able to handle 1000 concurrent users using the connection features (FR-3 to FR-8) without performance degradation (response time exceeding 5 seconds).
+NFR-5: The ""Connections"" page (FR-6) shall load within 2 seconds for users with up to 500 connections.
+",616,1426,13,5,4,1,2,2.37,157,368,525,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to search for other users based on specified health goals, including but not limited to weight loss, fitness, nutrition, and mental well-being. Search results shall display users whose profiles indicate alignment with the searched health goals.
+
+FR-2: The system shall enable users to view the profiles of other users identified through the search function, displaying relevant information such as their self-identified health goals, progress updates (if shared), and any public bio information.
+
+FR-3: The system shall provide a ""Connect"" or ""Follow"" feature that allows users to initiate a connection with other users. Upon initiating a connection request, the recipient user shall receive a notification within the application.
+
+FR-4: The system shall allow users to accept or decline connection requests from other users. Upon acceptance, both users shall be considered ""connected.""
+
+FR-5: The system shall provide a dedicated section for connected users, displaying a list of their connections and providing access to communication features.
+
+FR-6: The system shall enable connected users to send direct messages to each other within the application.
+
+FR-7: The system shall implement a flagging mechanism for users to report profiles or messages that violate community guidelines. Each report shall be reviewed by an administrator within 24 hours.
+
+NFR-1: The system shall ensure that user search results are returned within 3 seconds for 95% of search queries.
+
+NFR-2: The system shall maintain a user connection success rate (acceptance rate of connection requests) of at least 70%.
+
+NFR-3: The system shall ensure all user profile data and messaging communication is encrypted using AES-256 encryption both in transit and at rest.
+
+NFR-4: The system shall be accessible and usable on mobile devices (iOS and Android) with responsive design, tested on at least 3 different device screen sizes each (small, medium, large).
+",616,1965,11,4,4,1,2,2.99,157,402,559,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional software requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: User Goal Setting:** The system shall allow users to define and save their health goals (e.g., weight loss, fitness, nutrition, mental wellness).
+    *   *Measurable:* Goals should have quantifiable targets (e.g., lose 10 pounds, exercise 3 times a week).
+*   **FR-2: Goal Similarity Matching:** The system shall match users with other users who have similar health goals based on a defined similarity algorithm.
+    *   *Measurable:* The algorithm should consider goal type, target values, and frequency.
+*   **FR-3: User Connection Request:** The system shall allow users to send connection requests to other users identified as having similar goals.
+*   **FR-4: Connection Request Management:** The system shall allow users to accept or decline connection requests from other users.
+*   **FR-5: User Connection List:** The system shall maintain a list of connected users for each user.
+*   **FR-6: Direct Messaging:** The system shall provide a direct messaging feature that allows connected users to communicate with each other.
+*   **FR-7: Group Messaging (Optional):** The system may provide a group messaging feature for users with similar goals to participate in group discussions.
+*   **FR-8: User Profile Visibility Control:** The system shall allow users to control the visibility of their profile information to connected users.
+*   **FR-9: Search Functionality:** The system shall allow users to search for other users based on health goals and/or keywords.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Matching Performance:** The system shall identify potential matches within 2 seconds of a user saving or updating their health goals.
+*   **NFR-2: Scalability:** The system shall support at least 10,000 concurrent users without significant performance degradation.
+*   **NFR-3: Responsiveness:** The messaging feature shall deliver messages with a latency of no more than 1 second under normal network conditions.
+*   **NFR-4: Data Privacy:** The system shall protect user data and comply with relevant privacy regulations (e.g., GDPR, CCPA).
+*   **NFR-5: Security:** The system shall prevent unauthorized access to user connections and messages.
+*   **NFR-6: Availability:** The system shall be available 99.9% of the time.
+*   **NFR-7: Algorithm Accuracy:** The similarity matching algorithm shall have a precision rate of at least 80% in identifying users with genuinely similar goals (measured through user feedback).
+*   **NFR-8: Connection Limit:** The system shall allow a user to have a maximum of 500 connections.
+
+**Explanation of Choices:**
+
+*   **Specificity:** Each requirement is clearly defined and focuses on a specific aspect of the user story.
+*   **Measurability:**  The requirements include metrics (e.g., time limits, precision rates, user limits) that can be used to verify that the system meets the requirements.
+*   **Achievability:** The requirements are realistic and can be implemented with reasonable effort and resources.
+*   **Relevance:** The requirements directly address the user's need to connect with others for support and motivation related to their health goals.
+*   **Time-Bound:**  Performance requirements include specific time limits (e.g., 2 seconds for matching).
+
+This breakdown provides a solid foundation for developers to understand and implement the features required to fulfill the user's need for connection and support. Remember that these are just examples, and the specific requirements may need to be adjusted based on the specific context and goals of the project.
+",1508,3890,17,8,3,1,1,5.70,343,857,1200,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements:**
+
+*   **FR-1: User Goal Setting and Matching:** The system shall allow users to define and save their health goals, including but not limited to weight loss, fitness, diet, and mental wellbeing.
+*   **FR-2: Similarity Algorithm:** The system shall implement an algorithm to match users based on the similarity of their defined health goals, with adjustable weighting for different goal categories (e.g., weight loss goals are weighted more heavily than diet goals).
+*   **FR-3: User Search & Filtering:** The system shall provide a search and filtering mechanism to allow users to find other users based on shared health goals, keywords, location (optional), and other relevant criteria (e.g., age range, gender - with user consent).
+*   **FR-4: Connection Request:** The system shall allow users to send connection requests to other users.
+*   **FR-5: Connection Management:** The system shall allow users to accept or reject connection requests.
+*   **FR-6: Connected User List:** The system shall provide a list of users with whom the current user is connected.
+*   **FR-7: Direct Messaging:** The system shall enable direct messaging functionality between connected users.
+*   **FR-8: User Profile Visibility:** The system shall allow users to control the visibility of their profile information to connected users, the general public, or only themselves. Options shall include at least: 'Public', 'Connected Users Only', 'Private'.
+
+**Non-Functional Requirements:**
+
+*   **NFR-1: Matching Performance:** The system shall provide a list of recommended users with similar health goals within 3 seconds of the user saving or updating their goals.
+*   **NFR-2: Algorithm Accuracy:** The user matching algorithm shall have a precision rate of at least 70% based on user feedback regarding the relevance of suggested connections. (Measured by periodically surveying users on the relevance of their suggested connections).
+*   **NFR-3: Scalability:** The system shall support up to 10,000 concurrent users searching for connections without performance degradation (response time exceeding 5 seconds).
+*   **NFR-4: Data Security:** The system shall protect user's personal health information by storing data securely and complying with relevant privacy regulations (e.g., GDPR, HIPAA - depending on the scope of the data collected).
+*   **NFR-5: Real-time Messaging:** Direct messages between connected users shall be delivered with a latency of no more than 1 second under normal network conditions.
+*   **NFR-6: User Experience:** The connection process (search, request, accept/reject) shall be intuitive and easy to use, as measured by a system usability scale (SUS) score of at least 70. (Measured after the feature is implemented).
+*   **NFR-7: Availability:** The connection feature shall be available 99.9% of the time.
+",1508,3141,15,7,3,1,2,4.70,343,683,1026,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+","Okay, here's the conversion of the user story ""As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation"" into specific, measurable, achievable, relevant, and time-bound (SMART) functional and non-functional software requirements:
+
+**Functional Requirements:**
+
+*   **FR-1:** The system shall provide a mechanism for users to specify their health goals (e.g., weight loss, fitness training, dietary changes, disease management).
+*   **FR-2:** The system shall provide a search functionality allowing users to find other users with similar health goals.
+*   **FR-3:** The search functionality shall filter users based on a compatibility score which is computed using the similarity of the user's health goals and other profile information.
+*   **FR-4:** The system shall allow users to view the profiles of other users, including their specified health goals and optionally, any publicly shared information related to their health journey (e.g., progress updates, recipes, workout routines).
+*   **FR-5:** The system shall enable users to send connection requests to other users.
+*   **FR-6:** The system shall allow users to accept or decline connection requests from other users.
+*   **FR-7:** The system shall provide a messaging system that allows connected users to communicate privately.
+*   **FR-8:** The system shall provide a way for users to join or create public or private groups based on shared health goals.
+*   **FR-9:** The system shall notify users when they receive a connection request, a new message, or an update from a user in their network.
+
+**Non-Functional Requirements:**
+
+*   **NFR-1:** The system shall return search results for potential matches within 2 seconds of the user initiating the search.
+*   **NFR-2:** The system shall be able to support at least 10,000 concurrent users searching for matches.
+*   **NFR-3:** User profiles and health goal information shall be stored securely to protect user privacy and comply with relevant data protection regulations (e.g., GDPR, HIPAA if applicable).
+*   **NFR-4:** The messaging system shall deliver messages within 1 second under normal network conditions.
+*   **NFR-5:** The system shall ensure that the compatibility score calculation is accurate and reflects the similarity of user goals within a margin of error of +/- 5%.
+*   **NFR-6:** The system shall provide a user-friendly interface that is easy to navigate and understand for users of all technical skill levels. The user-friendliness will be evaluated through usability testing with a score of at least 4 out of 5 on a System Usability Scale (SUS).
+",1508,2663,15,6,4,1,1,3.87,343,586,929,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow users to search for other users based on specified health goals.
+FR-2: The system shall display a list of users matching the search criteria, including their username and a brief summary of their health goals.
+FR-3: The system shall allow users to send connection requests to other users.
+FR-4: The system shall notify users when they receive a connection request.
+FR-5: The system shall allow users to accept or decline connection requests.
+FR-6: The system shall maintain a list of a user's connections (i.e., users they are connected with).
+FR-7: The system shall provide a communication channel (e.g., direct messaging, forum) for connected users to interact.
+FR-8: The system shall allow users to specify their health goals, including type (e.g., weight loss, fitness, nutrition) and specific targets (e.g., lose 10 pounds, run a marathon, eat 5 servings of vegetables daily).
+FR-9: The system shall allow users to update their health goals.
+FR-10: The system shall provide privacy settings to control the visibility of a user's profile and health goals to other users.
+
+NFR-1: The system shall respond to user search requests for other users within 3 seconds.
+NFR-2: The system shall ensure that all user data, including health goals and communication, is encrypted both in transit and at rest.
+NFR-3: The system shall be accessible on devices with screen sizes ranging from 320x568 pixels to 1920x1080 pixels.
+NFR-4: The system shall maintain an uptime of 99.9%.
+NFR-5: The system shall support at least 10,000 concurrent users.
+NFR-6: The system shall adhere to accessibility guidelines (WCAG 2.1 Level AA).
+",1675,1645,16,6,3,1,1,2.97,387,416,803,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow users to search for other users based on health goals, using a keyword search field.
+FR-2: The system shall display a list of users matching the search criteria, showing their username, a brief profile description (max 100 characters), and a visual indicator of goal similarity (e.g., percentage match).
+FR-3: The system shall allow users to filter search results based on health goal categories (e.g., weight loss, fitness, nutrition).
+FR-4: The system shall allow users to send connection requests to other users.
+FR-5: The system shall notify users when they receive a connection request.
+FR-6: The system shall allow users to accept or decline connection requests.
+FR-7: The system shall display a list of a user's connections.
+FR-8: The system shall allow users to remove connections.
+FR-9: The system shall prevent users from sending more than 3 connection requests to the same user within a 24-hour period.
+FR-10: The system shall provide a profile setting allowing users to control the visibility of their profile in search results (Public/Private).
+
+NFR-1: The user search functionality shall return results within 3 seconds.
+NFR-2: The system shall support a minimum of 10,000 concurrent users searching for connections.
+NFR-3: The system shall ensure that user profiles are only accessible to connected users or based on the user's privacy settings.
+NFR-4: The user interface for connecting with other users shall be accessible on desktop and mobile devices.
+NFR-5: The system shall log all connection requests and connection actions (accept, decline, remove) for auditing purposes.
+NFR-6: The system shall ensure that connection data is stored securely and protected against unauthorized access.
+",1675,1737,16,6,3,2,1,2.99,387,396,783,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow users to search for other users based on specified health goals.
+FR-2: The system shall display a list of users matching the search criteria, including their usernames and a brief summary of their health goals.
+FR-3: The system shall allow users to send connection requests to other users.
+FR-4: The system shall notify users when they receive a connection request.
+FR-5: The system shall allow users to accept or reject connection requests.
+FR-6: The system shall maintain a list of a user's connections.
+FR-7: The system shall provide a communication channel (e.g., messaging, forum) for connected users to interact.
+FR-8: The system shall allow users to specify and update their health goals.
+FR-9: The system shall provide privacy settings that allow users to control the visibility of their profile and activity to other users.
+FR-10: The search functionality shall include filtering options such as location, age range, and specific health conditions.
+
+NFR-1: The search for users with similar health goals shall return results within 3 seconds for 95% of searches.
+NFR-2: The system shall ensure that user data related to health goals and connections is encrypted both in transit and at rest.
+NFR-3: The system shall support a minimum of 10,000 concurrent users.
+NFR-4: The system shall be accessible via a mobile-responsive web interface.
+NFR-5: The connection request acceptance/rejection process shall be completed in under 1 second.
+NFR-6: The system shall provide clear and concise instructions on how to use the connection features.
+NFR-7: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+",1675,1664,17,7,3,2,2,2.98,387,387,774,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements, followed by the evaluation and final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/users/search` that accepts a JSON payload containing an array of health goals (strings).
+FR-2: The `/users/search` endpoint shall return a JSON array of user IDs matching at least one health goal in the request payload.
+FR-3: The system shall utilize a database index on the `health_goals` field in the `users` table to optimize search performance.
+FR-4: The system shall implement a caching mechanism to store search results for 5 minutes to reduce database load.
+NFR-1: The `/users/search` endpoint shall respond within 200ms for 95% of requests.
+NFR-2: The system shall support a maximum of 10 concurrent requests to the `/users/search` endpoint without performance degradation.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: Users shall be able to search for other users based on shared health goals using a search bar on the ""Community"" page.
+FR-2: The search results shall display a list of user profiles, including their name, a brief bio, and a list of shared health goals.
+FR-3: Users shall be able to send a connection request to other users directly from the search results page.
+FR-4: The system shall provide a notification to users when they receive a new connection request.
+NFR-1: The search results shall load within 3 seconds.
+NFR-2: The user interface shall be intuitive and easy to navigate, as measured by a System Usability Scale (SUS) score of 70 or higher.
+NFR-3: At least 50% of users who perform a search should send at least one connection request within their first week of using the feature.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall store user health goals as a multi-valued attribute associated with each user profile.
+FR-2: Users shall be able to add, remove, and modify their health goals through the ""Edit Profile"" page.
+FR-3: The system shall prevent users from adding health goals that are not included in a pre-defined list of valid health goals.
+FR-4: The system shall automatically suggest relevant health goals to users based on their profile information and activity history.
+FR-5: The system shall log all search queries and connection requests for auditing and reporting purposes.
+NFR-1: The system shall comply with all applicable data privacy regulations regarding the storage and processing of user health data.
+NFR-2: The database shall be backed up daily to prevent data loss.
+NFR-3: The system shall retain user health goal data for a minimum of 2 years, even if the user deactivates their account.
+",1290,2719,21,8,4,2,2,4.15,282,632,914,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements, followed by the evaluation and final recommendation:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/users/search` that accepts a list of health goals as a query parameter.
+FR-2: The `users/search` endpoint shall return a JSON array of user IDs matching the specified health goals.
+FR-3: The database shall include a `health_goals` table with a many-to-many relationship to the `users` table.
+NFR-1: The `users/search` endpoint shall respond within 200ms for 95% of requests.
+NFR-2: The system shall use a NoSQL database for storing user health goals.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: Users shall be able to specify their health goals during account creation or within their profile settings.
+FR-2: Users shall be presented with a list of suggested users with similar health goals on a dedicated ""Connections"" page.
+FR-3: Users shall be able to send connection requests to other users.
+FR-4: Users shall be able to accept or decline incoming connection requests.
+NFR-1: The ""Connections"" page shall load within 3 seconds.
+NFR-2: The system shall provide a mechanism for users to report inappropriate content or behavior within connections.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall match users based on a minimum of one shared health goal.
+FR-2: The system shall prioritize user matches based on the number of shared health goals.
+FR-3: User health goals data shall be stored securely and in compliance with HIPAA regulations (if applicable).
+FR-4: The system shall log all connection requests and responses for auditing purposes.
+NFR-1: The matching algorithm shall be updated weekly based on user feedback to improve accuracy.
+NFR-2: The system shall perform daily backups of user health goals data.
+",1290,1886,17,6,4,1,1,3.17,282,442,724,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of requirements, along with an evaluation and final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/users/{userId}/matches` to retrieve potential user matches.
+FR-2: The API endpoint shall accept a parameter `goalId` to filter matches based on specific health goals.
+FR-3: The matching algorithm shall utilize a database query against the `users` table, filtering based on shared `goalId` values.
+FR-4: The API endpoint shall return a JSON array of user IDs representing potential matches.
+NFR-1: The API endpoint's response time shall be less than 200ms.
+NFR-2: The system shall handle up to 100 concurrent requests to the matching API without performance degradation.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: Users shall be able to view a list of potential matches, displaying their profile picture, username, and shared health goals.
+FR-2: Users shall be able to filter potential matches by shared health goals.
+FR-3: Users shall be able to initiate a connection request with potential matches.
+FR-4: The system shall notify users when they receive a connection request.
+NFR-1: The user interface for viewing and filtering matches shall be responsive and intuitive on both desktop and mobile devices.
+NFR-2: Users shall be able to find at least 5 relevant matches within 2 minutes of using the feature.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall store user health goals in a normalized database table with a unique identifier for each goal.
+FR-2: The system shall allow users to select multiple health goals from a predefined list.
+FR-3: A matching score shall be calculated for each potential match based on the number of shared health goals.
+FR-4: Only users who have opted into the ""Connect with Others"" feature shall be included in the matching process.
+NFR-1: User health goal data shall be stored securely and comply with privacy regulations (e.g., GDPR, HIPAA).
+NFR-2: The matching algorithm shall be updated weekly to incorporate new users and health goals.
+",1290,2137,18,6,3,1,1,3.28,282,489,771,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to search for other users based on specified health goals (e.g., weight loss, fitness training, dietary changes) with a search response time of less than 3 seconds.
+
+FR-2: The system shall display a list of potential matches based on the search criteria, showing at least the user's profile picture, username, and a brief summary of their health goals, within 2 seconds of the search completion.
+
+FR-3: The system shall allow users to send connection requests to other users. The connection request must be sent within 1 second of the user clicking the ""Connect"" button.
+
+FR-4: The system shall notify users of incoming connection requests within 5 minutes of the request being sent.
+
+FR-5: The system shall allow users to accept or decline connection requests. The acceptance or rejection action must be processed within 1 second.
+
+FR-6: The system shall provide a mechanism for connected users to communicate with each other via direct messaging. Messages must be delivered within 2 seconds of being sent.
+
+FR-7: The system shall allow users to create and join groups focused on specific health goals. Group creation should take no more than 5 seconds.
+
+FR-8: The system shall allow users to report other users for inappropriate behavior or content. The report submission should be completed within 3 seconds.
+
+NFR-1: The system shall maintain a user availability of 99.9% during peak hours (6 PM - 9 PM local time) to ensure consistent access to social features.
+
+NFR-2: The system shall ensure that all user data related to health goals and connections is encrypted both in transit (using HTTPS) and at rest (using AES-256 encryption) to protect user privacy.
+
+NFR-3: The system shall be scalable to support at least 10,000 concurrent users without performance degradation, as measured by response times for search and messaging functionalities, by the end of Q4 2024.
+
+NFR-4: The system shall be accessible on devices with screen sizes ranging from 320x568 pixels to 1920x1080 pixels, ensuring usability across various mobile and desktop platforms by the end of Q3 2024.
+
+NFR-5: The system shall comply with all applicable data privacy regulations, including GDPR and CCPA, with compliance verified through regular audits conducted quarterly.
+",832,2283,13,5,5,1,3,3.61,196,515,711,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to search for other users based on health goals specified during profile creation. *Measurable*: Search results will display users whose health goals match the search criteria with a relevance score (e.g., percentage match). *Time-bound*: Search results shall be returned within 3 seconds 95% of the time.
+
+FR-2: The system shall provide a mechanism for users to connect with other users, such as sending a connection request. *Measurable*: Connection requests shall be successfully sent and received, with a confirmation message displayed to the sender. *Time-bound*: Connection requests shall be processed and delivered within 1 second 95% of the time.
+
+FR-3: The system shall notify users when they receive a connection request. *Measurable*: Users will receive a notification (e.g., push notification, in-app message) within 5 seconds of the connection request being sent. *Time-bound*: Notifications shall be delivered within 5 seconds 95% of the time.
+
+FR-4: The system shall allow users to accept or decline connection requests. *Measurable*: The system will update the connection status (accepted/declined) within the database upon user action and reflect the change to both users. *Time-bound*: Connection status update shall be reflected within 1 second 95% of the time.
+
+FR-5: The system shall provide a messaging feature for connected users to communicate with each other. *Measurable*: Messages sent between connected users will be delivered and displayed to the recipient. *Time-bound*: Messages shall be delivered within 2 seconds 95% of the time.
+
+FR-6: The system shall allow users to specify and update their health goals in their profile. *Measurable*: The system will store the user's health goals and display them accurately in their profile. *Time-bound*: Profile updates shall be saved and reflected within 1 second 95% of the time.
+
+NFR-1: The system shall maintain the privacy of user health goals. *Measurable*: User health goals will only be visible to connected users or as configured by the user's privacy settings. *Time-bound*: Privacy settings enforcement shall be immediate upon saving.
+
+NFR-2: The system shall be scalable to support a large number of users and connections. *Measurable*: The system shall support at least 10,000 concurrent users without significant performance degradation (e.g., search response time remains under 5 seconds). *Time-bound*: Scalability testing will be performed before launch.
+
+NFR-3: The system shall be available 99.9% of the time. *Measurable*: System uptime will be monitored and reported on a monthly basis. *Time-bound*: The 99.9% uptime target will be achieved within 3 months of launch.
+
+NFR-4: The system shall be secure and protect user data from unauthorized access. *Measurable*: The system will undergo regular security audits and penetration testing. *Time-bound*: Security audits will be conducted at least quarterly.
+
+NFR-5: The user interface for connecting with other users shall be intuitive and easy to use. *Measurable*: User satisfaction with the connection process will be measured through user surveys. *Time-bound*: User satisfaction scores will be collected within 1 month of launch.
+",832,3214,11,5,3,1,2,4.56,196,709,905,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to create a profile, specifying their health goals (e.g., weight loss, muscle gain, marathon training), with a clearly defined and searchable taxonomy of goals, by [Date - One week from now].
+
+FR-2: The system shall provide a search function that allows users to find other users based on shared health goals, allowing filtering by goal type, location (optional), and activity level, within 3 seconds of initiating the search, as measured by system logs, completed by [Date - Two weeks from now].
+
+FR-3: The system shall display a list of users matching the search criteria, presenting each user's profile picture, user name, and a brief summary of their shared health goals (limited to the top 3 goals), no later than [Date - Two weeks from now].
+
+FR-4: Users shall be able to send connection requests to other users through the system, with a confirmation message displayed to the sender upon successful request submission, by [Date - Three weeks from now].
+
+FR-5: Users shall be able to accept or decline connection requests, with the requestor notified of the action within 1 minute via an in-app notification, as measured by the time the requestor receives notification to the time request was accepted or declined, scheduled for completion by [Date - Three weeks from now].
+
+FR-6: Upon accepting a connection request, users shall be able to communicate with each other via a private messaging system, with messages delivered within 5 seconds of being sent, by [Date - Four weeks from now].
+
+FR-7: The system shall provide privacy settings allowing users to control the visibility of their profile and health goals to connected users, other users, or the public, to be implemented by [Date - Four weeks from now].
+
+NFR-1: The system shall maintain a user profile availability of 99.9% during peak hours (6 PM to 9 PM local time), as measured by server monitoring tools, ensuring access for user connections to work and allowing them to receive support, measured monthly, starting [Date - One month from now].
+
+NFR-2: The system shall ensure user data privacy by encrypting all user profile data and communication messages, as verified through regular security audits, with the first audit completed by [Date - Six weeks from now].
+
+NFR-3: The system shall be scalable to support at least 10,000 concurrent users searching for and connecting with other users without performance degradation (response times exceeding 5 seconds), as demonstrated by load testing, no later than [Date - One month from now].
+
+NFR-4: The system shall be accessible on all major web browsers (Chrome, Firefox, Safari, Edge) and mobile operating systems (iOS and Android) with a responsive design, as verified by manual testing on each platform, by [Date - Three weeks from now].
+",832,2796,11,4,5,2,3,4.33,196,602,798,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to create a profile including, but not limited to, health goals (e.g., weight loss, fitness, nutrition), interests, and preferred communication methods.
+
+FR-2: The system shall provide a search functionality that allows users to find other users based on matching health goals, interests, or profile keywords.
+
+FR-3: The system shall provide a recommendation engine that suggests potential connections to users based on their profile information and activity within the platform.
+
+FR-4: The system shall allow users to send connection requests to other users.
+
+FR-5: The system shall allow users to accept or decline connection requests.
+
+FR-6: The system shall provide a messaging system that allows connected users to communicate with each other.
+
+FR-7: The system shall allow users to create and join groups focused on specific health goals or interests.
+
+FR-8: The system shall allow users to share content (e.g., text, images, links) within groups and with their connections.
+
+FR-9: The system shall provide moderation tools for group administrators to manage content and members within their groups.
+
+FR-10: The system shall allow users to report other users or content that violates community guidelines.
+
+FR-11: The system shall provide privacy settings that allow users to control the visibility of their profile information and activity.
+
+FR-12: The system shall provide notification settings that allow users to customize the types of notifications they receive (e.g., connection requests, messages, group updates).
+
+NFR-1: The system shall be able to support at least 10,000 concurrent users without performance degradation.
+
+NFR-2: The system shall respond to user requests (e.g., search, connection request) within 2 seconds on average.
+
+NFR-3: All user data, including health goals and communication, shall be encrypted both in transit and at rest using AES-256 encryption.
+
+NFR-4: The system shall comply with all applicable data privacy regulations, including GDPR and HIPAA (if applicable based on the nature of the health goals and data collected).
+
+NFR-5: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-6: The system shall be accessible on a variety of devices, including desktop computers, tablets, and smartphones, with a responsive user interface.
+
+NFR-7: The system shall be designed for scalability to accommodate future growth in user base and data volume.
+
+NFR-8: The system shall log all user activity for auditing and security purposes. Logs shall be retained for at least 12 months.
+
+NFR-9: The system shall implement role-based access control to restrict access to sensitive data and functionality.
+
+NFR-10: The system shall undergo regular security vulnerability assessments and penetration testing.
+",1087,2807,22,10,3,1,1,3.84,236,602,838,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements for the user story: ""As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.""
+
+FR-1: The system shall allow users to create a profile including health goals selected from a pre-defined list (e.g., weight loss, fitness improvement, healthy eating, smoking cessation, chronic disease management).
+FR-2: The system shall allow users to specify the desired level of support (e.g., beginner, intermediate, advanced) related to their selected health goals.
+FR-3: The system shall provide a search function that allows users to find other users based on matching health goals and support levels.
+FR-4: The system shall provide a recommendation engine that suggests other users to connect with based on profile data, activity, and stated goals.
+FR-5: The system shall allow users to send connection requests to other users.
+FR-6: The system shall allow users to accept or reject connection requests.
+FR-7: The system shall provide a messaging feature that allows connected users to communicate with each other.
+FR-8: The system shall allow users to create and join groups focused on specific health goals.
+FR-9: The system shall allow users to share progress updates related to their health goals within their connections and/or groups.
+FR-10: The system shall allow users to block or report other users for inappropriate behavior.
+FR-11: The system shall allow users to specify their preferred communication methods (e.g., in-app messaging, email notifications).
+FR-12: The system shall allow users to set privacy settings to control the visibility of their profile and activity to other users.
+
+NFR-1: The system shall provide search results for potential connections within 3 seconds.
+NFR-2: The system shall support a minimum of 10,000 concurrent users actively using the connection and messaging features.
+NFR-3: The system shall protect user data and privacy in compliance with HIPAA and GDPR regulations.
+NFR-4: The system shall ensure all communication between users is encrypted using TLS 1.3 or higher.
+NFR-5: The system shall provide uptime of 99.9% for the user connection and messaging features, excluding scheduled maintenance.
+NFR-6: The system shall be accessible on iOS and Android mobile devices, as well as through a web browser.
+NFR-7: The system shall provide a mechanism for content moderation to ensure a safe and supportive environment.
+NFR-8: The system shall automatically flag and report suspicious activity that may indicate harassment or abuse.
+NFR-9: The system shall be designed to be easily maintainable and scalable to accommodate future growth in users and features.
+NFR-10: The system shall provide clear and concise user documentation and support resources.
+NFR-11: The system shall be designed with accessibility in mind, adhering to WCAG 2.1 Level AA guidelines.
+",1087,2926,23,11,3,1,1,4.12,236,640,876,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to search for other users based on shared health goals, including but not limited to weight loss, fitness training, dietary restrictions (e.g., vegan, gluten-free), and chronic disease management (e.g., diabetes, heart disease).
+
+FR-2: The system shall provide a profile attribute for users to specify their primary and secondary health goals, allowing for a maximum of 3 goals per user.
+
+FR-3: The system shall implement a matching algorithm that suggests potential connections based on the degree of overlap in specified health goals, prioritizing matches with users who have actively engaged with the platform within the last 30 days.
+
+FR-4: The system shall allow users to send and receive connection requests to other users.
+
+FR-5: The system shall allow users to accept or reject incoming connection requests.
+
+FR-6: The system shall provide a ""Connections"" page where users can view their list of accepted connections.
+
+FR-7: The system shall provide a direct messaging feature for connected users to communicate with each other.
+
+FR-8: The system shall allow users to remove connections from their ""Connections"" list.
+
+FR-9: The system shall allow users to block other users, preventing further communication or connection requests.
+
+FR-10: The system shall provide privacy settings that allow users to control the visibility of their health goals to other users, with options for ""Public"" (visible to all users), ""Connections Only"" (visible only to accepted connections), and ""Private"" (visible only to the user).
+
+FR-11: The system shall generate a notification to a user when another user sends a connection request.
+
+FR-12: The system shall provide a mechanism for users to report inappropriate behavior or content from other users.
+
+NFR-1: The system shall respond to user search queries for potential connections within 3 seconds under normal operating conditions.
+
+NFR-2: The system shall support a minimum of 10,000 concurrent users actively searching for and connecting with other users without performance degradation.
+
+NFR-3: The system shall store user data, including health goals and connection information, securely, complying with HIPAA and GDPR regulations.
+
+NFR-4: The system shall be accessible on major web browsers (Chrome, Firefox, Safari, Edge) and on iOS and Android mobile devices (responsive design or native apps).
+
+NFR-5: The system shall implement role-based access control, ensuring that only authorized personnel can access and manage user data.
+
+NFR-6: The system shall maintain an uptime of 99.9% per month, excluding scheduled maintenance windows, with transparent communication of any outages.
+
+NFR-7: All user-generated content, including messages and profile information, shall be scanned for inappropriate content using automated content moderation tools.
+
+NFR-8: The system shall log all user connection requests, acceptances, rejections, and removals for auditing and security purposes, retaining logs for a minimum of 1 year.
+
+NFR-9: The system shall be designed to be scalable to accommodate future growth in the user base and feature set.
+
+NFR-10: The direct messaging feature shall support end-to-end encryption to ensure the privacy of user communications.
+",1087,3245,22,10,4,1,1,4.55,236,684,920,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Contextual,precise,"
+BUSINESS CONTEXT:
+Application for physical and mental health tracking
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to search for other users based on shared health goals (e.g., weight loss, running a marathon, managing diabetes) using a keyword search and/or pre-defined goal categories.
+
+FR-2: Users shall be able to send and receive connection requests to other users.
+
+FR-3: Users shall be able to accept or decline connection requests.
+
+FR-4: Users shall be able to view a list of their confirmed connections (i.e., ""friends"").
+
+FR-5: Users shall be able to send direct messages to their connections.
+
+FR-6: Users shall be able to create and join group chats focused on specific health goals.
+
+FR-7: Users shall be able to report other users for inappropriate behavior or content.
+
+FR-8: The system shall automatically suggest potential connections to users based on their profile information and tracked health data, displaying a maximum of 10 suggestions.
+
+NFR-1: The system shall respond to connection requests within 2 seconds under peak load (defined as 10,000 concurrent users).
+
+NFR-2: The system shall maintain a 99.9% uptime for the connection feature.
+
+NFR-3: The connection feature shall integrate with the existing user profile system to access user data (e.g., goals, demographics) via API calls with a maximum latency of 500ms.
+
+NFR-4: The system shall log all connection requests, acceptances, and rejections, including timestamps and user IDs, for auditing and troubleshooting purposes.
+
+NFR-5: The user interface for the connection feature shall be intuitive and easy to navigate, achieving a System Usability Scale (SUS) score of 70 or higher in user testing with at least 20 participants.
+
+NFR-6: The system shall implement rate limiting to prevent abuse of the connection request feature, allowing a maximum of 50 connection requests per user per hour.
+
+NFR-7: The system shall monitor the number of active connections and group chats, alerting administrators if usage exceeds predefined thresholds (e.g., 80% of maximum capacity).
+
+NFR-8: Error messages related to connection failures (e.g., user not found, request failed) shall be user-friendly and provide guidance on how to resolve the issue.
+",815,2133,16,8,3,1,1,3.66,188,490,678,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Contextual,default,"
+BUSINESS CONTEXT:
+Application for physical and mental health tracking
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The application shall allow users to search for other users based on shared health goals (e.g., weight loss, running a marathon, managing diabetes) using a keyword search and filtering by age range (±5 years), gender, and location (within 50 miles).
+
+FR-2: The application shall allow users to send and receive connection requests to other users.
+
+FR-3: The application shall provide a dedicated section (""Community"") where users can view their connections and any new connection requests.
+
+FR-4: The application shall allow users to send direct messages to their connections.
+
+FR-5: The application shall allow users to create or join group chats focused on specific health goals, with a maximum of 50 members per group.
+
+FR-6: The application shall allow users to block other users from contacting them.
+
+FR-7: The application shall provide a reporting mechanism for users to report inappropriate behavior or content within the community features.
+
+NFR-1: The search functionality (FR-1) shall return results within 2 seconds for 95% of searches during peak load (defined as 10,000 concurrent users).
+
+NFR-2: The application shall ensure that message delivery (FR-4) occurs within 5 seconds for 99% of messages.
+
+NFR-3: The application shall integrate with the existing user authentication system to verify user identities and prevent unauthorized access to community features.
+
+NFR-4: The application shall log all connection requests, messages sent, and group chat activity for auditing and moderation purposes. Logs shall be retained for 90 days.
+
+NFR-5: The application shall display a clear and informative error message to the user if a connection request fails to send or receive.
+
+NFR-6: The user interface for the Community section (FR-3) shall be intuitive and easy to navigate, as measured by a system usability scale (SUS) score of 70 or higher after user testing with 10 participants.
+
+NFR-7: The application shall implement rate limiting to prevent abuse of the messaging and connection request features (e.g., limiting connection requests to 20 per day).
+
+NFR-8: The application shall monitor the number of active users in the Community section and alert the operations team if the number of concurrent users exceeds 80% of the system's capacity.
+",815,2270,15,8,4,2,3,3.46,188,500,688,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Contextual,creative,"
+BUSINESS CONTEXT:
+Application for physical and mental health tracking
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to search for other users based on shared health goals (e.g., weight loss, running a marathon, managing diabetes) using a keyword search and selectable goal categories, with search results displayed within 3 seconds.
+FR-2: Users shall be able to send a connection request to other users.
+FR-3: Users shall be able to accept or decline connection requests.
+FR-4: Users shall have a ""Connections"" page displaying a list of accepted connections with profile summaries.
+FR-5: Users shall be able to send direct messages to their connections.
+FR-6: Users shall be able to create and join group chats focused on specific health goals.
+FR-7: The system shall recommend potential connections to users based on their profile information and tracked health data, updating suggestions daily.
+
+NFR-1: The ""Connections"" page shall load within 2 seconds under peak load (10,000 concurrent users).
+NFR-2: The system shall support a maximum of 500 concurrent users sending connection requests without performance degradation (response time within 5 seconds).
+NFR-3: Connection requests shall be processed within 1 second in 99.9% of cases.
+NFR-4: Error messages shall be displayed to the user in a clear and understandable format if a connection request fails.
+NFR-5: The system shall log all connection requests, acceptances, and rejections, including timestamps and user IDs, for auditing and error tracking purposes.
+NFR-6: The user interface for connecting with other users shall be intuitive and easy to navigate, as measured by a System Usability Scale (SUS) score of 70 or higher after user testing with 10 participants by the end of the next sprint.
+NFR-7: All user profile data used for connection recommendations shall be encrypted at rest and in transit.
+",815,1776,14,7,4,2,2,2.91,188,400,588,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to specify their health goals (e.g., weight loss, fitness, nutrition) using a predefined list and free-text input.
+FR-2: The system shall match users with other users who have at least one health goal in common, with a matching algorithm prioritizing users with multiple shared goals.
+FR-3: The system shall display a list of potential matches to the user, showing their profile picture, name, and shared health goals.
+FR-4: The system shall allow users to send connection requests to other users.
+FR-5: The system shall notify users when they receive a connection request.
+FR-6: The system shall allow users to accept or decline connection requests.
+FR-7: The system shall provide a messaging feature for connected users to communicate with each other.
+FR-8: The system shall allow users to block other users.
+FR-9: The system shall allow users to report other users for inappropriate behavior.
+
+NFR-1: The matching algorithm shall return results within 2 seconds.
+NFR-2: The system shall ensure user data privacy by only displaying shared health goals and profile information to potential matches.
+NFR-3: The system shall be accessible on iOS and Android mobile devices.
+NFR-4: The system shall handle a minimum of 10,000 concurrent users.
+NFR-5: The system shall store user data securely, complying with relevant data privacy regulations (e.g., GDPR, CCPA).
+NFR-6: The system shall provide clear error messages to the user in case of connection or matching failures.
+NFR-7: The system shall log all connection requests and messaging activity for auditing purposes.
+",1771,1603,16,7,3,2,1,2.59,398,364,762,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to search for other users based on health goals.
+FR-2: The system shall display a list of users matching the search criteria, including their username and a brief summary of their health goals.
+FR-3: The system shall allow users to initiate a connection request to other users.
+FR-4: The system shall notify users when they receive a connection request.
+FR-5: The system shall allow users to accept or decline connection requests.
+FR-6: The system shall provide a messaging system for connected users to communicate.
+FR-7: Users shall be able to specify their primary health goals in their profile.
+FR-8: The system shall allow users to filter search results by specific health goal categories.
+
+NFR-1: The system shall respond to user searches within 3 seconds.
+NFR-2: The system shall ensure the privacy of user health goals, only displaying them to other users with explicit consent (e.g., after accepting a connection request).
+NFR-3: The system shall securely store user connection data and messaging history.
+NFR-4: The system shall be accessible on mobile devices (iOS and Android).
+NFR-5: The system shall handle at least 10,000 concurrent users without performance degradation.
+",1771,1222,13,5,3,1,1,2.20,398,277,675,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to specify their health goals using a pre-defined list of goals (e.g., weight loss, muscle gain, improved sleep).
+FR-2: The system shall provide a search functionality that allows users to find other users based on shared health goals.
+FR-3: The system shall display a list of potential matches, showing shared goals and a brief user profile summary.
+FR-4: Users shall be able to initiate a connection request with another user.
+FR-5: Users shall be able to accept or reject connection requests.
+FR-6: Connected users shall be able to communicate through a direct messaging feature.
+FR-7: The system shall provide notification to users when a new connection request is received or a new message is sent.
+
+NFR-1: The system shall return search results for similar health goals within 3 seconds.
+NFR-2: The system shall ensure user profile data is only accessible to connected users or users who have explicitly allowed profile visibility.
+NFR-3: The system shall authenticate users before allowing access to connection features.
+NFR-4: The system shall be accessible on web and mobile platforms (iOS and Android).
+NFR-5: The system shall store connection information securely, adhering to GDPR and CCPA guidelines.
+NFR-6: The direct messaging feature shall support at least 10,000 concurrent users.
+",1771,1333,13,6,4,1,1,2.48,398,298,696,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to search for other users based on shared health goals (e.g., weight loss, fitness training, disease management).
+FR-2: The system shall display a list of users matching the search criteria, including their profile information (e.g., name, profile picture, brief bio, shared goals).
+FR-3: The system shall require users to create a profile and specify their health goals before being able to search for or connect with other users.
+FR-4: The system shall allow users to send connection requests to other users.
+FR-5: The system shall display an error message if no users match the search criteria.
+FR-6: The system shall notify users via in-app notification when they receive a connection request.
+NFR-1: The system shall return search results within 3 seconds.
+NFR-2: The user interface for searching and connecting with other users shall be intuitive and easy to navigate, adhering to established UI/UX principles.
+NFR-3: The system shall ensure the privacy of user data by only displaying information that the user has explicitly chosen to share in their profile.
+",1837,1102,9,3,3,2,1,1.98,436,243,679,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to search for other users based on shared health goals, specified as keywords or pre-defined categories.
+FR-2: The system shall display a list of users matching the search criteria, including a brief profile summary showing relevant health goals and a way to initiate a connection request.
+FR-3: Users must create a profile and specify their health goals before being searchable by other users.
+FR-4: When a user sends a connection request, the recipient shall receive a notification and be able to accept or decline the request.
+FR-5: The system shall display an error message if no users are found matching the search criteria.
+FR-6: The system shall notify the requesting user if their connection request is accepted or declined within 24 hours.
+NFR-1: Search results shall be displayed within 2 seconds.
+NFR-2: The user interface for searching and connecting with other users shall be intuitive and easy to navigate, adhering to accessibility guidelines (WCAG 2.1 Level AA).
+NFR-3: User profiles and connection data shall be stored securely, adhering to data privacy regulations (e.g., GDPR, CCPA).
+",1837,1138,9,3,3,2,2,2.16,436,249,685,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.', 'context': 'Application for physical and mental health tracking'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to connect with other users who have similar health goals so that I can receive support and motivation.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to search for other users based on shared health goals (e.g., weight loss, running a marathon, managing diabetes).
+FR-2: The system shall display a list of users who match the search criteria, including their name (or chosen display name), a brief summary of their health goals, and a method to initiate contact (e.g., send a message, request to connect).
+FR-3: Users must first create a profile and specify their health goals before being able to search for or be found by other users.
+FR-4: The system shall store and update user health goals in a secure database, ensuring user privacy and data integrity.
+FR-5: If no users match the search criteria, the system shall display a message indicating ""No users found matching your criteria"" and suggest broadening the search terms or adding/modifying the users health goals.
+FR-6: The system shall notify a user via email or in-app notification when another user has requested to connect with them.
+NFR-1: The search for users with similar health goals shall return results within 3 seconds.
+NFR-2: The user interface for searching and connecting with other users shall be intuitive and easy to navigate on both desktop and mobile devices.
+NFR-3: The system shall implement role-based access control to ensure that users' health goals and personal information are only accessible to authorized users or to those they explicitly grant permission to.
+
+FINAL REQUIREMENTS:
+FR-1: The system shall allow users to search for other users based on shared health goals (e.g., weight loss, running a marathon, managing diabetes).
+FR-2: The system shall display a list of users who match the search criteria, including their name (or chosen display name), a brief summary of their health goals, and a method to initiate contact (e.g., send a message, request to connect).
+FR-3: Users must first create a profile and specify their health goals before being able to search for or be found by other users.
+FR-4: The system shall store and update user health goals in a secure database, ensuring user privacy and data integrity.
+FR-5: If no users match the search criteria, the system shall display a message indicating ""No users found matching your criteria"" and suggest broadening the search terms or adding/modifying the users health goals.
+FR-6: The system shall notify a user via email or in-app notification when another user has requested to connect with them.
+NFR-1: The search for users with similar health goals shall return results within 3 seconds.
+NFR-2: The user interface for searching and connecting with other users shall be intuitive and easy to navigate on both desktop and mobile devices.
+NFR-3: The system shall implement role-based access control to ensure that users' health goals and personal information are only accessible to authorized users or to those they explicitly grant permission to.
+",1837,2887,18,6,3,2,1,3.64,436,622,1058,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

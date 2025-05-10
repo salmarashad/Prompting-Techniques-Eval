@@ -1,0 +1,1431 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews for a product on the product details page.
+FR-2: The system shall display the average customer rating for a product on the product details page, calculated from all submitted ratings.
+FR-3: The system shall display the total number of customer reviews for a product on the product details page.
+FR-4: The system shall allow customers to sort reviews by date (newest to oldest, oldest to newest) and rating (highest to lowest, lowest to highest).
+FR-5: The system shall paginate reviews, displaying a maximum of 10 reviews per page.
+
+NFR-1: The product details page, including reviews and ratings, shall load in under 3 seconds for 95% of users.
+NFR-2: The system shall be able to store and display at least 10,000 reviews per product.
+NFR-3: The review display shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+NFR-4: The system shall ensure that customer reviews are stored securely and protected from unauthorized access.
+",567,1014,9,4,3,3,1,1.74,147,238,385,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews for a product on the product details page.
+FR-2: The system shall display the average rating for a product on the product details page, calculated from all customer ratings for that product.
+FR-3: The system shall display the total number of customer reviews for a product on the product details page.
+FR-4: Each customer review shall display the customer's rating (on a scale of 1 to 5 stars).
+FR-5: Each customer review shall display the customer's written review text.
+FR-6: Each customer review shall display the date the review was submitted.
+FR-7: The system shall display a maximum of 10 customer reviews per page, with pagination for accessing additional reviews.
+FR-8: The system shall allow sorting of customer reviews by date (newest to oldest, oldest to newest) and rating (highest to lowest, lowest to highest).
+FR-9: The system shall display the customer's name or a pseudonym (if the customer chooses to use one) with each review.
+
+NFR-1: The average product rating shall be calculated and displayed within 500 milliseconds.
+NFR-2: The product details page, including reviews and ratings, shall load within 3 seconds on a standard desktop internet connection (10 Mbps).
+NFR-3: The system shall be able to handle at least 100 concurrent users viewing product reviews and ratings without performance degradation (defined as page load times exceeding 5 seconds).
+NFR-4: The review and rating display shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+NFR-5: The review and rating display should be accessible to users with disabilities, adhering to WCAG 2.1 Level AA guidelines.
+NFR-6: The system shall securely store customer review data, protecting it from unauthorized access or modification.
+",567,1797,15,6,3,3,2,2.64,147,406,553,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews on the product details page, ordered by most recent first.
+
+FR-2: The system shall display an average customer rating for each product, calculated as the arithmetic mean of all submitted ratings.
+
+FR-3: The system shall display the total number of customer reviews and ratings for each product.
+
+FR-4: The system shall allow users to filter displayed reviews by rating (e.g., 5-star, 4-star, etc.).
+
+FR-5: The system shall display a maximum of 10 customer reviews per page, with pagination for accessing additional reviews.
+
+NFR-1: The average customer rating shall be calculated and displayed within 0.5 seconds of the product details page loading.
+
+NFR-2: The customer reviews shall be displayed on the product details page within 2 seconds of the page loading.
+
+NFR-3: The system shall be able to handle at least 100 concurrent users viewing product reviews without performance degradation (response time exceeding 3 seconds).
+",567,978,8,3,3,2,2,1.65,147,220,367,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to view customer reviews and ratings for products.
+","Okay, here's the breakdown of the user story ""As a customer, I want to be able to view customer reviews and ratings for products"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Product Page Display:** The system shall display customer reviews and ratings on each product page.
+*   **FR-2: Review Content:** The system shall display the following information for each review:
+    *   Customer's name (or alias, if chosen)
+    *   Date of the review
+    *   Rating (e.g., a star rating from 1 to 5)
+    *   Review text (customer's written comments)
+*   **FR-3: Rating Aggregation:** The system shall calculate and display the average rating for each product, based on all submitted customer ratings.
+*   **FR-4: Review Sorting:** The system shall allow customers to sort reviews by:
+    *   Most recent
+    *   Highest rating
+    *   Lowest rating
+    *   Most helpful (if a ""helpful"" voting mechanism is implemented - see FR-6)
+*   **FR-5: Review Pagination:** The system shall implement pagination for reviews if the number of reviews exceeds a defined limit (e.g., 10 reviews per page).
+*   **FR-6: Review Helpfulness (Optional):** The system shall allow customers to mark reviews as ""helpful"" or ""not helpful."" (This adds a feature to improve review filtering).
+*   **FR-7: Report Inappropriate Reviews:** The system shall allow customers to report reviews as inappropriate or violating community guidelines.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Page Load Time:** The product page, including reviews and ratings, shall load within 3 seconds under normal load conditions.
+*   **NFR-2: Data Storage:** Customer reviews and ratings shall be stored securely in the database.
+*   **NFR-3: Data Consistency:** The average rating displayed shall be updated within 1 minute of a new review or rating being submitted.
+*   **NFR-4: Scalability:** The system shall be able to handle a large number of reviews and ratings without significant performance degradation (e.g., support at least 10,000 reviews per product).
+*   **NFR-5: Accessibility:** The display of reviews and ratings shall be accessible to users with disabilities, adhering to WCAG (Web Content Accessibility Guidelines) 2.1 Level AA.
+*   **NFR-6: Security:** The system shall prevent unauthorized modification or deletion of customer reviews and ratings.
+",1459,2439,13,6,3,1,1,3.76,333,579,912,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to view customer reviews and ratings for products.
+","Okay, here's the user story ""As a customer, I want to be able to view customer reviews and ratings for products"" converted into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements:
+
+**Requirements:**
+
+*   **FR-1: Product Review Display:** The system shall display customer reviews and ratings on each product page.
+
+*   **FR-2: Rating Display:** The system shall display an average rating for each product, calculated from all customer ratings.
+
+*   **FR-3: Review Content:** Each displayed review shall include the following information:
+    *   Customer's name (or alias, if provided)
+    *   Date of the review
+    *   Rating (e.g., a star rating or numerical score)
+    *   Review text
+
+*   **FR-4: Review Sorting:** The system shall allow customers to sort reviews by:
+    *   Most recent
+    *   Highest rating
+    *   Lowest rating
+    *   Most helpful (if a 'helpful' voting mechanism is implemented)
+
+*   **FR-5: Pagination:** The system shall implement pagination for reviews if a product has more than 10 reviews, displaying a maximum of 10 reviews per page.
+
+*   **FR-6: Review Filtering:** The system shall allow customers to filter reviews by rating (e.g., show only 5-star reviews).
+
+*   **NFR-1: Review Loading Time:** The customer reviews and ratings shall load within 2 seconds of the product page loading under normal load conditions.
+
+*   **NFR-2: Data Integrity:** The system shall ensure that displayed average ratings are accurately calculated and updated in real-time when new reviews are submitted.
+
+*   **NFR-3: Accessibility:** The review section and its controls shall be accessible to users with disabilities, adhering to WCAG 2.1 AA guidelines.
+",1459,1735,9,3,3,1,1,2.66,333,408,741,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to view customer reviews and ratings for products.
+","Okay, let's break down the user story ""As a customer, I want to be able to view customer reviews and ratings for products"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional software requirements.
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Product Page Display:** The system shall display customer reviews and ratings on each product page.
+*   **FR-2: Rating Display:** The system shall display the average customer rating for each product, represented numerically (e.g., out of 5 stars) and visually (e.g., star icons).
+*   **FR-3: Review Display:** The system shall display individual customer reviews, including the reviewer's (anonymized) username or alias, the date of the review, and the review text.
+*   **FR-4: Review Sorting:** The system shall allow users to sort reviews by criteria such as:
+    *   Most recent
+    *   Highest rating
+    *   Lowest rating
+    *   Most helpful (if a ""helpful"" voting mechanism is implemented)
+*   **FR-5: Pagination/Loading:** The system shall implement pagination or infinite scrolling for product reviews to handle a large number of reviews gracefully.
+*   **FR-6: Filtering:** The system shall allow customers to filter reviews based on star rating.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Performance:** The loading of reviews and ratings on a product page shall complete within 2 seconds under normal load conditions (defined as X concurrent users).
+*   **NFR-2: Scalability:** The system shall be able to handle up to Y reviews per product without significant performance degradation (e.g., loading time remains below 3 seconds).
+*   **NFR-3: Data Integrity:** Customer ratings and reviews shall be stored securely and accurately, ensuring data integrity.
+*   **NFR-4: Accessibility:** The display of reviews and ratings shall be accessible to users with disabilities, adhering to WCAG (Web Content Accessibility Guidelines) Level AA standards.
+*   **NFR-5: Security:** The system shall prevent malicious users from injecting harmful scripts or content within reviews. The system shall sanitize input before displaying it.
+",1459,2136,11,5,3,2,1,3.07,333,479,812,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall display customer reviews and ratings on the product details page.
+FR-2: The system shall display the average rating for each product, calculated from all customer ratings.
+FR-3: The system shall allow customers to sort reviews by date (newest to oldest, oldest to newest).
+FR-4: The system shall allow customers to filter reviews by rating (e.g., show only 5-star reviews).
+FR-5: The system shall display a maximum of 10 reviews per page, with pagination for accessing additional reviews.
+FR-6: The system shall display the reviewer's username (or a pseudonym) and the date of the review.
+FR-7: The system shall display the full text of each customer review.
+FR-8: The system shall display a visual representation of the rating (e.g., star icons) alongside each review.
+FR-9: The system shall handle cases where no reviews exist for a product, displaying a message indicating that no reviews are currently available.
+
+NFR-1: The product details page, including reviews and ratings, shall load within 3 seconds.
+NFR-2: The system shall be able to handle at least 100 concurrent users viewing product reviews without performance degradation.
+NFR-3: The review display shall be compatible with major web browsers (Chrome, Firefox, Safari, Edge) and mobile devices (iOS and Android).
+NFR-4: The system shall ensure the integrity of review data, preventing unauthorized modification or deletion of reviews.
+NFR-5: The system shall adhere to accessibility guidelines (e.g., WCAG) to ensure usability for users with disabilities.
+",1626,1546,14,5,3,2,1,2.44,377,355,732,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall display the average customer rating for each product on the product details page.
+FR-2: The system shall display individual customer reviews for each product on the product details page.
+FR-3: The system shall allow customers to sort reviews by date (most recent first, oldest first).
+FR-4: The system shall allow customers to filter reviews by rating (e.g., show only 5-star reviews).
+FR-5: The system shall paginate the reviews, displaying a maximum of 10 reviews per page.
+FR-6: The system shall display the customer's username and the date of the review alongside each review.
+FR-7: The system shall display a title for each review, if provided by the customer.
+FR-8: The system shall display a ""No reviews yet"" message if a product has no reviews.
+
+NFR-1: The product details page, including customer reviews and ratings, shall load in under 3 seconds.
+NFR-2: The review and rating data shall be stored securely to prevent unauthorized modification.
+NFR-3: The review display shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+NFR-4: The system shall be able to handle at least 100 concurrent users viewing product reviews without performance degradation.
+NFR-5: The system shall ensure that the average rating calculation is accurate to at least two decimal places.
+",1626,1336,13,5,3,2,1,2.45,377,310,687,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall display customer reviews and ratings on the product details page.
+FR-2: The system shall display an average customer rating for each product, calculated from all individual customer ratings.
+FR-3: The system shall allow customers to sort reviews by date (most recent first, oldest first), rating (highest first, lowest first), and helpfulness (most helpful first).
+FR-4: The system shall display a maximum of 10 reviews per page, with pagination to navigate through additional reviews.
+FR-5: The system shall display the customer's username or alias alongside their review.
+FR-6: The system shall display the date and time the review was submitted.
+FR-7: The system shall allow customers to mark reviews as helpful or not helpful.
+FR-8: The system shall display the number of helpful/not helpful votes for each review.
+FR-9: The system shall filter out reviews marked as spam or flagged for inappropriate content by administrators.
+FR-10: The system shall display a star rating (1-5 stars) representing the customer's rating for each review.
+FR-11: The system shall provide a summary of the rating distribution (e.g., number of 5-star reviews, 4-star reviews, etc.).
+
+NFR-1: The product details page, including reviews and ratings, shall load within 3 seconds.
+NFR-2: The system shall be able to handle at least 100 concurrent users viewing product reviews without performance degradation.
+NFR-3: The customer review and rating data shall be stored securely, protecting customer privacy.
+NFR-4: The review display shall be accessible and usable on desktop and mobile devices with standard web browsers.
+NFR-5: The review display shall adhere to accessibility guidelines (WCAG 2.1 Level AA).
+NFR-6: The average rating calculation shall be accurate to at least two decimal places.
+NFR-7: The system shall be available 24/7, with a maximum downtime of 0.1% per month.
+NFR-8: The system shall prevent automated bots from posting fake reviews through CAPTCHA or similar mechanisms.
+",1626,2000,19,8,3,2,1,3.17,377,468,845,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART software requirements for the user story, followed by an evaluation and final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve customer reviews and ratings from the ""Reviews"" database table.
+FR-2: The system shall display reviews in descending order of submission date.
+FR-3: The system shall use a REST API endpoint ""/products/{product_id}/reviews"" to serve review data.
+NFR-1: The API endpoint shall respond within 200ms for 95% of requests.
+NFR-2: The system shall use caching to minimize database load.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The product page shall display an average customer rating (out of 5 stars) for each product.
+FR-2: Users shall be able to view at least 5 customer reviews per page, with pagination for additional reviews.
+FR-3: Each review shall display the customer's name (or alias), rating (out of 5 stars), and review text.
+NFR-1: The average customer rating shall be updated within 5 minutes of a new review being submitted.
+NFR-2: The review section of the product page shall load within 3 seconds.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: Only registered customers shall be able to submit reviews.
+FR-2: Reviews shall be limited to a maximum of 500 characters.
+FR-3: The system shall calculate the average product rating based on all approved reviews.
+NFR-1: The system shall store review data securely, complying with data privacy regulations.
+NFR-2: The system shall automatically flag reviews containing prohibited content (e.g., profanity) for moderation.
+",1241,1638,15,6,3,2,2,2.52,272,396,668,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve customer reviews from the ""Reviews"" database table.
+FR-2: The system shall display reviews in descending order of submission timestamp.
+FR-3: The system shall use AJAX to load reviews dynamically without page refresh.
+NFR-1: The review retrieval process shall have a maximum latency of 500 milliseconds.
+NFR-2: The system shall support a minimum of 10 concurrent users accessing reviews.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The product page shall display an average customer rating out of 5 stars.
+FR-2: Each review shall display the reviewer's username and date of review.
+FR-3: Users shall be able to filter reviews by rating (1-5 stars).
+NFR-1: The average rating shall be prominently displayed above the review list.
+NFR-2: The page load time for reviews shall be less than 2 seconds on desktop and 3 seconds on mobile.
+FR-4: The user should be able to view at least 10 reviews per page.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: Only registered users who have purchased the product can submit a review.
+FR-2: Reviews must be approved by an administrator before being displayed.
+FR-3: The system shall prevent duplicate reviews from the same user for the same product.
+NFR-1: The review approval process shall have a maximum turnaround time of 24 hours.
+NFR-2: The system shall store reviews securely, protecting user data and preventing unauthorized access.
+FR-4: Reviews should be limited to 500 characters.
+",1241,1555,17,6,3,2,2,2.62,272,378,650,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve product reviews from the ""Reviews"" database table.
+FR-2: The system shall display reviews in ascending order based on the ""ReviewDate"" field.
+FR-3: The system shall utilize the ""RateLimit"" API to prevent excessive review requests.
+NFR-1: The average database query response time for retrieving reviews shall be less than 200ms.
+NFR-2: The system shall be able to handle up to 100 concurrent requests for product reviews without performance degradation.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: Users shall be able to view a list of customer reviews for a specific product.
+FR-2: Users shall be able to see the overall rating (average) for a product, displayed as a star rating out of 5 stars.
+FR-3: Users shall be able to filter reviews based on rating (e.g., ""5-star reviews only"").
+FR-4: Each review shall display the reviewer's name (or alias) and the date of the review.
+NFR-1: The product review section shall load within 3 seconds.
+NFR-2: The product review display shall be responsive and render correctly on desktop and mobile devices.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall only display reviews that meet the minimum length requirement of 20 characters.
+FR-2: The system shall mask any personally identifiable information (PII) in the reviews before display.
+FR-3: The system shall calculate the average product rating based on valid review scores (1-5).
+FR-4: The system shall flag reviews for moderation if they contain prohibited content based on a pre-defined list of keywords.
+NFR-1: Review data shall be stored securely, complying with GDPR regulations.
+NFR-2: The system shall maintain an audit log of all review modifications and flags.
+
+**FINAL RECOMMENDATION**
+
+Here's the most effective set of requirements:
+
+FR-1: Users shall be able to view a list of customer reviews for a specific product.
+FR-2: Users shall be able to see the overall rating (average) for a product, displayed as a star rating out of 5 stars.
+FR-3: Users shall be able to filter reviews based on rating (e.g., ""5-star reviews only"").
+FR-4: Each review shall display the reviewer's name (or alias) and the date of the review.
+NFR-1: The product review section shall load within 3 seconds.
+NFR-2: The product review display shall be responsive and render correctly on desktop and mobile devices.
+",1241,2441,23,8,3,2,1,3.60,272,595,867,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews for a specific product on the product details page. (Measurable: Reviews are displayed; Achievable: Data exists; Relevant: Directly addresses user story; Time-bound: Implemented by next sprint)
+
+FR-2: The system shall display the average customer rating for a product, calculated from all submitted reviews, on the product details page. (Measurable: Average rating is displayed; Achievable: Calculation logic exists; Relevant: Directly addresses user story; Time-bound: Implemented by next sprint)
+
+FR-3: The system shall allow customers to sort reviews by date (newest to oldest and oldest to newest). (Measurable: Reviews are sorted correctly; Achievable: Sorting functionality exists; Relevant: Enhances user experience; Time-bound: Implemented by next sprint)
+
+FR-4: The system shall allow customers to filter reviews by rating (e.g., 5-star, 4-star, etc.). (Measurable: Reviews are filtered correctly; Achievable: Filtering functionality exists; Relevant: Enhances user experience; Time-bound: Implemented by next sprint)
+
+FR-5: The system shall display a maximum of 10 reviews per page, with pagination for accessing additional reviews. (Measurable: Page limits and pagination work correctly; Achievable: Pagination logic exists; Relevant: Improves performance; Time-bound: Implemented by next sprint)
+
+NFR-1: The product details page, including customer reviews and ratings, shall load within 3 seconds for 95% of users. (Measurable: Page load time; Achievable: Optimization techniques exist; Relevant: Improves user experience; Time-bound: Continuously monitored)
+
+NFR-2: The system shall ensure that customer reviews are stored securely and protected from unauthorized access. (Measurable: Access control mechanisms are in place; Achievable: Security protocols exist; Relevant: Protects user data; Time-bound: Implemented and audited quarterly)
+
+NFR-3: The system shall be able to handle at least 100 concurrent users viewing product reviews without performance degradation. (Measurable: System performance under load; Achievable: Load testing and optimization; Relevant: Ensures scalability; Time-bound: Tested monthly)
+
+NFR-4: The system shall display reviews in a clear and readable font size (minimum 12pt) and contrast ratio (minimum 4.5:1) to ensure accessibility for users with visual impairments. (Measurable: Font size and contrast ratio; Achievable: CSS styling; Relevant: Improves accessibility; Time-bound: Implemented by next sprint)
+",783,2504,9,4,3,2,1,3.59,186,539,725,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews for a specific product on the product details page. Reviews shall be displayed in chronological order by default (newest first). (Achievable, Relevant, Time-bound: Within the next sprint - 2 weeks)
+
+FR-2: The system shall display an average rating (out of 5 stars) for each product, calculated from all valid customer reviews. (Achievable, Relevant, Time-bound: Within the next sprint - 2 weeks)
+
+FR-3: The system shall allow customers to filter reviews based on rating (e.g., show only 5-star reviews, show only 1-star reviews). (Achievable, Relevant, Time-bound: Within the next sprint - 2 weeks)
+
+FR-4: The system shall display a maximum of 10 reviews per page. (Specific, Measurable, Achievable, Relevant, Time-bound: Within the next sprint - 2 weeks)
+
+FR-5: The system shall provide pagination for product reviews if the total number of reviews exceeds 10, allowing users to navigate to subsequent pages of reviews. (Specific, Measurable, Achievable, Relevant, Time-bound: Within the next sprint - 2 weeks)
+
+FR-6: The system shall display the date of each review alongside the review text. (Specific, Measurable, Achievable, Relevant, Time-bound: Within the next sprint - 2 weeks)
+
+NFR-1: The product review display shall load within 3 seconds on a standard desktop internet connection (10 Mbps download). (Specific, Measurable, Achievable, Relevant, Time-bound: Continuously monitored)
+
+NFR-2: The system shall be able to handle at least 100 concurrent users viewing product reviews without performance degradation (response time exceeding 5 seconds). (Specific, Measurable, Achievable, Relevant, Time-bound: Continuously monitored)
+
+NFR-3: The product review data shall be stored securely, protecting customer anonymity and preventing unauthorized modification of review content. (Specific, Measurable, Achievable, Relevant, Time-bound: Audited monthly)
+
+NFR-4: The system shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers on desktop and mobile devices. (Specific, Measurable, Achievable, Relevant, Time-bound: Continuously tested)
+
+NFR-5: The average product rating shall be updated within 1 minute of a new review being submitted. (Specific, Measurable, Achievable, Relevant, Time-bound: Continuously monitored)
+",783,2310,11,5,5,2,2,3.29,186,541,727,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements derived from the user story, following the SMART criteria:
+
+FR-1: The system shall display an average customer rating for each product, calculated from all submitted ratings, within 1 second of the product page loading.
+
+FR-2: The system shall display a list of individual customer reviews for a product, showing the reviewer's name (or a pseudonym), the date of the review, the rating given (using a consistent visual representation, e.g., stars), and the review text. This list should be sortable by date (newest first, oldest first) and rating (highest first, lowest first) within 2 seconds of a user selection.
+
+FR-3: The system shall allow customers to filter displayed reviews based on a specific rating (e.g., show only 5-star reviews) within 1 second of filter selection.
+
+FR-4: The system shall display a message indicating that ""No reviews are available"" if a product has not received any customer reviews, within 0.5 seconds of the product page loading.
+
+FR-5: The system shall limit the display of reviews to the 10 most recent reviews per page, and provide pagination allowing users to view older reviews. Pagination controls must load within 0.5 seconds.
+
+NFR-1: The system shall maintain a data retention policy to keep all customer reviews and ratings available for a minimum of 2 years from the date of submission.
+
+NFR-2: The system shall ensure the integrity of displayed ratings by validating all new ratings to be on a scale of 1-5 (inclusive). Attempts to submit ratings outside this range shall be rejected with a user-friendly error message displayed within 1 second.
+
+NFR-3: The system shall be able to handle a concurrent load of 1000 users viewing product reviews without performance degradation (response times for review display should remain under 2 seconds) as measured by load testing every quarter.
+
+NFR-4: All customer reviews shall be stored securely, adhering to relevant data privacy regulations (e.g., GDPR, CCPA) as demonstrated by yearly compliance audits.
+
+NFR-5: The system shall ensure that customer reviews and ratings are consistently displayed across all supported browsers and devices (desktop, mobile, tablet) as determined by regression testing performed for each release.
+",783,2278,10,5,4,2,3,3.48,186,488,674,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews and ratings on the product detail page.
+
+FR-2: The system shall allow customers to sort reviews by date (newest to oldest, oldest to newest), rating (highest to lowest, lowest to highest), and helpfulness (most helpful to least helpful).
+
+FR-3: The system shall display the average rating for each product, calculated from all submitted customer ratings.
+
+FR-4: The system shall display the total number of reviews for each product.
+
+FR-5: The system shall allow customers to filter reviews based on star rating (e.g., show only 5-star reviews).
+
+FR-6: The system shall implement a pagination mechanism to display reviews in manageable chunks (e.g., 10 reviews per page).
+
+FR-7: The system shall display the customer's name (or a pseudonym if preferred) and the date of the review alongside each review.
+
+FR-8: The system shall allow customers to mark reviews as helpful or not helpful.
+
+FR-9: The system shall display the number of ""helpful"" votes for each review.
+
+FR-10: The system shall provide a mechanism for reporting inappropriate reviews (e.g., offensive language, spam).
+
+FR-11: The system shall integrate with the existing user authentication system to ensure only logged-in users can submit reviews.
+
+FR-12: The system shall validate review content to prevent submission of empty or excessively long reviews.
+
+FR-13: The system shall limit the number of reviews a single customer can submit for a single product (e.g., one review per product purchased).
+
+FR-14: The system shall display a visual representation of the rating distribution (e.g., a bar chart showing the number of 5-star, 4-star, 3-star, 2-star, and 1-star reviews).
+
+FR-15: The system shall support displaying reviews in multiple languages based on the user's language preference.
+
+NFR-1: The product detail page, including reviews, shall load within 3 seconds.
+
+NFR-2: The system shall be able to handle at least 100 concurrent users viewing reviews without performance degradation.
+
+NFR-3: The review data shall be stored securely, protecting customer privacy and preventing unauthorized access.
+
+NFR-4: The system shall be compliant with all relevant data privacy regulations (e.g., GDPR, CCPA).
+
+NFR-5: The system shall be designed for maintainability, with clear code structure and comprehensive documentation.
+
+NFR-6: The system shall be scalable to accommodate a growing number of products and reviews.
+
+NFR-7: The system shall be available 24/7 with a guaranteed uptime of 99.9%.
+
+NFR-8: The system shall be accessible to users with disabilities, adhering to WCAG 2.1 AA accessibility guidelines.
+
+NFR-9: The system shall be monitored for performance and errors, with alerts triggered for critical issues.
+
+NFR-10: The system shall be tested thoroughly to ensure functionality, performance, security, and usability.
+",1038,2850,25,10,2,2,1,4.20,226,665,891,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements based on the user story:
+
+FR-1: The system shall display customer reviews and ratings on the product details page.
+
+FR-2: The system shall allow customers to sort reviews by date (newest to oldest, oldest to newest), rating (highest to lowest, lowest to highest), and helpfulness (most helpful to least helpful).
+
+FR-3: The system shall display an average rating for each product, calculated from all submitted customer ratings.
+
+FR-4: The system shall allow customers to filter reviews based on a star rating (e.g., show only 5-star reviews).
+
+FR-5: The system shall display a summary of the rating distribution (e.g., a bar graph showing the number of 1-star, 2-star, 3-star, 4-star, and 5-star ratings).
+
+FR-6: The system shall display a customer's verified purchase status (if applicable) next to their review.
+
+FR-7: The system shall allow customers to mark reviews as helpful or not helpful.
+
+FR-8: The system shall provide a reporting mechanism for inappropriate reviews.
+
+FR-9: The system shall paginate reviews, displaying a defined number of reviews per page (e.g., 10 reviews per page).
+
+FR-10: The system shall display the customer's name (or a pseudonym if preferred) and the date of the review.
+
+NFR-1: The product review display shall load within 3 seconds for 95% of users.
+
+NFR-2: The system shall be able to handle at least 10,000 concurrent users viewing reviews without performance degradation.
+
+NFR-3: The review data shall be stored securely, adhering to privacy regulations (e.g., GDPR, CCPA) regarding personal data.
+
+NFR-4: The system shall be designed to prevent malicious users from manipulating review ratings or submitting fraudulent reviews.
+
+NFR-5: The system shall be monitored for performance and availability, with alerts triggered for any issues.
+
+NFR-6: The system shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+
+NFR-7: The review display shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+
+NFR-8: The system shall be designed for maintainability, with clear code documentation and modular architecture.
+
+NFR-9: The system shall integrate with existing authentication and authorization services.
+",1038,2265,19,9,3,2,1,3.63,226,531,757,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the requirements for the user story ""As a customer, I want to be able to view customer reviews and ratings for products,"" ready for development team implementation:
+
+FR-1: The system shall display an average customer rating for each product, calculated from all approved customer reviews, with a precision of one decimal place (e.g., 4.5 stars).
+
+FR-2: The system shall display the total number of customer reviews associated with each product.
+
+FR-3: The system shall display individual customer reviews, showing the review title, rating (represented visually, e.g., using stars), review text, and the date the review was submitted.
+
+FR-4: The system shall allow customers to sort reviews by date (newest to oldest, oldest to newest), rating (highest to lowest, lowest to highest), and helpfulness (most helpful to least helpful).
+
+FR-5: The system shall implement pagination for customer reviews, displaying a maximum of 10 reviews per page, with controls to navigate between pages.
+
+FR-6: The system shall include a mechanism for customers to mark reviews as ""helpful"" or ""not helpful.""
+
+FR-7: The system shall display the number of ""helpful"" votes for each review.
+
+FR-8: The system shall support the display of product reviews and ratings on both desktop and mobile devices (responsive design).
+
+FR-9: The system shall integrate with the existing product catalog to retrieve product information for display alongside reviews.
+
+FR-10: The system shall provide an administrative interface for moderating reviews, allowing administrators to approve, edit, or delete reviews.
+
+NFR-1: The average response time for displaying product reviews and ratings shall be less than 3 seconds under normal load (defined as up to 100 concurrent users per product).
+
+NFR-2: The system shall maintain data consistency between the product catalog and the reviews database. Any changes to product information must be reflected in the review display within 5 minutes.
+
+NFR-3: The system shall be designed to handle at least 10,000 customer reviews per product without significant performance degradation (defined as response time increasing by more than 20%).
+
+NFR-4: Customer reviews and ratings shall be stored securely, protecting against unauthorized access and modification. The system shall comply with all applicable data privacy regulations (e.g., GDPR, CCPA).
+
+NFR-5: The system shall be monitored to detect and alert on any performance issues or errors related to the review and rating display.
+
+NFR-6: The system shall be designed to be easily maintainable and extensible. Code shall be well-documented and adhere to established coding standards.
+",1038,2651,16,6,4,2,1,3.81,226,559,785,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Contextual,precise,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display an average customer rating for each product, calculated from all submitted ratings, within 0.5 seconds of the product page loading.
+
+FR-2: The system shall allow customers to submit a rating (on a scale of 1 to 5 stars) and a text review for a product after they have placed an order containing that product.
+
+FR-3: The system shall display customer reviews and ratings in chronological order, with the most recent review appearing first, on the product page.
+
+FR-4: The system shall integrate with the existing order management system to verify that a customer has purchased a product before allowing them to submit a review for that product.
+
+FR-5: The system shall allow customers to flag reviews as inappropriate.
+
+FR-6: The system shall allow administrators to remove inappropriate reviews within 1 business day of being flagged.
+
+NFR-1: The system shall be able to handle at least 100 concurrent users submitting reviews during peak hours (6 PM - 8 PM) without performance degradation (response time exceeding 2 seconds).
+
+NFR-2: The system shall store customer reviews and ratings in a secure database, compliant with PCI DSS standards, accessible only through authenticated API calls.
+
+NFR-3: The system shall monitor the number of reviews submitted per hour and alert administrators if there is a significant deviation ( +/- 20%) from the average.
+
+NFR-4: The system shall log all errors encountered during review submission and display a user-friendly error message to the customer within 1 second.
+
+NFR-5: The system shall ensure that the product page loading time, including the display of reviews and ratings, does not exceed 3 seconds on a standard broadband connection (25 Mbps download speed).
+
+NFR-6: The system shall provide a clear and intuitive interface for submitting reviews, with clear instructions and error messages, achieving a usability score of at least 4 out of 5 on a System Usability Scale (SUS) test.
+
+NFR-7: The system shall be available 99.9% of the time, excluding scheduled maintenance windows (maximum 2 hours per month).
+",743,2091,13,7,5,3,3,3.16,175,452,627,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Contextual,default,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display an average customer rating (on a 5-star scale) for each product, calculated from all submitted reviews.
+
+FR-2: The system shall display individual customer reviews for each product, including the reviewer's name (or a pseudonym), the date of the review, and the review text.
+
+FR-3: The system shall retrieve product review data from the existing product catalog database (Table: `ProductReviews`, Fields: `ProductID`, `ReviewerID`, `ReviewDate`, `Rating`, `ReviewText`) via API endpoint `/api/products/{productID}/reviews` within 200ms.
+
+FR-4: The system shall integrate with the existing user authentication system to display a reviewer's name (or a pseudonym) based on their `ReviewerID`.
+
+FR-5: The system shall support pagination for reviews, displaying a maximum of 10 reviews per page, with navigation to subsequent pages.
+
+NFR-1: The average rating for a product shall be calculated and displayed within 500ms under peak load (defined as 500 concurrent users accessing product pages with reviews).
+
+NFR-2: The system shall log any errors encountered while retrieving or displaying reviews to the central logging system, including the error message, timestamp, and ProductID.
+
+NFR-3: The review display shall be responsive and adapt to various screen sizes (desktop, tablet, mobile) with a load time of under 3 seconds on a 3G network.
+
+NFR-4: The API endpoint `/api/products/{productID}/reviews` shall maintain an availability of 99.9% during business hours (7:00 AM to 10:00 PM local time).
+
+NFR-5: The font size and contrast of the review text shall adhere to WCAG 2.1 AA accessibility guidelines to ensure readability for users with visual impairments.
+",743,1694,10,5,5,3,3,2.90,175,402,577,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Contextual,creative,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display an average customer rating (on a scale of 1 to 5 stars, with half-star increments allowed) for each product, calculated from all submitted customer reviews.
+
+FR-2: Customers shall be able to submit a review (text field, maximum 500 characters) and a rating (1 to 5 stars) for a product after they have placed and received an order containing that product.
+
+FR-3: The system shall display the most recent 10 customer reviews per product, sorted by date of submission (newest first), along with the reviewer's name (displayed as ""[First Name] [Last Initial]."") and date of review.
+
+FR-4: The product details page shall integrate with the existing order management system to verify if the user has placed and received an order containing the product before allowing them to submit a review.
+
+FR-5: The system shall integrate with the existing user authentication system to identify the user submitting the review and associate it with their account.
+
+NFR-1: The average product rating and the list of reviews shall load on the product details page within 2 seconds under normal load (up to 100 concurrent users).
+
+NFR-2: The average product rating and the list of reviews shall load on the product details page within 5 seconds under peak load (up to 500 concurrent users).
+
+NFR-3: The system shall handle a minimum of 10 review submissions per minute without performance degradation.
+
+NFR-4: Any errors encountered during review submission (e.g., database connection failure) shall be logged with relevant details (timestamp, user ID, product ID, error message) for monitoring and debugging purposes.
+
+NFR-5: The user interface for submitting reviews shall be intuitive and accessible, adhering to WCAG 2.1 Level AA accessibility guidelines.
+
+NFR-6: The system shall include monitoring to track the number of reviews submitted per day and average review ratings per product. Thresholds shall be set to trigger alerts if there are significant deviations (e.g., a sudden surge in negative reviews).
+
+NFR-7: All review data shall be stored securely, complying with relevant data privacy regulations (e.g., GDPR, CCPA) and protecting against unauthorized access or modification.
+",743,2204,12,7,4,1,1,3.13,175,480,655,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews and ratings on the product detail page.
+FR-2: The system shall display the average rating for each product, calculated from all customer ratings.
+FR-3: Customers shall be able to sort reviews by date (newest to oldest, oldest to newest), rating (highest to lowest, lowest to highest), and helpfulness (most helpful to least helpful).
+FR-4: The system shall allow customers to filter reviews based on star rating (e.g., show only 5-star reviews).
+FR-5: The system shall display the total number of reviews for each product.
+FR-6: The system shall allow customers to mark reviews as helpful or not helpful.
+FR-7: The system shall paginate reviews, displaying a maximum of 10 reviews per page.
+FR-8: The system shall display the customer's name (or a pseudonym) and the date of the review.
+FR-9: The system shall allow customers to report reviews that violate community guidelines.
+
+NFR-1: The product detail page, including reviews and ratings, shall load within 3 seconds.
+NFR-2: The system shall be able to handle at least 100 concurrent users viewing reviews without performance degradation.
+NFR-3: Customer reviews shall be stored securely and in compliance with privacy regulations (e.g., GDPR, CCPA).
+NFR-4: The system shall be available 99.9% of the time.
+NFR-5: The review display shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+NFR-6: The system shall prevent automated bots from submitting fake reviews.
+",1722,1495,15,6,3,2,1,2.45,388,358,746,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews and ratings on the product details page.
+FR-2: The system shall allow customers to sort reviews by date (newest to oldest, oldest to newest), rating (highest to lowest, lowest to highest), and relevance.
+FR-3: The system shall display the average rating for each product, calculated from all customer reviews.
+FR-4: The system shall display the total number of reviews for each product.
+FR-5: The system shall implement a pagination or infinite scrolling mechanism to display reviews in manageable chunks (e.g., 10 reviews per page).
+FR-6: The system shall allow customers to filter reviews based on a star rating (e.g., show only 5-star reviews).
+FR-7: The system shall display the customer's name (or a pseudonym) and the date of the review alongside each review.
+FR-8: The system shall prevent displaying reviews marked as inappropriate after moderation.
+
+NFR-1: The product reviews and ratings shall load within 3 seconds of the product details page loading.
+NFR-2: The system shall be able to handle at least 100 concurrent users viewing product reviews without performance degradation.
+NFR-3: The system shall ensure that all customer data, including reviews, is stored securely and in compliance with privacy regulations (e.g., GDPR).
+NFR-4: The system shall be accessible to users with disabilities, adhering to WCAG 2.1 AA accessibility guidelines.
+NFR-5: The system shall log all errors encountered while retrieving or displaying reviews for debugging purposes.
+NFR-6: The system shall be available 99.9% of the time.
+",1722,1576,14,6,2,2,1,2.55,388,363,751,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews and ratings for a product on the product details page.
+FR-2: The system shall allow users to sort reviews by date, rating (highest to lowest, lowest to highest), and helpfulness.
+FR-3: The system shall display the average rating and total number of reviews for each product.
+FR-4: The system shall paginate reviews, displaying a maximum of 10 reviews per page.
+FR-5: The system shall allow users to mark reviews as helpful or not helpful.
+FR-6: The system shall display the number of helpful votes for each review.
+
+NFR-1: The product details page, including reviews and ratings, shall load within 3 seconds.
+NFR-2: The system shall store customer reviews and ratings data securely, complying with relevant privacy regulations (e.g., GDPR, CCPA).
+NFR-3: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+NFR-4: The system shall handle a minimum of 100 concurrent users viewing product reviews without performance degradation.
+NFR-5: The system shall be compatible with major web browsers (Chrome, Firefox, Safari, Edge) and mobile devices (iOS and Android).
+",1722,1138,11,5,2,2,1,1.94,388,270,658,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews and ratings for a specific product.
+FR-2: The system shall allow customers to sort reviews by date, rating (highest to lowest, lowest to highest), and helpfulness.
+FR-3: The system shall require a product identifier to retrieve and display reviews and ratings.
+FR-4: The system shall store customer reviews and ratings, including the customer's username (or anonymized ID), rating (on a scale of 1-5 stars), review text, and timestamp.
+FR-5: The system shall display an error message if no reviews are available for a product.
+FR-6: The system shall provide a mechanism for reporting inappropriate or abusive reviews to administrators.
+NFR-1: The system shall display reviews and ratings within 3 seconds of the product page loading.
+NFR-2: The review display shall be easily readable and accessible on various screen sizes (desktop, tablet, mobile).
+NFR-3: The system shall protect customer data and prevent unauthorized modification or deletion of reviews.
+",1788,1007,9,3,3,3,1,1.85,426,223,649,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display customer reviews and ratings for a selected product.
+FR-2: The system shall allow customers to sort reviews by date, rating (highest to lowest and lowest to highest), and helpfulness.
+FR-3: The system shall require a product to be selected before displaying reviews and ratings.
+FR-4: The system shall store customer reviews and ratings associated with the corresponding product ID.
+FR-5: The system shall display an error message if no reviews are available for a selected product.
+FR-6: The system shall log failed attempts to retrieve reviews and notify the administrator if the failure rate exceeds 5% within a 24-hour period.
+NFR-1: The system shall display the reviews and ratings within 3 seconds of product selection.
+NFR-2: The customer review section shall adhere to WCAG 2.1 Level AA accessibility guidelines.
+NFR-3: The system shall protect customer reviews and ratings from unauthorized modification.
+",1788,945,9,3,4,3,2,1.72,426,209,635,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to view customer reviews and ratings for products.', 'context': 'Online food ordering service'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to view customer reviews and ratings for products.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Display a list of customer reviews and an average customer rating for each product.
+FR-2: Allow users to sort customer reviews by date (newest to oldest and oldest to newest), rating (highest to lowest and lowest to highest), and helpfulness.
+FR-3: Product details page should load before customer reviews and ratings are displayed.
+FR-4: Each review should display the reviewer's username (or an anonymized identifier), review date, rating (e.g., a star rating or numerical score), and review text.
+FR-5: If no reviews exist for a product, display a message indicating ""No reviews available for this product.""
+FR-6: Implement a mechanism to report abusive or inappropriate reviews.
+NFR-1: Customer reviews and ratings should load within 3 seconds.
+NFR-2: The customer review section should be easily identifiable and visually distinct on the product details page.
+NFR-3: The website must comply with WCAG 2.1 Level AA accessibility guidelines for displaying and interacting with reviews and ratings.
+",1788,1007,9,3,2,2,1,1.94,426,225,651,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

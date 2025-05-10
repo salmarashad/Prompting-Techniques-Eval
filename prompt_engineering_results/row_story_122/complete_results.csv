@@ -1,0 +1,1437 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user, showing task title, description, due date, and status.
+
+FR-2: The system shall allow users to filter their assigned tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+
+FR-3: The system shall allow users to sort their assigned tasks by due date (ascending or descending).
+
+FR-4: The system shall display the number of tasks assigned to the logged-in user for each status type.
+
+NFR-1: The task list shall load within 3 seconds for users with up to 100 assigned tasks.
+
+NFR-2: The task list shall be accessible via a web browser on desktop and mobile devices (responsive design).
+
+NFR-3: The system shall authenticate users using secure password storage and industry-standard encryption.
+",595,775,7,3,4,2,1,1.63,155,187,342,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user.
+FR-2: Each task in the list shall display a title, description, due date, and status.
+FR-3: The system shall allow the user to filter the list of tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-4: The system shall allow the user to sort the list of tasks by due date (ascending or descending).
+FR-5: The task list shall be updated automatically every 5 minutes to reflect any changes.
+
+NFR-1: The task list shall load in under 3 seconds on a standard broadband connection (25 Mbps download speed).
+NFR-2: The system shall be accessible from the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+NFR-3: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+NFR-4: The task list display shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+",595,904,9,4,3,2,2,2.03,155,230,385,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user within 2 seconds of login. Measurable by automated performance testing; passing requires response time <= 2 seconds.
+
+FR-2: Each task displayed shall include the task title, description, due date, and current status (e.g., ""To Do,"" ""In Progress,"" ""Completed""). This can be verified by visually inspecting the task details displayed on the user interface.
+
+FR-3: The system shall allow users to filter their assigned tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed""). Measurable by checking if a task appears or disappears from the list when the status filter is applied.
+
+FR-4: The system shall allow users to sort their assigned tasks by due date (ascending and descending). Measurable by verifying the correct order of tasks based on their due dates.
+
+NFR-1: The task list interface shall be accessible on Chrome, Firefox, Safari, and Edge browsers. Tested by manually verifying functionality in each browser.
+
+NFR-2: The system shall be available 99.9% of the time, measured monthly. Measured through system monitoring and reporting tools.
+
+NFR-3: The task list user interface shall be responsive and adapt to different screen sizes (desktop, tablet, mobile). Verified by visual inspection and testing on devices with varying screen resolutions.
+",595,1337,7,3,3,1,2,2.36,155,293,448,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+","Okay, here's the breakdown of the user story ""As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Task List Display:** The system shall display a list of tasks assigned to the logged-in team member.
+*   **FR-2: Task Details:** The system shall allow the team member to view detailed information for each task, including:
+    *   Task title
+    *   Task description
+    *   Assigned date
+    *   Due date
+    *   Priority (e.g., High, Medium, Low)
+    *   Status (e.g., To Do, In Progress, Completed, Blocked)
+*   **FR-3: Task Filtering:** The system shall allow the team member to filter the task list by:
+    *   Status
+    *   Priority
+    *   Due Date (e.g., Today, This Week, Overdue)
+*   **FR-4: Task Sorting:** The system shall allow the team member to sort the task list by:
+    *   Due date (ascending/descending)
+    *   Priority (ascending/descending)
+*   **FR-5: Task Search:** The system shall allow the team member to search for tasks by keyword within the task title and description.
+*   **FR-6: Task Status Update:** The system shall allow the team member to update the status of their assigned tasks.
+*   **FR-7: Task Comments:** The system shall allow the team member to view and add comments to their assigned tasks.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Page Load Time:** The task list page shall load within 2 seconds under normal load conditions (defined as up to 50 concurrent users).
+*   **NFR-2: Data Accuracy:** Task information displayed shall be accurate and reflect the latest updates within 1 minute of a change being made.
+*   **NFR-3: Accessibility:** The task list shall be accessible to users with disabilities, adhering to WCAG 2.1 Level AA guidelines.
+*   **NFR-4: Security:** The system shall ensure that team members can only view and modify tasks assigned to them.
+*   **NFR-5: Responsiveness:** The task list shall be responsive and display correctly on various screen sizes (desktops, tablets, and mobile devices).
+*   **NFR-6: Scalability:** The system shall be able to handle up to 10,000 tasks per team member without significant performance degradation.
+",1487,2330,13,6,4,1,1,3.47,341,587,928,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+","Here's the breakdown of the user story into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**User Story:** As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+**Requirements:**
+
+**Functional Requirements (FR):**
+
+*   **FR-1:** The system shall provide a dedicated ""My Tasks"" section accessible to each logged-in team member.
+*   **FR-2:** The ""My Tasks"" section shall display all tasks assigned to the currently logged-in team member.
+*   **FR-3:** Each task displayed in the ""My Tasks"" section shall include the following attributes:
+    *   Task Name
+    *   Task Description
+    *   Assigned Date
+    *   Due Date
+    *   Status (e.g., To Do, In Progress, Completed, Blocked)
+    *   Priority (e.g., High, Medium, Low)
+*   **FR-4:** The system shall allow team members to filter their tasks by status (e.g., show only ""In Progress"" tasks).
+*   **FR-5:** The system shall allow team members to sort their tasks by due date (ascending or descending).
+*   **FR-6:** The system shall provide a mechanism for team members to update the status of their assigned tasks (e.g., from ""To Do"" to ""In Progress"").
+*   **FR-7:** When a task status is updated, the system shall automatically record the date and time of the update.
+*   **FR-8:** The system shall display a visual indicator for tasks that are overdue (e.g., highlight the due date in red).
+*   **FR-9:** The system shall link each task to its detailed view, allowing team members to access comprehensive information and related discussions.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1:** The ""My Tasks"" section shall load and display tasks within 2 seconds under normal load conditions (up to 50 concurrent users).
+*   **NFR-2:** The task list shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+*   **NFR-3:** The system shall maintain task data accuracy and integrity, ensuring no data loss during updates or modifications.
+*   **NFR-4:** The ""My Tasks"" section shall be accessible 24/7 with an availability rate of 99.9%.
+*   **NFR-5:** The system shall ensure that only the assigned team member can modify the status of a task.
+",1487,2244,14,5,3,1,1,3.46,341,567,908,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+","Okay, here's the breakdown of the user story ""As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional software requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1:** The system shall provide a dedicated view for team members to access their assigned tasks.
+*   **FR-2:** The system shall display the following information for each assigned task:
+    *   Task Title
+    *   Task Description
+    *   Assigned Date
+    *   Due Date
+    *   Status (e.g., To Do, In Progress, Completed, Blocked)
+    *   Priority (e.g., High, Medium, Low)
+*   **FR-3:** The system shall allow team members to filter their assigned tasks based on:
+    *   Status
+    *   Priority
+    *   Due Date (e.g., show tasks due this week, next week, overdue)
+*   **FR-4:** The system shall allow team members to sort their assigned tasks based on:
+    *   Due Date (Ascending/Descending)
+    *   Priority (Ascending/Descending)
+*   **FR-5:** The system shall visually differentiate tasks based on their status (e.g., using different colors or icons for ""To Do,"" ""In Progress,"" ""Completed"").
+*   **FR-6:** The system shall provide a mechanism for team members to mark a task as ""Completed"".
+*   **FR-7:** The system shall provide pagination if the number of assigned tasks exceeds a predetermined limit (e.g., 20 tasks per page).
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1:** The assigned tasks view shall load within 2 seconds under normal operating conditions with up to 100 assigned tasks per user.
+*   **NFR-2:** The assigned tasks view shall be accessible and usable on the following web browsers: Chrome (latest version), Firefox (latest version), Safari (latest version), and Edge (latest version).
+*   **NFR-3:** The assigned tasks view shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+*   **NFR-4:** The system shall maintain data consistency; when a task is marked as completed, the change shall be reflected immediately in the database.
+*   **NFR-5:** The system shall ensure that the task assignments are only viewable by the assigned team member and authorized administrators.
+",1487,2260,12,5,3,1,1,3.25,341,553,894,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a team member to log in using their unique credentials (username/password or SSO).
+FR-2: Upon successful login, the system shall display a personalized dashboard.
+FR-3: The dashboard shall include a section displaying a list of tasks assigned to the logged-in team member.
+FR-4: Each task in the list shall display the task title, description, due date, and current status (e.g., To Do, In Progress, Completed).
+FR-5: The task list shall be sortable by due date (ascending and descending) and status.
+FR-6: The task list shall be filterable by status.
+FR-7: The system shall provide a link or button for each task to view the full task details.
+FR-8: The system shall update the task list in real-time or within 5 seconds of a change in task assignment or status.
+FR-9: The system shall display a message if the team member has no assigned tasks.
+
+NFR-1: The system shall load the task list within 3 seconds of login.
+NFR-2: The system shall be accessible via modern web browsers (Chrome, Firefox, Safari, Edge).
+NFR-3: The system shall be available 99.9% of the time (excluding scheduled maintenance).
+NFR-4: The system shall protect task data with role-based access control, ensuring only authorized users can view and modify tasks.
+NFR-5: The user interface shall be intuitive and easy to navigate, requiring minimal training.
+NFR-6: The system shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+",1654,1460,15,6,3,2,2,2.44,385,359,744,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow team members to log in with their unique credentials (username/password).
+FR-2: The system shall display a list of tasks assigned to the logged-in team member.
+FR-3: Each task in the list shall display a title, description, status (e.g., ""To Do,"" ""In Progress,"" ""Completed""), due date, and priority (e.g., ""High,"" ""Medium,"" ""Low"").
+FR-4: The system shall allow team members to filter their assigned tasks by status, due date, and priority.
+FR-5: The system shall allow team members to sort their assigned tasks by due date and priority.
+FR-6: The system shall display the date and time of the last task list update.
+FR-7: The system shall provide a visual indicator for tasks with approaching or overdue due dates.
+
+NFR-1: The task list shall load within 3 seconds.
+NFR-2: The system shall be accessible on the latest versions of Chrome, Firefox, and Safari web browsers.
+NFR-3: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+NFR-4: User authentication shall be secured using industry-standard encryption protocols.
+NFR-5: The system shall be responsive on desktop and tablet devices.
+",1654,1149,12,5,2,2,1,2.11,385,287,672,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow team members to log in using their unique username and password.
+FR-2: Upon successful login, the system shall display a personalized dashboard for the team member.
+FR-3: The dashboard shall display a list of tasks assigned to the logged-in team member.
+FR-4: Each task in the list shall display, at minimum, the task title, description, due date, and current status.
+FR-5: The system shall allow team members to filter the task list by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-6: The system shall allow team members to sort the task list by due date (ascending or descending).
+FR-7: The system shall display a visual indicator (e.g., color-coding) for tasks that are overdue.
+FR-8: The system shall provide a link or button for each task that navigates the user to a detailed task view.
+FR-9: The system shall persist the tasks and their statuses, even after the team member logs out.
+FR-10: The system shall synchronize the displayed tasks with the central task management database in real-time or near real-time (maximum delay of 5 minutes).
+
+NFR-1: The system shall load the team member's dashboard, including the list of assigned tasks, within 3 seconds under normal operating conditions.
+NFR-2: The system shall be accessible via common web browsers (Chrome, Firefox, Safari, Edge) on desktop and mobile devices.
+NFR-3: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+NFR-4: The system shall protect team member data and tasks using role-based access control.
+NFR-5: The system shall adhere to WCAG 2.1 Level AA accessibility guidelines.
+NFR-6: The system shall be secured against common web vulnerabilities, including but not limited to SQL injection and cross-site scripting (XSS).
+",1654,1767,16,6,3,2,1,3.34,385,428,813,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of requirements, followed by the evaluation and final recommendation, formatted as requested:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve assigned tasks from the ""Tasks"" database table.
+FR-2: The system shall display tasks in a tabular format with columns: Task ID, Task Name, Status, Due Date.
+FR-3: The system shall use AJAX to update the task list without requiring a full page reload.
+NFR-1: The task list shall load within 2 seconds.
+NFR-2: The system shall use HTTPS for all communication.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The system shall display a personalized task list upon user login.
+FR-2: The system shall allow users to filter tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-3: The system shall allow users to sort tasks by due date (ascending or descending).
+NFR-1: 95% of users shall be able to find their assigned tasks within 5 seconds of logging in.
+NFR-2: The task list interface shall be accessible according to WCAG 2.1 Level AA guidelines.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall only display tasks assigned to the currently logged-in user.
+FR-2: The system shall reflect task assignments based on the ""AssignedTo"" field in the ""Tasks"" database table.
+FR-3: The system shall update the ""LastViewed"" timestamp in the ""Tasks"" table when a task is viewed.
+NFR-1: The system shall maintain an audit log of task views, including user ID and timestamp.
+NFR-2: The system shall ensure data consistency between the displayed task list and the database.
+",1269,1634,15,6,3,2,1,2.84,280,405,685,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART software requirements based on the provided user story, categorized by the specified approaches, followed by an evaluation and a final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve task assignments from the ""Tasks"" database table.
+FR-2: The system shall display task assignments in a tabular format.
+FR-3: The system shall use AJAX to update the task list without requiring a full page reload.
+NFR-1: The task list shall load within 2 seconds.
+NFR-2: The system shall support at least 100 concurrent users viewing task assignments.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The system shall display each task with its title, description, due date, and assigned team member.
+FR-2: The system shall allow users to filter tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-3: The system shall allow users to sort tasks by due date or priority.
+NFR-1: 95% of users shall be able to locate their assigned tasks within 15 seconds of accessing the task list.
+NFR-2: The task list interface shall be accessible on desktop and mobile devices with a responsive design.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall only display tasks assigned to the currently logged-in user.
+FR-2: The system shall display task status based on the ""Status"" field in the database, which can be one of: ""Open,"" ""In Progress,"" ""Blocked,"" ""Completed.""
+FR-3: The system shall automatically refresh the task list every 5 minutes to reflect any changes.
+NFR-1: All task data shall be encrypted in transit and at rest.
+NFR-2: The system shall maintain an audit log of all task assignments and status changes, retained for at least 1 year.
+",1269,1772,15,6,3,2,2,3.09,280,429,709,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART requirements, focusing on different approaches, followed by the evaluation criteria, and a final recommendation of the most effective set with justification.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall display a list of tasks associated with the logged-in user ID.
+FR-2: The task list shall be retrieved from the 'Tasks' database table using a SQL query filtered by the 'AssignedUserID' field.
+FR-3: The task list shall be rendered using a REST API endpoint '/api/tasks/{userID}'.
+NFR-1: The task list shall load in under 2 seconds on a network with a minimum bandwidth of 10 Mbps.
+NFR-2: The API shall be able to handle 100 concurrent requests without degradation in response time.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The system shall present a clear and concise list of tasks assigned to the logged-in user.
+FR-2: Each task in the list shall display its title, due date, and current status.
+FR-3: The user shall be able to filter the task list by status (e.g., ""To Do"", ""In Progress"", ""Completed"").
+NFR-1: The task list shall be accessible on desktop and mobile devices with responsive design.
+NFR-2: The user interface shall conform to the company's established accessibility guidelines (WCAG 2.1 Level AA).
+NFR-3: The task list shall be easy to navigate and understand, as measured by a System Usability Scale (SUS) score of 70 or higher.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall display only tasks that are currently assigned to the logged-in user, according to the ""Assignments"" table.
+FR-2: Tasks marked as ""Inactive"" or ""Archived"" in the system shall not be displayed in the task list.
+FR-3: The system shall allow a task to be reassigned to a different user, which will automatically update the task list for both users.
+NFR-1: All task list data shall be encrypted in transit and at rest.
+NFR-2: The system shall maintain an audit log of all task assignments and reassignments.
+NFR-3: Data retention policy shall be in compliance with company policy #123
+",1269,2107,17,8,2,2,1,3.43,280,518,798,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in team member within 1 second of the user navigating to the ""My Tasks"" page.
+FR-2: Each task displayed shall include the task title, description, assigned due date, current status (e.g., ""To Do,"" ""In Progress,"" ""Completed""), and priority (e.g., ""High,"" ""Medium,"" ""Low"").
+FR-3: The system shall allow the team member to filter the displayed tasks by status (e.g., show only ""In Progress"" tasks) and priority. The filtering operation must complete within 2 seconds.
+FR-4: The system shall allow the team member to sort the displayed tasks by due date (ascending or descending) and priority (ascending or descending). The sorting operation must complete within 2 seconds.
+FR-5: The system shall provide a link or button for each task that allows the team member to view the full task details, including any associated comments or attachments.
+FR-6: The system shall update the task list in real-time (within 5 seconds) to reflect any changes made to the tasks assigned to the team member by other users (e.g., task status updates, due date changes).
+
+NFR-1: The ""My Tasks"" page shall be accessible from any modern web browser (Chrome, Firefox, Safari, Edge) on desktop and mobile devices.
+NFR-2: The system shall maintain an average response time of less than 3 seconds for all operations related to viewing and managing assigned tasks under normal load (up to 100 concurrent users).
+NFR-3: The system shall be available 99.9% of the time, excluding scheduled maintenance windows (maximum 2 hours per month).
+NFR-4: The system shall protect task data from unauthorized access by implementing role-based access control, ensuring that team members can only view and modify tasks assigned to them.
+NFR-5: The system shall log all task status changes and user access events for auditing purposes, retaining logs for at least 90 days.
+NFR-6: The system shall be designed to handle up to 500 tasks per team member without significant performance degradation (response time remains under 5 seconds).
+",811,2061,12,6,4,1,3,3.11,194,480,674,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in team member. The list shall be displayed within 1 second of the team member navigating to the ""My Tasks"" page, as measured by system logs, by [Date: 2024-12-31].
+
+FR-2: Each task displayed shall include, at minimum, the task title, a brief description (maximum 250 characters), the assigned due date, and the current status (e.g., ""To Do,"" ""In Progress,"" ""Completed,"" ""Blocked""). This information shall be accurately reflected in the database by [Date: 2024-12-31].
+
+FR-3: The system shall allow team members to filter their assigned tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed,"" ""Blocked""). Filter results shall be displayed within 2 seconds of filter selection, as measured by system logs, by [Date: 2024-12-31].
+
+FR-4: The system shall provide a mechanism for team members to sort their assigned tasks by due date (ascending or descending). Sort results shall be displayed within 2 seconds of sort selection, as measured by system logs, by [Date: 2024-12-31].
+
+FR-5: The system shall provide a visual indicator (e.g., color-coding) to highlight tasks that are overdue (due date is in the past). This indicator must be clearly visible and distinguishable by [Date: 2024-12-31].
+
+FR-6: The system shall display a maximum of 50 tasks per page. If the team member has more than 50 assigned tasks, the system shall provide pagination to navigate through the task list. Pagination controls must be functional and allow navigation to the next and previous pages by [Date: 2024-12-31].
+
+NFR-1: The ""My Tasks"" page shall be accessible to all team members with valid system accounts. Access control shall be verified by user authentication and authorization mechanisms by [Date: 2024-12-31].
+
+NFR-2: The system shall maintain an average page load time of no more than 3 seconds for the ""My Tasks"" page under normal operating conditions (defined as up to 100 concurrent users). Performance testing shall be conducted and results documented by [Date: 2024-12-31].
+
+NFR-3: The ""My Tasks"" page shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers. Browser compatibility testing shall be conducted and results documented by [Date: 2024-12-31].
+
+NFR-4: The system shall ensure that task data is stored securely and protected from unauthorized access. Data security measures shall be implemented and documented according to industry best practices by [Date: 2024-12-31].
+
+NFR-5: The system shall be available 99.9% of the time, excluding scheduled maintenance. System uptime shall be monitored and reported monthly by [Date: 2024-12-31].
+",811,2649,11,5,4,1,2,4.08,194,690,884,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user, with each task clearly identified by title, description, and due date, within 1 second of the user navigating to the ""My Tasks"" page. (SMART: Specific, Measurable - 1 second load time, Achievable, Relevant, Time-bound).
+
+FR-2: The system shall allow a user to filter their assigned tasks by status (e.g., ""To Do"", ""In Progress"", ""Completed"") within 0.5 seconds of a filter selection. (SMART: Specific, Measurable - 0.5 second response time, Achievable, Relevant, Time-bound).
+
+FR-3: The system shall provide the functionality to view the details of an assigned task, including all associated information (e.g., description, attachments, priority, assigned team, discussion threads), within 2 seconds of the task being selected. (SMART: Specific, Measurable - 2 second load time, Achievable, Relevant, Time-bound).
+
+FR-4: The system shall allow the user to update the status of their assigned tasks (e.g., ""To Do"", ""In Progress"", ""Completed"") with confirmation displayed within 1 second of the update. (SMART: Specific, Measurable - 1 second confirmation, Achievable, Relevant, Time-bound).
+
+FR-5: The system shall provide a visual indicator for tasks that are overdue (i.e., the due date has passed and the status is not ""Completed""), displayed immediately upon page load for each task in ""My Tasks"". (SMART: Specific, Measurable - overdue tasks indicated, Achievable, Relevant, Time-bound).
+
+NFR-1: The system shall maintain an average response time of less than 3 seconds for all user interactions related to viewing and managing assigned tasks, measured during peak usage hours. (SMART: Specific, Measurable - 3 seconds average response time, Achievable, Relevant, Time-bound - measured during peak hours).
+
+NFR-2: The system shall be accessible from the latest two versions of Chrome, Firefox, Safari, and Edge browsers. (SMART: Specific, Measurable - browser compatibility, Achievable, Relevant, Time-bound - latest two versions).
+
+NFR-3: The system shall ensure that the user's task information is protected from unauthorized access, complying with OWASP top 10 vulnerabilities, verified via monthly penetration testing. (SMART: Specific, Measurable - OWASP compliance, Achievable, Relevant, Time-bound - monthly testing).
+
+NFR-4: The system shall be available 99.9% of the time, excluding scheduled maintenance windows which will be announced at least 48 hours in advance. (SMART: Specific, Measurable - 99.9% uptime, Achievable, Relevant, Time-bound).
+
+NFR-5: The ""My Tasks"" page shall be designed with a user-friendly and intuitive interface, achieving a usability score of at least 4 out of 5 based on a System Usability Scale (SUS) survey conducted with a representative sample of team members within one month of release. (SMART: Specific, Measurable - SUS score of 4/5, Achievable, Relevant, Time-bound - within one month of release).
+",811,2927,10,5,3,1,3,4.23,194,691,885,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall provide a user interface displaying a list of tasks assigned to the currently logged-in user.
+
+FR-2: The task list shall display the following attributes for each task: Task Name, Description, Status (e.g., To Do, In Progress, Completed, Blocked), Due Date, Priority (e.g., High, Medium, Low), and Assigned Date.
+
+FR-3: The system shall allow users to filter the task list by Status, Priority, and Due Date.
+
+FR-4: The system shall allow users to sort the task list by Due Date, Priority, and Assigned Date (ascending and descending).
+
+FR-5: The system shall provide a link from each task in the list to a detailed task view.
+
+FR-6: The detailed task view shall display all attributes listed in FR-2, plus any associated comments, attachments, and a history of status changes.
+
+FR-7: The system shall integrate with the authentication system to verify user identity before displaying assigned tasks.
+
+FR-8: The system shall retrieve task data from the task management database.
+
+FR-9: The system shall log all task view accesses, including user ID, timestamp, and task ID.
+
+FR-10: The system shall support displaying tasks assigned to a user across multiple projects.
+
+NFR-1: The task list shall load within 3 seconds for users with up to 200 assigned tasks.
+
+NFR-2: The system shall be accessible via modern web browsers (Chrome, Firefox, Safari, Edge) and mobile devices (iOS and Android) with responsive design.
+
+NFR-3: The system shall adhere to role-based access control, ensuring users can only view tasks assigned to them.
+
+NFR-4: The system shall be available 24/7, with a planned downtime of no more than 4 hours per month for maintenance.
+
+NFR-5: All data transmitted between the user's browser and the server shall be encrypted using HTTPS.
+
+NFR-6: The system shall comply with all relevant data privacy regulations (e.g., GDPR, CCPA) regarding the storage and handling of user data.
+
+NFR-7: The system shall be designed for scalability to support up to 10,000 concurrent users.
+
+NFR-8: The system shall be maintainable, with clear and well-documented code.
+
+NFR-9: The system shall be tested for cross-site scripting (XSS) and SQL injection vulnerabilities.
+
+NFR-10: The system shall provide audit logs for all data access and modifications.
+",1066,2277,20,10,3,2,1,3.43,234,549,783,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the currently logged-in user.
+
+FR-2: Each task displayed shall include the task title, description, status (e.g., To Do, In Progress, Completed), priority (e.g., High, Medium, Low), due date, and the name of the project it belongs to.
+
+FR-3: The system shall allow users to filter their assigned tasks by status.
+
+FR-4: The system shall allow users to sort their assigned tasks by due date (ascending or descending) and priority (High to Low or Low to High).
+
+FR-5: The system shall provide a link or button for each task that allows the user to navigate to a detailed view of the task.
+
+FR-6: The system shall display a visual indicator (e.g., color-coding) for tasks that are overdue.
+
+FR-7: The system shall refresh the task list automatically every 5 minutes to reflect any changes made by other users.
+
+FR-8: The system shall integrate with the existing authentication system to verify user credentials before displaying assigned tasks.
+
+FR-9: The system shall provide a mechanism for users to provide feedback on the task list functionality (e.g., a ""Feedback"" button linking to a feedback form).
+
+FR-10: The system shall log all user access to the task list, including the user ID, timestamp, and IP address.
+
+NFR-1: The task list shall load and display within 3 seconds of the user accessing the page.
+
+NFR-2: The task list shall be accessible on all major web browsers (Chrome, Firefox, Safari, Edge) and on devices with screen sizes down to 320px width.
+
+NFR-3: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-4: All data transmitted between the user's browser and the server shall be encrypted using HTTPS.
+
+NFR-5: The system shall comply with all relevant data privacy regulations (e.g., GDPR, CCPA).
+
+NFR-6: The system shall be designed for scalability to accommodate a growing number of users and tasks.
+
+NFR-7: The system shall be maintainable, with clear and well-documented code.
+
+NFR-8: The system shall be tested for accessibility according to WCAG 2.1 Level AA guidelines.
+
+NFR-9: The system shall be monitored for performance and errors, and alerts shall be generated for critical issues.
+
+NFR-10: The system shall be designed to prevent SQL injection and cross-site scripting (XSS) vulnerabilities.
+",1066,2319,20,10,3,1,1,3.58,234,561,795,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements for the user story:
+
+FR-1: The system shall display a list of tasks assigned to the currently logged-in user.
+
+FR-2: Each task displayed shall include, at a minimum: Task Title, Task Description, Due Date, Status (e.g., To Do, In Progress, Completed, Blocked), and Priority (e.g., High, Medium, Low).
+
+FR-3: Users shall be able to filter the task list by Status (To Do, In Progress, Completed, Blocked).
+
+FR-4: Users shall be able to sort the task list by Due Date (ascending or descending) and Priority (High to Low, or Low to High).
+
+FR-5: The system shall visually indicate tasks that are overdue (Due Date is in the past and Status is not Completed).
+
+FR-6: The system shall provide a link or button to view the full task details for each task in the list.
+
+FR-7: The task list shall be paginated if the number of assigned tasks exceeds a configurable limit (e.g., 20 tasks per page).
+
+FR-8: The task list shall be refreshed automatically (e.g., every 5 minutes) to reflect any changes to task assignments or statuses, or the user shall be able to manually refresh the list.
+
+FR-9: The system shall integrate with the existing authentication system to verify the user's identity before displaying their assigned tasks.
+
+NFR-1: The task list shall load within 3 seconds for users with up to 100 assigned tasks.
+
+NFR-2: The system shall be accessible via modern web browsers (Chrome, Firefox, Safari, Edge) and on various screen sizes (desktop, tablet, mobile).
+
+NFR-3: The system shall comply with relevant data privacy regulations (e.g., GDPR, CCPA) regarding the display of user and task information.
+
+NFR-4: The application shall be secured against common web vulnerabilities, including but not limited to XSS and SQL injection, using industry-standard security practices.
+
+NFR-5: The system shall be designed for high availability, with a target uptime of 99.9%.
+
+NFR-6: All data access and modification events related to tasks shall be logged for auditing purposes.
+
+NFR-7: The application should be easily maintainable and extendable, adhering to coding standards and best practices.
+",1066,2149,16,7,3,1,1,3.36,234,511,745,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Contextual,precise,"
+BUSINESS CONTEXT:
+Project management service
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user, showing task name, project name, due date, and status (e.g., To Do, In Progress, Completed).
+
+FR-2: The system shall allow users to filter their assigned tasks by project name, due date range, and status.
+
+FR-3: The system shall allow users to sort their assigned tasks by due date (ascending or descending) and priority (high, medium, low).
+
+FR-4: The system shall allow users to mark tasks as ""Completed"".
+
+FR-5: The system shall integrate with the existing user authentication system to verify user credentials before displaying assigned tasks.
+
+FR-6: The system shall retrieve task assignments from the existing project management database via API.
+
+FR-7: The system shall update the task status in the existing project management database via API when a user marks a task as ""Completed"".
+
+NFR-1: The system shall load the list of assigned tasks within 3 seconds under normal load (up to 50 concurrent users).
+
+NFR-2: The system shall maintain an average response time of less than 5 seconds for loading assigned tasks, even under peak load (up to 200 concurrent users).
+
+NFR-3: The system shall log all errors encountered while retrieving or updating task information, including user ID, timestamp, and error message.
+
+NFR-4: The system shall display a user-friendly error message to the user if task retrieval fails, suggesting potential causes and providing contact information for support.
+
+NFR-5: The system shall be accessible via a web browser on desktop and mobile devices with a responsive design.
+
+NFR-6: The system shall adhere to WCAG 2.1 Level AA accessibility guidelines.
+
+NFR-7: The user interface shall be intuitive and easy to navigate, requiring minimal training for team members.
+",769,1782,14,7,4,2,1,2.74,182,400,582,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Contextual,default,"
+BUSINESS CONTEXT:
+Project management service
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user, including task name, description, due date, priority, and status.
+
+FR-2: The system shall allow users to filter their assigned tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+
+FR-3: The system shall allow users to sort their assigned tasks by due date, priority, or task name.
+
+FR-4: The system shall integrate with the existing user authentication system to verify user credentials before displaying assigned tasks.
+
+FR-5: The system shall retrieve task data from the existing task management database via API.
+
+FR-6: The system shall allow the user to update the status of each assigned task (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+
+FR-7: The system shall display real-time updates to task status changes made by other users within 5 seconds.
+
+NFR-1: The system shall load the assigned tasks list for a user within 3 seconds under normal load (up to 100 concurrent users).
+
+NFR-2: The system shall maintain an average response time of under 5 seconds for task list loading during peak load (up to 500 concurrent users).
+
+NFR-3: The system shall log all errors encountered during task retrieval and status updates, including timestamp, user ID, and error message.
+
+NFR-4: The system shall provide a clear and intuitive user interface with consistent navigation for accessing and managing assigned tasks.
+
+NFR-5: The system shall be accessible on all major web browsers (Chrome, Firefox, Safari, Edge) and screen resolutions.
+
+NFR-6: The system shall provide an error message to the user if the task list cannot be retrieved, with instructions on how to resolve the issue or contact support.
+
+NFR-7: The system shall automatically refresh the task list every 15 minutes to ensure the user sees the most up-to-date information.
+",769,1824,14,7,4,2,2,2.93,182,422,604,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Contextual,creative,"
+BUSINESS CONTEXT:
+Project management service
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in team member, showing task name, due date, status (e.g., To Do, In Progress, Completed), and priority, within 2 seconds of login.
+
+FR-2: The system shall allow team members to filter their assigned tasks by status, priority, and due date range. Filter results shall be displayed within 3 seconds of applying the filter.
+
+FR-3: The system shall allow team members to update the status of an assigned task (e.g., from ""To Do"" to ""In Progress"" or ""Completed"") with a confirmation message displayed within 1 second of status change.
+
+FR-4: The system shall integrate with the existing user authentication system to verify team member credentials before granting access to task information.
+
+FR-5: The system shall synchronize task assignments and status updates with the project management database at least every 5 minutes.
+
+FR-6: The system shall allow users to view tasks assigned to them for all projects they are members of.
+
+NFR-1: The system shall maintain an average response time of less than 5 seconds for task retrieval and display under peak load (defined as 50 concurrent users).
+
+NFR-2: The system shall log all errors and warnings, including user ID, timestamp, and error message, to a centralized logging system.
+
+NFR-3: The system shall provide a visually clear and intuitive interface for viewing and managing assigned tasks, as measured by a system usability scale (SUS) score of 70 or higher during user acceptance testing.
+
+NFR-4: The system shall be accessible on all major web browsers (Chrome, Firefox, Safari, Edge) and screen resolutions.
+
+NFR-5: The system shall send an automated email notification to the team member if the task due date is within 24 hours of the current date.
+",769,1775,11,5,5,2,3,2.88,182,397,579,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user.
+FR-2: Each task displayed shall include a title, description, due date, and status.
+FR-3: The system shall allow users to filter tasks by status (e.g., To Do, In Progress, Completed).
+FR-4: The system shall allow users to sort tasks by due date (ascending or descending).
+FR-5: The system shall provide a link or button to view the full details of each task.
+FR-6: The task list shall be updated automatically upon login.
+FR-7: The system shall display a message if the user has no assigned tasks.
+
+NFR-1: The task list shall load within 3 seconds.
+NFR-2: The system shall be accessible on desktop and mobile devices.
+NFR-3: The system shall be available 99.9% of the time.
+NFR-4: User authentication shall be required to access the task list.
+NFR-5: The system shall comply with all relevant data privacy regulations.
+NFR-6: The task list display shall be compatible with common screen readers.
+",1750,975,13,6,3,1,1,1.75,396,253,649,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user.
+FR-2: The task list shall include the task name, description, due date, and status.
+FR-3: The system shall allow users to filter tasks by status (e.g., To Do, In Progress, Completed).
+FR-4: The system shall allow users to sort tasks by due date (ascending and descending).
+FR-5: The system shall display the task list within 2 seconds of the user accessing the ""My Tasks"" page.
+FR-6: The system shall visually indicate tasks that are overdue.
+FR-7: The system shall provide a link to view the full task details.
+FR-8: The system shall be accessible via web browser on desktop and mobile devices.
+
+NFR-1: The system shall be available 99.9% of the time during business hours (8 AM - 6 PM, Monday-Friday).
+NFR-2: The system shall be secure, protecting task data from unauthorized access, conforming to OWASP guidelines.
+NFR-3: The task list display shall be responsive and adapt to different screen sizes.
+NFR-4: The system shall be scalable to support up to 10,000 users.
+NFR-5: The system shall log all user actions related to task viewing for auditing purposes.
+",1750,1142,13,5,3,2,1,2.15,396,296,692,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in team member.
+FR-2: Each task displayed shall include its title, description, due date, and status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-3: The system shall allow team members to filter the task list by status.
+FR-4: The system shall allow team members to sort the task list by due date (ascending or descending).
+FR-5: The system shall display the task list within 3 seconds of the user accessing the ""My Tasks"" page.
+FR-6: The system shall allow team members to view the tasks from a web browser (Chrome, Firefox, Safari, Edge).
+
+NFR-1: The task list shall be accessible 24/7, with a system availability of 99.9%.
+NFR-2: The system shall protect task data with role-based access control.
+NFR-3: The system shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+NFR-4: The system shall log all user access and task views for auditing purposes.
+",1750,955,10,4,3,2,2,1.93,396,248,644,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user.
+FR-2: Each task displayed shall include its title, description, due date, and status.
+FR-3: The system shall require user authentication before displaying assigned tasks.
+FR-4: The system shall allow users to filter tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-5: If no tasks are assigned to the user, the system shall display a message indicating ""No tasks assigned.""
+FR-6: The system shall send a daily email notification to the user listing tasks due within the next 24 hours.
+NFR-1: The list of assigned tasks shall load within 3 seconds of the user logging in.
+NFR-2: The user interface for displaying tasks shall be responsive and accessible on desktop and mobile devices.
+NFR-3: The system shall ensure that only the assigned user can view their tasks, implementing role-based access control.
+
+FINAL REQUIREMENTS:
+FR-1: The system shall display a list of tasks assigned to the logged-in user.
+FR-2: Each task displayed shall include its title, description, due date, and status.
+FR-3: The system shall require user authentication before displaying assigned tasks.
+FR-4: The system shall allow users to filter tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-5: If no tasks are assigned to the user, the system shall display a message indicating ""No tasks assigned.""
+FR-6: The system shall send a daily email notification to the user listing tasks due within the next 24 hours.
+NFR-1: The list of assigned tasks shall load within 3 seconds of the user logging in.
+NFR-2: The user interface for displaying tasks shall be responsive and accessible on desktop and mobile devices.
+NFR-3: The system shall ensure that only the assigned user can view their tasks, implementing role-based access control.
+",1816,1817,18,6,4,2,2,3.05,434,434,868,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user.
+FR-2: Each task in the list shall display the task name, description, due date, and status.
+FR-3: The system shall require users to log in with valid credentials before viewing assigned tasks.
+FR-4: The system shall allow users to filter tasks by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-5: If no tasks are assigned to the user, the system shall display a message indicating ""No tasks assigned.""
+FR-6: The system shall send an email notification to the user 24 hours before a task's due date, if the task is not marked as ""Completed.""
+NFR-1: The list of assigned tasks shall load within 3 seconds.
+NFR-2: The user interface shall be intuitive and easy to navigate, with clear visual cues for task status and due dates.
+NFR-3: The system shall adhere to WCAG 2.1 Level AA accessibility guidelines.
+",1816,890,9,3,4,2,2,1.99,434,228,662,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.', 'context': 'Project management service'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a team member, I want to be able to view my assigned tasks online so that I can stay organized and on track.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of tasks assigned to the logged-in user.
+FR-2: Each task in the list shall display its title, description, due date, and status.
+FR-3: The system shall require user authentication (login) before displaying the task list.
+FR-4: The system shall allow users to filter the task list by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-5: If no tasks are assigned to the user, the system shall display a message indicating ""No tasks assigned.""
+FR-6: The system shall send a daily email notification to the user listing tasks due within the next 24 hours.
+NFR-1: The task list shall load within 3 seconds.
+NFR-2: The task list shall be displayed in a clear and easy-to-read format.
+NFR-3: The system shall be accessible to users with disabilities, complying with WCAG 2.1 Level AA guidelines.
+
+FINAL REQUIREMENTS:
+FR-1: The system shall display a list of tasks assigned to the logged-in user.
+FR-2: Each task in the list shall display its title, description, due date, and status.
+FR-3: The system shall require user authentication (login) before displaying the task list.
+FR-4: The system shall allow users to filter the task list by status (e.g., ""To Do,"" ""In Progress,"" ""Completed"").
+FR-5: If no tasks are assigned to the user, the system shall display a message indicating ""No tasks assigned.""
+FR-6: The system shall send a daily email notification to the user listing tasks due within the next 24 hours.
+NFR-1: The task list shall load within 3 seconds.
+NFR-2: The task list shall be displayed in a clear and easy-to-read format.
+NFR-3: The system shall be accessible to users with disabilities, complying with WCAG 2.1 Level AA guidelines.
+",1816,1685,18,6,4,2,2,2.62,434,438,872,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

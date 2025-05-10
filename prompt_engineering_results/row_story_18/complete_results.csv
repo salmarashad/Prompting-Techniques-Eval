@@ -1,0 +1,1316 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter free-text delivery instructions, up to a maximum of 255 characters, during the order placement process.
+
+FR-2: The delivery instructions entered by the customer shall be displayed to the restaurant staff on the order details screen in the restaurant's order management system.
+
+FR-3: The delivery instructions entered by the customer shall be included in the order confirmation email sent to the customer.
+
+FR-4: The delivery instructions entered by the customer shall be accessible to the delivery driver via the driver's mobile application.
+
+NFR-1: The delivery instruction input field shall load within 2 seconds on a standard desktop browser with a 100 Mbps internet connection.
+
+NFR-2: The delivery instructions shall be stored securely in the database, adhering to data privacy regulations.
+
+NFR-3: The system shall be able to handle at least 1000 concurrent users entering delivery instructions without performance degradation (response time exceeding 5 seconds).
+",619,1019,7,3,5,1,2,1.73,155,211,366,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter free-text delivery instructions, up to a maximum of 255 characters, during the order placement process.
+
+FR-2: The system shall store the delivery instructions associated with an order in the 'delivery_instructions' field of the 'orders' database table.
+
+FR-3: The system shall display the delivery instructions to the restaurant staff on the order details screen.
+
+FR-4: The system shall allow the restaurant staff to view the delivery instructions at least 5 minutes before the scheduled delivery time.
+
+NFR-1: The delivery instruction input field shall load within 2 seconds.
+
+NFR-2: The delivery instructions shall be securely stored and transmitted using HTTPS protocol.
+
+NFR-3: The system shall be able to handle at least 100 concurrent users updating delivery instructions without performance degradation (average response time exceeding 5 seconds).
+",619,905,7,3,5,2,3,1.73,155,190,345,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter free-text delivery instructions of up to 255 characters during the order placement process, before payment confirmation.
+FR-2: The system shall store the delivery instructions entered by the customer and associate them with the specific order.
+FR-3: The system shall display the delivery instructions to the restaurant staff (e.g., on the order confirmation screen, kitchen display system, or printed receipt) along with other order details.
+FR-4: The system shall allow customers to edit the delivery instructions for an order up to 15 minutes after the order is placed, provided the restaurant has not yet marked the order as ""in preparation.""
+FR-5: The system shall automatically remove any HTML or script tags entered into the delivery instructions field to prevent potential security vulnerabilities.
+
+NFR-1: The delivery instructions field shall have a response time of less than 0.5 seconds upon user input.
+NFR-2: The delivery instruction data shall be stored securely, adhering to data privacy regulations and protected against unauthorized access.
+NFR-3: The delivery instruction field shall be accessible and usable for customers using assistive technologies, complying with WCAG 2.1 AA accessibility guidelines.
+NFR-4: The system shall maintain an availability of 99.9% for accessing and displaying delivery instructions.
+",619,1382,9,4,3,2,2,2.07,155,284,439,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+","Okay, here's the conversion of the user story ""As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional software requirements:
+
+**Functional Requirements:**
+
+*   **FR-1: Delivery Instructions Field:** The system shall provide a text field on the order placement page labeled ""Delivery Instructions"" or a similar clear and concise label.
+
+*   **FR-2: Instruction Length Limit:** The ""Delivery Instructions"" field shall accept a maximum of 250 characters.
+
+*   **FR-3: Instruction Persistence:** The system shall store the delivery instructions provided by the customer in association with the specific order.
+
+*   **FR-4: Restaurant Visibility:** The system shall display the customer's delivery instructions to the restaurant staff (e.g., on the order confirmation screen, kitchen display system, or printed order ticket) immediately upon order confirmation.
+
+*   **FR-5: Driver Visibility:** The system shall display the customer's delivery instructions to the delivery driver via the driver application.
+
+*   **FR-6: Instruction Editing:** The system shall allow customers to edit the delivery instructions for an order until the restaurant confirms the order.
+
+**Non-Functional Requirements:**
+
+*   **NFR-1: Instruction Storage Performance:** The system shall store the delivery instructions within 1 second of the customer submitting the order.
+
+*   **NFR-2: Instruction Display Performance:** The delivery instructions shall be displayed to the restaurant staff and delivery driver within 2 seconds of the order confirmation.
+
+*   **NFR-3: Data Security:** The system shall securely store delivery instructions, protecting them from unauthorized access.
+
+*   **NFR-4: Field Availability:** The ""Delivery Instructions"" field shall be available on all order placement pages, regardless of device (desktop, mobile).
+
+**Explanation of Choices and Considerations:**
+
+*   **Specificity:** The requirements are specific about what the system *must* do.  For example, FR-1 specifies the presence of a text field and a suggested label.
+*   **Measurability:**  The requirements include measurable aspects, such as character limits (FR-2) and time constraints (NFR-1, NFR-2).
+*   **Achievability:** The requirements are realistic and achievable within a typical software development context.
+*   **Relevance:** The requirements directly address the user story's need to provide delivery instructions.
+*   **Time-Bound:** The performance requirements (NFR-1, NFR-2) include specific time limits.
+*   **Functional vs. Non-Functional:** The requirements are clearly categorized as either functional (what the system *does*) or non-functional (how well it *does* it).
+*   **Completeness:** The requirements cover the key aspects of the user story, including input, storage, display, and security.
+*   **Assumptions:**  I've made some assumptions about the system's architecture (e.g., a separate driver application).  These assumptions should be validated during the requirements gathering process.
+*   **Further Refinement:** These requirements could be further refined based on more detailed discussions with stakeholders. For example, you might want to specify the exact location of the ""Delivery Instructions"" field on the order placement page, or the specific security measures to be used for storing the instructions.
+",1511,3487,10,4,3,2,1,4.50,341,724,1065,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+","Okay, here's the breakdown of the user story ""As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional software requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1:** The system shall provide a text field on the order placement page (or equivalent) labeled ""Delivery Instructions"" (or similar).
+*   **FR-2:** The ""Delivery Instructions"" text field shall allow customers to enter a minimum of 0 and a maximum of 255 characters.
+*   **FR-3:** The system shall store the delivery instructions associated with the order in the database.
+*   **FR-4:** The system shall display the delivery instructions to the restaurant staff (e.g., on the order details screen in the restaurant's order management system) immediately after the order is placed.
+*   **FR-5:** The system shall allow the customer to edit the delivery instructions up to 15 minutes after the order is placed or until the restaurant marks the order as ""Preparing,"" whichever comes first.
+*   **FR-6:** The system shall send delivery instructions to the delivery driver application/device.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1:** The ""Delivery Instructions"" text field shall load on the order placement page within 2 seconds under normal load conditions.
+*   **NFR-2:** The system shall ensure that the delivery instructions are transmitted securely (e.g., using HTTPS) between the customer's device, the server, and the restaurant's system.
+*   **NFR-3:** The system shall maintain an audit log of any edits made to the delivery instructions, including the timestamp and the user who made the change.
+*   **NFR-4:** The system shall be designed to handle a minimum of 1000 concurrent users adding or editing delivery instructions without performance degradation.
+",1511,1920,10,4,4,2,1,2.73,341,430,771,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+","Okay, let's break down that user story into specific, measurable, achievable, relevant, and time-bound functional and non-functional software requirements.
+
+**User Story:** As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+**Requirements:**
+
+**Functional Requirements (FR):**
+
+*   **FR-1:** The system shall provide a free-text field on the order confirmation page or during the checkout process for customers to enter delivery instructions.
+*   **FR-2:** The delivery instruction field shall allow a minimum of 200 characters and a maximum of 500 characters.
+*   **FR-3:** The system shall store the customer-provided delivery instructions associated with the order in the database.
+*   **FR-4:** The system shall display the customer's delivery instructions to the restaurant staff/delivery driver on the order details screen.
+*   **FR-5:** The system shall allow the restaurant to view the customer's delivery instructions immediately upon receiving the order confirmation.
+*   **FR-6:** The system shall not allow the customer to edit the delivery instructions once the order has been confirmed and sent to the restaurant, however a possibility to contact the restaurant via phone should be displayed.
+*   **FR-7:** The system will send the delivery instruction information to the delivery service with each order.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1:** The delivery instruction field shall load on the order confirmation page within 2 seconds.
+*   **NFR-2:** The stored delivery instructions shall be readily accessible (displayed within 1 second) to the restaurant staff/delivery driver upon viewing the order details.
+*   **NFR-3:** The delivery instruction field shall be compatible with all major web browsers (Chrome, Firefox, Safari, Edge) and mobile operating systems (iOS, Android).
+*   **NFR-4:** The system shall use secure data transmission protocols (e.g., HTTPS) to protect the confidentiality of the delivery instructions.
+*   **NFR-5:** The system shall be able to handle at least 100 concurrent users adding delivery instructions without performance degradation.
+",1511,2188,12,5,4,2,1,2.93,341,472,813,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall provide a text field labeled ""Delivery Instructions"" on the order placement page.
+FR-2: The ""Delivery Instructions"" text field shall allow a maximum of 255 characters.
+FR-3: The system shall store the content of the ""Delivery Instructions"" field associated with the order in the database.
+FR-4: The system shall display the ""Delivery Instructions"" to the restaurant staff on the order details page.
+FR-5: The system shall display the ""Delivery Instructions"" to the delivery driver on the delivery assignment screen.
+FR-6: The system shall allow the customer to edit the ""Delivery Instructions"" within 5 minutes of placing the order.
+FR-7: The system shall prevent the customer from entering HTML or script tags in the ""Delivery Instructions"" field.
+
+NFR-1: The ""Delivery Instructions"" field shall load within 2 seconds of the order placement page loading.
+NFR-2: The system shall ensure the ""Delivery Instructions"" are transmitted securely using HTTPS.
+NFR-3: The ""Delivery Instructions"" field shall be easily accessible and clearly visible on the order placement page.
+NFR-4: The system shall maintain 99.9% uptime for displaying and transmitting the ""Delivery Instructions"".
+",1678,1200,11,4,3,2,2,1.97,385,269,654,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall provide a text field for customers to enter delivery instructions during the order placement process.
+FR-2: The delivery instructions text field shall allow a maximum of 255 characters.
+FR-3: The system shall store the delivery instructions associated with the order in the database.
+FR-4: The system shall display the delivery instructions to the restaurant staff on the order details screen.
+FR-5: The system shall display the delivery instructions to the delivery driver on the delivery assignment screen.
+FR-6: The system shall allow the customer to edit the delivery instructions up to 15 minutes before the scheduled delivery time.
+
+NFR-1: The delivery instructions text field shall load in under 2 seconds.
+NFR-2: The system shall ensure that the delivery instructions are transmitted securely between the customer, restaurant, and delivery driver, using encryption.
+NFR-3: The delivery instructions text field shall be clearly visible and easily accessible on both the order placement and order details screens.
+",1678,1043,9,3,4,3,2,1.58,385,214,599,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall provide a text field labeled ""Delivery Instructions"" on the order placement page.
+FR-2: The ""Delivery Instructions"" text field shall allow a maximum of 255 characters.
+FR-3: The system shall store the delivery instructions provided by the customer and associate them with the corresponding order.
+FR-4: The system shall display the delivery instructions to the restaurant staff when they view the order details.
+FR-5: The system shall display the delivery instructions to the delivery driver via the driver app when they view the order details.
+FR-6: The delivery instructions field shall be optional for the customer to complete.
+FR-7: The system shall sanitize the delivery instructions input to prevent malicious code injection.
+
+NFR-1: The ""Delivery Instructions"" text field shall load within 1 second of the order placement page loading.
+NFR-2: The delivery instructions shall be stored securely and encrypted at rest.
+NFR-3: The system shall maintain 99.9% uptime availability for displaying delivery instructions to restaurant staff and delivery drivers.
+NFR-4: The ""Delivery Instructions"" text field shall be accessible and usable on mobile devices with varying screen sizes.
+NFR-5: The system shall provide a mechanism to audit any changes made to delivery instructions after order placement.
+",1678,1325,12,5,3,2,2,1.99,385,280,665,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements, followed by the evaluation and final recommendation, presented in the requested format:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide a text field in the order confirmation page to accept delivery instructions.
+FR-2: The text field shall accept a maximum of 255 characters.
+FR-3: The delivery instructions shall be stored in the `delivery_instructions` column of the `orders` table in the database.
+FR-4: The API endpoint `/orders/{orderId}` shall return the `delivery_instructions` field.
+NFR-1: The delivery instructions field shall be transmitted securely using HTTPS.
+NFR-2: The database query to retrieve order details, including delivery instructions, shall execute in under 200ms.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The customer shall be able to enter delivery instructions during the checkout process, before confirming the order.
+FR-2: The customer shall be able to view the entered delivery instructions on the order confirmation page.
+FR-3: The restaurant staff shall be able to view the delivery instructions on the order details screen in their order management system.
+FR-4: The system shall provide a clear visual indication to the customer that delivery instructions have been saved.
+NFR-1: The delivery instructions field shall be easily accessible and clearly labeled on both the customer and restaurant interfaces.
+NFR-2: The system shall provide a positive confirmation message to the customer after saving delivery instructions within 2 seconds.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall allow customers to enter delivery instructions for each order.
+FR-2: Delivery instructions shall be associated with a specific order ID.
+FR-3: Delivery instructions shall be retained in the system for at least 90 days after the order is completed.
+FR-4: The system shall prevent customers from entering HTML or other potentially malicious code in the delivery instructions field.
+NFR-1: The system shall comply with all applicable data privacy regulations regarding the storage and handling of delivery instructions.
+NFR-2: The system shall be able to handle at least 10,000 concurrent users entering delivery instructions without performance degradation.
+",1293,2331,18,6,4,1,2,3.29,280,493,773,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements, followed by my evaluation and final recommendation, formatted as requested.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide a text field for delivery instructions.
+FR-2: The text field shall accept a maximum of 255 characters.
+FR-3: Delivery instructions shall be stored in the ""delivery_notes"" field of the ""orders"" table in the database.
+FR-4: The API endpoint `/orders/{orderId}` shall be updated to include the ""delivery_notes"" field in the request body.
+NFR-1: The delivery instructions field shall load in under 500ms.
+NFR-2: The database shall be able to store at least 1 million delivery instruction entries.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The customer shall be presented with a clear and prominent ""Delivery Instructions"" field on the order confirmation page.
+FR-2: The customer shall be able to enter free-text instructions in the ""Delivery Instructions"" field.
+FR-3: The entered delivery instructions shall be displayed to the customer in the order confirmation summary.
+FR-4: The entered delivery instructions shall be communicated to the restaurant along with the order details.
+FR-5: The customer shall be able to edit the delivery instructions up to 15 minutes after placing the order.
+NFR-1: The ""Delivery Instructions"" field shall be easily accessible and intuitive to use on both desktop and mobile devices.
+NFR-2: The system shall provide visual confirmation to the customer that the delivery instructions have been saved.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: If a customer enters delivery instructions, they must be associated with the specific order.
+FR-2: Delivery instructions shall be retained for a minimum of 30 days after order completion for customer service purposes.
+FR-3: Delivery instructions shall be purged from the system after 1 year.
+FR-4: If delivery instructions exceed 255 characters, the system shall display an error message to the customer.
+FR-5: Delivery instructions shall be included in order confirmation emails sent to the customer.
+NFR-1: Access to delivery instructions in the database shall be restricted to authorized personnel only.
+NFR-2: The system shall comply with all applicable data privacy regulations regarding the storage and handling of delivery instructions.
+",1293,2379,20,6,4,1,2,3.45,280,525,805,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements based on the provided user story, focusing on technical implementation, user experience, and business rules respectively, followed by an evaluation and final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide a text input field in the order confirmation page to accept delivery instructions.
+FR-2: The text input field shall allow a maximum of 255 characters.
+FR-3:  The delivery instructions shall be stored in the ""delivery_instructions"" field of the ""Orders"" table in the database.
+FR-4: The system shall transmit the delivery instructions to the restaurant's order management system (OMS) via API call.
+NFR-1: The delivery instruction text field must load within 0.5 seconds.
+NFR-2: The API call to the OMS must complete within 2 seconds.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The user shall be able to enter delivery instructions on the order confirmation page.
+FR-2: The user shall receive confirmation that the delivery instructions have been successfully saved.
+FR-3: The restaurant staff should be able to clearly view the customer's delivery instructions within their order management interface.
+NFR-1: 95% of users should be able to successfully enter and save delivery instructions on their first attempt.
+NFR-2: The delivery instructions should be clearly visible to the restaurant staff, with font size no smaller than 12pt.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall validate that the delivery instructions field is not empty before allowing the order to be placed.
+FR-2: The system shall sanitize the delivery instructions input to prevent SQL injection or cross-site scripting attacks.
+FR-3: If the delivery address is within a gated community, the delivery instructions field is mandatory.
+FR-4: The delivery instructions will be stored in compliance with GDPR data protection regulations.
+NFR-1: The data storage solution must have a 99.99% uptime.
+NFR-2: Any invalid or malicious delivery instructions shall be rejected and logged for security auditing purposes.
+",1293,2155,17,6,4,1,2,3.16,280,475,755,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will generate functional and non-functional requirements from the user story, ensuring they are SMART.
+
+FR-1: The system shall allow customers to enter free-text delivery instructions, up to 255 characters, during the order placement process.
+FR-2: The system shall store the delivery instructions associated with the order in the database.
+FR-3: The system shall display the delivery instructions to the restaurant staff on the order details screen within 5 seconds of the order being placed.
+FR-4: The system shall allow customers to edit delivery instructions for an order up to 15 minutes after the order is placed, provided the restaurant has not yet confirmed the order.
+FR-5: The system shall notify the customer if they attempt to edit delivery instructions after the 15-minute window or after the restaurant has confirmed the order.
+
+NFR-1: The system shall ensure that delivery instructions are transmitted securely using HTTPS encryption to protect sensitive information such as gate codes.
+NFR-2: The system shall maintain an average response time of less than 2 seconds for displaying delivery instructions on the restaurant's order details screen under normal load (up to 100 concurrent orders).
+NFR-3: The system shall be available 99.9% of the time, ensuring customers can consistently provide delivery instructions during order placement.
+NFR-4: The system shall validate the input field for delivery instructions to prevent injection attacks and ensure data integrity.
+NFR-5: The system shall log all instances of delivery instruction creation and modification for auditing purposes, retaining logs for at least 90 days.
+",835,1647,10,5,5,3,3,2.55,194,341,535,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will generate functional and non-functional requirements from the user story, ensuring they are SMART.
+
+FR-1: The system shall allow customers to enter free-text delivery instructions, up to 255 characters, when placing an order.
+FR-2: The system shall store the delivery instructions associated with the order in the database.
+FR-3: The system shall display the delivery instructions to the restaurant staff when they view the order details.
+FR-4: The system shall allow the customer to edit the delivery instructions for an order until the restaurant confirms the order.
+FR-5: The system shall provide a default ""No special instructions"" if the customer does not enter any delivery instructions.
+
+NFR-1: The system shall store delivery instructions securely, complying with data privacy regulations (e.g., GDPR), within 3 months.
+NFR-2: The delivery instructions field shall load within 2 seconds on the order placement page to ensure a smooth user experience.
+NFR-3: The system shall be able to handle at least 1000 concurrent users editing delivery instructions without performance degradation (response time exceeding 5 seconds) within 6 months.
+NFR-4: The input field for delivery instructions shall be accessible to users with disabilities, complying with WCAG 2.1 Level AA guidelines, within 4 months.
+NFR-5: The system shall log all updates to delivery instructions, including the user and timestamp, for auditing purposes within 2 months.
+",835,1457,10,5,5,2,3,2.29,194,315,509,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements derived from the user story, following the SMART criteria:
+
+FR-1: The system shall allow customers to enter free-text delivery instructions (up to 255 characters) for a specific restaurant order during the checkout process. The entered instructions must be associated with the current order and stored in the database. (Achievable, Relevant, Time-bound - by next release, Measurable - character limit, Specific - what data is stored).
+
+FR-2: The system shall display the customer's delivery instructions to the restaurant staff (cook, delivery driver) via the restaurant's order management interface within 10 seconds of the customer completing the order. (Achievable, Relevant, Time-bound - 10 seconds, Measurable - response time, Specific - displayed to whom).
+
+FR-3: The system shall allow the customer to view and edit delivery instructions for a pending order (i.e., order status is not ""delivered"" or ""canceled"") up until 15 minutes before the restaurant's estimated preparation time. (Achievable, Relevant, Time-bound - 15 minutes, Measurable - time window, Specific - when instructions can be edited).
+
+FR-4: The system shall sanitize customer-provided delivery instructions to prevent injection attacks by removing or encoding potentially malicious characters (e.g., <, >, "", ') before storing them in the database. (Achievable, Relevant, Time-bound - by next release, Measurable - security check, Specific - characters to be removed/encoded)
+
+NFR-1: The system shall maintain an availability of 99.9% for displaying and storing customer delivery instructions during peak hours (6 PM - 9 PM local time) to ensure reliable order processing. (Achievable, Relevant, Time-bound - peak hours, Measurable - uptime percentage, Specific - what functionality availability refers to).
+
+NFR-2: The storage of customer delivery instructions shall be compliant with data privacy regulations (e.g., GDPR, CCPA) by using appropriate encryption methods at rest and in transit, ensuring data is secured within 3 months. (Achievable, Relevant, Time-bound - 3 months, Measurable - compliance, Specific - data privacy regulations).
+
+NFR-3: The system shall provide a responsive user interface for entering delivery instructions, with a page load time of less than 3 seconds on a standard mobile network (4G). (Achievable, Relevant, Time-bound - 3 seconds, Measurable - page load time, Specific - on what network).
+
+NFR-4: The system shall log all instances of delivery instructions being created, viewed, and edited, along with timestamps and user IDs, for auditing and security purposes. Logs shall be retained for a minimum of 12 months. (Achievable, Relevant, Time-bound - 12 months retention, Measurable - logging of actions, Specific - what actions are logged).
+",835,2812,8,4,3,1,3,4.35,194,615,809,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter free-text delivery instructions, with a maximum length of 255 characters, during the order placement process, specifically on the order confirmation page or a dedicated delivery options page accessible from the cart.
+
+FR-2: The system shall store the customer-provided delivery instructions securely in the order database, associated with the specific order ID.
+
+FR-3: The system shall display the delivery instructions to the restaurant staff via the restaurant order management interface (e.g., kitchen display system, order printout, or restaurant portal) alongside other order details.
+
+FR-4: The system shall display the delivery instructions to the delivery driver via the driver application or dispatch system.
+
+FR-5: The system shall allow customers to edit delivery instructions up to 15 minutes before the scheduled or estimated delivery time. After this cut-off, the instructions become read-only.
+
+FR-6: The system shall provide a mechanism for the restaurant to flag inappropriate or offensive delivery instructions.
+
+FR-7: The system shall support the storage and retrieval of delivery instructions in multiple languages, based on the customer's preferred language setting.
+
+NFR-1: The system shall ensure the secure transmission and storage of delivery instructions, complying with data privacy regulations (e.g., GDPR, CCPA).
+
+NFR-2: The system shall maintain an average response time of less than 2 seconds for displaying delivery instructions in both the restaurant and driver interfaces.
+
+NFR-3: The system shall be designed to handle a minimum of 10,000 concurrent users accessing and modifying delivery instructions without performance degradation.
+
+NFR-4: The system shall be compatible with the existing order management system, driver application, and restaurant portal, minimizing integration efforts.
+
+NFR-5: The system shall be designed for ease of maintenance and future enhancements, with clear code documentation and modular architecture.
+
+NFR-6: The system shall provide audit logging for all modifications to delivery instructions, including timestamps and user IDs.
+
+NFR-7: The system shall be accessible and usable on a variety of devices and screen sizes, including desktops, tablets, and mobile phones, adhering to accessibility guidelines (e.g., WCAG).
+",1090,2338,14,7,3,2,1,3.33,234,463,697,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter free-text delivery instructions during the order placement process, with a maximum character limit of 255 characters.
+
+FR-2: The delivery instructions field shall be displayed prominently on the order confirmation screen presented to the customer after order placement.
+
+FR-3: The delivery instructions shall be transmitted to the restaurant along with the order details.
+
+FR-4: The delivery instructions shall be accessible to the delivery driver via the driver application.
+
+FR-5: The system shall provide a mechanism for the restaurant to flag inappropriate or offensive delivery instructions.
+
+FR-6: The system shall store delivery instructions associated with an order for a minimum of 90 days for auditing purposes.
+
+NFR-1: The delivery instructions feature shall be accessible and usable on all supported devices and screen sizes (desktop, mobile web, and native mobile applications).
+
+NFR-2: The addition of delivery instructions shall not increase the average order placement time by more than 2 seconds.
+
+NFR-3: The system shall ensure that delivery instructions are transmitted securely and are protected from unauthorized access during transmission and storage.
+
+NFR-4: The system shall be able to handle a minimum of 10,000 concurrent users entering or viewing delivery instructions without performance degradation.
+
+NFR-5: The delivery instructions field shall be validated on the client-side and server-side to prevent injection attacks and ensure data integrity.
+
+NFR-6: The feature must comply with all relevant data privacy regulations (e.g., GDPR, CCPA) regarding the storage and handling of customer-provided information.
+",1090,1690,12,6,4,1,1,2.80,234,337,571,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter free-text delivery instructions during the order placement process, with a maximum character limit of 255 characters.
+
+FR-2: The system shall store the customer-provided delivery instructions securely in the order database, associated with the specific order.
+
+FR-3: The system shall display the delivery instructions to the restaurant staff (e.g., on the order confirmation screen, kitchen display system, or printed order ticket) when they receive the order.
+
+FR-4: The system shall display the delivery instructions to the delivery driver (e.g., on the delivery driver's mobile application) when they are assigned to the order.
+
+FR-5: The system shall allow customers to edit the delivery instructions for an order up until the point the order is confirmed by the restaurant.
+
+FR-6: The system shall support a mechanism for sanitizing customer-provided delivery instructions to prevent injection attacks.
+
+FR-7: The system should include a logging mechanism to track creation, modification and access to delivery instructions for auditing purposes.
+
+NFR-1: The system shall provide a response time of less than 2 seconds when displaying delivery instructions to restaurant staff and delivery drivers.
+
+NFR-2: The delivery instruction field shall be accessible and usable on various devices and screen sizes, adhering to accessibility guidelines (WCAG 2.1 Level AA).
+
+NFR-3: The system shall ensure the confidentiality of delivery instructions, protecting them from unauthorized access or disclosure through encryption at rest and in transit.
+
+NFR-4: The system shall be designed to handle a minimum of 10,000 concurrent users accessing and modifying delivery instructions without performance degradation.
+
+NFR-5: Maintenance of delivery instructions shall be possible during scheduled downtime outside of peak hours.
+
+NFR-6: The system shall comply with all applicable data privacy regulations regarding the storage and handling of customer data (e.g., GDPR, CCPA).
+",1090,2017,13,6,3,2,1,3.17,234,407,641,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Contextual,precise,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter delivery instructions, up to 255 characters, during the order placement process.
+
+FR-2: The delivery instructions entered by the customer shall be displayed to the restaurant staff on the order details screen within the restaurant's order management system.
+
+FR-3: The delivery instructions shall be transmitted to the delivery driver's application in real-time upon order assignment.
+
+FR-4: The system shall store the delivery instructions associated with each order in the order database.
+
+FR-5: The system shall provide a default ""No special instructions"" option, pre-selected for the customer, which can be modified.
+
+NFR-1: The delivery instructions field shall load within 1 second on 99% of user devices.
+
+NFR-2: The system shall be able to handle 1000 concurrent users entering delivery instructions during peak hours (6 PM - 8 PM) without performance degradation (response time exceeding 2 seconds).
+
+NFR-3: The system shall log any errors encountered while saving or retrieving delivery instructions, including the order ID and user ID, to a centralized logging system.
+
+NFR-4: The delivery instructions field shall be clearly visible and easily accessible on the order placement screen, adhering to WCAG 2.1 AA accessibility standards.
+
+NFR-5: Changes to the delivery instruction feature must be implemented and tested within 2 weeks.
+",795,1394,10,5,5,2,2,2.89,183,300,483,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Contextual,default,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter delivery instructions, up to 255 characters, during the checkout process, before order confirmation. (Achievable, Relevant, Specific)
+
+FR-2: The delivery instructions entered by the customer shall be displayed to the restaurant staff on the order details page within the restaurant's order management system. (Achievable, Relevant, Specific)
+
+FR-3: The delivery instructions shall be transmitted to the delivery driver’s application or device with the order details. (Achievable, Relevant, Specific)
+
+FR-4: The system shall store the delivery instructions securely in the order database. (Achievable, Relevant, Specific)
+
+FR-5: The delivery instructions field shall be optional for the customer. (Achievable, Relevant, Specific)
+
+NFR-1: The delivery instructions field in the checkout process shall load within 2 seconds under normal load (up to 1000 concurrent users). (Measurable, Achievable, Relevant, Time-bound)
+
+NFR-2: The delivery instructions shall be transmitted to the restaurant's order management system within 5 seconds of order placement, even under peak load (up to 5000 concurrent users). (Measurable, Achievable, Relevant, Time-bound)
+
+NFR-3: The system shall log any errors encountered while saving or retrieving delivery instructions and notify the development team via automated alerts within 5 minutes. (Measurable, Achievable, Relevant, Time-bound)
+
+NFR-4: The delivery instructions field shall be clearly labeled and easily accessible within the checkout flow, conforming to WCAG 2.1 AA accessibility standards. (Measurable, Achievable, Relevant)
+
+NFR-5: The system shall validate the delivery instruction input to prevent malicious code injection (e.g., HTML, JavaScript) within 0.5 seconds. (Measurable, Achievable, Relevant, Time-bound)
+",795,1811,10,5,5,2,2,2.77,183,403,586,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Contextual,creative,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter delivery instructions (text field) up to 255 characters in length during the order checkout process.
+FR-2: The delivery instructions entered by the customer shall be displayed to the restaurant staff on the order details screen in the restaurant's order management system within 2 seconds of the order being placed.
+FR-3: The delivery instructions shall be stored in the 'delivery_instructions' field of the 'orders' table in the existing database.
+FR-4: The 'delivery_instructions' field in the 'orders' table shall be updated with the customer's input within 1 second of order placement.
+FR-5: The delivery instructions shall be included in the delivery driver's order details on the delivery driver's mobile application.
+NFR-1: The system shall maintain an average response time of less than 1 second for displaying delivery instructions on both the restaurant's order management system and the driver's mobile application under peak load (defined as 500 orders per minute).
+NFR-2: The system shall log any errors encountered while saving or retrieving delivery instructions, including timestamp, user ID, and error message, to a central logging system.
+NFR-3: The checkout page, including the delivery instructions input field, shall load in under 3 seconds on 95% of user sessions.
+NFR-4: The delivery instruction text field shall be clearly labeled with placeholder text (""e.g., Gate code: 1234, Leave at back door"") to guide the user.
+NFR-5: The system shall validate that the delivery instruction text does not contain any malicious code or HTML tags within 0.5 seconds before saving.
+",795,1641,10,5,4,2,3,2.72,183,366,549,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter delivery instructions, with a maximum character limit of 255 characters.
+FR-2: Delivery instructions entered by the customer shall be displayed to the restaurant staff on the order details screen.
+FR-3: Delivery instructions shall be stored in the database and associated with the specific order.
+FR-4: Customers shall be able to edit delivery instructions up until the order is confirmed by the restaurant.
+FR-5: The system shall provide a clear visual indicator to the customer that delivery instructions have been saved.
+NFR-1: The delivery instructions input field shall load within 2 seconds.
+NFR-2: The system shall ensure that delivery instructions are transmitted securely using HTTPS.
+NFR-3: The system shall be able to handle at least 1000 concurrent users entering delivery instructions without performance degradation.
+NFR-4: The delivery instructions field shall be accessible and usable for customers with disabilities, adhering to WCAG 2.1 AA guidelines.
+",1774,1018,9,4,4,1,1,1.83,396,214,610,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall provide a text input field on the order confirmation page allowing customers to enter delivery instructions (maximum 255 characters).
+FR-2: The delivery instructions entered by the customer shall be displayed to the restaurant staff in the order details view.
+FR-3: Delivery instructions shall be stored securely in the database and associated with the specific order.
+FR-4: The system shall prevent the submission of delivery instructions containing potentially malicious code (e.g., HTML tags).
+FR-5: The delivery instructions shall be accessible to the delivery driver via the driver application.
+NFR-1: The delivery instructions input field shall load within 2 seconds on the order confirmation page.
+NFR-2: The delivery instructions field shall be responsive and accessible on various screen sizes (desktop, tablet, mobile).
+NFR-3: Data at rest for delivery instructions shall be encrypted using AES-256 encryption.
+NFR-4: The system shall log any errors encountered while saving or retrieving delivery instructions.
+FR-6: The system shall truncate delivery instructions exceeding 255 characters and display a warning message to the user.
+NFR-5: The delivery instructions feature shall be available 99.9% of the time.
+",1774,1246,11,5,3,1,1,1.84,396,265,661,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter delivery instructions via a text input field with a character limit of 255 characters.
+FR-2: Delivery instructions entered by the customer shall be displayed to the restaurant staff on the order details screen.
+FR-3: Delivery instructions entered by the customer shall be printed on the delivery ticket or included in the information sent to the delivery driver.
+FR-4: Customers shall be able to edit their delivery instructions up to 5 minutes before the scheduled delivery time.
+FR-5: Delivery instructions field shall be optional for the customer.
+FR-6: Delivery instructions shall be stored securely associated with the relevant order in the database.
+
+NFR-1: The delivery instructions text input field shall load within 2 seconds.
+NFR-2: The delivery instructions feature shall be available 99.9% of the time.
+NFR-3: The system shall prevent the submission of delivery instructions containing malicious code or potentially harmful content.
+NFR-4: The delivery instructions text field shall be accessible and usable by customers with disabilities, adhering to WCAG 2.1 AA standards.
+",1774,1135,10,4,3,1,2,1.84,396,240,636,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the customer to enter delivery instructions, up to 255 characters, during the order placement process.
+FR-2: The system shall store the delivery instructions associated with the order in the database.
+FR-3: The delivery instructions field shall be displayed on the order confirmation screen after the order is placed.
+FR-4: The system shall transmit the delivery instructions to the restaurant along with the order details.
+FR-5: If the delivery instructions exceed 255 characters, the system shall display an error message to the customer, prompting them to shorten the instructions.
+FR-6: The system shall provide a default delivery instruction option (e.g., ""Leave at door"") that the customer can select if they do not want to enter custom instructions.
+NFR-1: The delivery instructions shall be transmitted to the restaurant within 2 seconds of order placement.
+NFR-2: The delivery instructions field shall be clearly labeled and easily accessible on the order placement screen.
+NFR-3: The delivery instructions field shall be accessible to users with screen readers.
+",1840,1101,9,3,4,2,1,1.84,434,232,666,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the customer to enter delivery instructions, with a maximum length of 255 characters, during the order placement process.
+FR-2: The system shall store the delivery instructions associated with the order.
+FR-3: The delivery instructions field shall be displayed to the customer on the order confirmation page.
+FR-4: The system shall transmit the delivery instructions to the restaurant along with the order details.
+FR-5: If the delivery instructions exceed 255 characters, the system shall display an error message to the customer, prompting them to shorten the text.
+FR-6: The system shall provide a default delivery instruction field that includes common delivery options, such as ""Leave at the door"" or ""Call upon arrival,"" which the user can select or modify.
+NFR-1: The delivery instructions should be transmitted to the restaurant within 2 seconds of order confirmation.
+NFR-2: The delivery instructions field should be clearly labeled and easily accessible on the order placement page.
+NFR-3: The system shall ensure that the delivery instructions are transmitted securely and are only accessible to authorized restaurant personnel.
+",1840,1169,9,3,4,2,1,1.75,434,240,674,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.', 'context': 'Online food ordering service'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to leave delivery instructions for the restaurant, such as gate codes or special parking arrangements.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to enter free-text delivery instructions, up to 250 characters.
+FR-2: The system shall store the delivery instructions entered by the customer and associate them with the specific order.
+FR-3: The system shall display the option to enter delivery instructions on the order confirmation page, before the customer finalizes and pays for the order.
+FR-4: The system shall transmit the delivery instructions to the restaurant along with the order details.
+FR-5: If delivery instructions exceed 250 characters, the system shall display an error message to the customer and prevent order submission until the instructions are shortened.
+FR-6: The system shall notify the customer upon order confirmation that delivery instructions have been successfully saved.
+NFR-1: The delivery instructions shall be transmitted to the restaurant within 2 seconds of order confirmation.
+NFR-2: The delivery instructions text box shall be clearly labeled and easily accessible on the order confirmation page.
+NFR-3: The delivery instruction field shall adhere to accessibility guidelines (WCAG 2.1 level AA).
+",1840,1127,9,3,4,2,1,1.80,434,232,666,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

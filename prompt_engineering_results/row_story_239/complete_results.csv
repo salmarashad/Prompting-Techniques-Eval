@@ -1,0 +1,1558 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to ""Like"" a post.
+FR-2: The system shall record the number of ""Likes"" for each post.
+FR-3: The system shall display the total number of ""Likes"" for each post to all users who can view the post.
+FR-4: The system shall allow a user to add a text-based comment to a post.
+FR-5: The system shall display comments associated with a post in chronological order.
+FR-6: The system shall store the username of the user who created each comment.
+FR-7: The system shall display the username of the user who created each comment alongside the comment text.
+FR-8: The system shall limit comment length to 500 characters.
+FR-9: The system shall prevent a user from liking the same post more than once.
+FR-10: The system shall allow a user to unlike a post they have previously liked.
+
+NFR-1: The ""Like"" action shall be processed and reflected on the user interface within 2 seconds.
+NFR-2: The system shall be able to handle at least 1000 ""Like"" actions per second.
+NFR-3: The system shall be able to store and retrieve comments with an average latency of less than 500ms.
+NFR-4: The comment input field shall be clearly visible and accessible on all supported devices (desktop, tablet, mobile).
+NFR-5: The system shall ensure that no personally identifiable information (PII) is exposed in the display of likes or comments, beyond the user's chosen username.
+",601,1382,15,5,3,2,1,2.62,157,350,507,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to ""Like"" a post. When a user clicks the ""Like"" button on a post, the number of likes associated with that post shall increment by one. The system shall record the user's ""Like"" action.
+FR-2: The system shall allow users to ""Unlike"" a post they have previously ""Liked"". When a user clicks the ""Unlike"" button on a post, the number of likes associated with that post shall decrement by one. The system shall remove the user's ""Like"" action record.
+FR-3: The system shall display the total number of ""Likes"" a post has received. This number shall be visible to all users who can view the post.
+FR-4: The system shall allow users to add a text-based comment to a post. Comments shall be limited to a maximum of 500 characters.
+FR-5: The system shall display comments associated with a post in chronological order (oldest to newest).
+FR-6: The system shall store the username of the user who created each comment. This username shall be displayed alongside the comment.
+FR-7: The system shall display the timestamp of when each comment was created. The timestamp should display the date and time.
+
+NFR-1: The ""Like"" or ""Unlike"" action on a post shall be processed and reflected in the user interface within 2 seconds.
+NFR-2: The system shall be able to handle at least 1000 concurrent users liking or commenting on posts without significant performance degradation (defined as an average response time exceeding 3 seconds).
+NFR-3: The system shall ensure that a user can only ""Like"" a post once. Duplicate ""Like"" actions from the same user on the same post shall be prevented.
+NFR-4: The comment input field shall be clearly visible and easily accessible on each post.
+NFR-5: The system shall store all ""Like"" and comment data persistently and reliably, with a data loss rate of no more than 0.001%.
+",601,1831,12,5,3,2,1,2.81,157,437,594,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to 'Like' a post with a single click/tap on a designated 'Like' button/icon.
+FR-2: The system shall record each 'Like' action associated with the specific post and user account.
+FR-3: The total number of 'Likes' for a post shall be displayed and updated in real-time (within 2 seconds) upon each 'Like' action.
+FR-4: Users shall be able to add a text-based comment to a post via a comment input field.
+FR-5: The system shall store each comment, associating it with the specific post, user account, and timestamp of submission.
+FR-6: Comments shall be displayed below the post in chronological order of submission.
+FR-7: The system shall support a maximum comment length of 500 characters.
+FR-8: Users shall be able to delete their own comments.
+FR-9: The system shall update the comment section within 3 seconds of a successful comment submission.
+
+NFR-1: The 'Like' and comment submission features shall have an average response time of no more than 1 second under normal load (defined as up to 1000 concurrent users).
+NFR-2: The 'Like' and comment features shall be available 99.9% of the time, measured weekly.
+NFR-3: The system shall be able to handle at least 50 'Like' actions per second without degradation in performance.
+NFR-4: The user interface for liking and commenting must be accessible on desktop and mobile devices.
+NFR-5: All user interactions (likes/comments) must be secured using HTTPS to protect user data.
+",601,1454,14,5,4,1,2,2.62,157,365,522,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Post Reaction Options:** The system shall provide users with the ability to react to posts. At a minimum, this shall include the option to ""Like"" a post.
+*   **FR-2: Commenting Functionality:** The system shall allow users to add text-based comments to posts.
+*   **FR-3: Like Persistence:** The system shall persist ""Like"" reactions to posts, associating them with the reacting user and the specific post.
+*   **FR-4: Comment Persistence:** The system shall persist comments to posts, associating them with the commenting user, the specific post, and a timestamp.
+*   **FR-5: Like Display:** The system shall display the number of ""Likes"" a post has received.
+*   **FR-6: Comment Display:** The system shall display comments associated with a post, ordered chronologically (newest first or oldest first, configurable by the user in their profile settings).
+*   **FR-7: User Identification on Reactions:** The system shall display the username (or display name) of users who have ""Liked"" a post (e.g., on mouseover or click).
+*   **FR-8: User Identification on Comments:** The system shall display the username (or display name) of users who have commented on a post alongside their comment.
+*   **FR-9: Comment Editing/Deletion (User):** The system shall allow users to edit or delete their own comments within 5 minutes of posting.
+*   **FR-10: Comment Reporting:** The system shall allow users to report comments for violating community guidelines.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Reaction Responsiveness:** The system shall register a ""Like"" reaction within 1 second of the user clicking the ""Like"" button under normal load conditions (defined as fewer than 1000 concurrent users).
+*   **NFR-2: Comment Submission Latency:** The system shall save and display a user's comment within 2 seconds of the user submitting the comment under normal load conditions (defined as fewer than 1000 concurrent users).
+*   **NFR-3: Scalability of Reactions:** The system shall be able to handle at least 10,000 ""Like"" reactions per minute across all posts without performance degradation (defined as response times exceeding 3 seconds).
+*   **NFR-4: Scalability of Comments:** The system shall be able to handle at least 5,000 comments per minute across all posts without performance degradation (defined as response times exceeding 3 seconds).
+*   **NFR-5: Data Integrity:** The system shall ensure that ""Like"" and comment data is not lost or corrupted, even in the event of system failures.  Data backups shall be performed daily.
+*   **NFR-6: Security of Comments:** The system shall sanitize user-submitted comments to prevent cross-site scripting (XSS) attacks.
+*   **NFR-7: Accessibility:** The ""Like"" and comment functionalities shall be accessible to users with disabilities, adhering to WCAG 2.1 Level AA guidelines.
+*   **NFR-8: Comment Length Limit:** The system shall limit comments to a maximum of 500 characters to prevent abuse and maintain readability.
+",1493,3300,18,8,4,2,2,5.01,343,772,1115,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+","Okay, here's the breakdown of the user story into functional and non-functional requirements, following the examples you provided:
+
+**User Story:** As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+**Requirements:**
+
+**Functional Requirements (FR):**
+
+*   **FR-1: The system shall provide a ""Like"" button/icon on each post.**
+    *   *Rationale:* Directly addresses the ""liking"" aspect of reacting to posts.
+*   **FR-2: The system shall increment the ""Like"" count associated with a post when a user clicks the ""Like"" button.**
+    *   *Rationale:* Specifies the action that occurs when a like is registered.
+*   **FR-3: The system shall allow a user to ""Unlike"" a post, decrementing the ""Like"" count accordingly.**
+    *   *Rationale:* Allows users to undo their like.
+*   **FR-4: The system shall display the total number of ""Likes"" a post has received.**
+    *   *Rationale:* Provides feedback to users about the popularity of a post.
+*   **FR-5: The system shall provide a comment section/input field below each post.**
+    *   *Rationale:* Addresses the ""commenting"" aspect of reacting to posts.
+*   **FR-6: The system shall allow users to enter and submit comments on a post.**
+    *   *Rationale:* Specifies the action of submitting a comment.
+*   **FR-7: The system shall display comments on a post in chronological order, with the most recent comments appearing first.**
+    *   *Rationale:* Defines the ordering of comments. (Can be modified to specify other ordering options)
+*   **FR-8: The system shall display the username/profile name of the user who posted each comment.**
+    *   *Rationale:* Provides context for comments.
+*   **FR-9: The system shall allow users to delete their own comments.**
+    *   *Rationale:* Allows users to manage their own content.
+*   **FR-10: The system shall store the user ID, post ID, comment text, and timestamp for each comment.**
+    *   *Rationale:* Specifies the data structure needed to support comments.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: The system shall register a ""Like"" or ""Unlike"" action within 1 second of the user clicking the button.**
+    *   *Rationale:* Performance requirement for responsiveness.
+*   **NFR-2: The system shall display new comments within 2 seconds of submission.**
+    *   *Rationale:* Performance requirement for comment display.
+*   **NFR-3: The system shall support at least 100 concurrent users ""Liking"" or ""Commenting"" on a single post without performance degradation.**
+    *   *Rationale:* Scalability and performance under load.
+*   **NFR-4: The system shall prevent users from rapidly ""Liking"" or ""Unliking"" a post to avoid spamming (e.g., rate limiting to 1 like/unlike per second).**
+    *   *Rationale:* Security and abuse prevention.
+*   **NFR-5: The system shall ensure that comments containing potentially offensive or harmful language are flagged for moderation.**
+    *   *Rationale:* Moderation and community safety (This requires integration with a content filtering system, which can be detailed in more specific sub-requirements).
+*   **NFR-6: The ""Like"" button and comment section shall be accessible on desktop and mobile devices.**
+    *   *Rationale:* Usability and accessibility.
+*   **NFR-7: The comment section should be designed to be readable and easily navigable on different screen sizes.**
+    *   *Rationale:* Usability and responsiveness.
+",1493,3447,17,7,3,1,1,5.25,343,829,1172,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Post Display:** The system shall display posts in a format that allows users to easily identify and access reaction options (like, comment, etc.).
+*   **FR-2: Liking Functionality:** The system shall allow users to ""like"" a post with a single click/tap on a designated ""like"" icon or button.
+*   **FR-3: Like Count:** The system shall display the number of likes a post has received in real-time (or near real-time) and update it when a user likes or unlikes the post.
+*   **FR-4: Like/Unlike Toggle:** The system shall allow users to ""unlike"" a post they have previously liked by clicking/tapping the same ""like"" icon/button, effectively toggling their reaction.
+*   **FR-5: Commenting Functionality:** The system shall provide a text input field or modal for users to enter and submit comments on a post.
+*   **FR-6: Comment Display:** The system shall display comments associated with a post in chronological order (or with an option to sort), including the username/profile of the commenter and the timestamp of the comment.
+*   **FR-7: Comment Submission:** The system shall allow users to submit comments of up to 500 characters in length.
+*   **FR-8: Comment Moderation (Optional - Depends on requirements):** The system shall allow post authors or designated moderators to delete or hide comments that violate community guidelines (if moderation is implemented).
+*   **FR-9: Notification of Reactions (Optional - Depends on requirements):** The system shall notify the author of a post when other users like or comment on their post.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Like Response Time:** The system shall register and display a ""like"" action within 0.5 seconds of the user clicking/tapping the ""like"" button under normal load conditions.
+*   **NFR-2: Comment Submission Time:** The system shall process and display a submitted comment within 1 second under normal load conditions.
+*   **NFR-3: System Performance Under Load:** The system shall maintain acceptable performance (response times for liking and commenting within specified limits) even with 10,000 concurrent users interacting with posts.
+*   **NFR-4: Data Storage:** The system shall store all reactions (likes, comments) in a manner that ensures data persistence and integrity.
+*   **NFR-5: Security - Comment Sanitization:** The system shall sanitize user-submitted comments to prevent cross-site scripting (XSS) attacks.
+*   **NFR-6: Accessibility:** The ""like"" and ""comment"" features shall be accessible to users with disabilities, adhering to WCAG guidelines (e.g., providing alternative text for icons, keyboard navigation).
+*   **NFR-7: Scalability:** The system must be scalable to accommodate a growing number of users and posts without significant performance degradation.
+
+**Explanation of choices:**
+
+*   **Specificity:** Each requirement clearly describes a particular aspect of the functionality or performance.
+*   **Measurability:** The NFRs include specific timeframes or metrics (e.g., 0.5 seconds, 1 second, 10,000 concurrent users).
+*   **Achievability:** The requirements are realistic given typical web development capabilities.
+*   **Relevance:** The requirements directly address the user's need to react to posts.
+*   **Time-bound:** The NFRs imply a certain urgency in terms of performance.
+
+I have also provided for comment sanitisation which is an important feature for social media.
+",1493,3725,16,7,3,1,1,5.48,343,854,1197,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a logged-in user to ""like"" a post.
+FR-2: The system shall display the total number of ""likes"" a post has received.
+FR-3: The system shall allow a logged-in user to add a text-based comment to a post.
+FR-4: The system shall display comments associated with a post, ordered chronologically.
+FR-5: The system shall associate each comment with the user who created it.
+FR-6: The system shall store the timestamp of when a like was created.
+FR-7: The system shall store the timestamp of when a comment was created.
+FR-8: The system shall prevent a user from liking the same post more than once.
+FR-9: The system shall allow a user to unlike a post.
+FR-10: The system shall update the like count in real-time or near real-time (within 2 seconds) after a user likes or unlikes a post.
+
+NFR-1: The ""like"" action shall complete within 500 milliseconds for 95% of requests.
+NFR-2: The comment submission shall complete within 1 second for 95% of requests.
+NFR-3: The system shall be able to handle at least 10,000 concurrent users liking or commenting on posts without significant performance degradation (defined as response times exceeding 2 seconds).
+NFR-4: The system shall ensure that only authenticated users can like or comment on posts.
+NFR-5: The user interface for liking and commenting shall be intuitive and easy to use, as measured by a System Usability Scale (SUS) score of at least 70.
+NFR-6: The system shall store all comments securely, protecting against unauthorized access or modification.
+NFR-7: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+",1660,1618,17,7,3,2,2,2.75,387,412,799,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a user to ""like"" a post.
+FR-2: The system shall allow a user to add a comment to a post.
+FR-3: The system shall display the total number of ""likes"" a post has received.
+FR-4: The system shall display all comments associated with a post, ordered chronologically.
+FR-5: The system shall allow a user to remove a comment they have created.
+FR-6: The system shall display the username of the user who created each comment.
+FR-7: The system shall provide a visual indicator (e.g., a filled-in heart icon) to show when a user has already ""liked"" a post.
+FR-8: The system shall prevent a user from liking the same post multiple times.
+FR-9: The system shall limit comment length to 500 characters.
+FR-10: The system shall notify the post author when another user comments on their post.
+
+NFR-1: The system shall record a ""like"" action within 200ms of the user action.
+NFR-2: The system shall display new comments within 500ms of submission.
+NFR-3: The comment input field shall be easily accessible and intuitive to use on both desktop and mobile devices.
+NFR-4: The system shall be able to handle at least 10,000 concurrent users liking or commenting on posts without significant performance degradation (response times exceeding 1 second).
+NFR-5: User authentication shall be required before a user can like or comment on a post.
+NFR-6: The system shall protect against cross-site scripting (XSS) vulnerabilities in comments.
+NFR-7: The system shall store all like and comment data securely, compliant with GDPR privacy regulations.
+NFR-8: The like and comment features shall be available 99.9% of the time.
+",1660,1632,18,8,3,2,2,2.96,387,415,802,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a user to ""like"" a post.
+FR-2: The system shall record the user's ""like"" against the specific post.
+FR-3: The system shall display the total number of ""likes"" a post has received.
+FR-4: The system shall allow a user to add a text-based comment to a post.
+FR-5: The system shall display comments associated with a post in chronological order or allow sorting by 'most liked'.
+FR-6: The system shall store the comment, associating it with the user and the post.
+FR-7: The system shall display the user's profile name or display name alongside their comment.
+FR-8: The system shall allow users to delete their own comments.
+FR-9: The system shall notify the post's author when a user likes or comments on their post.
+FR-10: The system shall display the number of comments on a post.
+
+NFR-1: The system shall respond to a ""like"" action within 500 milliseconds.
+NFR-2: The system shall allow a minimum comment length of 1 character.
+NFR-3: The system shall support a maximum comment length of 1000 characters.
+NFR-4: The system shall maintain an uptime of 99.9% for the liking and commenting functionality.
+NFR-5: The system shall protect against cross-site scripting (XSS) vulnerabilities in user comments.
+NFR-6: The commenting functionality shall be accessible and usable on devices with varying screen sizes, including mobile phones, tablets, and desktop computers.
+NFR-7: The system shall be able to handle at least 1000 concurrent users liking or commenting on posts without significant performance degradation (defined as response time exceeding 1 second).
+",1660,1588,17,7,3,2,2,2.76,387,394,781,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART software requirements for the user story, followed by an evaluation and final recommendation, presented in the requested format:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/posts/{post_id}/like` that accepts a POST request.
+FR-2: The system shall update the `likes` counter in the `posts` database table when a user successfully likes a post.
+FR-3: The system shall provide an API endpoint `/posts/{post_id}/comments` that accepts a POST request with a `comment_text` parameter.
+FR-4: The system shall store comments in a `comments` database table, associated with the corresponding `post_id`.
+NFR-1: The API endpoints for liking and commenting shall have a response time of less than 200ms under normal load (1000 concurrent users).
+NFR-2: The system shall be able to handle at least 10,000 likes per minute.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The user shall be able to ""like"" a post by clicking a ""Like"" button or icon.
+FR-2: The ""Like"" button/icon shall visually change state (e.g., color change, filled icon) to indicate that the post has been liked.
+FR-3: The user shall be able to add a comment to a post via a text input field and a ""Submit"" button.
+FR-4: The comment shall be displayed below the post immediately after submission, along with the user's name and timestamp.
+NFR-1: The ""Like"" button/icon shall respond to user clicks within 100ms.
+NFR-2: Comments shall be displayed within 1 second of submission.
+NFR-3: The platform shall provide a mechanism to edit or delete comments within 5 minutes of posting.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: Each user shall be able to like a post only once.
+FR-2: The system shall prevent users from liking their own posts.
+FR-3: Comments shall be limited to a maximum length of 500 characters.
+FR-4: The system shall filter comments for profanity before displaying them.
+FR-5: The system shall store the user ID, post ID, and timestamp for each like.
+FR-6: The system shall store the user ID, post ID, timestamp, and comment text for each comment.
+NFR-1: The system shall maintain an audit log of all likes and comments, including user ID, post ID, timestamp, and IP address.
+NFR-2: Data storage for likes and comments shall comply with GDPR regulations.
+",1275,2363,21,7,3,2,2,3.68,282,604,886,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint for liking a post.
+FR-2: The system shall provide an API endpoint for adding a comment to a post.
+FR-3: The system shall store like data in the 'likes' table with columns 'user_id', 'post_id', and 'timestamp'.
+FR-4: The system shall store comment data in the 'comments' table with columns 'user_id', 'post_id', 'comment_text', and 'timestamp'.
+NFR-1: The API endpoint for liking a post shall respond in under 200ms under normal load (1000 concurrent users).
+NFR-2: The database shall be able to handle 1 million likes per day.
+NFR-3: The system shall use JSON for API requests and responses.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The user shall be able to ""like"" a post by clicking a ""Like"" button.
+FR-2: The user shall be able to add a comment to a post via a text input field and a ""Post"" button.
+FR-3: The ""Like"" button shall toggle between ""Like"" and ""Unlike"" states after a user clicks it.
+FR-4: The comment input field shall be limited to 280 characters.
+FR-5: The number of likes on a post shall be displayed near the ""Like"" button.
+FR-6: Comments shall be displayed in chronological order beneath the post.
+NFR-1: The ""Like"" button click shall update the like count within 1 second.
+NFR-2: The user interface shall be responsive across desktop, tablet, and mobile devices.
+NFR-3: The platform shall support accessibility features, including screen reader compatibility for liking and commenting.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: Each post can have multiple likes.
+FR-2: Each user can only like a post once.
+FR-3: Users must be logged in to like or comment on a post.
+FR-4: Comments cannot be edited after they are posted.
+FR-5: Comments must be associated with a valid post.
+FR-6: The system shall prevent users from posting empty comments.
+NFR-1: The system shall ensure data consistency between the number of likes displayed and the number of likes stored in the database.
+NFR-2: User activity logs shall record all like and comment actions with timestamps and user IDs.
+NFR-3: The system shall have a mechanism to flag and remove inappropriate comments.
+
+**FINAL RECOMMENDATION:**
+
+FR-1: The user shall be able to ""like"" a post by clicking a ""Like"" button.
+FR-2: The user shall be able to add a comment to a post via a text input field and a ""Post"" button.
+FR-3: The ""Like"" button shall toggle between ""Like"" and ""Unlike"" states after a user clicks it.
+FR-4: The comment input field shall be limited to 280 characters.
+FR-5: The number of likes on a post shall be displayed near the ""Like"" button.
+FR-6: Comments shall be displayed in chronological order beneath the post.
+FR-7: Users must be logged in to like or comment on a post.
+FR-8: Each user can only like a post once.
+FR-9: The system shall prevent users from posting empty comments.
+NFR-1: The ""Like"" button click shall update the like count within 1 second.
+NFR-2: The user interface shall be responsive across desktop, tablet, and mobile devices.
+NFR-3: The platform shall support accessibility features, including screen reader compatibility for liking and commenting.
+NFR-4: The system shall ensure data consistency between the number of likes displayed and the number of likes stored in the database.
+",1275,3339,38,13,3,1,1,4.89,282,861,1143,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of requirements, followed by the evaluation criteria and final recommendation, presented in the format you requested.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/posts/{post_id}/like` that accepts a POST request from an authenticated user.
+FR-2: The system shall store like information in a database table named `post_likes` with columns `user_id`, `post_id`, and `created_at`.
+FR-3: The system shall provide an API endpoint `/posts/{post_id}/comments` that accepts a POST request with a `comment_text` parameter from an authenticated user.
+FR-4: The system shall store comments in a database table named `post_comments` with columns `user_id`, `post_id`, `comment_text`, and `created_at`.
+NFR-1: The API endpoints for liking and commenting shall have a maximum response time of 200ms.
+NFR-2: The database shall be able to handle 10,000 like and comment requests per minute.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The user shall be able to ""like"" a post with a single click or tap.
+FR-2: The number of ""likes"" on a post shall be displayed visually to the user.
+FR-3: The user shall be able to add a comment to a post via a text input field.
+FR-4: Comments added by the user shall be displayed below the post, along with the user's name or username.
+FR-5: The user shall be able to delete their own comment.
+NFR-1: The ""like"" action shall provide immediate visual feedback to the user (e.g., changing the icon color).
+NFR-2: Comments shall be displayed in chronological order.
+NFR-3: The page should load completely with comments and like counts in less than 2 seconds.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall allow authenticated users to like a post only once.
+FR-2: The system shall prevent users from liking their own posts.
+FR-3: The system shall allow authenticated users to comment on any post unless the post has been flagged as inappropriate.
+FR-4: The system shall store the user ID, post ID, and timestamp for each like and comment.
+FR-5: If a post is deleted, all associated likes and comments shall also be deleted.
+NFR-1: The system shall ensure data consistency between the displayed number of likes and the actual number of likes stored in the database.
+NFR-2: The system shall protect against comment spam by implementing rate limiting (e.g., no more than 5 comments per minute per user).
+FINAL RECOMMENDATION:
+
+The most effective set of requirements is **Approach 2: Focus on user experience and outcomes**.
+
+",1275,2586,21,7,3,1,1,4.63,282,642,924,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will generate functional and non-functional requirements based on the user story ""As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them,"" ensuring each requirement is SMART.
+
+FR-1: The system shall allow a logged-in user to ""like"" a post. (Specific, Measurable: User can click a like button, Achievable, Relevant, Time-bound: Within 0.5 seconds of button click)
+
+FR-2: The system shall display the total number of ""likes"" a post has received. (Specific, Measurable: Display an integer value, Achievable, Relevant, Time-bound: Updated within 1 second of a like/unlike action)
+
+FR-3: The system shall allow a logged-in user to add a text-based comment to a post. (Specific, Measurable: User can enter text in a comment field and submit, Achievable, Relevant, Time-bound: Comment submission within 1 second)
+
+FR-4: The system shall display comments associated with a post, ordered chronologically (newest first or oldest first, configurable by the user in their profile settings). (Specific, Measurable: Comments are displayed in a list with timestamp, Achievable, Relevant, Time-bound: Displayed within 2 seconds of post loading)
+
+FR-5: The system shall allow a logged-in user to delete their own comments from a post. (Specific, Measurable: User can click a delete button next to their comment, Achievable, Relevant, Time-bound: Comment deletion within 1 second of button click)
+
+FR-6: The system shall prevent users from liking the same post multiple times. (Specific, Measurable: Subsequent like clicks do not increment the like count, Achievable, Relevant, Time-bound: Prevented immediately)
+
+FR-7: The system shall limit the length of comments to 500 characters. (Specific, Measurable: System truncates or prevents submission of comments exceeding 500 characters, Achievable, Relevant, Time-bound: Enforced at submission time)
+
+NFR-1: The ""like"" action shall have a response time of no more than 0.5 seconds under normal load (defined as up to 1000 concurrent users). (Specific, Measurable: Response time measured in seconds, Achievable, Relevant, Time-bound: Under normal load conditions)
+
+NFR-2: The system shall be able to handle at least 100 comments per second without performance degradation (defined as a response time increase of more than 1 second). (Specific, Measurable: Comments processed per second, Achievable, Relevant, Time-bound: Sustained for 1 minute)
+
+NFR-3: The system shall ensure that comments are persistently stored and available with 99.99% uptime. (Specific, Measurable: Uptime percentage, Achievable, Relevant, Time-bound: Measured monthly)
+
+NFR-4: The system shall protect against cross-site scripting (XSS) attacks in comments. (Specific, Measurable: Vulnerability scans show no XSS vulnerabilities, Achievable, Relevant, Time-bound: Continuously monitored)
+
+NFR-5: The system shall be accessible on desktop and mobile devices with a responsive design for optimal viewing. (Specific, Measurable: Layout adapts to different screen sizes, Achievable, Relevant, Time-bound: Available upon release)
+",817,3099,12,5,5,2,4,4.70,196,726,922,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will generate functional and non-functional requirements from the given user story, ensuring they are SMART.
+
+FR-1: The system shall allow a logged-in user to ""Like"" a post. The action shall be completed within 0.5 seconds of the user interaction.
+FR-2: The system shall visually indicate that a post has been ""Liked"" by the user (e.g., by changing the color/icon of the ""Like"" button). This visual change must happen within 0.2 seconds.
+FR-3: The system shall display the total number of ""Likes"" a post has received. This count shall be updated within 1 second of a new ""Like"" being registered.
+FR-4: The system shall allow a logged-in user to add a text-based comment to a post. The comment input field must be visible and accessible on each post.
+FR-5: The system shall allow a logged-in user to submit a comment of up to 500 characters. The system shall display an error message if the character limit is exceeded upon submission.
+FR-6: The system shall display the user's comment immediately below the post after submission, along with the user's username and timestamp (within 2 seconds).
+FR-7: The system shall store the ""Like"" and comment information (user ID, post ID, timestamp) persistently in the database. Data must be stored within 5 seconds of the event occurring.
+
+NFR-1: The ""Like"" and comment functionality shall be available 99.9% of the time during business hours (8 AM - 8 PM local time), measured weekly.
+NFR-2: The system shall handle at least 1000 concurrent users interacting with the ""Like"" and comment functionality without performance degradation (response times exceeding 2 seconds). This will be tested via load testing by the end of next sprint.
+NFR-3: The system shall ensure that only logged-in users can ""Like"" or comment on posts, protecting against unauthorized access. This will be validated through security testing before the release.
+NFR-4: The system shall prevent cross-site scripting (XSS) attacks in user-submitted comments by sanitizing input before display. This will be confirmed by vulnerability scanning before the feature is released.
+NFR-5: The ""Like"" and comment feature should be accessible and usable on devices with screen sizes ranging from 320px to 1920px, ensuring responsiveness. This will be checked by manual testing before release.
+",817,2302,12,5,3,2,2,3.81,196,540,736,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements derived from the user story, formatted as requested and adhering to the SMART criteria:
+
+FR-1: The system shall allow a logged-in user to ""like"" a post. *Measure: User successfully clicks the ""like"" button on a post. Achievable by the end of the next sprint (2 weeks). Relevant to enabling user interaction. Time-bound: 2 weeks.*
+
+FR-2: The system shall visually indicate that a post has been ""liked"" by the user (e.g., change the appearance of the ""like"" button). *Measure: The ""like"" button's appearance changes upon click. Achievable by the end of the next sprint (2 weeks). Relevant to providing feedback to the user. Time-bound: 2 weeks.*
+
+FR-3: The system shall display the total number of ""likes"" a post has received. *Measure: The number of likes is displayed next to each post. Achievable by the end of the next sprint (2 weeks). Relevant to showing post popularity. Time-bound: 2 weeks.*
+
+FR-4: The system shall allow a logged-in user to add a text-based comment to a post. *Measure: User is able to type and submit a comment. Achievable by the end of the next sprint (2 weeks). Relevant to enabling user discussion. Time-bound: 2 weeks.*
+
+FR-5: The system shall display comments associated with a post, ordered chronologically (oldest first). *Measure: Comments are visible below the post in the correct order. Achievable within 3 weeks. Relevant to providing context to a discussion. Time-bound: 3 weeks.*
+
+FR-6: The system shall associate each comment with the user who created it (e.g., display the username). *Measure: Each comment displays the username of the commenter. Achievable within 3 weeks. Relevant to attributing contributions. Time-bound: 3 weeks.*
+
+FR-7: The system shall limit comments to a maximum length of 500 characters to prevent abuse. *Measure: Comments longer than 500 characters will not be submitted. Achievable within 3 weeks. Relevant to maintaining data integrity. Time-bound: 3 weeks.*
+
+NFR-1: The ""like"" action shall complete within 0.5 seconds for 95% of users. *Measure: Response time is less than 0.5 seconds. Achievable in the upcoming quarter (3 months). Relevant to ensuring user experience. Time-bound: 3 months.*
+
+NFR-2: The comment posting functionality shall be available 99.9% of the time. *Measure: Uptime of comment functionality. Achievable within the upcoming quarter (3 months) Relevant to system reliability. Time-bound: 3 months.*
+
+NFR-3: The system shall prevent cross-site scripting (XSS) attacks when rendering comments. *Measure: Penetration tests show no XSS vulnerabilities. Achievable within the upcoming quarter (3 months). Relevant to maintaining security. Time-bound: 3 months.*
+
+NFR-4: The system shall be able to handle at least 100 concurrent users liking/commenting on posts without performance degradation. *Measure: System performance remains acceptable with 100 concurrent users. Achievable within the upcoming quarter (3 months). Relevant to system scalability. Time-bound: 3 months.*
+",817,3020,11,4,3,2,2,4.48,196,719,915,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a logged-in user to ""Like"" a post.
+
+FR-2: The system shall allow a logged-in user to ""Unlike"" a post they have previously liked.
+
+FR-3: The system shall display the total number of likes for each post.
+
+FR-4: The system shall display a visual indication (e.g., highlighted icon) to the user if they have already liked a post.
+
+FR-5: The system shall allow a logged-in user to add a text-based comment to a post.
+
+FR-6: The system shall display comments associated with a post, ordered chronologically (oldest first) or reverse chronologically (newest first) - *Configuration to be determined during design*.
+
+FR-7: The system shall display the username of the user who created each comment.
+
+FR-8: The system shall allow a logged-in user to delete their own comments.
+
+FR-9: The system shall limit the length of comments to 1000 characters.
+
+FR-10: The system shall prevent users from liking or commenting on posts that have been flagged as inappropriate or violate community guidelines.
+
+FR-11: The system shall record the timestamp of when a like or comment was created.
+
+FR-12: The system shall provide an API endpoint for creating likes.
+
+FR-13: The system shall provide an API endpoint for deleting likes.
+
+FR-14: The system shall provide an API endpoint for creating comments.
+
+FR-15: The system shall provide an API endpoint for deleting comments.
+
+NFR-1: The ""Like"" and ""Unlike"" actions shall complete within 500 milliseconds under normal load.
+
+NFR-2: The addition of a comment shall complete within 1 second under normal load.
+
+NFR-3: The system shall be able to handle at least 10,000 concurrent users liking or commenting on posts without significant performance degradation (defined as an increase in response time of more than 20%).
+
+NFR-4: The system shall store all likes and comments in a persistent data store with a data retention policy of at least 2 years.
+
+NFR-5: The system shall be designed to prevent SQL injection vulnerabilities in comment creation and retrieval.
+
+NFR-6: The system shall be compliant with GDPR regulations regarding user data (likes and comments).
+
+NFR-7: The system shall be monitored for performance and availability, with alerts triggered for error rates exceeding 1%.
+
+NFR-8: The system shall be designed for scalability to accommodate future growth in the number of users and posts.
+
+NFR-9: The system shall be accessible and usable across different web browsers (Chrome, Firefox, Safari, Edge) and mobile devices (iOS and Android).
+
+NFR-10: The system shall provide audit logs for all like and comment actions, including user ID, post ID, timestamp, and action type.
+",1072,2647,25,10,3,2,1,4.15,236,623,859,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow authenticated users to ""like"" a post.
+
+FR-2: The system shall allow authenticated users to ""unlike"" a post they have previously liked.
+
+FR-3: The system shall record the user ID and timestamp of each ""like"" action.
+
+FR-4: The system shall display the total number of ""likes"" for each post.
+
+FR-5: The system shall display a visual indicator (e.g., a filled-in heart icon) to show that a user has liked a post.
+
+FR-6: The system shall allow authenticated users to add text comments to a post.
+
+FR-7: The system shall display comments in chronological order below the post.
+
+FR-8: The system shall display the username and timestamp of each comment.
+
+FR-9: The system shall limit the maximum length of a comment to 1000 characters.
+
+FR-10: The system shall provide a mechanism for users to report inappropriate comments to platform moderators.
+
+FR-11: The system shall allow users to delete their own comments.
+
+FR-12: The system shall persist ""like"" and ""comment"" data in a database.
+
+FR-13: The system shall support retrieving ""like"" and ""comment"" data for a post with a maximum latency of 200ms.
+
+FR-14: The system shall provide an API endpoint for creating, retrieving, updating, and deleting comments.
+
+NFR-1: The ""like"" action shall complete within 500ms under normal load.
+
+NFR-2: The comment submission process shall complete within 1 second under normal load.
+
+NFR-3: The system shall be able to handle at least 10,000 ""like"" actions per minute.
+
+NFR-4: The system shall be able to handle at least 5,000 comment submissions per minute.
+
+NFR-5: All user input (comments) shall be sanitized to prevent XSS attacks.
+
+NFR-6: The system shall comply with GDPR regulations regarding data privacy and user consent.
+
+NFR-7: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-8: ""Like"" and comment data shall be backed up daily to prevent data loss.
+
+NFR-9: The system shall be designed to be scalable to handle future growth in users and posts.
+
+NFR-10: The system shall log all ""like"" and comment actions for auditing purposes.
+",1072,2093,24,10,3,2,1,3.42,236,539,775,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a logged-in user to ""Like"" a post.
+
+FR-2: The system shall visually indicate that a post has been ""Liked"" by the current user.
+
+FR-3: The system shall record the user who ""Liked"" a post, and the timestamp of the ""Like"" action.
+
+FR-4: The system shall display the total number of ""Likes"" a post has received.
+
+FR-5: The system shall allow a logged-in user to ""Unlike"" a post they previously ""Liked.""
+
+FR-6: The system shall remove the ""Like"" record from the database when a user ""Unlikes"" a post.
+
+FR-7: The system shall update the total number of ""Likes"" displayed on a post in real-time (or near real-time) when a user ""Likes"" or ""Unlikes"" it.
+
+FR-8: The system shall allow a logged-in user to add a text comment to a post.
+
+FR-9: The system shall store the comment text, the user who created the comment, the post the comment is associated with, and the timestamp of the comment creation.
+
+FR-10: The system shall display comments in chronological order (or reverse chronological order, configurable per user preference) below the post, with commenter's username and timestamp clearly visible.
+
+FR-11: The system shall support the ability to paginate comments if the number of comments exceeds a configurable threshold.
+
+FR-12: The system shall allow users to edit their own comments within a configurable time window (e.g., 5 minutes).
+
+FR-13: The system shall store comment edit history (original comment and the edited comment) for audit purposes.
+
+FR-14: The system shall prevent users from posting comments that exceed a configurable length limit.
+
+FR-15: The system shall implement input validation to prevent Cross-Site Scripting (XSS) attacks in comments.
+
+FR-16: The system shall support reporting offensive or inappropriate comments to moderators.
+
+FR-17: The system shall notify the post author (if they have enabled notifications) when a new comment is added to their post.
+
+NFR-1: The ""Like"" and ""Unlike"" actions shall complete within 500 milliseconds under normal load.
+
+NFR-2: The comment submission shall complete within 1 second under normal load.
+
+NFR-3: The system shall be able to handle at least 10,000 ""Likes"" per second during peak usage.
+
+NFR-4: The system shall be able to handle at least 5,000 comment submissions per second during peak usage.
+
+NFR-5: The database shall be designed to ensure data consistency and prevent data loss in the event of a system failure.
+
+NFR-6: All ""Like"" and comment data shall be stored in compliance with GDPR and other relevant privacy regulations.
+
+NFR-7: The system shall protect against unauthorized access to ""Like"" and comment data through appropriate authentication and authorization mechanisms.
+
+NFR-8: The system shall provide audit logs for all ""Like"" and comment actions, including user IDs, timestamps, and relevant data changes.
+
+NFR-9: The system shall be designed to be scalable to accommodate future growth in the number of users and posts.
+
+NFR-10: The system shall be maintainable, with well-documented code and a clear architecture.
+
+NFR-11: The system shall be compatible with major web browsers (Chrome, Firefox, Safari, Edge) and mobile devices (iOS and Android).
+
+NFR-12: The user interface for ""Likes"" and comments shall be accessible to users with disabilities, complying with WCAG 2.1 Level AA guidelines.
+",1072,3321,29,12,3,2,1,4.96,236,801,1037,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Contextual,precise,"
+BUSINESS CONTEXT:
+A social media platform
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to ""Like"" a post with a single click/tap.
+FR-2: Users shall be able to add a text-based comment to a post, up to 500 characters in length.
+FR-3: The system shall display the total number of ""Likes"" a post has received.
+FR-4: The system shall display all comments associated with a post, ordered chronologically.
+FR-5: Users shall be able to delete their own comments.
+FR-6: The ""Like"" functionality shall integrate with the existing user authentication system to ensure only logged-in users can react.
+FR-7: The commenting functionality shall integrate with the existing notification system to notify the post author of new comments.
+FR-8: The system shall store ""Like"" and comment data in the existing database.
+NFR-1: The ""Like"" action shall be processed and reflected on the user interface within 200 milliseconds under normal load (defined as 10,000 concurrent users).
+NFR-2: The system shall be able to handle 5,000 ""Like"" actions per second during peak load (defined as 50,000 concurrent users).
+NFR-3: Comment submission shall be processed and displayed within 500 milliseconds under normal load.
+NFR-4: The system shall log all errors related to ""Like"" and comment functionality, including user ID, post ID, timestamp, and error message.
+NFR-5: The system shall provide real-time monitoring of ""Like"" and comment activity, including the number of ""Likes"" and comments per post, and error rates.
+NFR-6: The ""Like"" button shall visually change state (e.g., color change, icon change) upon being clicked/tapped to provide immediate feedback to the user.
+NFR-7: The comment input field shall provide a character counter to inform the user of the remaining characters available.
+NFR-8: Error messages related to ""Like"" and comment functionality shall be user-friendly and informative, providing guidance on how to resolve the issue.
+NFR-9: The system shall maintain 99.9% uptime for the ""Like"" and comment functionality.
+NFR-10: All requirements must be implemented and tested within 4 weeks.
+",772,2022,18,10,4,1,1,3.47,185,500,685,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Contextual,default,"
+BUSINESS CONTEXT:
+A social media platform
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to ""Like"" a post with a single click/tap.
+FR-2: Users shall be able to add a text comment to a post, up to 500 characters in length.
+FR-3: The system shall display the total number of ""Likes"" for each post.
+FR-4: The system shall display a list of comments for each post, ordered chronologically.
+FR-5: Users shall be able to delete their own comments within 5 minutes of posting.
+FR-6: The system shall integrate with the existing user authentication system to verify user identity before allowing reactions.
+FR-7: The system shall integrate with the existing notification system to notify the post author when a user reacts to their post.
+FR-8: The system shall integrate with the existing content moderation system to flag offensive comments.
+NFR-1: The ""Like"" reaction time shall be less than 200ms 95% of the time under peak load (10,000 reactions per second).
+NFR-2: The system shall be able to handle 5,000 comments per minute without performance degradation (average comment posting time exceeding 1 second).
+NFR-3: The system shall monitor the average reaction time and comment posting time, triggering an alert if either exceeds 500ms for more than 1 minute.
+NFR-4: The system shall log all errors related to reaction processing and comment posting, including user ID, post ID, and timestamp.
+NFR-5: The ""Like"" button and comment input field shall be easily accessible and visually distinct on all post displays.
+NFR-6: The system shall provide clear error messages to the user in case of reaction failure (e.g., ""Unable to Like post. Please try again later."").
+NFR-7: Comment threads shall be displayed in a clear, readable format with adequate spacing.
+NFR-8: The system shall be accessible on the latest two versions of Chrome, Firefox, Safari, and Edge browsers, as well as the latest two versions of iOS and Android mobile operating systems.
+",772,1883,16,8,3,2,2,3.34,185,453,638,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Contextual,creative,"
+BUSINESS CONTEXT:
+A social media platform
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to react to a post with a ""Like"" within 500ms of clicking the ""Like"" button.
+
+FR-2: Users shall be able to add a text-based comment (up to 280 characters) to a post.
+
+FR-3: The system shall display the total number of ""Likes"" a post has received.
+
+FR-4: The system shall display the last 10 comments posted on a post in chronological order.
+
+FR-5: The system shall integrate with the existing user authentication system to verify user identity before allowing reactions or comments.
+
+FR-6: The system shall integrate with the notification system to send a notification to the post author when a user reacts or comments on their post.
+
+FR-7: Users shall be able to delete their own comments within 5 minutes of posting.
+
+NFR-1: The system shall maintain an average response time of less than 1 second for reacting to posts under a peak load of 10,000 reactions per second.
+
+NFR-2: The comment posting system shall handle a peak load of 5,000 comments per second with a 99.9% success rate.
+
+NFR-3: The system shall log all ""Like"" and comment actions, including timestamps, user IDs, and post IDs, for auditing purposes.
+
+NFR-4: Error messages displayed to the user during reaction or comment failures shall be user-friendly and provide guidance on how to resolve the issue.
+
+NFR-5: The ""Like"" button and comment input field shall be easily accessible and visually distinct on both desktop and mobile interfaces.
+
+NFR-6: The system shall provide real-time updates of the number of ""Likes"" and new comments displayed on a post without requiring the user to refresh the page.
+",772,1597,13,6,4,2,2,2.88,185,389,574,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users can ""like"" a post with a single click/tap.
+FR-2: Users can add a text-based comment to a post.
+FR-3: The number of ""likes"" on a post is displayed.
+FR-4: Comments are displayed below the post, ordered chronologically.
+FR-5: Users can view a list of users who ""liked"" a post.
+FR-6: Users can delete their own comments.
+FR-7: Users can edit their own comments within 5 minutes of posting.
+FR-8: The platform supports a maximum comment length of 500 characters.
+FR-9: The platform supports a maximum of 1000 comments per post.
+FR-10: The platform supports a maximum of 10,000 likes per post.
+
+NFR-1: The ""like"" action must complete within 500ms.
+NFR-2: Comments must be displayed within 1 second of posting.
+NFR-3: The platform must handle at least 1000 concurrent users reacting to posts.
+NFR-4: The platform must be accessible on all major web browsers (Chrome, Firefox, Safari, Edge) and mobile operating systems (iOS, Android).
+NFR-5: User reactions (likes and comments) must be stored securely and comply with data privacy regulations.
+NFR-6: The platform should provide real-time updates for likes and comments.
+NFR-7: The platform should be responsive and adapt to different screen sizes.
+NFR-8: The platform should be available 99.9% of the time.
+",1756,1263,18,8,4,1,2,2.46,398,355,753,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to ""like"" a post with a single click/tap.
+FR-2: Users shall be able to add a text-based comment to a post.
+FR-3: Users shall be able to view the number of ""likes"" a post has received.
+FR-4: Users shall be able to view all comments associated with a post.
+FR-5: Users shall be able to unlike a post.
+FR-6: Users shall be able to delete their own comments.
+FR-7: The system shall display the name/username of the user who liked or commented on a post.
+FR-8: The system shall store the timestamp of when a like or comment was created.
+FR-9: Users shall be able to report comments for inappropriate content.
+
+NFR-1: The ""like"" action should complete within 500ms.
+NFR-2: Comments should be displayed in chronological order.
+NFR-3: The system should handle at least 1000 concurrent users interacting with the ""like"" and comment features without performance degradation.
+NFR-4: User data related to likes and comments must be stored securely and in compliance with privacy regulations.
+NFR-5: The ""like"" and comment features shall be accessible on all supported devices and browsers.
+NFR-6: The system should notify the post author when a new like or comment is added within 2 seconds.
+",1756,1206,15,6,4,1,1,2.24,398,310,708,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users can ""like"" a post by clicking a ""like"" button/icon.
+FR-2: Users can add a text-based comment to a post.
+FR-3: The total number of ""likes"" for a post is displayed and updated dynamically.
+FR-4: Comments are displayed chronologically under each post.
+FR-5: Users can delete their own comments.
+FR-6: Users can view a list of users who have ""liked"" a specific post.
+FR-7: The social media platform sends a notification to the post author when another user likes their post.
+FR-8: The social media platform sends a notification to the post author when another user comments on their post.
+FR-9: The user interface updates in real-time for likes and comments.
+NFR-1: The ""like"" action must complete within 500 milliseconds.
+NFR-2: The system must handle at least 10,000 ""like"" actions per second.
+NFR-3: The system must handle at least 5,000 comment submissions per second.
+NFR-4: Post reactions (likes and comments) must be stored securely, protecting user privacy.
+NFR-5: The platform should be accessible on major browsers and mobile devices.
+NFR-6: The comment input field must limit comments to 500 characters.
+",1756,1123,15,6,3,1,1,2.29,398,300,698,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to react to a post with a ""like"" action.
+FR-2: The system shall allow a user to add a text-based comment to a post.
+FR-3: The system shall require a user to be logged in before they can react to or comment on a post.
+FR-4: The system shall store the user's reaction (like/comment) associated with the specific post and the timestamp of the reaction.
+FR-5: The system shall display an error message to the user if the reaction or comment cannot be saved due to a server error.
+FR-6: The system shall provide visual confirmation to the user that their reaction (like/comment) has been successfully recorded.
+NFR-1: The system shall record and display a user's reaction (like/comment) within 2 seconds of the action.
+NFR-2: The ""like"" button and comment input field shall be clearly visible and easily accessible on each post.
+NFR-3: The system shall prevent users from submitting comments containing malicious code or exceeding a maximum length of 500 characters.
+",1822,998,9,3,4,2,1,1.93,436,243,679,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to react to posts with a ""like"" reaction.
+FR-2: The system shall allow users to add text comments to posts.
+FR-3: The system shall require a user to be logged in before they can react to or comment on a post.
+FR-4: The system shall store the user ID, reaction type (like/comment), and timestamp for each reaction.
+FR-5: The system shall display an error message to the user if their reaction fails to save to the database.
+FR-6: The system shall provide visual confirmation to the user that their reaction (like or comment) has been successfully registered.
+NFR-1: The system shall register a user's reaction to a post within 1 second of the user initiating the action.
+NFR-2: The like button and comment input field shall be clearly visible and easily accessible on each post.
+NFR-3: The system shall prevent users from submitting comments containing malicious scripts or exceeding 500 characters.
+
+FINAL REQUIREMENTS:
+FR-1: The system shall allow users to react to posts with a ""like"" reaction.
+FR-2: The system shall allow users to add text comments to posts.
+FR-3: The system shall require a user to be logged in before they can react to or comment on a post.
+FR-4: The system shall store the user ID, reaction type (like/comment), and timestamp for each reaction.
+FR-5: The system shall display an error message to the user if their reaction fails to save to the database.
+FR-6: The system shall provide visual confirmation to the user that their reaction (like or comment) has been successfully registered.
+NFR-1: The system shall register a user's reaction to a post within 1 second of the user initiating the action.
+NFR-2: The like button and comment input field shall be clearly visible and easily accessible on each post.
+NFR-3: The system shall prevent users from submitting comments containing malicious scripts or exceeding 500 characters.
+",1822,1889,18,6,4,2,1,2.71,436,444,880,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.', 'context': 'A social media platform'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to react to posts on the social media platform, such as by liking or commenting on them.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to react to a post by selecting a reaction type (e.g., like, love, laugh, sad, angry) within 2 seconds of the post being displayed.
+
+FR-2: The system shall allow a user to add a text-based comment to a post, with a maximum character limit of 1000 characters, within 5 seconds of initiating the comment function.
+
+FR-3: The reaction functionality shall be available only after the user has successfully logged into the social media platform and the post is fully loaded.
+
+FR-4: The system shall record the user's reaction type and timestamp the reaction within 1 second of the reaction selection.
+
+FR-5: If the reaction submission fails due to network connectivity issues, the system shall display an error message ""Reaction failed to submit. Please try again later"" within 3 seconds and automatically retry the submission up to 3 times with a 5-second interval.
+
+FR-6: The system shall notify the post author via in-app notification within 1 minute when another user reacts to their post.
+
+NFR-1: The reaction count for each reaction type on a post shall be updated within 1 second of a new reaction being submitted.
+
+NFR-2: The reaction options (e.g., like, love) shall be displayed using icons that are easily distinguishable and recognizable by users, conforming to standard social media conventions, and should be accessible using keyboard navigation.
+
+NFR-3: The system shall prevent users from submitting more than 5 reactions to a single post within a 60 second period to mitigate potential abuse.
+
+FINAL REQUIREMENTS:
+FR-1: The system shall allow a user to react to a post by selecting a reaction type (e.g., like, love, laugh, sad, angry) within 2 seconds of the post being displayed.
+FR-2: The system shall allow a user to add a text-based comment to a post, with a maximum character limit of 1000 characters, within 5 seconds of initiating the comment function.
+FR-3: The reaction functionality shall be available only after the user has successfully logged into the social media platform and the post is fully loaded.
+FR-4: The system shall record the user's reaction type and timestamp the reaction within 1 second of the reaction selection.
+FR-5: If the reaction submission fails due to network connectivity issues, the system shall display an error message ""Reaction failed to submit. Please try again later"" within 3 seconds and automatically retry the submission up to 3 times with a 5-second interval.
+FR-6: The system shall notify the post author via in-app notification within 1 minute when another user reacts to their post.
+NFR-1: The reaction count for each reaction type on a post shall be updated within 1 second of a new reaction being submitted.
+NFR-2: The reaction options (e.g., like, love) shall be displayed using icons that are easily distinguishable and recognizable by users, conforming to standard social media conventions, and should be accessible using keyboard navigation.
+NFR-3: The system shall prevent users from submitting more than 5 reactions to a single post within a 60 second period to mitigate potential abuse.
+",1822,3095,18,6,5,1,4,4.63,436,694,1130,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
