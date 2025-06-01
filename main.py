@@ -324,24 +324,6 @@ def run_evaluation(user_story, row_number):
         "by_config": token_usage_by_config
     }
 
-    # # Generate human evaluation template
-    # eval_template = os.path.join(run_dir, "human_evaluation_template.csv")
-    # with open(eval_template, 'w', newline='') as f:
-    #     writer = csv.writer(f)
-    #     writer.writerow([
-    #         "Strategy", "Config", "Completeness (1-5)", "Clarity (1-5)",
-    #         "Specificity (1-5)", "Testability (1-5)", "Usefulness (1-5)",
-    #         "Overall (1-5)", "Notes"
-    #     ])
-    #
-    #     for strategy_name in all_results["results"]:
-    #         for config_name in all_results["results"][strategy_name]:
-    #             writer.writerow([
-    #                 strategy_name,
-    #                 config_name,
-    #                 "", "", "", "", "", "", ""
-    #             ])
-
 
     return all_results, run_dir, token_summary
 

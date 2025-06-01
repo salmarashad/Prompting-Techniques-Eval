@@ -1,0 +1,1552 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the user to initiate a bill split request for a group order before payment.
+FR-2: The system shall allow the user to specify the number of participants in the bill split, up to a maximum of 10.
+FR-3: The system shall allow the user to split the bill equally among the participants.
+FR-4: The system shall allow the user to manually adjust the amount each participant owes, with the total sum of individual amounts equaling the total bill amount.
+FR-5: The system shall send a notification to each participant with a link to view their share of the bill and make their payment.
+FR-6: The system shall track the payment status of each participant (e.g., pending, paid, overdue).
+FR-7: The system shall allow the order initiator to view the payment status of all participants.
+FR-8: The system shall automatically mark the bill split as complete once all participants have paid their share.
+FR-9: The system shall support bill splitting for all payment methods accepted by the platform.
+
+NFR-1: The bill split feature shall be accessible and usable on all supported devices (desktop, mobile web, and mobile app).
+NFR-2: The bill split process, from initiation to notification, shall complete within 5 seconds.
+NFR-3: The system shall securely store and process payment information related to bill splitting, complying with PCI DSS standards.
+NFR-4: The system shall be able to handle at least 100 concurrent bill split requests without performance degradation.
+NFR-5: The bill split feature shall be available 99.9% of the time.
+NFR-6: The user interface for the bill split feature shall be intuitive and easy to use, achieving a System Usability Scale (SUS) score of 70 or higher.
+",589,1708,15,6,4,1,1,3.03,152,394,546,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the user to specify the number of individuals (between 2 and 10 inclusive) participating in the bill split before order submission.
+
+FR-2: The system shall provide an option to split the total bill amount equally among the specified number of individuals.
+
+FR-3: The system shall allow users to customize individual contributions to the bill (e.g., specific items or amounts) before finalizing the split.
+
+FR-4: The system shall display the individual amount due for each participant after the bill is split, either equally or customized.
+
+FR-5: The system shall provide a mechanism (e.g., unique URL, QR code, notification) for each participant to view their individual portion of the bill and submit their payment.
+
+FR-6: The system shall track payment status (paid/unpaid) for each participant in the split bill.
+
+FR-7: The system shall notify the order initiator when all participants have paid their portion of the bill.
+
+FR-8: The system shall automatically combine all individual payments into a single transaction for the merchant.
+
+NFR-1: The bill splitting functionality shall be accessible and usable on devices with screen sizes ranging from 320x568 pixels to 1920x1080 pixels.
+
+NFR-2: The bill splitting process (from initiation to individual amount display) shall complete within 3 seconds for 95% of users under normal load (up to 100 concurrent users).
+
+NFR-3: The system shall ensure the security of payment information during the bill splitting process, complying with PCI DSS standards.
+
+NFR-4: The bill splitting feature shall be available 99.9% of the time, excluding scheduled maintenance windows.
+",589,1649,12,4,3,1,1,7.72,152,373,525,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the user to initiate a bill split request for a group order before the order is placed.
+FR-2: The system shall allow the user to specify the number of participants in the bill split, up to a maximum of 10.
+FR-3: The system shall allow the user to choose between equal split and custom split (specifying the amount each participant pays).
+FR-4: The system shall send a notification to each participant in the bill split request with the amount they owe and a link to pay.
+FR-5: The system shall track the payment status (paid/unpaid) of each participant in the bill split.
+FR-6: The system shall display a summary of the bill split status (total amount, amount paid, amount remaining, participant payment status) to the user who initiated the split.
+FR-7: The system shall automatically mark the bill split as complete once all participants have paid their share.
+
+NFR-1: The bill split notification shall be delivered to participants within 5 seconds of the split request being initiated.
+NFR-2: The system shall support concurrent bill split requests from up to 500 users without performance degradation (response time for any action related to bill splitting should be under 2 seconds).
+NFR-3: The bill split feature shall be accessible and usable on devices with screen sizes ranging from 320x568 pixels to 1920x1080 pixels.
+NFR-4: All monetary values related to bill splitting shall be stored with a precision of two decimal places to ensure accurate calculations and reporting.
+",589,1512,11,4,5,1,2,2.64,152,345,497,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+","Okay, here's the breakdown of the user story ""As a customer, I want to be able to split the bill with friends or colleagues when placing a group order"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Group Order Initiation:** The system shall allow a customer to initiate a ""group order"" from the checkout page or order summary page.
+*   **FR-2: Participant Invitation:** The system shall allow the customer initiating the group order to invite other customers (friends/colleagues) to participate in the order via email, phone number, or shareable link.
+*   **FR-3: Participant Acceptance:** The system shall allow invited customers to accept or decline the invitation to participate in the group order.
+*   **FR-4: Item Selection and Contribution:** The system shall allow each participant to view the group order and select items they wish to contribute to the order.
+*   **FR-5: Individual Item Selection:** The system shall allow each participant to select the quantity of each item they want to contribute to the order.
+*   **FR-6: Real-time Order Updates:** The system shall display real-time updates to all participants regarding the items selected and the total cost of the group order.
+*   **FR-7: Bill Splitting Options:** The system shall offer the following bill-splitting options:
+    *   **FR-7.1:** Equal split: Divide the total bill amount equally among all participants.
+    *   **FR-7.2:** Item-based split: Calculate each participant's share based on the items they selected.
+    *   **FR-7.3:** Custom split: Allow the initiating customer to manually assign amounts to each participant.
+*   **FR-8: Payment Processing:** The system shall allow each participant to pay their assigned share of the bill using available payment methods.
+*   **FR-9: Order Confirmation:** The system shall only confirm the order once all participants have paid their assigned share or the initiating customer has covered any remaining balance.
+*   **FR-10: Notifications:** The system shall send notifications to all participants regarding the status of the group order, including invitations, payment requests, payment confirmations, and order confirmation.
+*   **FR-11: Partial Payment Handling:** The system shall allow the initiating customer to pay the remaining balance if some participants do not pay their share within a specified timeframe (e.g., 24 hours).
+*   **FR-12: Cancellation:** The system shall allow the initiating customer to cancel the group order before all participants have paid, with clear communication of cancellation policies (e.g., refunds).
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Performance - Invitation Sending:** The system shall send invitations to participants within 2 seconds of the initiating customer submitting the invitations.
+*   **NFR-2: Performance - Bill Calculation:** The system shall calculate and display the split bill amount for each participant within 1 second of selecting a bill-splitting option.
+*   **NFR-3: Scalability:** The system shall support up to 20 participants in a single group order without performance degradation.
+*   **NFR-4: Security:** The system shall securely store and transmit payment information for each participant, adhering to PCI DSS compliance standards.
+*   **NFR-5: Usability:** The group order and bill splitting process shall be intuitive and easy to understand for all users, with clear instructions and visual cues.
+*   **NFR-6: Availability:** The group order and bill splitting functionality shall be available 99.9% of the time.
+*   **NFR-7: Responsiveness:** The group order interface shall be responsive and function correctly on various devices (desktops, tablets, and mobile phones).
+*   **NFR-8: Data Retention:** The system shall retain group order data for a minimum of 30 days for customer service and reporting purposes.
+*   **NFR-9: Error Handling:** The system shall provide informative error messages to users in case of payment failures or other issues during the group order process.
+",1481,4111,21,9,4,2,2,5.41,338,895,1233,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+","Okay, here's the breakdown of the user story ""As a customer, I want to be able to split the bill with friends or colleagues when placing a group order"" into specific, measurable, achievable, relevant, and time-bound (SMART) functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Group Order Creation:** The system shall allow a customer to initiate a ""group order"" and invite other users (friends/colleagues) to participate.
+*   **FR-2: Invitation Mechanism:** The system shall support inviting users to a group order via email or shareable link.
+*   **FR-3: Order Contribution:** Invited users shall be able to view the group order, add items to their individual portion, and specify any dietary restrictions or preferences relevant to their selections.
+*   **FR-4: Bill Splitting Options:** The system shall provide options for bill splitting:
+    *   **FR-4.1: Equal Split:** Divide the total bill (including taxes and delivery fees) equally among all participants.
+    *   **FR-4.2: Item-Based Split:** Allow users to pay for the items they individually added to the order.
+    *   **FR-4.3: Custom Split:** Allow the group order initiator to manually adjust the amount each participant pays.
+*   **FR-5: Individual Payment:** The system shall allow each participant to pay their share of the bill individually using supported payment methods.
+*   **FR-6: Order Confirmation:** The system shall not submit the order until all participants have paid their share or the group order initiator has overridden the payment requirement (with appropriate authorization/warnings).
+*   **FR-7: Payment Tracking:** The system shall track the payment status of each participant in the group order.
+*   **FR-8: Reminders:** The system shall send automated payment reminders to participants who have not yet paid their share (e.g., 24 hours and 1 hour before order submission deadline).
+*   **FR-9: Order Cancellation:** The system shall allow the group order initiator to cancel the group order before all participants have paid, with appropriate refund mechanisms in place.
+*   **FR-10: Minimum Participants:** The system shall allow a minimum of 2 participants per group order.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Security:** All payment information shall be securely encrypted using industry-standard encryption protocols (e.g., TLS 1.3 or higher).
+*   **NFR-2: Performance (Bill Calculation):** The bill splitting calculation (equal, item-based, or custom) shall complete within 1 second, regardless of the number of participants (up to a reasonable limit, e.g., 20).
+*   **NFR-3: Performance (Payment Processing):** Individual payment processing shall complete within 5 seconds.
+*   **NFR-4: Scalability:** The system shall be able to handle at least 100 concurrent group orders without significant performance degradation.
+*   **NFR-5: Availability:** The group order and bill splitting functionality shall be available 99.9% of the time.
+*   **NFR-6: Usability:** The group order creation and bill splitting process shall be intuitive and easy to use on both desktop and mobile devices.  A usability test with at least 5 users shall result in an average System Usability Scale (SUS) score of 70 or higher.
+*   **NFR-7: Error Handling:** The system shall provide informative and user-friendly error messages in case of payment failures or other issues during the group order process.
+*   **NFR-8: Data Retention:** Group order data (including payment information) shall be retained for at least 7 years to comply with accounting regulations.
+*   **NFR-9: Concurrency:** The system shall be able to handle multiple users simultaneously adding items and making payments to the same group order without data corruption or conflicts.
+
+**Explanation of Choices:**
+
+*   **Specificity:** Each requirement is defined with clear actions and conditions.
+*   **Measurability:**  The requirements include metrics like time limits (seconds), percentages (availability), scores (SUS), and minimum/maximum values (number of participants).
+*   **Achievability:** The requirements are realistic given current technology and development practices.
+*   **Relevance:**  All requirements directly support the user's need to split bills within a group order.
+*   **Time-Bound:**  Implied through development sprint timelines and release cycles.  Specific time-bound aspects are included in performance requirements.
+
+This breakdown provides a more comprehensive and actionable set of requirements for developers to implement the bill-splitting feature. Remember to refine these further based on specific project constraints and priorities.
+",1481,4670,19,9,3,1,1,6.24,338,1022,1360,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+","Okay, here's the breakdown of the user story ""As a customer, I want to be able to split the bill with friends or colleagues when placing a group order"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements:**
+
+*   **FR-1: Group Order Initiation:** The system shall allow a customer to initiate a ""group order"" within the ordering process (e.g., via a button or checkbox).
+*   **FR-2: Participant Invitation:** The system shall allow the initiator of the group order to invite other customers to participate in the order. Invitation methods shall include at least email address entry and/or sharing a unique order link.
+*   **FR-3: Order Contribution:** The system shall allow invited customers to add items to the group order.
+*   **FR-4: Individual Item Assignment:** The system shall allow any participant in the group order to assign individual items within the order to specific participants (including themselves). If an item is not assigned, the system will consider it as a shared item to be divided.
+*   **FR-5: Bill Splitting Options:** The system shall provide at least two bill-splitting options:
+    *   **FR-5.1: Equal Split:** The system shall calculate and display the amount owed by each participant based on an equal division of any unassigned order items.
+    *   **FR-5.2: Item Based:** The system shall calculate and display the amount owed by each participant based on the items assigned to them plus a pro-rata share of any unassigned items.
+*   **FR-6: Real-time Updates:** The system shall update the amount owed by each participant in real-time as items are added, assigned, or removed from the group order.
+*   **FR-7: Payment Allocation:** The system shall provide each participant with the ability to pay their portion of the bill individually using available payment methods.
+*   **FR-8: Order Status:** The system shall display the payment status of each participant (e.g., ""Paid"", ""Pending"", ""Unpaid"").
+*   **FR-9: Order Confirmation:** The system shall send an order confirmation to each participant once all participants have paid their portion of the bill or the order initiator approves the order with outstanding payments. The confirmation should include a detailed breakdown of items assigned, items shared, and total amount paid.
+*   **FR-10: Minimum Participants:** The system should allow a minimum of 2 participants.
+*   **FR-11: Maximum Participants:** The system should allow a maximum of 10 participants.
+
+**Non-Functional Requirements:**
+
+*   **NFR-1: Performance - Real-time Updates:** The system shall update the amount owed by each participant within 1 second of any item addition, assignment, or removal.
+*   **NFR-2: Scalability:** The system shall be able to handle at least 100 concurrent group orders without significant performance degradation (defined as an increase of more than 2 seconds in update time).
+*   **NFR-3: Security:** The system shall protect user payment information using industry-standard encryption techniques (e.g., SSL/TLS) during transmission and storage.
+*   **NFR-4: Usability:** The group order process shall be intuitive and easy to use, as measured by a System Usability Scale (SUS) score of at least 70 after user testing.
+*   **NFR-5: Availability:** The group order functionality shall be available 99.9% of the time, excluding scheduled maintenance.
+*   **NFR-6: Responsiveness:** The group order interface shall be responsive and display correctly on a variety of devices, including desktops, tablets, and mobile phones.
+*   **NFR-7: Data Retention:** The system shall retain group order data (including participant information, items ordered, and payment status) for at least 90 days for reporting and customer service purposes.
+*   **NFR-8: Concurrency:** The system shall handle concurrent updates to the group order from multiple participants without data conflicts or errors.
+
+**Explanation of Choices:**
+
+*   **Functional:** These requirements define *what* the system must do in terms of the bill splitting functionality. They are directly tied to the user story.
+*   **Non-Functional:** These requirements define *how well* the system must perform, covering aspects like speed, security, usability, and scalability.  They ensure a good user experience and a robust system.
+*   **Measurable:**  Wherever possible, I've included metrics (e.g., ""within 1 second"", ""SUS score of at least 70"", ""99.9% availability"") to allow for testing and verification.
+*   **Achievable:**  The requirements are realistic and attainable with reasonable development effort.
+*   **Relevant:**  All requirements directly relate to the user story of splitting bills with friends.
+*   **Time-Bound:**  While not every requirement has an explicit time constraint, the performance requirements are time-bound.  The data retention requirement specifies a minimum duration. Also the speed measurements.
+
+This provides a more comprehensive set of requirements that can be used for development, testing, and validation. Remember to tailor these further based on your specific project context and technical constraints.
+",1481,5163,19,8,3,2,1,12.07,338,1131,1469,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow the customer to initiate a ""split bill"" request during the order placement process.
+FR-2: The system shall allow the customer to specify the number of participants for the bill split, up to a maximum of 10.
+FR-3: The system shall allow the customer to invite participants to the bill split via email or phone number.
+FR-4: The system shall send a notification to each invited participant with a link to accept or decline the bill split request.
+FR-5: The system shall display the status of each participant's acceptance (accepted, declined, pending).
+FR-6: The system shall allow the customer to specify how the bill should be split: equally or by item.
+FR-7: If split equally, the system shall calculate the amount due per participant, including taxes and fees.
+FR-8: If split by item, the system shall allow the customer to assign specific items to specific participants.
+FR-9: The system shall display a summary of the amount due for each participant.
+FR-10: The system shall allow each participant to pay their portion of the bill through the available payment methods.
+FR-11: The system shall track the payment status of each participant.
+FR-12: The system shall mark the order as fully paid only when all participants have paid their respective portions.
+FR-13: The system shall send a confirmation email to each participant upon successful payment of their portion.
+FR-14: The system shall send a notification to the original customer when all participants have paid their portions.
+FR-15: The system shall automatically cancel the split bill request if not all participants have paid within 24 hours of the order being placed.
+
+NFR-1: The system shall process a bill split request with up to 10 participants in under 3 seconds.
+NFR-2: The system shall ensure that all payment information is securely transmitted and stored, adhering to PCI DSS standards.
+NFR-3: The bill split feature shall be accessible and usable on all supported devices (desktop, mobile, tablet).
+NFR-4: The system shall provide clear and concise instructions for using the bill split feature.
+NFR-5: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+NFR-6: The system shall protect user data and privacy in compliance with GDPR regulations.
+",1648,2282,21,6,4,2,1,3.33,382,514,896,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow the customer to initiate a ""split bill"" request during the order placement process.
+FR-2: The system shall allow the customer to specify the number of participants to split the bill with, up to a maximum of 10.
+FR-3: The system shall allow the customer to invite other participants (friends or colleagues) to join the split bill via email or a shareable link.
+FR-4: The system shall send an invitation to each participant with a unique link to accept the split bill request.
+FR-5: Upon accepting the split bill request, the participant shall be prompted to create an account or log in if they are an existing user.
+FR-6: The system shall calculate the equal share amount for each participant, including the original order initiator, based on the total bill amount and the number of participants.
+FR-7: The system shall display each participant's share amount.
+FR-8: The system shall allow each participant to pay their share individually using the available payment methods.
+FR-9: The system shall track the payment status of each participant's share.
+FR-10: The system shall notify the original order initiator when all participants have paid their shares.
+FR-11: If a participant fails to pay their share within 24 hours, the system shall notify the original order initiator and provide options to either pay the remaining amount or cancel the split bill request.
+FR-12: The system shall display a clear summary of the split bill status, including participants, amounts, and payment status, to the original order initiator.
+FR-13: The system shall provide a mechanism to resend invitations to participants who have not yet accepted the split bill request.
+
+NFR-1: The system shall calculate the split bill amount within 2 seconds of the customer specifying the number of participants.
+NFR-2: The system shall send split bill invitations within 1 minute of the customer initiating the split bill request.
+NFR-3: The system shall securely store and process payment information in compliance with PCI DSS standards.
+NFR-4: The split bill functionality shall be accessible on all supported devices (desktop, mobile web, and mobile app).
+NFR-5: The system shall be able to handle at least 100 concurrent split bill requests without performance degradation.
+NFR-6: The user interface for the split bill functionality shall be intuitive and easy to use, as measured by a System Usability Scale (SUS) score of 70 or higher.
+NFR-7: All email communications related to split bills shall be delivered with a success rate of 99%.
+",1648,2549,20,7,4,3,2,4.08,382,559,941,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a customer placing an order to designate the order as a ""group order.""
+FR-2: The system shall, upon designation as a ""group order,"" present the customer with the option to split the bill.
+FR-3: The system shall allow the customer to split the bill evenly amongst participants.
+FR-4: The system shall allow the customer to manually assign specific amounts to be paid by each participant.
+FR-5: The system shall allow the customer to invite participants to the group order via email or a shareable link.
+FR-6: The system shall, upon invitation, send a notification to each participant detailing the order, their assigned amount, and a payment link.
+FR-7: The system shall allow invited participants to view the order details and their assigned payment amount.
+FR-8: The system shall allow invited participants to pay their assigned portion of the bill via integrated payment methods.
+FR-9: The system shall track the payment status of each participant in the group order.
+FR-10: The system shall display the overall payment status of the group order to the order initiator.
+FR-11: The system shall send a reminder notification to participants who have not yet paid their assigned amount 24 hours before order confirmation.
+FR-12: The system shall prevent order confirmation until the total bill amount is paid. If the total bill isn't paid by a defined time (e.g., 1 hour from order start), the order will be cancelled automatically.
+FR-13: The system shall allow the original order initiator to pay the remaining balance if any participant fails to pay.
+FR-14: The system shall send confirmation notification once the order is fully paid.
+
+NFR-1: The system shall process split bill requests and send participant invitations within 3 seconds.
+NFR-2: The system shall use secure HTTPS protocol for all payment related communications.
+NFR-3: The system shall comply with PCI DSS standards for handling payment information.
+NFR-4: The split bill feature shall be accessible and usable on both desktop and mobile devices.
+NFR-5: The system shall be able to handle up to 20 participants in a group order simultaneously.
+NFR-6: The system shall provide clear and concise error messages to users during the split bill process.
+NFR-7: The system shall be available 99.9% of the time.
+NFR-8: The system shall protect user data and privacy during the split billing process in accordance with GDPR and other relevant regulations.
+NFR-9: The payment process for participants shall be completed in less than 60 seconds.
+",1648,2535,23,9,3,2,2,3.78,382,568,950,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART software requirements for the user story, followed by an evaluation and final recommendation, formatted as requested.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall expose a new API endpoint `/orders/{orderId}/split` that accepts a list of user IDs.
+FR-2: The `/orders/{orderId}/split` endpoint shall validate that all user IDs in the request are valid and associated with the same organization as the order creator.
+FR-3: The system shall create a new sub-order for each user ID in the request, linked to the original order.
+FR-4: Each sub-order shall initially contain all items from the original order.
+FR-5: The system shall persist the split order information in the `split_orders` table with fields: `order_id`, `user_id`, `sub_order_id`.
+NFR-1: The `/orders/{orderId}/split` endpoint shall respond within 200ms under normal load (100 requests/second).
+NFR-2: The `split_orders` table shall be indexed on `order_id` and `user_id` for efficient querying.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The user interface shall provide a ""Split Bill"" button on the order confirmation page.
+FR-2: Clicking the ""Split Bill"" button shall display a modal window allowing the user to select friends or colleagues from a list.
+FR-3: The list of friends/colleagues shall be populated from the user's contact list or organization directory.
+FR-4: The user shall be able to specify the amount each person owes, either equally or manually.
+FR-5: The system shall send a notification to each selected friend/colleague with a link to their portion of the bill.
+NFR-1: The ""Split Bill"" modal window shall load within 2 seconds.
+NFR-2: The notification sent to friends/colleagues shall be delivered within 5 minutes.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall allow the order creator to initiate a bill split before the order is marked as ""Completed"".
+FR-2: The system shall calculate the individual amounts due based on the split configuration provided by the order creator.
+FR-3: The system shall track the payment status of each sub-order (e.g., ""Pending,"" ""Paid,"" ""Overdue"").
+FR-4: The system shall prevent the original order from being marked as ""Completed"" until all sub-orders are paid or manually reconciled by an administrator.
+FR-5: The system shall generate a report showing the split order details, including the original order ID, sub-order IDs, amounts due, and payment statuses.
+NFR-1: The system shall maintain an audit log of all bill split actions, including who initiated the split, when it was initiated, and any modifications made to the split configuration.
+NFR-2: The system shall ensure data consistency between the original order and its sub-orders.
+",1263,2791,21,6,3,2,1,4.63,277,669,946,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements, followed by the evaluation and final recommendation, presented in the requested format:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall expose a ""Split Bill"" API endpoint accessible via POST request, accepting a list of user IDs and the total bill amount.
+FR-2: The system shall calculate the individual share for each user based on the total bill amount and the number of users provided.
+FR-3: The system shall update the payment status for each user in the ""Split Bill"" group to ""Pending Payment"".
+FR-4: The API shall return a unique ""Split Bill ID"" upon successful creation.
+NFR-1: The ""Split Bill"" API endpoint shall respond within 500 milliseconds under normal load (100 concurrent requests).
+NFR-2: The system shall support a maximum of 10 users in a single split bill group.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The application shall provide a ""Split Bill"" option during the checkout process for group orders.
+FR-2: The application shall allow the user initiating the split bill to select other users from their contact list to participate.
+FR-3: Each user participating in the split bill shall receive a notification with the amount they owe and a link to pay their share.
+FR-4: The application shall display the payment status (paid/unpaid) for each participant in the split bill to the initiating user.
+NFR-1: The ""Split Bill"" option shall be easily discoverable within the checkout flow, requiring no more than 2 clicks.
+NFR-2: The application shall support splitting the bill evenly or allowing the initiating user to customize individual amounts.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall enforce a maximum bill split amount of $500 per transaction.
+FR-2: The system shall record all split bill transactions in a dedicated ""Split Bill Transaction"" table, including user IDs, amounts, timestamps, and payment statuses.
+FR-3: The system shall automatically send reminder notifications to users with unpaid shares after 24 hours.
+FR-4: The system shall prevent a user from participating in more than 5 pending split bill transactions simultaneously.
+NFR-1: All split bill transaction data shall be stored securely, complying with PCI DSS standards.
+NFR-2: The system shall generate daily reports summarizing split bill transaction volumes and payment completion rates.
+",1263,2433,18,6,4,2,1,3.58,277,541,818,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of software requirements for the user story, focusing on different approaches, followed by an evaluation and a final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/orders/{orderId}/split` to initiate the bill splitting process.
+FR-2: The system shall use a distributed transaction to ensure atomicity when updating individual user balances.
+FR-3: The system shall implement a split algorithm that distributes the bill evenly amongst all participating users.
+FR-4: The system shall generate a unique split identifier for each split bill transaction.
+NFR-1: The bill splitting process shall complete within 2 seconds under normal load (50 concurrent users).
+NFR-2: The API endpoint shall handle up to 100 requests per second without performance degradation.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The user interface shall display a ""Split Bill"" button on the order confirmation page.
+FR-2: The user shall be able to select contacts from their phone or the application's user list to include in the bill split.
+FR-3: The user shall be able to optionally adjust the split amount for each participant.
+FR-4: The user and their invitees shall receive a notification with a direct link to pay their share of the bill.
+FR-5: The user shall be able to view a summary of the bill split, including who has paid and who hasn't.
+NFR-1: The ""Split Bill"" process shall be intuitive and easy to understand for first-time users. A usability test with 5 users shall result in a System Usability Scale (SUS) score of 70 or higher.
+NFR-2: The user interface should load the user's contact list within 1 second.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall record the original order ID and the IDs of all participating users in the bill split transaction.
+FR-2: The system shall prevent a user from participating in a bill split if their account is suspended.
+FR-3: The system shall support splitting the bill by equal amounts, percentage amounts, or specified amounts per user.
+FR-4: The system shall automatically update the order status to ""Partially Paid"" if some, but not all, participants have paid their share.
+FR-5: The system shall update the order status to ""Fully Paid"" when all participants have paid their share.
+NFR-1: The system shall maintain an audit log of all bill split transactions, including the initiator, participants, amounts, and timestamps, for a period of 7 years.
+NFR-2: Data related to bill splitting shall be stored securely and in compliance with relevant data privacy regulations.
+",1263,2658,20,6,4,3,1,3.87,277,602,879,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements derived from the user story ""As a customer, I want to be able to split the bill with friends or colleagues when placing a group order"":
+
+FR-1: The system shall allow the customer to initiate a bill split request during the group order placement process, before order confirmation. (Achievable, Relevant, Time-bound: Within the order placement workflow)
+
+FR-2: The system shall allow the customer to specify the number of participants for the bill split, up to a maximum of 10 participants. (Specific, Measurable, Achievable, Relevant)
+
+FR-3: The system shall provide options for splitting the bill: (a) equally among all participants, or (b) by specifying custom amounts for each participant. (Specific, Measurable, Achievable, Relevant)
+
+FR-4: The system shall send individual payment requests to each participant via email or push notification (based on user preference settings), including the amount due and a link to complete their payment. (Specific, Measurable, Achievable, Relevant)
+
+FR-5: The system shall track the payment status of each participant (e.g., pending, paid, declined). (Specific, Measurable, Achievable, Relevant)
+
+FR-6: The system shall notify the order initiator when all participants have completed their payments, or when a payment is declined. (Specific, Measurable, Achievable, Relevant)
+
+FR-7: The system shall allow the order initiator to pay the remaining balance if any participant declines or fails to complete their payment within 24 hours of the request being sent. (Specific, Measurable, Achievable, Relevant, Time-bound)
+
+FR-8: The system shall display a consolidated view of the bill split status to the order initiator, showing who has paid, who is pending, and any remaining balance. (Specific, Measurable, Achievable, Relevant)
+
+NFR-1: The bill split feature shall be responsive and load within 3 seconds on a mobile device with a 4G connection. (Specific, Measurable, Achievable, Relevant, Time-bound)
+
+NFR-2: The system shall securely store payment information and comply with PCI DSS standards. (Specific, Measurable, Achievable, Relevant)
+
+NFR-3: The system shall be able to handle at least 100 concurrent bill split requests without performance degradation. (Specific, Measurable, Achievable, Relevant)
+
+NFR-4: The system shall provide clear and concise error messages to the user in case of payment failures or other issues during the bill split process. (Specific, Measurable, Achievable, Relevant)
+
+NFR-5: The system shall be available 99.9% of the time, including during peak hours, to ensure reliable bill splitting functionality. (Specific, Measurable, Achievable, Relevant)
+",805,2685,13,5,5,2,2,4.06,191,598,789,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will generate functional and non-functional requirements from the user story, ensuring they are SMART.
+
+FR-1: The system shall allow the user (customer) to initiate a bill split request within 2 seconds of completing their individual order within a group order, starting November 6, 2024.
+
+FR-2: The system shall allow the user to specify the number of participants (friends/colleagues) with whom they want to split the bill, with a maximum of 10 participants, within 3 seconds of initiating the bill split request, starting November 6, 2024.
+
+FR-3: The system shall provide options for splitting the bill equally or by specifying custom amounts for each participant within 5 seconds of entering the number of participants, starting November 6, 2024.
+
+FR-4: The system shall generate a unique, shareable link or QR code for the bill split request that can be sent to other participants within 1 second of selecting the split method, starting November 6, 2024.
+
+FR-5: The system shall track the payment status of each participant within the bill split request and update the initiator in real-time, with updates occurring within 5 seconds of a participant making a payment, starting November 6, 2024.
+
+FR-6: The system shall automatically send payment reminders to participants who haven't paid their share of the bill 24 hours before the payment deadline, starting November 6, 2024.
+
+FR-7: The system shall provide a consolidated view of the bill split status, including amounts paid, amounts outstanding, and participant details, to the initiator within 2 seconds of the initiator requesting the view, starting November 6, 2024.
+
+FR-8: The system shall automatically close the bill split request and notify all participants once all shares have been paid or after 72 hours of the initial request, starting November 6, 2024.
+
+NFR-1: The bill splitting feature shall be available 99.9% of the time, measured monthly, starting December 6, 2024.
+
+NFR-2: The system shall process bill split requests for up to 10 simultaneous users with an average response time of less than 3 seconds, tested under peak load conditions, starting December 6, 2024.
+
+NFR-3: All financial transactions related to bill splitting shall be encrypted using AES-256 encryption to ensure data security, audited quarterly, starting December 6, 2024.
+
+NFR-4: The system shall comply with PCI DSS standards for handling payment information related to bill splitting transactions, verified annually through external audits, starting December 6, 2024.
+
+NFR-5: The user interface for the bill splitting feature shall be intuitive and easy to use, achieving a System Usability Scale (SUS) score of 70 or higher based on user testing with at least 20 participants, completed by January 6, 2025.
+",805,2766,13,5,5,2,4,4.24,191,655,846,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements derived from the user story ""As a customer, I want to be able to split the bill with friends or colleagues when placing a group order"":
+
+FR-1: The system shall allow the customer to initiate a bill split request with other users (friends/colleagues) who are part of the same group order, within 2 minutes of placing the order.
+
+FR-2: The system shall support splitting the bill equally or by specifying a custom amount for each participant, selectable by the initiating customer before sending the split request.
+
+FR-3: The system shall send a notification to each invited participant of the bill split request, displayed within the application and via push notification if enabled, within 15 seconds of the request initiation.
+
+FR-4: The system shall allow participants to accept or decline the bill split request within 5 minutes of receiving the notification.
+
+FR-5: Upon acceptance of the bill split request, the system shall automatically calculate and display the amount owed by the participant, considering any applied discounts or promotions, within 1 second.
+
+FR-6: The system shall record the status of each participant's contribution (pending, paid, declined) and display it to the initiating customer in real-time, updating every 5 seconds.
+
+FR-7: The system shall automatically settle the initiating customer's portion of the bill once all participants have either paid or declined their portions, or after a maximum of 24 hours from the initial request.
+
+FR-8: If not all participants have paid or declined within 24 hours, the initiating customer shall have the option to pay the remaining balance themselves, or cancel the outstanding portions of the order.
+
+NFR-1: The bill splitting feature shall be available 99.9% of the time, measured monthly, excluding scheduled maintenance windows (maximum 2 hours per month).
+
+NFR-2: The system shall ensure secure handling of financial transactions during bill splitting, complying with PCI DSS standards, verified through annual audits.
+
+NFR-3: The response time for calculating and displaying split amounts shall be less than 1 second, measured by end-to-end monitoring.
+
+NFR-4: The system shall handle a maximum of 50 concurrent bill split requests per order, ensuring performance degradation does not exceed 10% of baseline response times during peak hours (6 PM - 8 PM daily), measured by monitoring transaction latency.
+
+NFR-5: The user interface for the bill splitting feature shall be intuitive and easy to use, achieving a user satisfaction score of at least 4 out of 5 in user acceptance testing (UAT) conducted before release.
+",805,2653,13,5,5,1,5,3.92,191,556,747,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the order initiator to designate the order as a ""group order"" during the order creation process.
+
+FR-2: The system shall allow the order initiator to invite other users (friends/colleagues) to participate in the group order via email, SMS, or a shareable link.
+
+FR-3: The system shall allow invited users to view the group order details, including items added, quantities, and individual prices.
+
+FR-4: The system shall allow invited users to add items to the group order, subject to any restrictions set by the order initiator (e.g., maximum order amount per user).
+
+FR-5: The system shall automatically calculate the total bill amount for the group order.
+
+FR-6: The system shall provide options for splitting the bill: (a) equally among all participants, (b) based on individual items selected by each participant, (c) custom amounts specified by the order initiator.
+
+FR-7: The system shall display the amount owed by each participant based on the selected splitting method.
+
+FR-8: The system shall allow each participant to pay their share of the bill using available payment methods.
+
+FR-9: The system shall track the payment status of each participant (e.g., pending, paid, overdue).
+
+FR-10: The system shall notify the order initiator and participants of payment status updates.
+
+FR-11: The system shall provide a summary of the group order, including items, prices, participants, amounts owed, and payment statuses.
+
+FR-12: The system shall integrate with existing payment gateways to process individual payments from participants.
+
+FR-13: The system shall handle scenarios where a participant fails to pay their share of the bill, including options for the order initiator to cover the outstanding amount or cancel the order.
+
+FR-14: The system shall provide a mechanism for participants to dispute their share of the bill with the order initiator.
+
+FR-15: The system shall support partial payments from participants, with the remaining balance tracked accordingly.
+
+NFR-1: The system shall ensure that all payment transactions are processed securely, adhering to PCI DSS compliance standards.
+
+NFR-2: The system shall be able to handle at least 100 concurrent group orders without performance degradation.
+
+NFR-3: The system shall provide a response time of less than 3 seconds for all bill splitting calculations and payment status updates.
+
+NFR-4: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-5: The system shall be compatible with the latest versions of major web browsers (Chrome, Firefox, Safari, Edge) and mobile operating systems (iOS, Android).
+
+NFR-6: The system shall be designed with scalability in mind, allowing for future expansion to support a larger number of users and transactions.
+
+NFR-7: The system shall provide audit logs for all group order activities, including order creation, item additions, payment transactions, and dispute resolutions.
+
+NFR-8: The system shall adhere to all relevant data privacy regulations, such as GDPR and CCPA.
+
+NFR-9: The system shall provide clear and concise error messages to users in case of payment failures or other issues.
+
+NFR-10: The system shall be designed for ease of maintenance and support, with well-documented code and a comprehensive monitoring system.
+",1060,3304,25,10,3,1,1,4.49,231,712,943,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the order initiator to designate the order as a ""group order"" before or during the order placement process.
+
+FR-2: The system shall allow the order initiator to invite other users (friends/colleagues) to participate in the group order via email, SMS, or a unique shareable link.
+
+FR-3: The system shall allow invited users to view the group order details, including the items already added, the total cost, and any applicable fees or discounts.
+
+FR-4: The system shall allow invited users to add their own items to the group order, subject to any limitations set by the order initiator (e.g., spending limits per person).
+
+FR-5: The system shall calculate and display the individual amount due for each participant based on their selected items and a proportional share of any shared costs (delivery fees, taxes, etc.).
+
+FR-6: The system shall provide the order initiator with the option to manually adjust individual amounts due, overriding the automatically calculated values, with a log maintained of these adjustments.
+
+FR-7: The system shall support multiple payment methods for each participant, including credit card, debit card, and other integrated payment platforms (e.g., PayPal, Venmo).
+
+FR-8: The system shall send payment requests to each participant, indicating the amount due and providing a secure payment link.
+
+FR-9: The system shall track the payment status of each participant (e.g., pending, paid, declined).
+
+FR-10: The system shall notify the order initiator when all participants have paid their share of the bill, or if a participant's payment has failed.
+
+FR-11: The system shall allow the order initiator to finalize the order and submit it for processing only after all participants have paid their respective shares, or if the initiator chooses to cover the remaining balance.
+
+FR-12: The system shall generate a consolidated receipt for the group order, detailing each participant's contributions and the overall order summary.
+
+FR-13: The system shall handle scenarios where a participant fails to pay their share within a defined timeframe. The system shall notify the order initiator and provide options such as cancelling the unpaid portion or covering the outstanding balance.
+
+FR-14: The system shall allow participants to view their individual order history and payment details for past group orders.
+
+NFR-1: The system shall ensure that all payment transactions are processed securely and comply with relevant PCI DSS standards.
+
+NFR-2: The system shall maintain the privacy of user data and comply with relevant data privacy regulations (e.g., GDPR, CCPA).
+
+NFR-3: The system shall be available and responsive during peak ordering times, with a target response time of less than 3 seconds for all user interactions related to group order functionality.
+
+NFR-4: The system shall be scalable to accommodate a growing number of users and group orders without impacting performance.
+
+NFR-5: The system shall be designed to be easily maintainable and extensible, allowing for future enhancements and integrations with other systems.
+
+NFR-6: The system shall provide clear and concise error messages to users in case of payment failures or other issues.
+
+NFR-7: The system shall be accessible on a variety of devices, including desktop computers, tablets, and smartphones, with a responsive user interface.
+
+NFR-8: The system shall provide audit logs for all transactions related to group orders, including payment attempts, adjustments, and cancellations.
+
+",1060,3521,22,8,3,1,1,4.81,231,724,955,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the order initiator to designate the order as a ""group order"" during order creation.
+
+FR-2: The system shall provide a mechanism for the order initiator to invite participants to the group order using email addresses or phone numbers.
+
+FR-3: The system shall send invitations to the specified participants, containing a unique link to join the group order.
+
+FR-4: Invited participants shall be able to view the group order details, including the items selected, quantities, and individual prices.
+
+FR-5: Invited participants shall be able to add items to the group order, subject to any order initiator-defined limitations (e.g., spending limit).
+
+FR-6: The system shall calculate and display the total order amount, including applicable taxes and fees.
+
+FR-7: The system shall provide options for splitting the bill: (a) equally among all participants, (b) by item, allowing each participant to claim specific items, (c) custom amounts per participant.
+
+FR-8: For splitting by item, the system shall allow participants to claim ownership of specific items in the order.
+
+FR-9: The system shall automatically calculate the amount due from each participant based on the selected splitting method and claimed items.
+
+FR-10: The system shall display the amount due from each participant clearly and accurately.
+
+FR-11: The system shall integrate with payment gateways to allow each participant to pay their individual portion of the bill securely.
+
+FR-12: The system shall support multiple payment methods for each participant (e.g., credit card, debit card, digital wallets).
+
+FR-13: The system shall send payment reminders to participants who have not yet paid their portion of the bill.
+
+FR-14: The order initiator shall be able to track the payment status of each participant.
+
+FR-15: The system shall notify the order initiator when all participants have paid their portion of the bill.
+
+FR-16: The system shall record the payment details for each participant and associate them with the group order.
+
+FR-17: The system shall allow the order initiator to finalize the order only after all participants have paid or the initiator has assumed responsibility for any outstanding balance.
+
+FR-18: The system shall generate a consolidated order summary for the order initiator, including the total order amount, individual contributions, and payment details.
+
+FR-19: The system shall provide mechanisms for handling disputes or disagreements among participants regarding the bill split. This includes an ""appeal"" or ""dispute"" button.
+
+FR-20: The system shall support cancellation of a split order. If any participant has already paid, the money will automatically be refunded.
+
+NFR-1: The system shall process bill split calculations and payment updates within 2 seconds under normal load.
+
+NFR-2: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-3: The system shall protect sensitive financial data (e.g., credit card numbers) using encryption and secure storage practices, adhering to PCI DSS standards.
+
+NFR-4: The system shall be designed to handle a peak load of 1000 concurrent group orders without performance degradation.
+
+NFR-5: The system shall log all bill split transactions for auditing and reporting purposes.
+
+NFR-6: The system shall be accessible and usable on a variety of devices, including desktops, tablets, and smartphones (responsive design).
+
+NFR-7: The system shall comply with all relevant data privacy regulations, such as GDPR and CCPA.
+
+NFR-8: The invitation process must be secure to prevent unauthorized users from joining a group order.
+
+NFR-9: The system shall provide clear and concise error messages to users in case of payment failures or other issues.
+
+NFR-10: The system shall support international currencies and payment methods.
+",1060,3832,30,10,3,2,1,5.25,231,814,1045,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Contextual,precise,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user initiating an order to invite up to 9 other users to participate in the order and bill split.
+FR-2: The system shall allow invited users to view the shared order, add items to their portion, and indicate their dietary restrictions (e.g., vegetarian, allergies).
+FR-3: The system shall automatically calculate each user's individual subtotal based on their selected items, including applicable taxes and fees.
+FR-4: The system shall allow the order initiator to set a maximum order amount per participant.
+FR-5: The system shall provide a summary view showing each participant's name, items ordered, subtotal, and payment status.
+FR-6: The system shall integrate with the existing payment gateway to allow each participant to pay their individual portion of the bill using supported payment methods (credit card, debit card, digital wallets).
+FR-7: The system shall send automated notifications (email/push) to all participants regarding order updates, payment reminders, and order confirmation.
+FR-8: The system shall allow the order initiator to finalize the order only after all participants have paid their respective portions or the initiator chooses to pay the remaining balance.
+FR-9: The system shall generate a consolidated order receipt for the initiator and individual receipts for each participant, detailing their respective charges.
+FR-10: The system shall allow the order initiator to remove a participant from the split bill before the order is finalized.
+
+NFR-1: The bill splitting feature shall be integrated with the existing user authentication system, ensuring secure access and data privacy.
+NFR-2: The system shall process bill split calculations and payment requests within 3 seconds under peak load (defined as 500 concurrent users).
+NFR-3: The system shall maintain an uptime of 99.9% for the bill splitting functionality.
+NFR-4: The system shall log all bill split transactions, including user actions, payment status, and error messages, for auditing and debugging purposes.
+NFR-5: The user interface for the bill splitting feature shall be intuitive and easy to navigate, with a task completion rate of 90% based on usability testing with 10 participants.
+NFR-6: The system shall be able to handle at least 200 concurrent bill split orders without performance degradation.
+NFR-7: The system shall provide real-time error messages to users in case of payment failures or other issues during the bill splitting process.
+NFR-8: The system shall be compatible with the latest versions of iOS and Android operating systems.
+NFR-9: The system shall adhere to all relevant data privacy regulations (e.g., GDPR, CCPA) regarding the handling of user payment information.
+NFR-10: The system shall provide a clear and concise help section explaining the bill splitting feature and addressing common user questions.
+",765,2868,20,10,3,2,1,4.25,180,605,785,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Contextual,default,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user initiating a group order to invite up to 10 other users via email or phone number to participate in the order and bill split within 2 minutes of order creation.
+
+FR-2: The system shall allow invited users to accept or decline the group order invitation within 5 minutes of receiving it.
+
+FR-3: The system shall automatically calculate and display the individual amount due for each participant based on their selected items within the group order.
+
+FR-4: The system shall allow each user to pay their individual share of the bill using existing payment methods (credit card, debit card, wallet) within 10 minutes of order confirmation.
+
+FR-5: The system shall integrate with the existing payment gateway to process individual payments for split bills.
+
+FR-6: The system shall update the order status to ""Completed"" only when all participants have successfully paid their share of the bill.
+
+FR-7: The system shall send a notification to all participants upon successful completion of the order and bill split.
+
+FR-8: The system shall provide a summary of the order, including individual contributions and payment status, to the order initiator.
+
+NFR-1: The bill split functionality shall be implemented within 4 weeks.
+
+NFR-2: The system shall be able to handle at least 50 concurrent split bill requests during peak hours (6 PM - 8 PM) without performance degradation (response time no more than 3 seconds).
+
+NFR-3: The system shall monitor the success rate of bill split transactions and alert the operations team if the failure rate exceeds 1% within a 1-hour period.
+
+NFR-4: The system shall log all bill split transactions, including user IDs, order IDs, payment amounts, and timestamps, for auditing and error tracking purposes.
+
+NFR-5: The bill split user interface shall be intuitive and easy to use, as measured by a System Usability Scale (SUS) score of at least 70 after user testing with 10 participants.
+
+NFR-6: The system shall provide clear error messages to users if a payment fails during the bill split process.
+",765,2066,14,6,5,3,3,3.28,180,451,631,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Contextual,creative,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user initiating a group order to invite up to 5 other registered users to participate in the order and bill split within 2 steps.
+FR-2: The system shall allow invited users to accept or decline the group order invitation within 24 hours of receiving it.
+FR-3: The system shall automatically calculate each user's share of the total bill based on the items they individually added to the group order, plus a pro-rated share of delivery fees and taxes, displayed clearly before order confirmation.
+FR-4: The system shall allow the group order initiator to adjust individual shares (e.g., if someone pays for an appetizer separately) within a tolerance of +/- 10% of the initially calculated share, requiring confirmation from the adjusted user before finalizing.
+FR-5: The system shall support splitting the bill using the existing payment gateway's ""split payment"" functionality.
+FR-6: The system shall record the payment status (paid, pending, failed) for each user within the group order.
+FR-7: The system shall send payment reminders to users with pending payments 6 hours and 2 hours before the scheduled order placement time.
+FR-8: The system shall automatically cancel the group order if any participant's payment fails 15 minutes before the scheduled order placement time, notifying all participants.
+
+NFR-1: The bill splitting feature must integrate with the existing user authentication system within 1 week of deployment to maintain consistent user experience.
+NFR-2: The bill splitting feature shall integrate with the existing payment gateway API within 2 weeks of release, using the designated split payment endpoint.
+NFR-3: The bill splitting calculation process shall complete in under 2 seconds for group orders with up to 6 users.
+NFR-4: The system shall handle at least 50 concurrent group order creation requests during peak hours (6 PM - 8 PM) with an average response time of under 3 seconds.
+NFR-5: The system shall log all bill splitting transactions, including user IDs, order IDs, payment statuses, and timestamps, for auditing and troubleshooting purposes, with a log retention period of 3 months.
+NFR-6: The system shall provide clear and informative error messages to users in case of payment failures or calculation errors, offering options to retry or contact support.
+NFR-7: The bill splitting feature should be accessible and usable on all supported web browsers and mobile devices (iOS and Android).
+NFR-8: The user interface for bill splitting shall adhere to existing design guidelines, with a maximum of 3 clicks to initiate the bill split, to ensure a consistent and intuitive user experience.
+NFR-9: The system should send real-time updates to all group members via push notifications regarding order status, payment reminders, and any modifications to the bill, ensuring everyone is informed promptly.
+NFR-10: The system shall be monitored for errors related to bill splitting, and alerts shall be generated if the error rate exceeds 1% of total bill splitting transactions, enabling proactive issue resolution.
+",765,3081,18,10,5,2,3,4.46,180,649,829,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the user to initiate a bill split request during the checkout process of a group order.
+FR-2: The system shall allow the user to specify the number of people to split the bill with.
+FR-3: The system shall allow the user to split the bill equally among the specified number of people.
+FR-4: The system shall allow the user to customize the split, assigning specific items or amounts to individual participants.
+FR-5: The system shall send a notification to each participant with their share of the bill and payment instructions.
+FR-6: The system shall track the payment status of each participant's share.
+FR-7: The system shall allow the order initiator to view the payment status of all participants.
+FR-8: The system shall support splitting the bill using the same payment methods available for regular orders.
+FR-9: The system shall automatically calculate and display the amount due from each participant, including any applicable taxes and fees.
+FR-10: The system shall allow the order initiator to resend payment requests to participants who have not yet paid.
+
+NFR-1: The bill split feature shall be available 99.9% of the time.
+NFR-2: The system shall send bill split notifications within 5 seconds of the order initiator completing the checkout process.
+NFR-3: The system shall securely store payment information in compliance with PCI DSS standards.
+NFR-4: The bill split feature shall be accessible and usable on all supported devices (desktop, mobile, tablet).
+NFR-5: The system shall handle up to 100 concurrent bill split requests without performance degradation.
+NFR-6: The system shall provide clear and concise error messages to users in case of issues with the bill split process.
+",1744,1728,16,6,3,2,1,2.52,393,380,773,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the user to initiate a bill split request during the checkout process of a group order.
+FR-2: The system shall allow the user to specify the number of people to split the bill with, up to a maximum of 10.
+FR-3: The system shall allow the user to distribute the bill equally amongst the selected number of people.
+FR-4: The system shall allow the user to individually adjust the amount owed by each person in the bill split.
+FR-5: The system shall send a notification to each participant in the bill split request with details of their share and payment options.
+FR-6: The system shall track the payment status of each participant in the bill split.
+FR-7: The system shall allow the order initiator to view the payment status of all participants in the bill split.
+FR-8: The system shall automatically mark the bill as fully paid when all participants have paid their share.
+FR-9: The system shall support splitting the bill by percentage.
+FR-10: The system shall support splitting the bill by item.
+
+NFR-1: The bill split feature shall be accessible and usable on all supported devices (web, iOS, Android).
+NFR-2: The bill split process shall be completed within 5 seconds.
+NFR-3: The system shall ensure data security and privacy of user payment information according to PCI DSS standards.
+NFR-4: The system shall provide clear and informative error messages to users during the bill splitting process.
+NFR-5: The system shall maintain an audit log of all bill split requests and payment transactions for at least 1 year.
+",1744,1552,15,5,4,2,1,2.64,393,352,745,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the user to initiate bill splitting during the checkout process after adding items to their group order, but before payment.
+FR-2: The system shall allow the user to specify the number of participants (friends/colleagues) in the bill split, with a maximum limit of 10 participants.
+FR-3: The system shall provide options for splitting the bill equally or manually assigning amounts to each participant.
+FR-4: For equal splitting, the system shall automatically calculate and display the amount owed per participant, including any applicable taxes and fees.
+FR-5: For manual splitting, the system shall allow the user to enter the amount owed by each participant, validating that the total equals the order total (including taxes and fees).
+FR-6: The system shall generate a unique payment request link for each participant, containing the participant's assigned amount and a link to the payment gateway.
+FR-7: The system shall provide the order initiator with a summary page showing the status of each participant's payment (e.g., ""Pending,"" ""Paid,"" ""Declined"").
+FR-8: The system shall send payment request links to each participant via email or SMS (user selectable).
+FR-9: The system shall automatically reconcile payments from each participant, updating the order status to ""Paid"" once all participants have paid their assigned amounts.
+FR-10: The system shall notify the order initiator when all participants have completed their payments.
+
+NFR-1: The system shall generate payment request links within 2 seconds of the user initiating the bill splitting process.
+NFR-2: The system shall securely store payment request links and participant payment statuses, complying with relevant data privacy regulations.
+NFR-3: The system shall be available 99.9% of the time, including during peak usage hours.
+NFR-4: The system shall support splitting bills in USD, EUR, and GBP currencies.
+NFR-5: The user interface for bill splitting shall be responsive and accessible on desktop and mobile devices.
+NFR-6: The bill splitting feature must be compatible with existing payment gateway integrations.
+",1744,2122,16,6,3,2,1,3.13,393,450,843,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the user to initiate a bill split request for a group order.
+FR-2: The system shall allow the user to specify the number of participants for the bill split.
+FR-3: A group order must be initiated before a bill split request can be made.
+FR-4: The system shall calculate the individual share of the bill for each participant based on the total bill amount and the number of participants.
+FR-5: The system shall display an error message if the number of participants specified is invalid (e.g., zero or negative).
+FR-6: The system shall notify all participants of the bill split request and their individual share.
+NFR-1: The bill split calculation and notification process shall complete within 3 seconds.
+NFR-2: The bill split interface shall be intuitive and easy to use on both desktop and mobile devices.
+NFR-3: The system shall ensure that payment information is securely transmitted and stored during the bill split process.
+",1810,958,9,3,3,2,1,1.73,431,212,643,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the user to initiate a bill split request during the group order placement process.
+FR-2: The system shall allow the user to specify the number of participants to split the bill with.
+FR-3: The system shall only allow the bill split option to be initiated after a group order has been created and before payment is processed.
+FR-4: The system shall calculate the amount due per participant based on the total bill amount and the number of participants specified.
+FR-5: The system shall display an error message if the user attempts to initiate a bill split with a number of participants greater than the number of members in the group order.
+FR-6: The system shall send a notification to each participant with their individual amount due and a link to pay their share.
+NFR-1: The bill split calculation and participant notification process shall complete within 5 seconds.
+NFR-2: The bill split option shall be easily accessible and clearly labeled within the group order interface.
+NFR-3: The system shall securely handle payment information for each participant's individual payment.
+",1810,1115,9,3,5,3,1,1.74,431,233,664,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.', 'context': 'Online food ordering service'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to split the bill with friends or colleagues when placing a group order.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user placing a group order to initiate a bill split request.
+FR-2: The system shall allow the user initiating the split to specify the number of participants for the bill split.
+FR-3: The bill split feature shall only be available after a group order has been created and before the order is submitted for payment.
+FR-4: The system shall calculate the individual share for each participant based on the total bill amount and number of participants.
+FR-5: The system shall display an error message to the user initiating the split if the number of participants is invalid (e.g., less than 1 or greater than the maximum allowed participants in a group order).
+FR-6: The system shall send a notification to each participant, inviting them to view their individual share of the bill and submit their payment.
+NFR-1: The system shall calculate and display the individual shares of the bill within 2 seconds of the user specifying the number of participants.
+NFR-2: The bill split interface shall be clear, intuitive, and easy to navigate for all users.
+NFR-3: The system shall ensure the security and privacy of all payment information during the bill splitting process, adhering to PCI DSS standards.
+",1810,1228,9,3,4,3,1,2.06,431,263,694,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

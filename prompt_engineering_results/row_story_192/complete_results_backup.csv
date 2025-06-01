@@ -1,0 +1,1499 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall generate an invoice in PDF format containing the service provider's name, address, and contact information.
+FR-2: The system shall include the client's name, address, and unique client ID on the invoice.
+FR-3: The system shall automatically calculate the monthly subscription fee based on the client's selected subscription plan.
+FR-4: The system shall include the invoice date and a unique invoice number on each generated invoice.
+FR-5: The system shall display the payment due date on the invoice, set to 30 days from the invoice date.
+FR-6: The system shall store generated invoices in a database, accessible by both service provider and client (upon login).
+FR-7: The system shall allow the service provider to download the generated invoice in PDF format.
+FR-8: The system shall record the invoice generation date and time in the database.
+FR-9: The system shall provide a mechanism to mark an invoice as ""Paid"" once payment is received.
+
+NFR-1: The invoice generation process shall complete within 5 seconds.
+NFR-2: The generated invoice PDF file size shall not exceed 500 KB.
+NFR-3: The system shall be available 99.9% of the time during business hours (8 AM - 6 PM, Monday-Friday).
+NFR-4: The system shall comply with relevant data privacy regulations (e.g., GDPR, CCPA) regarding client data stored on the invoice.
+NFR-5: The generated invoice shall be accessible and readable on all major web browsers (Chrome, Firefox, Safari, Edge).
+",659,1469,14,5,2,2,2,2.75,164,350,514,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall generate an invoice in PDF format for each client subscription at the end of each billing cycle (30 days).
+FR-2: The generated invoice shall include the following information: service provider name, client name, invoice number (unique), invoice date, billing period (start and end dates), subscription fee amount, payment due date (15 days from invoice date), and accepted payment methods.
+FR-3: The system shall automatically mark an invoice as ""Paid"" upon successful payment confirmation via integrated payment gateway.
+FR-4: The system shall allow the service provider to manually mark an invoice as ""Paid"" if payment is received through alternative methods (e.g., bank transfer).
+FR-5: The system shall store all generated invoices for a minimum of 7 years.
+FR-6: The system shall provide a search function allowing the service provider to search for invoices by client name, invoice number, or date range.
+FR-7: The system shall allow the service provider to download individual invoices in PDF format.
+
+NFR-1: Invoice generation shall be completed within 5 seconds of request.
+NFR-2: The invoice generation system shall be available 99.9% of the time.
+NFR-3: The generated invoice PDF file size shall not exceed 500 KB.
+NFR-4: The system shall comply with all applicable data privacy regulations regarding client information.
+",659,1355,11,4,3,1,3,2.45,164,301,465,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall generate an invoice in PDF format upon request for a specified client and subscription month.
+FR-2: The generated invoice shall include the service provider's name and contact information (address, phone number, email).
+FR-3: The generated invoice shall include the client's name and billing address.
+FR-4: The generated invoice shall include the invoice number, which is unique and automatically generated.
+FR-5: The generated invoice shall include the invoice date (date of generation).
+FR-6: The generated invoice shall include the subscription period (start and end dates) covered by the invoice.
+FR-7: The generated invoice shall include a description of the subscription service provided.
+FR-8: The generated invoice shall include the monthly subscription fee (amount due).
+FR-9: The generated invoice shall include the payment due date, which shall be 14 days from the invoice date.
+FR-10: The system shall store all generated invoices, accessible by client and invoice number.
+FR-11: The system shall allow downloading of the generated invoice in PDF format.
+
+NFR-1: The invoice generation process shall complete within 5 seconds of the request.
+NFR-2: The generated invoice PDF shall be compatible with Adobe Acrobat Reader version 11 or later.
+NFR-3: The system shall maintain a 99.9% uptime for invoice generation functionality during business hours (9:00 AM - 5:00 PM, Monday-Friday).
+NFR-4: Access to invoice generation functionality shall be secured using role-based access control.
+",659,1520,15,4,2,1,2,2.55,164,344,508,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+","Okay, here's the breakdown of the user story ""As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Invoice Generation Trigger:** The system shall allow a service provider to initiate the generation of an invoice for a specific client's monthly subscription fee.
+*   **FR-2: Invoice Data Population:** The system shall automatically populate the invoice with the following information:
+    *   Service provider's name and contact information.
+    *   Client's name and contact information.
+    *   Invoice number (unique).
+    *   Invoice date.
+    *   Subscription period (e.g., Month/Year).
+    *   Description of the subscription service.
+    *   Monthly subscription fee amount.
+    *   Applicable taxes (if any).
+    *   Total amount due.
+    *   Payment due date (e.g., 30 days from invoice date).
+*   **FR-3: Invoice Preview:** The system shall provide a preview of the generated invoice before finalization.
+*   **FR-4: Invoice Finalization:** The system shall allow the service provider to finalize the invoice, preventing further modifications.
+*   **FR-5: Invoice Storage:** The system shall store the finalized invoice securely and associate it with the client's account.
+*   **FR-6: Invoice Retrieval:** The system shall allow the service provider to retrieve and view previously generated invoices for a specific client.
+*   **FR-7: Invoice Delivery:** The system shall provide options to deliver the invoice to the client, including:
+    *   Download as a PDF file.
+    *   Send via email (with the invoice attached as a PDF).
+*   **FR-8: Payment Status Update:** The system shall allow the service provider to mark an invoice as ""Paid"" upon receiving payment.
+*   **FR-9: Account Status Tracking:** The system shall update the client's account status based on invoice payment status (e.g., ""Active,"" ""Past Due,"" ""Suspended"").
+*   **FR-10: Invoice Numbering:** The system shall generate unique invoice numbers following a defined format (e.g., YYYYMM-0001, incrementing sequentially).
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Invoice Generation Performance:** The system shall generate an invoice within 2 seconds under normal load conditions.
+*   **NFR-2: Data Security:** All invoice data, including client and payment information, shall be stored securely and protected from unauthorized access.
+*   **NFR-3: Data Integrity:** The system shall ensure the accuracy and consistency of invoice data.
+*   **NFR-4: System Availability:** The invoice generation functionality shall be available 99.9% of the time.
+*   **NFR-5: Scalability:** The system shall be able to handle an increasing number of clients and invoices without significant performance degradation.
+*   **NFR-6: Email Delivery Reliability:** The system shall ensure a high rate of successful email delivery of invoices (e.g., >99%).
+*   **NFR-7: Audit Trail:** The system shall maintain an audit trail of all invoice generation and payment status updates, including the user who performed the action and the timestamp.
+*   **NFR-8: Invoice Storage Capacity:** The system shall provide sufficient storage capacity to retain invoices for at least 7 years.
+",1551,3425,18,8,2,2,1,5.23,350,786,1136,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+","Okay, let's break down that user story into specific, measurable, achievable, relevant, and time-bound (SMART) functional and non-functional requirements.
+
+**User Story:** As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+**Requirements:**
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Invoice Generation Initiation:** The system shall provide a mechanism for service providers to initiate invoice generation for a specific client and billing period (month).
+*   **FR-2: Invoice Data Population:** The system shall automatically populate the invoice with the following information:
+    *   Service provider's name and contact information.
+    *   Client's name and contact information.
+    *   Invoice number (unique per invoice).
+    *   Invoice date.
+    *   Billing period (e.g., ""October 2023"").
+    *   Description of the service provided (e.g., ""Monthly Subscription Fee"").
+    *   Subscription fee amount.
+    *   Applicable taxes (if any).
+    *   Total amount due.
+    *   Payment due date (e.g., 30 days from invoice date).
+    *   Payment instructions (e.g., accepted payment methods, bank details).
+*   **FR-3: Invoice Preview and Modification:** The system shall allow the service provider to preview the invoice before final generation and make minor modifications (e.g., adding a custom message or discount).  Major modifications require re-calculating the fees.
+*   **FR-4: Invoice Storage:** The system shall store generated invoices in a secure and accessible format, linked to the client's account.
+*   **FR-5: Invoice Delivery:** The system shall allow the service provider to download the invoice in PDF format. The system will integrate with an email service to send a copy of the invoice to the client's registered email address.
+*   **FR-6: Payment Confirmation:** The system shall provide a mechanism for the service provider to mark an invoice as ""Paid"" after receiving payment.
+*   **FR-7: Account Status Update:** When an invoice is marked as ""Paid"", the system shall update the client's account status to reflect the payment (e.g., ""Active"", ""In Good Standing"").
+*   **FR-8: Invoice Search and Retrieval:** The system shall allow service providers to search for and retrieve invoices based on client name, invoice number, date range, and payment status.
+*   **FR-9: Client Notifications:** The system shall send a notification to the client when a new invoice is generated and when the invoice is marked as ""Paid"".
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Invoice Generation Performance:** The system shall generate an invoice within 5 seconds under normal load conditions.
+*   **NFR-2: Data Security:** Invoice data shall be stored securely, with appropriate access controls to prevent unauthorized access.
+*   **NFR-3: System Availability:** The invoice generation functionality shall be available 99.9% of the time.
+*   **NFR-4: Data Integrity:** The system shall ensure the accuracy and consistency of invoice data.
+*   **NFR-5: Scalability:** The system shall be able to handle an increasing number of clients and invoices without significant performance degradation. The system should be able to handle at least 10,000 invoices per month.
+*   **NFR-6: Email Delivery:** The system shall ensure that invoice emails are delivered to the client's inbox with a success rate of at least 99%.
+*   **NFR-7: Audit Trail:** The system shall maintain an audit trail of all invoice-related actions (generation, modification, payment confirmation), including the user who performed the action and the timestamp.
+*   **NFR-8: Reporting:** The system should be able to generate reports on invoice generation, payment status, and outstanding amounts.
+",1551,3813,17,8,2,2,1,5.15,350,866,1216,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+","Okay, here's a breakdown of the user story ""As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements:**
+
+*   **FR-1: Invoice Generation Trigger:** The system shall allow a service provider to manually trigger the generation of a monthly subscription invoice for a specific client.
+*   **FR-2: Automated Invoice Generation:** The system shall automatically generate a monthly subscription invoice for each client on their subscription renewal date.
+*   **FR-3: Invoice Content:** The generated invoice shall include, at minimum, the following information:
+    *   Client Name
+    *   Client ID (or unique identifier)
+    *   Invoice Number (unique)
+    *   Invoice Date
+    *   Due Date (e.g., 30 days from invoice date)
+    *   Service Description (e.g., ""Monthly Subscription Fee"")
+    *   Subscription Period (e.g., ""October 1, 2024 - October 31, 2024"")
+    *   Subscription Fee Amount
+    *   Applicable Taxes (if any)
+    *   Total Amount Due
+    *   Service Provider's Name/Contact Information
+    *   Payment Instructions
+*   **FR-4: Invoice Format:** The system shall generate invoices in a standard, printable format (e.g., PDF).
+*   **FR-5: Invoice Storage:** The system shall store generated invoices, associating them with the corresponding client account.
+*   **FR-6: Invoice Access:** The system shall allow service providers to view and download generated invoices for each client.
+*   **FR-7: Invoice Delivery:** The system shall provide an option to automatically email generated invoices to the client's registered email address.
+*   **FR-8: Payment Confirmation:** The system shall allow the service provider to mark an invoice as ""paid"" after receiving payment from the client.
+*   **FR-9: Account Status Update:** When an invoice is marked as ""paid,"" the system shall update the client's account status to reflect the payment.
+*   **FR-10: Invoice Numbering:** The system shall generate sequential invoice numbers for each client for each payment.
+
+**Non-Functional Requirements:**
+
+*   **NFR-1: Invoice Generation Performance:** The system shall generate an invoice within 2 seconds of the trigger (manual or automatic) under normal load conditions.
+*   **NFR-2: Invoice Data Security:** Invoice data shall be stored securely, protected from unauthorized access and modification.
+*   **NFR-3: Data Retention:** The system shall retain invoice data for a minimum of 7 years for auditing and legal compliance purposes.
+*   **NFR-4: Email Delivery Reliability:** The system shall ensure a minimum of 99% successful email delivery rate for automatically sent invoices.
+*   **NFR-5: System Availability:** The invoicing functionality shall be available 24/7, with a maximum downtime of 0.1% per month.
+*   **NFR-6: Scalability:** The system shall be able to handle invoice generation for at least 10,000 active clients without performance degradation.
+",1551,3122,16,6,3,2,2,4.75,350,722,1072,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a service provider to generate an invoice for a specific client's monthly subscription fee.
+FR-2: The system shall automatically calculate the invoice amount based on the client's subscription plan and the current billing period.
+FR-3: The system shall include the following information on the invoice: service provider's name and contact information, client's name and contact information, invoice number, invoice date, due date, description of services (monthly subscription), subscription plan name, subscription fee amount, any applicable taxes, and total amount due.
+FR-4: The system shall allow the service provider to specify a due date for the invoice.
+FR-5: The system shall generate a unique invoice number for each invoice.
+FR-6: The system shall store generated invoices in a database, associated with the corresponding client account.
+FR-7: The system shall allow the service provider to download the invoice in PDF format.
+FR-8: The system shall allow the service provider to mark an invoice as ""Paid"" upon confirmation of payment.
+FR-9: The system shall update the client's account status to reflect the payment status of the invoice.
+FR-10: The system shall provide a mechanism for the service provider to search and retrieve invoices by client name, invoice number, or date range.
+
+NFR-1: The system shall generate an invoice within 2 seconds of the request.
+NFR-2: The generated invoice shall be easily readable and printable.
+NFR-3: The system shall ensure that all invoice data is stored securely and protected from unauthorized access.
+NFR-4: The system shall be available 99.9% of the time.
+NFR-5: The system shall comply with all relevant data privacy regulations.
+NFR-6: The system shall support a minimum of 100 concurrent service provider users generating invoices.
+",1718,1821,16,6,3,2,1,2.84,394,401,795,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a service provider to generate an invoice for a specified client and billing period (month).
+FR-2: The system shall automatically calculate the subscription fee based on the client's active subscription plan.
+FR-3: The system shall include the client's name, address, and subscription details on the generated invoice.
+FR-4: The system shall include the service provider's name, address, and contact information on the generated invoice.
+FR-5: The system shall assign a unique invoice number to each generated invoice.
+FR-6: The system shall record the date of invoice generation.
+FR-7: The system shall provide options to download the invoice in PDF format.
+FR-8: The system shall store all generated invoices in a secure database.
+FR-9: The system shall allow the service provider to search and retrieve invoices by client, invoice number, or date range.
+FR-10: The system shall provide an option to mark an invoice as ""Paid"".
+FR-11: The system shall display the payment status (""Paid"" or ""Unpaid"") on the invoice.
+
+NFR-1: The invoice generation process shall complete within 3 seconds.
+NFR-2: The generated invoices shall be accessible and downloadable 99.9% of the time (availability).
+NFR-3: The system shall use encryption to protect sensitive client and financial data during invoice generation and storage.
+NFR-4: The invoice generation process shall be accessible through a user-friendly interface with clear instructions.
+NFR-5: The generated PDF invoices shall be compliant with accessibility standards (e.g., WCAG) to ensure readability for users with disabilities.
+NFR-6: The system shall maintain an audit log of all invoice generation activities, including the service provider who generated the invoice and the date/time of generation.
+",1718,1781,17,6,3,2,1,2.86,394,397,791,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a service provider to generate an invoice for a client's monthly subscription fee.
+FR-2: The invoice generation process shall be initiated through a user interface accessible to service providers.
+FR-3: The system shall automatically calculate the monthly subscription fee based on the client's service plan and current billing cycle.
+FR-4: The generated invoice shall include the following information: invoice number, invoice date, client name, client account number, service plan description, subscription period, monthly subscription fee, applicable taxes (if any), total amount due, and payment due date.
+FR-5: The system shall store generated invoices in a database.
+FR-6: The system shall assign a unique invoice number to each generated invoice.
+FR-7: The system shall allow the service provider to download the invoice in PDF format.
+FR-8: The system shall record the invoice generation date and time.
+FR-9: The system shall allow the service provider to filter and search for invoices by client name, invoice number, and date range.
+FR-10: The system shall automatically update the client's account status to ""Invoice Generated"" after an invoice is created.
+
+NFR-1: The invoice generation process shall complete within 3 seconds of initiation.
+NFR-2: The generated invoice PDF shall be less than 500KB in file size.
+NFR-3: The system shall ensure that all invoice data is securely stored and protected from unauthorized access, adhering to industry standard security practices such as encryption.
+NFR-4: The invoice generation feature shall be available 24/7 with a guaranteed uptime of 99.9%.
+NFR-5: The user interface for invoice generation shall be intuitive and easy to use for service providers with minimal training.
+",1718,1762,15,5,3,2,2,2.76,394,382,776,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements, followed by the evaluation and final recommendation, presented as requested:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall generate an invoice in PDF format.
+FR-2: The invoice generation module shall utilize the iText library (version 5.5.13 or later).
+FR-3: The system shall store generated invoices in a designated AWS S3 bucket.
+FR-4: The system shall trigger invoice generation via a scheduled cron job that runs on the 1st of each month.
+NFR-1: Invoice generation shall complete within 5 seconds per invoice.
+NFR-2: The system shall maintain a log of all invoice generation attempts, including success/failure status.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The system shall allow the service provider to generate an invoice for a specific client and month.
+FR-2: The generated invoice shall be easily downloadable by the service provider.
+FR-3: The system shall display a confirmation message to the service provider upon successful invoice generation.
+FR-4: The system shall provide a history of generated invoices for each client, accessible to the service provider.
+NFR-1: The invoice generation process shall be intuitive and require no more than 3 clicks.
+NFR-2: The generated invoice shall be easily readable and understandable by the client.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall calculate the invoice amount based on the client's subscription plan and any applicable discounts.
+FR-2: The invoice shall include the service provider's name, address, and contact information.
+FR-3: The invoice shall include the client's name, address, and subscription details.
+FR-4: The system shall automatically update the client's account status to ""invoiced"" upon invoice generation.
+FR-5: The system shall record the date and time of invoice generation.
+NFR-1: The system shall ensure data integrity and prevent invoice amount discrepancies.
+NFR-2: The system shall comply with all relevant tax regulations regarding invoice generation.
+",1333,2095,19,6,2,2,1,3.27,289,468,757,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART software requirements, followed by an evaluation and final recommendation:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall generate invoices in PDF format.
+FR-2: The invoice generation module shall utilize the iText library (version 5.5 or higher).
+FR-3: The system shall store generated invoices in a dedicated folder on the server file system, named ""invoices"".
+FR-4: The invoice generation process shall complete within 5 seconds.
+NFR-1: The system shall ensure data integrity during invoice generation by using database transactions.
+NFR-2: The invoice generation module shall be compatible with the existing database schema.
+NFR-3: The system shall log all invoice generation activities, including success and failure events.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The system shall allow the service provider to generate an invoice for a specific client and month.
+FR-2: The system shall display a confirmation message upon successful invoice generation.
+FR-3: The generated invoice shall be accessible to the service provider within 2 clicks from the main dashboard.
+FR-4: The generated invoice shall include the client's name, subscription period, fee amount, and due date.
+NFR-1: The invoice generation process shall be intuitive and require minimal training for the service provider.
+NFR-2: The system shall provide clear error messages if invoice generation fails.
+NFR-3: The invoice generation user interface shall be responsive and load within 2 seconds.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall automatically calculate the subscription fee based on the client's service plan.
+FR-2: The system shall apply any applicable discounts to the subscription fee based on the client's account.
+FR-3: The system shall include the service provider's contact information on the generated invoice.
+FR-4: The system shall update the client's account status to ""invoiced"" after invoice generation.
+FR-5: The system shall store the invoice number and generation date in the client's account record.
+NFR-1: The system shall adhere to all relevant tax regulations when calculating the invoice amount.
+NFR-2: The system shall ensure that invoice numbers are unique and sequential.
+NFR-3: The system shall maintain an audit log of all invoice generation actions, including the user who generated the invoice and the timestamp.
+",1333,2459,22,9,3,3,1,3.88,289,536,825,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint for invoice generation.
+FR-2: The system shall use a PDF generation library to create invoice documents.
+FR-3: The system shall store generated invoices in a dedicated database table.
+NFR-1: Invoice generation shall complete within 2 seconds.
+NFR-2: The system shall support invoice generation for up to 1000 concurrent users.
+NFR-3: The invoice database table shall have a backup schedule of once per day.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The system shall allow the service provider to generate an invoice for a specific client and month.
+FR-2: The generated invoice shall be downloadable in PDF format.
+FR-3: The system shall display a success message upon successful invoice generation.
+FR-4: The system shall update the client's account status to ""invoiced"" upon invoice generation.
+NFR-1: Invoice generation workflow shall be completed within 5 clicks.
+NFR-2: The generated invoice PDF shall be accessible within 3 seconds of the ""Generate Invoice"" button click.
+NFR-3: The system shall provide clear error messages to the service provider in case of invoice generation failure.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall calculate the subscription fee based on the client's service plan and the number of days in the invoice month.
+FR-2: The system shall include the client's name, address, and service plan details on the invoice.
+FR-3: The system shall include the invoice number, invoice date, and payment due date on the invoice.
+FR-4: The system shall store the invoice generation date and time in the invoice record.
+FR-5: The system shall apply any applicable discounts or promotions to the subscription fee.
+NFR-1: Invoice data shall be stored securely, complying with relevant data privacy regulations.
+NFR-2: The system shall maintain an audit log of all invoice generation activities.
+NFR-3: The system shall prevent the generation of duplicate invoices for the same client and month.
+",1333,2077,21,9,3,3,1,3.27,289,476,765,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements derived from the user story, adhering to the SMART criteria:
+
+FR-1: The system shall allow a service provider to generate an invoice for a client's monthly subscription fee within 2 seconds of request.
+FR-2: The system shall automatically calculate the invoice amount based on the client's subscription plan and any applicable discounts, completing the calculation within 1 second.
+FR-3: The system shall include the following information on the invoice: service provider name, client name, invoice number (unique), invoice date, due date (30 days from invoice date), subscription plan name, subscription period (start and end date), subscription fee, any discounts applied, total amount due, and payment instructions.
+FR-4: The system shall allow the service provider to preview the invoice before final generation, displaying the preview within 3 seconds.
+FR-5: The system shall store generated invoices in a secure database for a minimum of 7 years, ensuring data integrity and accessibility.
+FR-6: The system shall provide the option to download the invoice in PDF format within 5 seconds of the download request.
+FR-7: The system shall record the invoice generation date and time in the system log for auditing purposes.
+FR-8: The system shall automatically update the client's account status to ""Awaiting Payment"" upon invoice generation.
+
+NFR-1: The invoice generation process shall be secure, preventing unauthorized access and modification of invoice data, as verified by a penetration test conducted quarterly.
+NFR-2: The system shall be available 99.9% of the time during business hours (8 AM - 6 PM, Monday-Friday), excluding scheduled maintenance (maximum 2 hours per month).
+NFR-3: The system shall be able to handle a peak load of 100 invoice generation requests per minute without performance degradation, as measured during load testing.
+NFR-4: The generated invoices shall comply with relevant legal and accounting standards (e.g., VAT regulations), as validated by a compliance audit conducted annually.
+NFR-5: The system shall provide a user-friendly interface for invoice generation, as measured by a System Usability Scale (SUS) score of 70 or higher based on user testing with at least 10 service providers.
+NFR-6: The system shall be maintainable, with well-documented code and a modular architecture, allowing for future updates and enhancements with minimal disruption, as demonstrated by the ability to implement a minor feature change within 8 hours.
+NFR-7: The system shall be compatible with the latest versions of Chrome, Firefox, and Safari browsers, as verified through cross-browser testing performed after each release.
+",875,2711,15,7,4,3,3,4.09,203,570,773,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements derived from the user story, adhering to the SMART criteria:
+
+FR-1: The system shall allow service providers to generate invoices for monthly subscription fees. The invoice generation process must be completed within 2 seconds of the request, as measured by system logs, to ensure a responsive user experience. (Achievable, Relevant, Time-bound, Specific, Measurable)
+
+FR-2: The system shall automatically calculate the correct subscription fee amount based on the client's subscription plan, as defined in the system's client profile database, ensuring accurate billing. (Achievable, Relevant, Specific, Measurable)
+
+FR-3: The system shall include the following information on each generated invoice: service provider name, client name, invoice number (unique), invoice date, due date (net 30 days), subscription plan name, subscription period (start and end dates), subscription fee amount, and total amount due. (Achievable, Relevant, Specific, Measurable)
+
+FR-4: The system shall provide a mechanism to store generated invoices electronically for a minimum of 7 years to comply with auditing requirements, with successful storage confirmed by a database write confirmation. (Achievable, Relevant, Specific, Measurable, Time-bound)
+
+FR-5: The system shall allow service providers to download generated invoices in PDF format within 5 seconds of the download request, as measured by system logs, ensuring accessibility. (Achievable, Relevant, Time-bound, Specific, Measurable)
+
+FR-6: The system shall automatically mark an invoice as ""Paid"" when payment confirmation is received from the payment gateway, triggered by a successful payment notification, to accurately reflect account status. (Achievable, Relevant, Specific, Measurable)
+
+NFR-1: The invoice generation process shall be secured using TLS 1.3 encryption to protect sensitive client data during transmission, as verified by regular security audits. (Achievable, Relevant, Specific, Measurable)
+
+NFR-2: The system shall maintain an uptime of 99.9% per month, as measured by system monitoring tools, to ensure continuous availability of invoice generation functionality. (Achievable, Relevant, Specific, Measurable, Time-bound)
+
+NFR-3: The system shall be able to handle a peak load of 500 concurrent invoice generation requests without performance degradation (response time exceeding 2 seconds), as measured by load testing, ensuring scalability. (Achievable, Relevant, Specific, Measurable)
+
+NFR-4: The system shall comply with all applicable data privacy regulations (e.g., GDPR, CCPA) regarding the storage and processing of client data, as verified by regular compliance audits. (Achievable, Relevant, Specific, Measurable)
+
+NFR-5: The system shall be designed with a user-friendly interface, as measured by a System Usability Scale (SUS) score of at least 70, to ensure ease of use for service providers. (Achievable, Relevant, Specific, Measurable)
+",875,2975,11,5,4,2,2,4.29,203,625,828,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will generate functional and non-functional requirements from the user story, ensuring they are SMART.
+
+FR-1: The system shall allow the service provider to generate an invoice for a client's monthly subscription fee within 2 seconds of request, using a ""Generate Invoice"" button.
+
+FR-2: The system shall calculate the invoice amount based on the client's subscription plan and any applicable discounts, displaying the calculation within the generated invoice with 100% accuracy.
+
+FR-3: The system shall automatically include the service provider's name, address, and contact information on each generated invoice. This information must be configurable by an administrator.
+
+FR-4: The system shall assign a unique, sequential invoice number to each generated invoice, following a consistent format (e.g., INV-YYYYMM-XXXX) to ensure proper tracking and prevent duplication.
+
+FR-5: The system shall allow the service provider to download the generated invoice in PDF format within 1 second of clicking the ""Download PDF"" button.
+
+FR-6: The system shall record the date and time of invoice generation in the system logs, stored for at least 7 years to meet audit requirements.
+
+FR-7: The system shall store generated invoices linked to the corresponding client account, accessible for at least 7 years, allowing the service provider to view the invoice history.
+
+FR-8: The system shall provide a mechanism to mark an invoice as ""Paid"" or ""Unpaid"" after the payment is confirmed, updated within 1 second of selection.
+
+NFR-1: The invoice generation process shall be secure, adhering to industry-standard encryption protocols (e.g., TLS 1.2 or higher) to protect sensitive client data during transmission.
+
+NFR-2: The system shall be available 99.9% of the time, excluding scheduled maintenance windows not exceeding 2 hours per month, to ensure uninterrupted invoice generation.
+
+NFR-3: The system shall be able to handle a peak load of 100 invoice generation requests per minute without performance degradation, measured during simulated load tests.
+
+NFR-4: The generated invoices shall be compliant with relevant legal and accounting standards (e.g., VAT regulations), as verified annually through independent audits.
+
+NFR-5: The system's user interface for invoice generation shall be intuitive and easy to use, achieving a task completion rate of 95% among service providers with minimal training (less than 1 hour).
+",875,2425,13,5,4,2,2,3.78,203,517,720,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall automatically generate an invoice for each client's monthly subscription fee on the first day of each month.
+
+FR-2: The invoice shall include the service provider's name, address, and contact information.
+
+FR-3: The invoice shall include the client's name, address, and account number.
+
+FR-4: The invoice shall include the invoice number, invoice date, and payment due date (15 days from invoice date).
+
+FR-5: The invoice shall clearly state the subscription period (e.g., ""Month of October 2024"").
+
+FR-6: The invoice shall itemize the subscription fee, including the service name and the corresponding amount.
+
+FR-7: The invoice shall display the total amount due in the service provider's local currency.
+
+FR-8: The system shall store generated invoices in a secure and accessible format (e.g., PDF).
+
+FR-9: The system shall provide a mechanism for the service provider to manually generate an invoice for a specific client and period, overriding the automatic generation schedule.
+
+FR-10: The system shall allow the service provider to void or credit an invoice, with appropriate audit logging.
+
+FR-11: The system shall integrate with the payment processing system to automatically mark invoices as paid upon successful payment.
+
+FR-12: The system shall provide a reporting feature to track invoice generation, payment status, and outstanding balances.
+
+FR-13: The system shall support sending invoices to clients via email, with the invoice attached as a PDF.
+
+FR-14: The system shall provide a mechanism for clients to access and download their invoices through a secure online portal.
+
+FR-15: The system shall comply with relevant data privacy regulations (e.g., GDPR, CCPA) regarding invoice data storage and processing.
+
+NFR-1: The invoice generation process shall complete within 5 seconds per invoice.
+
+NFR-2: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-3: The system shall securely store invoice data, protecting it from unauthorized access and modification.
+
+NFR-4: The system shall be scalable to support a growing number of clients and invoices.
+
+NFR-5: The system shall be maintainable, with clear documentation and modular design.
+
+NFR-6: The system shall be compatible with the existing client management system and payment processing system.
+
+NFR-7: The system shall provide audit logs for all invoice-related activities, including generation, modification, and payment.
+
+NFR-8: The system shall support multiple currency options for future expansion.
+
+NFR-9: The system shall adhere to industry best practices for security and data protection.
+
+NFR-10: The system shall be user-friendly and intuitive for service providers to manage invoices.
+",1130,2728,25,10,2,2,1,4.19,243,602,845,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall automatically generate an invoice for each client's monthly subscription fee on the 1st day of each month.
+
+FR-2: The system shall allow manual generation of an invoice for a specific client and month by an authorized user (e.g., Customer Support, Accounting).
+
+FR-3: The invoice shall include the following information: Service Provider's Name and Address, Client's Name and Address, Invoice Number (unique), Invoice Date, Due Date (e.g., 30 days from invoice date), Description of Service (e.g., ""Monthly Subscription Fee""), Subscription Period (e.g., ""October 1, 2024 - October 31, 2024""), Subscription Fee Amount, Applicable Taxes (if any), Total Amount Due, and Payment Instructions.
+
+FR-4: The system shall assign a unique, sequential invoice number for each generated invoice, incorporating a date-based prefix (e.g., INV-202410-0001).
+
+FR-5: The system shall store generated invoices in a secure and accessible format (e.g., PDF) for a minimum of 7 years, compliant with accounting regulations.
+
+FR-6: The system shall allow authorized users to view, download, and print generated invoices.
+
+FR-7: The system shall integrate with the payment processing system to automatically mark invoices as ""Paid"" upon successful payment receipt.
+
+FR-8: The system shall provide a mechanism for authorized users to manually mark an invoice as ""Paid"" if payment is received through an alternative method (e.g., wire transfer).
+
+FR-9: The system shall update the client's account status based on the invoice payment status. If an invoice is overdue by more than 30 days, the system shall automatically flag the account as ""Past Due.""
+
+FR-10: The system shall send an invoice notification email to the client upon invoice generation. The email shall include a link to download the invoice.
+
+FR-11: The invoice notification email shall be customizable with the Service Provider's logo and branding.
+
+FR-12: The system shall maintain an audit log of all invoice-related activities, including generation, modification, and payment status updates, with timestamps and user information.
+
+NFR-1: The system shall generate invoices within 5 seconds of the scheduled generation time or manual request.
+
+NFR-2: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-3: The system shall comply with all relevant data privacy regulations (e.g., GDPR, CCPA) regarding the storage and processing of client data.
+
+NFR-4: Access to invoice data shall be restricted based on user roles and permissions, with appropriate authentication and authorization mechanisms in place.
+
+NFR-5: The system shall be scalable to handle an increasing number of clients and invoices without performance degradation.
+
+NFR-6: The system shall be maintainable and easily updated with new features or changes to existing functionality. Code should be well-documented and follow established coding standards.
+
+NFR-7: The invoice generation process shall be secure to prevent unauthorized access or modification of invoice data.
+
+NFR-8: The system shall be designed to handle different currencies and tax rates.
+",1130,3120,20,8,2,1,1,4.70,243,696,939,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall automatically generate an invoice for each active subscription account on the first day of each month.
+
+FR-2: The invoice shall include the service provider's name, address, and contact information.
+
+FR-3: The invoice shall include the client's name, billing address, and account number.
+
+FR-4: The invoice shall include a unique invoice number.
+
+FR-5: The invoice shall include the invoice date.
+
+FR-6: The invoice shall include the subscription period (e.g., month/year).
+
+FR-7: The invoice shall include a clear description of the subscription service.
+
+FR-8: The invoice shall include the monthly subscription fee amount.
+
+FR-9: The invoice shall include any applicable taxes (e.g., VAT, sales tax), clearly itemized.
+
+FR-10: The invoice shall include the total amount due.
+
+FR-11: The invoice shall include payment terms (e.g., net 30 days).
+
+FR-12: The invoice shall include accepted payment methods (e.g., credit card, bank transfer).
+
+FR-13: The invoice shall be generated in a PDF format.
+
+FR-14: The system shall store all generated invoices in a secure and retrievable manner for at least seven years to comply with accounting regulations.
+
+FR-15: The system shall automatically email the generated invoice to the client's registered email address.
+
+FR-16: The system shall record the invoice generation date and time in the invoice history.
+
+FR-17: The system shall provide an option to manually regenerate an invoice for a specific subscription and period.
+
+FR-18: The system shall integrate with the payment processing system to automatically track payment status for each invoice.
+
+FR-19: The system shall provide a user interface for service providers to view, search, and download generated invoices.
+
+FR-20: The system shall integrate with the accounting system to export invoice data for financial reporting.
+
+NFR-1: The invoice generation process shall be completed within 2 hours of the first day of each month for all active subscriptions.
+
+NFR-2: The system shall ensure the confidentiality and integrity of all invoice data, protecting it from unauthorized access or modification.
+
+NFR-3: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-4: The system shall comply with all relevant data privacy regulations (e.g., GDPR, CCPA) regarding client data and invoice storage.
+
+NFR-5: The invoice generation process shall be scalable to handle a growing number of subscriptions without performance degradation.
+
+NFR-6: The generated invoices shall be easily readable and understandable by clients.
+
+NFR-7: The system shall be designed to be maintainable and easily updated with changes to subscription plans, tax rates, or legal requirements.
+
+NFR-8: The system shall provide audit logs for all invoice-related activities, including generation, modification, and deletion.
+
+NFR-9: The system shall be secure against common web vulnerabilities such as SQL injection and cross-site scripting (XSS).
+
+NFR-10: The system shall provide role-based access control to restrict access to invoice data based on user roles.
+",1130,3091,30,10,2,1,1,4.26,243,692,935,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Contextual,precise,"
+BUSINESS CONTEXT:
+Application for invoice generation
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to generate an invoice for a specific client, specifying the subscription period (start and end date) and the monthly subscription fee.
+FR-2: The system shall automatically calculate the total amount due based on the subscription period and monthly fee.
+FR-3: The system shall generate an invoice document in PDF format.
+FR-4: The system shall store the generated invoice, including client ID, invoice number, date of generation, subscription period, amount due, and payment status, in the invoice database.
+FR-5: The system shall allow the user to mark an invoice as ""Paid"" and record the payment date.
+FR-6: The system shall integrate with the existing client management system to retrieve client details (name, address, contact information) for invoice generation.
+FR-7: The system shall provide a unique invoice number for each generated invoice, following a defined format (e.g., INV-YYYYMMDD-XXXX).
+FR-8: The system shall allow the user to preview the invoice before final generation.
+FR-9: The system shall allow the user to download the generated invoice in PDF format.
+FR-10: The system shall allow the user to search for invoices by client ID, invoice number, or date range.
+
+NFR-1: The system shall generate an invoice within 3 seconds under normal load (up to 5 concurrent users).
+NFR-2: The system shall generate an invoice within 5 seconds under peak load (up to 20 concurrent users).
+NFR-3: The system shall maintain 99.9% uptime, excluding scheduled maintenance.
+NFR-4: The system shall log all invoice generation activities, including user ID, timestamp, client ID, and any errors encountered.
+NFR-5: The system shall display user-friendly error messages in case of invoice generation failure, providing guidance on how to resolve the issue.
+NFR-6: The system shall be accessible via a web browser with a responsive design, ensuring usability on different screen sizes (desktop, tablet, mobile).
+NFR-7: The system shall adhere to data security standards, protecting sensitive client and invoice data from unauthorized access.
+NFR-8: The system shall be scalable to handle an increasing number of clients and invoices without significant performance degradation.
+NFR-9: The system shall be tested for security vulnerabilities before deployment and regularly thereafter.
+NFR-10: The user interface shall be intuitive and easy to navigate, requiring minimal training for users to generate invoices.
+",841,2449,20,10,4,3,1,3.70,192,538,730,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Contextual,default,"
+BUSINESS CONTEXT:
+Application for invoice generation
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow the user to generate an invoice for a monthly subscription fee, specifying the client, subscription period (start and end dates), and subscription price within 3 clicks.
+FR-2: The system shall automatically calculate the total amount due on the invoice based on the subscription period and price.
+FR-3: The system shall generate invoices in PDF format that are compliant with [Specify local tax regulations, e.g., US GAAP, IFRS] within 1 second.
+FR-4: The system shall store generated invoices in a secure and retrievable manner for at least 7 years as required by accounting regulations.
+FR-5: The system shall allow users to preview the invoice before final generation.
+FR-6: The system shall allow users to download the generated invoice in PDF format.
+FR-7: The system shall record the date and time of invoice generation, and the user who generated it.
+FR-8: The system shall automatically update the client's account status to ""Invoice Generated"" upon successful invoice creation.
+FR-9: The system shall integrate with the existing CRM system to retrieve client details (name, address, contact information) for populating the invoice within 2 seconds.
+FR-10: The system shall integrate with the existing payment processing system to allow for direct payment from the invoice by [Date].
+FR-11: The system shall send an email notification to the client containing a link to download the generated invoice within 5 minutes of invoice generation.
+FR-12: The system shall support generating invoices for a minimum of 1000 clients per hour during peak load (defined as 9 AM - 11 AM on the first business day of each month).
+NFR-1: The system shall have a response time of less than 3 seconds for invoice generation under normal load (defined as 50 concurrent users).
+NFR-2: The system shall maintain 99.9% uptime, excluding scheduled maintenance, to ensure uninterrupted invoice generation.
+NFR-3: The system shall log all invoice generation activities, including successes and failures, with sufficient detail for auditing and troubleshooting.
+NFR-4: The system shall display user-friendly error messages in case of invoice generation failure, providing guidance on how to resolve the issue.
+NFR-5: The system shall adhere to accessibility guidelines (WCAG 2.1 Level AA) to ensure usability for users with disabilities.
+NFR-6: The system shall use a clear and intuitive user interface for invoice generation, minimizing the number of steps required.
+NFR-7: The system shall implement role-based access control to restrict invoice generation functionality to authorized users only.
+NFR-8: The system shall undergo security testing every 6 months to identify and address potential vulnerabilities related to invoice data.
+NFR-9: The system shall be scalable to handle a 50% increase in the number of clients and invoices generated per month within the next year.
+",841,2891,21,9,4,2,2,4.61,192,630,822,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Contextual,creative,"
+BUSINESS CONTEXT:
+Application for invoice generation
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to generate invoices for monthly subscription fees with the current date, client name, subscription plan, and agreed-upon monthly fee, displaying the total amount due.
+FR-2: The system shall generate invoices in a PDF format.
+FR-3: The system shall store generated invoices in a retrievable format for a minimum of 7 years.
+FR-4: The system shall integrate with the existing customer relationship management (CRM) system to automatically populate client information (name, address, subscription plan) into the invoice form.
+FR-5: The system shall provide a user interface where the user can select the client, review, and generate the invoice with no more than 3 clicks.
+FR-6: The system shall allow users to download and email generated invoices directly from the system, integrating with the existing email service.
+FR-7: The system shall automatically mark an invoice as ""Paid"" when a payment is recorded in the integrated accounting system, through API integration.
+
+NFR-1: The system shall generate invoices within 2 seconds under normal load (up to 50 concurrent users).
+NFR-2: The system shall generate invoices within 5 seconds under peak load (up to 200 concurrent users).
+NFR-3: The system shall provide real-time monitoring of invoice generation success and failure rates.
+NFR-4: The system shall log all invoice generation activities, including user ID, timestamp, client ID, and status (success/failure), for auditing purposes.
+NFR-5: The system shall display user-friendly error messages in case of invoice generation failure, providing clear instructions for resolution (e.g., ""Failed to retrieve client data. Please check the CRM connection."").
+NFR-6: The user interface shall be responsive and accessible on desktop computers with a minimum screen resolution of 1280x720 pixels, and will be fully tested with JAWS screen reader to ensure accessibility compliance.
+NFR-7: The system shall ensure that only authorized users with the appropriate role permissions can generate invoices.
+NFR-8: The system will have a 99.9% uptime during business hours (8 AM - 6 PM, Monday - Friday) and will be fully patched with security updates within 7 days of release.
+",841,2205,15,8,4,3,2,3.65,192,488,680,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall generate an invoice in PDF format.
+FR-2: The system shall automatically generate invoices on the 1st day of each month.
+FR-3: The invoice shall include the client's name, address, and subscription details (service description, subscription period, and monthly fee).
+FR-4: The invoice shall include a unique invoice number.
+FR-5: The invoice shall include the service provider's name and contact information.
+FR-6: The invoice shall include the payment due date (15 days from invoice generation).
+FR-7: The system shall store generated invoices for a minimum of 7 years.
+FR-8: The system shall allow the service provider to manually generate an invoice for a specific client and month.
+FR-9: The system shall calculate the total amount due on the invoice.
+
+NFR-1: The invoice generation process shall complete within 5 seconds.
+NFR-2: The system shall ensure the confidentiality of client data according to GDPR regulations.
+NFR-3: The system shall be available 99.9% of the time during business hours (8 AM - 6 PM, Monday-Friday).
+NFR-4: The generated invoices shall be accessible only to authorized personnel (service provider and client).
+NFR-5: The system shall log all invoice generation events, including success and failure, for auditing purposes.
+",1814,1277,14,5,3,3,2,2.68,405,299,704,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall generate an invoice containing the client's name, address, invoice number, invoice date, subscription start and end dates, subscription fee, and total amount due.
+FR-2: The system shall automatically generate invoices on the first day of each month for all active subscriptions.
+FR-3: The system shall allow the service provider to manually generate an invoice for a specific client and month.
+FR-4: The generated invoice shall be downloadable in PDF format.
+FR-5: The system shall store generated invoices and associate them with the corresponding client account.
+FR-6: The system shall update the client's account status to ""Paid"" upon confirmation of payment against the generated invoice.
+FR-7: The system shall allow the service provider to mark an invoice as ""Paid"" manually.
+FR-8: The system shall support different currency types and display the appropriate currency symbol on the invoice.
+
+NFR-1: Invoice generation shall complete within 5 seconds of request.
+NFR-2: The system shall maintain data security by encrypting sensitive client information stored in the database.
+NFR-3: The system shall be available 99.9% of the time (excluding scheduled maintenance).
+NFR-4: The generated invoice PDF shall be accessible and readable on various devices and operating systems.
+NFR-5: The system shall log all invoice generation activities, including successful and failed attempts, for auditing purposes.
+NFR-6: The system shall comply with relevant data privacy regulations (e.g., GDPR).
+",1814,1516,14,6,2,2,1,2.45,405,328,733,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall generate an invoice for a specified client, including the client's name, address, invoice number, invoice date, and due date.
+FR-2: The system shall calculate the monthly subscription fee based on the client's subscription plan.
+FR-3: The system shall allow the service provider to preview the invoice before final generation.
+FR-4: The system shall store the generated invoice as a PDF document.
+FR-5: The system shall automatically increment the invoice number for each new invoice generated.
+FR-6: The system shall record the payment status (paid, unpaid, overdue) of each invoice.
+FR-7: The system shall allow the service provider to download the generated invoice.
+FR-8: The system shall allow the service provider to resend an invoice via email.
+
+NFR-1: The invoice generation process shall complete within 5 seconds.
+NFR-2: The generated invoice must be accessible to the service provider 24/7 with 99.9% uptime.
+NFR-3: The system shall comply with relevant data privacy regulations (e.g., GDPR).
+NFR-4: The system shall protect sensitive client data using encryption and access controls.
+NFR-5: The invoice generation process shall be auditable, logging all actions related to invoice creation and modification.
+NFR-6: The system should be accessible on the latest versions of Chrome, Firefox and Safari.
+",1814,1336,14,6,2,2,1,2.35,405,308,713,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall generate an invoice containing the client's name, billing address, invoice number, invoice date, subscription period, subscription fee, and total amount due.
+FR-2: The system shall store generated invoices in a database, linked to the client's account.
+FR-3: The system shall automatically trigger invoice generation on the first day of each month for all active subscriptions.
+FR-4: The system shall calculate the subscription fee based on the client's selected subscription plan.
+FR-5: The system shall generate an error message and log the error if invoice generation fails for a specific client.
+FR-6: The system shall send an email notification to the service provider upon successful invoice generation for each client.
+NFR-1: The system shall generate invoices within 5 seconds of the trigger event.
+NFR-2: The generated invoice shall be available in PDF format for easy viewing and printing.
+NFR-3: The system shall ensure that invoice data is stored securely and protected from unauthorized access.
+",1880,1031,9,3,3,3,1,1.63,443,219,662,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall generate an invoice containing the client's name, subscription period, subscription fee amount, and due date.
+FR-2: The system shall store generated invoices in a database, associating them with the corresponding client account.
+FR-3: The system shall automatically generate an invoice at the end of each subscription month.
+FR-4: The system shall calculate the subscription fee based on the client's chosen subscription plan.
+FR-5: If invoice generation fails (e.g., due to database error), the system shall log the error and retry invoice generation automatically up to 3 times.
+FR-6: The system shall send an email notification to the client upon invoice generation, containing a link to download the invoice in PDF format.
+NFR-1: The system shall generate an invoice within 5 seconds of the trigger event (end of subscription month).
+NFR-2: The generated invoice (PDF) shall be easily readable and printable.
+NFR-3: The system shall ensure the confidentiality of invoice data by using secure storage and transmission protocols (e.g., HTTPS).
+",1880,1069,9,3,2,3,1,1.94,443,234,677,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.', 'context': 'Application for invoice generation'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a service provider, I want to generate an invoice for the monthly subscription fee my client pays, so that I can confirm the payment and keep track of their account status.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall generate an invoice for a client's monthly subscription fee upon request or automatically on the last day of the billing cycle.
+FR-2: The system shall store generated invoices for a minimum of 7 years.
+FR-3: The system shall verify that a client has an active subscription before generating an invoice.
+FR-4: The system shall include the client's name, billing address, subscription plan, billing period, subscription fee, and due date on each generated invoice.
+FR-5: If the system fails to generate an invoice, it shall log the error and retry the process up to three times, then alert the administrator.
+FR-6: The system shall provide a function to regenerate a specific invoice if it is lost or corrupted.
+NFR-1: The system shall generate an invoice within 5 seconds of the request.
+NFR-2: The invoice shall be generated in a format easily readable and printable (e.g., PDF).
+NFR-3: Access to generated invoices shall be secured and restricted to authorized personnel only.
+",1880,1001,9,3,3,3,1,1.81,443,228,671,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

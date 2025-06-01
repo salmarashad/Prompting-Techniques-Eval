@@ -1,0 +1,1456 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order (e.g., ""Processing,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"") via a dedicated order tracking page accessible through their account or a unique tracking number.
+
+FR-2: The system shall send an email notification to the customer when the order status changes to ""Shipped,"" including the tracking number and a link to the carrier's tracking website.
+
+FR-3: The system shall send an SMS notification to the customer (if a phone number is provided) when the order status changes to ""Out for Delivery,"" including an estimated delivery time window.
+
+FR-4: The system shall update the order status in the system within 15 minutes of receiving an update from the shipping carrier's API.
+
+FR-5: The order tracking page shall display the order date, shipping address, estimated delivery date, and a detailed history of status updates with timestamps.
+
+NFR-1: The order tracking page shall load in under 3 seconds for 95% of users.
+
+NFR-2: The system shall be able to handle up to 10,000 concurrent users accessing the order tracking page without performance degradation.
+
+NFR-3: All order status updates and customer data shall be transmitted and stored securely, adhering to industry best practices for data encryption (e.g., TLS 1.3 or higher).
+
+NFR-4: The system shall maintain an uptime of 99.9% for the order tracking functionality.
+",596,1411,9,4,3,2,2,2.24,153,321,474,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order (e.g., ""Processing,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"") via a dedicated order tracking page within the customer account.
+
+FR-2: The system shall update the order status within 15 minutes of a status change event (e.g., shipment, arrival at a new location, delivery confirmation) being received from the shipping carrier's API.
+
+FR-3: The system shall send an email notification to the customer when the order status changes to ""Shipped,"" including the tracking number and estimated delivery date.
+
+FR-4: The system shall send an SMS notification to the customer (if a phone number is provided) when the order status changes to ""Out for Delivery.""
+
+FR-5: The order tracking page shall display the order date, shipping address, items ordered, and a detailed timeline of status updates with timestamps.
+
+NFR-1: The order tracking page shall load in under 3 seconds on desktop and mobile devices under normal network conditions (average latency < 100ms, bandwidth > 5 Mbps).
+
+NFR-2: The system shall be able to handle up to 10,000 concurrent users accessing the order tracking page without performance degradation (defined as a page load time exceeding 5 seconds).
+
+NFR-3: Email and SMS notifications shall be delivered to customers within 5 minutes of the order status update 99.9% of the time.
+
+NFR-4: The order tracking page shall be accessible and usable on the latest two versions of Chrome, Firefox, Safari, and Edge browsers.
+",596,1519,9,4,4,2,3,2.66,153,345,498,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display the current status of an order (e.g., ""Order Placed,"" ""Processing,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"") to the customer on the order details page.
+
+FR-2: The system shall allow customers to view the estimated delivery date for their order on the order details page.
+
+FR-3: The system shall send an email notification to the customer when the order status changes to ""Shipped,"" including the tracking number and a link to the carrier's tracking website.
+
+FR-4: The system shall update the order status in the system within 15 minutes of receiving a status update from the shipping carrier's API.
+
+FR-5: The system shall allow customers to access the order details page, including the order status, by clicking a link in the order confirmation email.
+
+NFR-1: The order status page shall load in under 3 seconds for 95% of users.
+
+NFR-2: The email notifications regarding order status updates shall be sent within 5 minutes of the order status being updated in the system.
+
+NFR-3: The system shall be available 24/7 with a 99.9% uptime for displaying order status and sending notifications.
+
+NFR-4: The order status information displayed shall be accurate and consistent with the information provided by the shipping carrier's API.
+",596,1268,9,4,3,2,3,2.14,153,292,445,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+","Okay, here's the breakdown of the user story ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Order Tracking Interface:** The system shall provide a customer-accessible interface (e.g., webpage, mobile app section) where customers can view the status of their orders.
+*   **FR-2: Order Status Display:** The system shall display the current status of an order, including but not limited to:
+    *   Order Placed
+    *   Order Confirmed
+    *   Order Processing
+    *   Order Shipped
+    *   Out for Delivery
+    *   Delivered
+    *   (Optionally) Any delays or exceptions.
+*   **FR-3: Order Tracking Number Input:** The system shall allow customers to input their order tracking number or order ID to access order status information.
+*   **FR-4: Estimated Delivery Date:** The system shall display an estimated delivery date for each order. This date should be updated if the delivery schedule changes.
+*   **FR-5: Update Notifications:** The system shall provide customers with the option to receive notifications (via email and/or SMS) when the order status changes.
+*   **FR-6: Notification Preferences:** The system shall allow customers to manage their notification preferences (e.g., choose which status updates they want to receive, preferred notification method).
+*   **FR-7: Historical Order Tracking:** The system shall retain order tracking information for at least 6 months after delivery.
+*   **FR-8: Contact Support Link:** The system shall provide a clear and easily accessible link to customer support from the order tracking page.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Order Status Update Latency:** Order status updates shall be reflected in the customer interface within 5 minutes of the status change being recorded in the system.
+*   **NFR-2: Notification Delivery Time:** Notifications shall be delivered to customers within 2 minutes of the order status change.
+*   **NFR-3: System Availability:** The order tracking interface shall be available 24/7, with a guaranteed uptime of 99.9%.
+*   **NFR-4: Scalability:** The system shall be able to handle at least 10,000 concurrent users accessing the order tracking interface without performance degradation.
+*   **NFR-5: Security:** The order tracking interface shall protect customer data and prevent unauthorized access to order information. Access to order information shall be limited to the customer associated with the order and authorized personnel.
+*   **NFR-6: Mobile Responsiveness:** The order tracking interface shall be responsive and accessible on a variety of devices, including desktops, tablets, and smartphones.
+*   **NFR-7: Data Accuracy:** The system shall ensure the accuracy of order status information displayed to the customer.
+*   **NFR-8: Notification Reliability:** The system shall ensure that notifications are reliably delivered to customers who have opted in to receive them.
+",1488,3114,16,8,4,2,2,4.30,339,679,1018,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+","Okay, here's the user story broken down into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**User Story:** As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+**Requirements:**
+
+**Functional Requirements (FR):**
+
+*   **FR-1:** The system shall provide a dedicated ""Order Tracking"" page accessible to the customer after logging in or via a unique tracking link provided in the order confirmation email.
+*   **FR-2:** The ""Order Tracking"" page shall display the current status of the order (e.g., ""Order Placed,"" ""Processing,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered,"" ""Cancelled"").
+*   **FR-3:** For each status update, the ""Order Tracking"" page shall display a timestamp indicating when the status was updated.
+*   **FR-4:** The system shall display the estimated delivery date on the ""Order Tracking"" page, if available.
+*   **FR-5:** The system shall allow customers to view the shipping address associated with the order on the ""Order Tracking"" page.
+*   **FR-6:** The system shall send email notifications to the customer when the order status changes to ""Shipped,"" ""Out for Delivery,"" and ""Delivered.""
+*   **FR-7:** The email notifications shall include a link to the ""Order Tracking"" page.
+*   **FR-8:** The system shall allow administrators to manually update the order status, which will trigger an email notification to the customer.
+*   **FR-9:** The system shall store a history of all status updates for each order.
+*   **FR-10:** The system shall integrate with the designated shipping carrier's API to automatically retrieve and update order status information at least once every 4 hours.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1:** The ""Order Tracking"" page shall load within 2 seconds under normal load conditions (defined as up to 100 concurrent users).
+*   **NFR-2:** Email notifications shall be sent to the customer within 5 minutes of a status update.
+*   **NFR-3:** The system shall support tracking of at least 10,000 concurrent orders without performance degradation.
+*   **NFR-4:** The system shall be available 24/7 with a target uptime of 99.9%.
+*   **NFR-5:** The system shall securely store order tracking information, protecting customer data from unauthorized access. Access to order tracking data should follow principle of least privilege.
+*   **NFR-6:** The email notifications shall be responsive and display correctly on various devices (desktops, tablets, and mobile phones).
+*   **NFR-7:** The system should be scalable to accommodate a 50% increase in order volume within the next year without requiring significant infrastructure changes.
+*   **NFR-8:** The system should provide logging of all order status updates for auditing and troubleshooting purposes.
+",1488,2834,18,8,4,3,2,3.70,339,655,994,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+","Okay, here are the functional and non-functional requirements derived from the user story ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."":
+
+**Functional Requirements:**
+
+*   **FR-1: Order Tracking Page:** The system shall provide a dedicated order tracking page accessible to the customer.
+*   **FR-2: Order Information Display:** The order tracking page shall display the current status of the order (e.g., ""Order Placed,"" ""Processing,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"").
+*   **FR-3: Detailed Status Updates:** The system shall display a chronological history of order status updates, including timestamps for each update.
+*   **FR-4: Delivery Address Display:** The order tracking page shall display the confirmed delivery address for the order.
+*   **FR-5: Estimated Delivery Date:** The system shall display an estimated delivery date on the order tracking page.
+*   **FR-6: Shipping Carrier Information:** The order tracking page shall display the name of the shipping carrier and a tracking number provided by the carrier.
+*   **FR-7: Carrier Tracking Link:** The system shall provide a direct link to the shipping carrier's website using the provided tracking number, enabling the customer to view the most up-to-date shipping information from the carrier.
+*   **FR-8: Email Notifications:** The system shall send email notifications to the customer upon specific order status changes (e.g., ""Order Shipped,"" ""Out for Delivery,"" ""Delivered"").
+*   **FR-9: Notification Preferences:** The system shall allow customers to manage their email notification preferences for order updates. (e.g., allow to enable or disable notifications)
+*   **FR-10: Access without Login:** The system shall allow customers to track their orders using their order number and email address without requiring them to log in to their account. (Optional)
+
+**Non-Functional Requirements:**
+
+*   **NFR-1: Tracking Page Load Time:** The order tracking page shall load within 2 seconds under normal load conditions.
+*   **NFR-2: Notification Delivery Time:** Email notifications shall be sent within 5 minutes of an order status change.
+*   **NFR-3: Data Accuracy:** Order status information displayed on the tracking page shall be accurate and reflect the latest available data from the shipping carrier.
+*   **NFR-4: System Availability:** The order tracking system shall be available 24/7 with a target uptime of 99.9%.
+*   **NFR-5: Scalability:** The system shall be able to handle a peak load of 10,000 concurrent order tracking requests without performance degradation.
+*   **NFR-6: Mobile Responsiveness:** The order tracking page shall be responsive and render correctly on various devices, including desktops, tablets, and smartphones.
+*   **NFR-7: Security:** The system shall prevent unauthorized access to order information by requiring either authentication or a unique order identifier (order number and email).
+",1488,2979,17,7,3,2,1,3.95,339,648,987,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a customer to view the current status of their order by entering their order ID and email address or order ID and registered account password.
+FR-2: The system shall display the following order statuses: ""Order Placed,"" ""Processing,"" ""Shipped,"" ""Out for Delivery,"" and ""Delivered.""
+FR-3: The system shall update the order status automatically as the order progresses through the delivery process.
+FR-4: The system shall send an email notification to the customer when the order status changes to ""Shipped,"" ""Out for Delivery,"" and ""Delivered.""
+FR-5: The email notifications shall include the order ID, current status, estimated delivery date (if available), and a link to a detailed order tracking page.
+FR-6: The detailed order tracking page shall display a timeline of status updates with corresponding dates and times.
+FR-7: The system shall integrate with the shipping carrier's API to retrieve real-time tracking information.
+FR-8: The system shall store a history of all order status updates for at least 1 year.
+
+NFR-1: The order status page shall load in under 3 seconds.
+NFR-2: Email notifications shall be sent within 5 minutes of a status change.
+NFR-3: The system shall be available 24/7 with a guaranteed uptime of 99.9%.
+NFR-4: The system shall protect customer order information using encryption and secure authentication methods.
+NFR-5: The order tracking page shall be accessible and usable on desktop and mobile devices.
+NFR-6: The system shall be able to handle at least 1000 concurrent order tracking requests without performance degradation.
+",1655,1592,14,6,3,2,2,2.45,383,361,744,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a customer to view the current status of their order by entering their order ID and email address/phone number on the order tracking page.
+FR-2: The system shall display the following order statuses: ""Order Placed"", ""Processing"", ""Shipped"", ""Out for Delivery"", and ""Delivered"".
+FR-3: The system shall provide an estimated delivery date for orders with the status ""Shipped"" or ""Out for Delivery"".
+FR-4: The system shall send an email notification to the customer when the order status changes to ""Shipped"". The email shall include the tracking number and a link to the order tracking page.
+FR-5: The system shall send an SMS notification to the customer (if a phone number is provided) when the order status changes to ""Out for Delivery"". The SMS shall include a link to the order tracking page.
+FR-6: The order tracking page shall display the date and time of each status update.
+FR-7: The system shall store historical order status information for at least 6 months after the order is delivered.
+FR-8: The system shall provide a ""Help"" or ""FAQ"" section on the order tracking page addressing common questions about order tracking.
+
+NFR-1: The order tracking page shall load in under 3 seconds.
+NFR-2: The system shall be able to handle at least 1000 concurrent users accessing the order tracking page without performance degradation.
+NFR-3: Email notifications shall be sent within 5 minutes of the order status update.
+NFR-4: SMS notifications shall be sent within 2 minutes of the order status update.
+NFR-5: The order tracking page shall be accessible on desktop and mobile devices (responsive design).
+NFR-6: The system shall securely store customer order data and protect it from unauthorized access.
+NFR-7: The order tracking page shall conform to WCAG 2.1 Level AA accessibility guidelines.
+",1655,1827,15,7,4,3,2,2.66,383,415,798,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow the customer to view the current status of their order, including processing, shipped, out for delivery, and delivered, through a dedicated order tracking page or section on the website/application.
+FR-2: The system shall provide an estimated delivery date for the order, which is initially displayed upon order confirmation and updated if necessary.
+FR-3: The system shall allow customers to track their order using a unique order tracking number or order ID.
+FR-4: The system shall automatically send email and/or SMS notifications to the customer upon significant changes in order status (e.g., order confirmation, shipment, out for delivery, delivery).
+FR-5: The system shall display a history of order status updates with timestamps for each update.
+FR-6: The system shall provide an interface for the customer to subscribe or unsubscribe from receiving order status update notifications via email and/or SMS.
+FR-7: The system shall provide a link to the carrier's tracking website (e.g., UPS, FedEx, USPS) when the order is shipped, allowing the customer to view detailed tracking information directly from the carrier.
+
+NFR-1: The order tracking page shall load within 3 seconds on a standard desktop or mobile device with a 4G connection.
+NFR-2: Order status updates shall be reflected in the system within 15 minutes of the carrier providing the update.
+NFR-3: Email and SMS notifications shall be sent within 5 minutes of a status update being recorded in the system.
+NFR-4: The system shall be available 99.9% of the time.
+NFR-5: The order tracking information shall be secured using HTTPS protocol to protect customer data.
+NFR-6: The system shall support at least 10,000 concurrent users tracking their orders.
+NFR-7: The user interface for order tracking shall be intuitive and easy to use on both desktop and mobile devices, conforming to established accessibility guidelines (e.g., WCAG).
+",1655,1934,14,7,3,2,2,2.88,383,430,813,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART software requirements for the user story, followed by an evaluation and final recommendation, presented in the requested format:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/orders/{orderId}/status` that returns the current status of the order.
+FR-2: The API shall return the following status codes: ""Order Placed"", ""Processing"", ""Shipped"", ""Out for Delivery"", ""Delivered"", ""Cancelled"".
+FR-3: The system shall update the order status in the database within 5 minutes of a status change event.
+NFR-1: The API endpoint `/orders/{orderId}/status` shall have a response time of less than 200ms under normal load (100 requests/second).
+NFR-2: The system shall use a message queue (e.g., RabbitMQ, Kafka) to handle status update events asynchronously.
+NFR-3: The database shall be able to store at least 1 million order records.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The customer shall be able to view the current status of their order on the order details page.
+FR-2: The customer shall receive email notifications when the order status changes to ""Shipped"", ""Out for Delivery"", and ""Delivered"".
+FR-3: The order details page shall display an estimated delivery date.
+NFR-1: The order details page shall load within 3 seconds.
+NFR-2: Email notifications shall be sent within 15 minutes of a status change.
+NFR-3: The user interface shall be accessible on desktop and mobile devices.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall track the following order status events: ""Order Placed"", ""Payment Received"", ""Processing"", ""Shipped"", ""Out for Delivery"", ""Delivered"", ""Cancelled"", ""Returned"".
+FR-2: The system shall store the timestamp of each order status event.
+FR-3: The system shall prevent status transitions that violate business rules (e.g., cannot transition from ""Delivered"" to ""Shipped"").
+NFR-1: Order status data shall be retained for a minimum of 2 years.
+NFR-2: The system shall generate a daily report of all orders with a status of ""Out for Delivery"".
+NFR-3: The system shall comply with all relevant data privacy regulations.
+",1270,2192,18,9,3,2,2,3.25,278,528,806,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART software requirements, followed by an evaluation and a final recommendation, presented as requested:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/orders/{orderId}/status` that returns the current status of an order given its ID.
+FR-2: The API endpoint shall return a JSON object containing the order ID, current status (e.g., ""Received"", ""Processing"", ""Shipped"", ""Delivered""), and a timestamp for the last status update.
+FR-3: The system shall update the order status in the database whenever a change in status occurs.
+NFR-1: The `/orders/{orderId}/status` API endpoint shall respond within 200ms under normal load (up to 100 requests per second).
+NFR-2: The system shall log all order status changes with a timestamp and user ID (if applicable) for auditing purposes.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The customer shall be able to view the current status of their order on the order details page within the customer portal.
+FR-2: The customer shall receive email notifications when their order status changes to ""Shipped"" and ""Delivered"".
+FR-3: The order status displayed shall include an estimated delivery date, if available.
+NFR-1: The order status information on the order details page shall be updated within 5 seconds of a status change in the system.
+NFR-2: Email notifications shall be sent within 15 minutes of the order status change.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall store the order status history for each order in a separate table with fields: order ID, status, timestamp, and updated_by (system or user).
+FR-2: Order statuses shall follow a predefined workflow: Received -> Processing -> Shipped -> Delivered -> Completed.
+FR-3: The system shall prevent transitions to invalid order statuses (e.g., from ""Shipped"" back to ""Processing"" without manager approval).
+NFR-1: The system shall maintain at least 1 year of order status history data.
+NFR-2: Data backups for order status information shall be performed daily.
+",1270,2114,15,6,4,2,2,3.16,278,488,766,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART software requirements based on the user story, followed by an evaluation and a final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/orders/{orderId}/status` that returns the current status of an order.
+FR-2: The API endpoint shall return data in JSON format, including status, last updated timestamp, and estimated delivery date.
+FR-3: The system shall use a message queue (e.g., RabbitMQ, Kafka) to propagate order status updates to the tracking module.
+NFR-1: The API endpoint `/orders/{orderId}/status` shall respond within 200ms on average.
+NFR-2: The system shall support at least 1000 concurrent requests to the order status API.
+FR-4: The database shall record each status change with a timestamp.
+NFR-3: The system shall retain order tracking data for at least 2 years.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The customer shall be able to view the current status of their order on the order details page within the customer portal.
+FR-2: The customer shall receive email notifications when the order status changes to ""Shipped,"" ""Out for Delivery,"" and ""Delivered.""
+FR-3: The customer shall have access to a tracking number and a link to the carrier's website on the order details page.
+NFR-1: The order status information displayed on the customer portal shall be updated within 5 minutes of a status change.
+NFR-2: The customer portal shall be accessible on desktop and mobile devices.
+FR-4: The customer shall be able to opt-in or opt-out of email notifications.
+NFR-3: Email notifications shall be delivered within 10 minutes of a status change.
+FR-5: The order details page shall display an estimated delivery date calculated based on the carrier's estimated transit time.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall update the order status based on events received from the shipping provider (e.g., ""Package Scanned,"" ""Exception"").
+FR-2: The system shall maintain a history of all order status changes, including the date and time of each change.
+FR-3: The system shall automatically update the order status to ""Delivered"" when confirmation is received from the shipping provider.
+NFR-1: The system shall poll the shipping provider for status updates every 15 minutes.
+NFR-2: The system shall handle different status codes and formats from multiple shipping providers.
+FR-4: The system shall log all errors encountered while processing order status updates.
+FR-5: The system shall allow administrators to manually update the order status in cases where automatic updates fail.
+
+**FINAL RECOMMENDATION**
+
+Based on the evaluation, **Approach 2** provides the most effective set of requirements.
+",1270,2782,22,8,3,2,1,3.99,278,636,914,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a customer to view the current status of their order (e.g., ""Order Placed,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"") via a unique order tracking number. The status shall be updated within 15 minutes of any change in the order's state.
+
+FR-2: The system shall provide an estimated delivery date for each order, calculated based on shipping method and destination. This estimate shall be displayed alongside the order status and updated within 24 hours if the shipping carrier provides a revised estimate.
+
+FR-3: The system shall send email notifications to the customer at the following stages: order confirmation, shipment confirmation (including tracking number), out for delivery, and delivery confirmation. These emails shall be triggered within 5 minutes of the corresponding event occurring.
+
+FR-4: The system shall provide a web interface and/or mobile application interface where customers can enter their order tracking number to view the order status and estimated delivery date. This interface shall be available 24/7 with a guaranteed uptime of 99.9%.
+
+FR-5: The system shall store a history of all order status updates for at least 6 months, allowing customers to review the progression of their order even after delivery.
+
+NFR-1: The order tracking system shall be highly available, with a guaranteed uptime of 99.9% during business hours (8 AM - 8 PM local time) and 99.5% outside of business hours, measured monthly.
+
+NFR-2: The system shall be scalable to handle a peak load of 10,000 concurrent users tracking orders without performance degradation (response time for status updates should remain under 2 seconds). This shall be tested and validated quarterly.
+
+NFR-3: All order tracking data shall be encrypted both in transit (using TLS 1.2 or higher) and at rest (using AES-256 encryption). Security audits will be conducted annually to ensure compliance.
+
+NFR-4: The system shall be accessible on a variety of devices (desktops, tablets, and smartphones) and web browsers (Chrome, Firefox, Safari, Edge) with a responsive design that adapts to different screen sizes. This will be tested on the latest versions of each browser quarterly.
+
+NFR-5: The email notification system shall have a delivery success rate of at least 99%, measured monthly. A mechanism for handling bounced emails and resending notifications shall be implemented.
+",812,2389,10,5,3,1,3,3.78,192,516,708,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow authenticated customers to view the current status of their orders (e.g., ""Processing,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"") via a dedicated ""Order Tracking"" page or section within their account by the end of the next sprint.
+
+FR-2: The system shall provide an estimated delivery date for each order, displayed prominently on the order tracking page, calculated based on shipping method and destination, and updated within 2 hours of a change in order status.
+
+FR-3: The system shall send automated email notifications to the customer upon order placement, shipment, and delivery, within 15 minutes of each event occurring, providing a link to the order tracking page.
+
+FR-4: The system shall allow customers to view a detailed history of order status updates, including timestamps for each status change, accessible from the order tracking page, implemented by the end of next sprint.
+
+FR-5: The system shall display the shipping carrier and tracking number (if available) on the order tracking page within 1 hour of the order being marked as ""Shipped"".
+
+NFR-1: The order tracking page shall load within 3 seconds on a standard desktop browser with a 1 Mbps internet connection (measured via Google PageSpeed Insights) to provide a responsive user experience.
+
+NFR-2: The email notification system shall have a delivery success rate of 99.9%, measured monthly, ensuring customers consistently receive order updates.
+
+NFR-3: The system shall securely store order tracking data, complying with all relevant data privacy regulations (e.g., GDPR, CCPA), verified through annual security audits.
+
+NFR-4: The order tracking feature shall be available 24/7 with a system uptime of 99.9%, monitored continuously using an external monitoring service, ensuring consistent access for customers.
+
+NFR-5: The system shall be able to handle a peak load of 1000 concurrent users accessing the order tracking feature without performance degradation (response time exceeding 5 seconds), tested using load testing tools before each major release.
+",812,2066,10,5,4,2,3,3.14,192,433,625,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will generate the functional and non-functional requirements based on the user story ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process,"" ensuring they are SMART.
+
+FR-1: The system shall allow a customer to view the current status of their order (e.g., ""Processing,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"") via a unique order tracking number within 1 second of submitting the request.
+
+FR-2: The system shall display the estimated delivery date for an order, initially based on the selected shipping option and updated by the carrier, displayed within 1 second of accessing the order status.
+
+FR-3: The system shall provide a detailed history of status changes for an order, including timestamps for each status update (e.g., ""Order Placed - 2024-10-27 10:00:00,"" ""Shipped - 2024-10-28 14:00:00""), available within 2 seconds of accessing the order status.
+
+FR-4: The system shall automatically send email notifications to the customer upon order status changes, including ""Shipped,"" ""Out for Delivery,"" and ""Delivered,"" within 5 minutes of the status change being recorded in the system.
+
+FR-5: The system shall provide a link to the carrier's tracking page, if available, allowing customers to view the carrier's detailed tracking information within 1 second of clicking the link.
+
+NFR-1: The order tracking system shall be available 24/7 with an uptime of 99.9%, measured monthly.
+
+NFR-2: The order status information shall be secured with HTTPS encryption to protect customer data during transmission, validated through quarterly security audits.
+
+NFR-3: The system shall handle a peak load of 10,000 concurrent order tracking requests without performance degradation (response time under 2 seconds) during promotional periods, verified through load testing conducted every six months.
+
+NFR-4: Email notifications shall be delivered to the customer's registered email address with a deliverability rate of at least 99%, measured monthly.
+
+NFR-5: The system shall be accessible and usable on various devices (desktops, tablets, and mobile phones) and major web browsers (Chrome, Firefox, Safari, Edge) released within the last 2 years, verified through compatibility testing conducted bi-annually.
+",812,2274,10,5,5,2,4,3.32,192,521,713,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order, including order confirmation, processing, shipped, out for delivery, and delivered.
+
+FR-2: The system shall provide an estimated delivery date for each order, displayed to the customer.
+
+FR-3: The system shall allow customers to access order tracking information via a unique tracking number associated with their order.
+
+FR-4: The system shall send automated email notifications to customers at the following order status changes: Order Confirmation, Order Shipped, Out for Delivery, and Order Delivered.
+
+FR-5: The system shall provide a web interface and a mobile application interface for customers to track their orders.
+
+FR-6: The system shall integrate with the designated shipping carrier's API (e.g., UPS, FedEx, USPS) to retrieve real-time tracking information.
+
+FR-7: The system shall store a history of all order status changes for a minimum of 24 months.
+
+FR-8: The system shall allow authenticated users to view all orders associated with their account.
+
+FR-9: The system shall provide a mechanism for customers to report issues with their order or delivery directly from the tracking page.
+
+FR-10: The system shall support displaying the order status in multiple languages based on the customer's preferred language setting.
+
+NFR-1: The order tracking system shall be available 24/7 with a guaranteed uptime of 99.9%.
+
+NFR-2: The system shall respond to order status requests within 3 seconds under normal load.
+
+NFR-3: The system shall be able to handle a peak load of 10,000 concurrent users accessing the order tracking feature.
+
+NFR-4: All customer data, including order information and tracking history, shall be encrypted both in transit and at rest, adhering to PCI DSS standards.
+
+NFR-5: The system shall comply with all relevant data privacy regulations, including GDPR and CCPA.
+
+NFR-6: The system shall be designed to be scalable to accommodate future growth in order volume and user base.
+
+NFR-7: The system shall be monitored for performance and security vulnerabilities, with regular security audits conducted at least annually.
+
+NFR-8: The system shall be designed for easy maintenance and updates, with modular components and clear documentation.
+
+NFR-9: The system shall provide audit logs for all user access and data modifications.
+
+NFR-10: The system shall be accessible to users with disabilities, adhering to WCAG 2.1 AA accessibility guidelines.
+",1067,2466,20,10,3,1,1,3.55,232,537,769,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order, including order placed, order confirmed, order processed, shipped, out for delivery, and delivered.
+
+FR-2: The system shall provide an estimated delivery date for each order displayed to the customer.
+
+FR-3: The system shall allow customers to view a detailed order history, including all status changes and timestamps.
+
+FR-4: The system shall send automated email notifications to the customer upon order confirmation, shipment, and delivery.
+
+FR-5: The system shall provide a tracking number for each shipped order, enabling customers to track the package through the designated carrier's website.
+
+FR-6: The system shall allow customers to access order tracking information via a web interface and a mobile application (iOS and Android).
+
+FR-7: The system shall integrate with the existing order management system to retrieve order status information in real-time.
+
+FR-8: The system shall provide a customer service contact option (e.g., phone number, email address, chat) within the order tracking interface.
+
+FR-9: The system shall support order tracking for all order types (e.g., standard delivery, express delivery, in-store pickup).
+
+FR-10: The system shall retain order tracking information for a minimum of 12 months after the order has been delivered.
+
+NFR-1: The order tracking interface shall load within 3 seconds.
+
+NFR-2: The system shall be available 24/7, with a guaranteed uptime of 99.9%.
+
+NFR-3: The system shall be scalable to handle a peak load of 10,000 concurrent users.
+
+NFR-4: All order tracking data shall be encrypted both in transit and at rest, adhering to PCI DSS compliance standards.
+
+NFR-5: The system shall be accessible and usable by customers with disabilities, complying with WCAG 2.1 Level AA accessibility guidelines.
+
+NFR-6: The system shall log all order status changes and customer access events for auditing and security purposes.
+
+NFR-7: The system shall be designed for easy maintenance and updates, with modular components and clear documentation.
+
+NFR-8: The email notification system shall have a delivery rate of at least 99%, avoiding spam filters.
+
+NFR-9: The system shall support multiple languages based on the customer's preferred language setting.
+
+NFR-10: The system shall be compatible with major web browsers (Chrome, Firefox, Safari, Edge) and mobile operating systems (iOS, Android).
+",1067,2428,20,10,3,1,2,3.37,232,543,775,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow authenticated customers to view the current status of their orders, including order placed, processing, shipped, out for delivery, and delivered.
+
+FR-2: The system shall provide an estimated delivery date for each order, updated dynamically as the order progresses through the delivery process.
+
+FR-3: The system shall allow customers to view a detailed order history, including all status changes and associated timestamps.
+
+FR-4: The system shall send email notifications to customers upon key order status changes (e.g., shipped, out for delivery, delivered).
+
+FR-5: The system shall allow customers to opt-in/opt-out of SMS notifications for order status updates.
+
+FR-6: The system shall integrate with the designated shipping carrier's API to retrieve real-time tracking information.
+
+FR-7: The system shall record all order status changes in an audit log, including the timestamp and the system/user that initiated the change.
+
+FR-8: The system shall provide a customer service interface for internal staff to manually update order statuses and add notes to an order for customer visibility.
+
+FR-9: The system shall display the shipping address associated with the order.
+
+FR-10: The system shall display the items included in the order.
+
+NFR-1: The order status information shall be accessible with an average response time of less than 2 seconds under normal load.
+
+NFR-2: The system shall be available 24/7 with a guaranteed uptime of 99.9%.
+
+NFR-3: The system shall protect customer order information according to PCI DSS standards.
+
+NFR-4: The email notification system shall be able to handle sending 100,000 emails per hour without performance degradation.
+
+NFR-5: The system shall be scalable to support a 50% increase in order volume within the next year.
+
+NFR-6: The system shall be designed to be maintainable, with clear code documentation and modular architecture.
+
+NFR-7: All data transmitted between the customer's browser and the server shall be encrypted using HTTPS.
+
+NFR-8: The system shall be accessible on all major web browsers (Chrome, Firefox, Safari, Edge) and mobile devices.
+
+NFR-9: The system shall comply with GDPR regulations regarding data privacy and consent for notifications.
+",1067,2245,19,9,3,2,1,3.27,232,496,728,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Contextual,precise,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order (e.g., ""Order Placed,"" ""Preparing,"" ""Out for Delivery,"" ""Delivered"") within the mobile application and website, updated in real-time.
+
+FR-2: The system shall send push notifications to the customer's mobile device and/or email updates at each major status change (e.g., ""Order Confirmed,"" ""Driver Assigned,"" ""Arriving Soon,"" ""Delivered"") within 2 minutes of the status change in the order management system.
+
+FR-3: The system shall display the estimated delivery time (ETA) to the customer, initially calculated at order placement and dynamically updated based on driver location and traffic conditions, with updates occurring at least every 5 minutes.
+
+FR-4: The system shall integrate with the existing order management system (OMS) to receive order status updates via a secure API, with a maximum latency of 1 second.
+
+FR-5: The system shall integrate with the existing mapping service (e.g., Google Maps, Mapbox) to display the driver's real-time location on a map within the customer's order tracking screen.
+
+NFR-1: The order tracking system shall handle a peak load of 10,000 concurrent users viewing order statuses without exceeding an average response time of 2 seconds for status updates.
+
+NFR-2: The system shall maintain an uptime of 99.9% for the order tracking functionality, excluding scheduled maintenance windows (maximum 2 hours per month).
+
+NFR-3: The system shall log all order status updates and errors encountered during the tracking process, with logs retained for a minimum of 90 days for auditing and debugging purposes.
+
+NFR-4: The mobile application and website shall display order status information in a clear and easily understandable format, adhering to accessibility guidelines (WCAG 2.1 Level AA) to ensure usability for all customers.
+
+NFR-5: The system shall provide error messages to the customer if the order tracking functionality is unavailable, with a clear explanation of the issue and estimated time to resolution, displayed within 5 seconds.
+
+NFR-6: The system shall encrypt all communication between the customer's device and the server using HTTPS with TLS 1.2 or higher to protect sensitive data.
+",772,2224,11,6,5,2,3,3.62,181,485,666,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Contextual,default,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display the current order status (e.g., ""Order Placed,"" ""Preparing,"" ""Out for Delivery,"" ""Delivered"") to the customer within the order details section of the mobile app and website within 1 second of a status update.
+
+FR-2: The system shall send a push notification to the customer's mobile device when the order status changes to ""Out for Delivery"" and ""Delivered"" within 30 seconds of the status change.
+
+FR-3: The system shall estimate and display the estimated delivery time (ETA) to the customer upon order confirmation, with the ETA updated every 5 minutes based on driver location and real-time traffic data.
+
+FR-4: The system shall allow the customer to view the real-time location of the delivery driver on a map interface in the mobile app, starting when the order status changes to ""Out for Delivery,"" with location updates occurring every 30 seconds.
+
+FR-5: The system shall integrate with the existing payment gateway to automatically update the order status to ""Payment Received"" upon successful payment authorization within 2 seconds.
+
+FR-6: The system shall integrate with the existing restaurant order management system to receive order status updates (e.g., ""Preparing,"" ""Ready for Pickup"") in real-time via API calls.
+
+NFR-1: The system shall handle at least 500 concurrent order status update requests per second during peak hours without exceeding an average response time of 500 milliseconds.
+
+NFR-2: The system shall maintain an uptime of 99.9% for order status tracking functionality, with automatic failover mechanisms in place to minimize downtime.
+
+NFR-3: The system shall log all order status updates, including timestamps, user IDs, and status details, for auditing and troubleshooting purposes, with logs retained for at least 90 days.
+
+NFR-4: The system shall provide error notifications to the customer if an order status update fails to display or a push notification fails to send, with clear instructions on how to resolve the issue (e.g., refreshing the app, checking internet connection).
+
+NFR-5: The mobile app interface for order tracking shall be accessible and usable on devices with screen sizes ranging from 4 inches to 7 inches, adhering to WCAG 2.1 Level AA accessibility guidelines.
+
+NFR-6: The system shall ensure that order status updates are displayed in a clear and concise manner, using easily understandable language and visual cues to indicate the progress of the delivery.
+",772,2450,12,6,4,3,3,3.54,181,527,708,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Contextual,creative,"
+BUSINESS CONTEXT:
+Online food ordering service
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order (e.g., ""Order Placed,"" ""Preparing,"" ""Out for Delivery,"" ""Delivered"") via the order tracking page on the website and mobile app.
+
+FR-2: The system shall send a push notification to the customer's mobile app and an email update when the order status changes.
+
+FR-3: The order tracking page shall display the estimated delivery time, updated at least every 5 minutes based on the delivery driver's GPS location.
+
+FR-4: The system shall integrate with the existing order management system to receive real-time order status updates via API.
+
+FR-5: The system shall integrate with the existing mapping service (e.g., Google Maps) to display the delivery driver's real-time location on a map within the order tracking page.
+
+NFR-1: The order status updates on the order tracking page shall load in under 2 seconds for 95% of users under peak load (defined as 5000 concurrent users).
+
+NFR-2: The system shall be able to process and send 1000 order status update notifications per minute without performance degradation.
+
+NFR-3: The system shall log all order status changes and notification events, including timestamps and any errors encountered.
+
+NFR-4: The system shall provide alerts to operations when there is a failure in the integration with the order management system or mapping service.
+
+NFR-5: The mobile app shall display the order tracking information clearly and concisely with intuitive visual cues to indicate the order's progress.
+
+NFR-6: The system shall maintain a 99.9% uptime for the order tracking functionality.
+",772,1609,11,6,3,3,2,2.67,181,363,544,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display the current status of an order (e.g., ""Order Placed,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"") to the customer.
+FR-2: The system shall provide an estimated delivery date for the order.
+FR-3: The system shall allow customers to view the order status via a dedicated ""Order Tracking"" page accessible from their account dashboard.
+FR-4: The system shall send email notifications to the customer when the order status changes to ""Shipped,"" ""Out for Delivery,"" and ""Delivered.""
+FR-5: The system shall allow customers to access order tracking information via a tracking link included in the email notifications.
+FR-6: The system shall integrate with the shipping carrier's API to retrieve real-time tracking updates.
+FR-7: The system shall display the shipping carrier's name and tracking number for the order.
+FR-8: The system shall store historical order status updates for at least 6 months.
+FR-9: The system shall provide a mechanism for customers to report issues with their order (e.g., ""Not Delivered,"" ""Damaged"").
+FR-10: The system shall update the order status within 15 minutes of receiving an update from the shipping carrier.
+
+NFR-1: The ""Order Tracking"" page shall load within 3 seconds.
+NFR-2: The system shall be able to handle 1000 concurrent users accessing the ""Order Tracking"" page without performance degradation.
+NFR-3: Order status updates shall be accurate and reliable, with a data accuracy rate of 99.9%.
+NFR-4: Customer order data shall be protected using encryption at rest and in transit.
+NFR-5: The system shall comply with all relevant data privacy regulations (e.g., GDPR, CCPA).
+NFR-6: Email notifications shall be delivered to customers within 5 minutes of a status change.
+NFR-7: The system shall be available 24/7, with a guaranteed uptime of 99.9%.
+NFR-8: The user interface for order tracking shall be accessible on desktop and mobile devices.
+NFR-9: The system shall log all order status changes and error events for auditing purposes.
+NFR-10: The system shall be scalable to accommodate future growth in order volume.
+",1751,2085,20,10,3,2,2,3.60,394,500,894,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order, including ""Order Placed,"" ""Processing,"" ""Shipped,"" ""Out for Delivery,"" and ""Delivered,"" accessible via the order details page within the customer's account.
+FR-2: The system shall send an email notification to the customer when the order status changes to ""Shipped,"" including the tracking number and estimated delivery date, within 15 minutes of the status update.
+FR-3: The system shall update the order status in the customer's account and send a push notification (if enabled) when the order is marked as ""Delivered"" within 5 minutes of the delivery confirmation.
+FR-4: The system shall integrate with at least three major shipping carriers (e.g., UPS, FedEx, USPS) to retrieve real-time tracking information based on the tracking number.
+FR-5: The system shall allow customers to opt-in or opt-out of push notifications for order status updates within their account settings.
+FR-6: The order tracking information shall be retained in the system for a minimum of 1 year after the order delivery date.
+NFR-1: The order status information shall be displayed to the customer within 3 seconds of accessing the order details page.
+NFR-2: The system shall be available 24/7, with a guaranteed uptime of 99.9%, for accessing order status information.
+NFR-3: All order status updates and tracking information shall be transmitted and stored using encrypted protocols (e.g., HTTPS, TLS) to ensure data security.
+NFR-4: The system shall be scalable to handle a peak load of 10,000 concurrent users accessing order status information without performance degradation.
+NFR-5: The application shall be accessible and usable on desktop, tablet, and mobile devices (responsive design).
+",1751,1756,11,5,5,1,2,2.93,394,393,787,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall provide a tracking number to the customer upon order placement.
+FR-2: The system shall display the current status of the order (e.g., ""Order Placed,"" ""Processing,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"") upon request.
+FR-3: The system shall update the order status at each significant stage of the delivery process (e.g., when the order is shipped, when it arrives at a distribution center, when it is out for delivery).
+FR-4: The system shall allow customers to view the estimated delivery date for their order.
+FR-5: The system shall provide a ""Track Order"" section on the website and in the customer's account dashboard.
+FR-6: Customers shall be able to access order tracking information via a unique URL (tracking page) without needing to log in, using the tracking number and order ID.
+FR-7: The system shall send email notifications to the customer when the order status changes to ""Shipped,"" ""Out for Delivery,"" and ""Delivered.""
+
+NFR-1: Order status updates shall be reflected in the system within 15 minutes of a status change occurring in the logistics provider's system.
+NFR-2: The system shall be available 24/7 with at least 99.9% uptime for order tracking functionality.
+NFR-3: The order tracking page shall load in under 3 seconds.
+NFR-4: All customer data related to order tracking must be encrypted both in transit and at rest.
+NFR-5: The system shall support a minimum of 10,000 concurrent order tracking requests without performance degradation.
+NFR-6: Email notifications shall be sent to customers within 5 minutes of an order status change.
+",1751,1589,13,6,3,2,2,2.51,394,377,771,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order, including location and estimated delivery time.
+FR-2: The system shall provide a unique tracking number to the customer upon order confirmation.
+FR-3: The system shall update the order status automatically as the order progresses through different stages (e.g., ""Order Placed,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"").
+FR-4: The system shall store the history of all status updates for each order, including timestamps.
+FR-5: If the system fails to retrieve the order status from the carrier, it shall display an error message to the customer and suggest retrying later.
+FR-6: The system shall send email and/or SMS notifications to the customer when the order status changes (e.g., ""Shipped,"" ""Out for Delivery,"" ""Delivered"").
+NFR-1: The order status information shall be displayed to the customer within 3 seconds of the request.
+NFR-2: The order tracking interface shall be accessible on desktop and mobile devices with a responsive design.
+NFR-3: The system shall protect customer order information using encryption and access controls to ensure data security.
+",1817,1151,9,3,3,2,1,2.08,432,250,682,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order, including location (if available), estimated delivery date, and any relevant updates (e.g., ""Order Received,"" ""Shipped,"" ""Out for Delivery,"" ""Delivered"").
+
+FR-2: The system shall display a historical timeline of order status updates, showing the date and time of each status change.
+
+FR-3: The system shall automatically update the order status upon receiving updates from the shipping carrier or internal processing systems.
+
+FR-4: The system shall store all order status updates in a database, associating each update with the specific order and a timestamp.
+
+FR-5: If an order status update fails to be received from the carrier within 24 hours of the expected update time, the system shall flag the order for investigation by customer service.
+
+FR-6: The system shall send an email and/or push notification to the customer (based on their notification preferences) whenever the order status changes (e.g., ""Shipped,"" ""Out for Delivery,"" ""Delivered"").
+
+NFR-1: Order status updates shall be reflected in the customer's view within 5 minutes of being received by the system.
+
+NFR-2: The order tracking interface shall be accessible and usable on both desktop and mobile devices, with a clear and intuitive design.
+
+NFR-3: The system shall protect customer order information and status updates through secure authentication and authorization mechanisms.
+",1817,1436,9,3,3,2,2,2.56,432,301,733,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': ""As a customer, I want to be able to track my order's status and receive updates throughout the delivery process."", 'context': 'Online food ordering service'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a customer, I want to be able to track my order's status and receive updates throughout the delivery process.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow customers to view the current status of their order, including at a minimum: ""Order Placed"", ""Processing"", ""Shipped"", and ""Delivered"".
+
+FR-2: The system shall display an estimated delivery date for the order.
+
+FR-3: The system shall require a valid order ID and either a customer account login or order confirmation email/phone number for order status tracking.
+
+FR-4: The system shall update the order status automatically within 15 minutes of a change in the order's status (e.g., when shipped by the carrier).
+
+FR-5: If an order cannot be found using the provided order ID and identifying information, the system shall display a user-friendly error message suggesting possible causes and providing contact information for customer support.
+
+FR-6: The system shall send email and/or SMS notifications to the customer whenever the order status changes (e.g., ""Shipped"" or ""Delivered""), if the customer has opted in to receive such notifications.
+
+NFR-1: The order status page shall load in under 3 seconds.
+
+NFR-2: The order status page shall be responsive and accessible on desktop, tablet, and mobile devices.
+
+NFR-3: The system shall protect order information by requiring authentication and using secure communication protocols (HTTPS).
+",1817,1271,9,3,3,2,2,2.24,432,276,708,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

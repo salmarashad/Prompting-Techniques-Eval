@@ -1,0 +1,1422 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of posts from other users, sorted by most recent first, on the main feed page.
+FR-2: Each post shall display the author's username, the post's timestamp, and the post's content.
+FR-3: The system shall display a maximum of 25 posts per page on the main feed.
+FR-4: The system shall provide a ""Load More"" button at the bottom of the feed, which, when clicked, loads the next 25 most recent posts.
+FR-5: The system shall display a placeholder message (e.g., ""No posts available"") if no posts exist to display.
+
+NFR-1: The main feed page shall load within 3 seconds on a standard broadband connection (25 Mbps download speed).
+NFR-2: The system shall be able to handle at least 1000 concurrent users viewing the main feed without performance degradation (defined as page load time exceeding 5 seconds).
+NFR-3: The post content shall be displayed in a readable font size (minimum 14pt) and with sufficient contrast against the background.
+NFR-4: The system shall ensure that posts are displayed securely, preventing unauthorized modification or access to post content.
+",573,1102,9,4,4,3,2,2.86,150,271,421,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of posts from other users on the main feed.
+FR-2: The system shall display a maximum of 25 posts per page on the main feed.
+FR-3: Each post shall display the username of the user who created it.
+FR-4: Each post shall display the timestamp of when it was created, accurate to the minute.
+FR-5: Users shall be able to scroll through the list of posts to load more content.
+FR-6: The system shall load the next set of posts when the user scrolls to the bottom of the current list, implementing pagination.
+FR-7: The system shall display a message to the user if there are no posts available to view.
+
+NFR-1: The main feed shall load the initial 25 posts within 3 seconds on a standard broadband connection (25 Mbps download).
+NFR-2: The system shall support at least 10,000 concurrent users viewing posts without performance degradation (defined as load times exceeding 5 seconds).
+NFR-3: The user interface for viewing posts shall be accessible according to WCAG 2.1 Level AA guidelines.
+NFR-4: The system shall securely retrieve and display posts, protecting against unauthorized access and modification.
+",573,1142,11,4,4,3,2,2.70,150,274,424,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of posts from other users in reverse chronological order (newest first).
+
+FR-2: Each post shall display the author's username.
+
+FR-3: Each post shall display the timestamp of when it was created, formatted as ""MM/DD/YYYY HH:MM AM/PM"".
+
+FR-4: Each post shall display the text content of the post, limited to 280 characters.
+
+FR-5: The system shall paginate the posts, displaying a maximum of 20 posts per page.
+
+FR-6: The system shall provide navigation controls (e.g., ""Previous,"" ""Next,"" page numbers) to allow users to browse through the paginated posts.
+
+FR-7: The system shall display a ""No posts found"" message if there are no posts available to display.
+
+NFR-1: The average response time for loading the list of posts shall be less than 3 seconds.
+
+NFR-2: The social media platform shall be able to support up to 10,000 concurrent users viewing posts without performance degradation (defined as response time exceeding 5 seconds).
+
+NFR-3: The system shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+
+NFR-4: The system shall be accessible to users with disabilities, adhering to WCAG 2.1 Level AA accessibility guidelines.
+",573,1209,11,4,3,2,1,2.49,150,300,450,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to view posts from other users on the social media platform.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to view posts from other users on the social media platform"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Post Display:** The system shall display posts from other users in a chronological order (newest first) on a designated ""feed"" or ""timeline"" page.
+*   **FR-2: Post Content:** The system shall display the following information for each post:
+    *   The username of the user who created the post.
+    *   The timestamp of when the post was created.
+    *   The text content of the post.
+    *   Any attached media (images, videos).
+*   **FR-3: User Identification:** The system shall provide a clickable link or element associated with each post's username that navigates to the user's profile page.
+*   **FR-4: Post Loading:** The system shall load an initial set of posts (e.g., 20 posts) upon accessing the feed.
+*   **FR-5: Infinite Scroll/Pagination:** The system shall implement either infinite scrolling or pagination to load additional posts as the user scrolls down or navigates through pages.
+*   **FR-6: Post Filtering (Optional):** The system shall allow users to filter posts based on specific criteria (e.g., posts from followed users only).
+*   **FR-7: Media Display:** The system shall display images and videos embedded within posts in a visually appealing and responsive manner.
+*   **FR-8: Error Handling:** The system shall display a user-friendly error message if posts cannot be loaded (e.g., due to network issues or server errors).
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Performance - Initial Load Time:** The initial set of posts (e.g., 20 posts) shall load within 2 seconds under normal network conditions (defined as a minimum download speed of 10 Mbps).
+*   **NFR-2: Performance - Subsequent Load Time:** Subsequent posts loaded via infinite scroll or pagination shall load within 1 second per batch (e.g., 10 posts) under normal network conditions.
+*   **NFR-3: Scalability:** The system shall be able to handle at least 10,000 concurrent users viewing posts without significant performance degradation (defined as an increase in load time of more than 0.5 seconds).
+*   **NFR-4: Responsiveness:** The post display shall be responsive and adapt to different screen sizes (desktop, tablet, mobile).
+*   **NFR-5: Availability:** The post viewing functionality shall be available 99.9% of the time.
+*   **NFR-6: Security:** The system shall prevent unauthorized access to posts based on privacy settings.
+*   **NFR-7: Accessibility:** The post display shall adhere to accessibility guidelines (e.g., WCAG) to ensure usability for users with disabilities. Alt text should be provided for all images.
+*   **NFR-8: Data Consistency:** The system shall ensure that the displayed posts are consistent with the data stored in the database.
+",1465,2966,16,8,3,1,1,4.67,336,708,1044,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to view posts from other users on the social media platform.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to view posts from other users on the social media platform"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional software requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Post Display Availability:** The system shall display posts from other users on a designated ""feed"" or ""timeline"" page.
+*   **FR-2: Post Content Display:** The system shall display the following information for each post:
+    *   User's display name/username
+    *   Timestamp of when the post was created
+    *   The post's text content (if any)
+    *   Any associated media (images, videos, links)
+*   **FR-3: Post Ordering:** The system shall order the posts on the feed by reverse chronological order (newest first) by default.
+*   **FR-4: User Profile Link:** The system shall enable users to click on a user's name/username displayed with a post to navigate to that user's profile page.
+*   **FR-5: Post Pagination/Scrolling:** The system shall implement pagination or infinite scrolling to load and display a manageable number of posts at a time.
+*   **FR-6: Post Filtering (Optional):** The system shall provide options for users to filter posts (e.g., by specific users, hashtags, or keywords).
+*   **FR-7: Blocking Users (Optional):** The system shall allow users to block other users, preventing their posts from appearing in their feed.
+*   **FR-8: Reporting Posts (Optional):** The system shall provide a mechanism for users to report posts that violate the platform's community guidelines.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Feed Loading Time:** The initial feed of posts shall load within 3 seconds under normal load conditions (e.g., 100 concurrent users).
+*   **NFR-2: Scroll Performance:** Scrolling through the feed shall be smooth and responsive, with no noticeable lag or delays in loading additional posts.
+*   **NFR-3: Scalability:** The system shall be able to handle a large volume of posts and users without significant performance degradation. (Define specific metrics, e.g., support 1 million users and 10,000 posts per minute).
+*   **NFR-4: Accessibility:** The post display shall adhere to accessibility guidelines (e.g., WCAG) to ensure usability for users with disabilities (provide alternative text for images, keyboard navigation).
+*   **NFR-5: Security:** The system shall prevent unauthorized access to user posts and data.
+*   **NFR-6: Responsiveness:** The post display shall be responsive and adapt to different screen sizes (desktops, tablets, mobile devices).
+*   **NFR-7: Media Display:** Images and videos shall be displayed with appropriate compression and optimization to minimize bandwidth usage and loading times.
+*   **NFR-8: Up-Time:** The system shall maintain 99.9% up-time during business hours to ensure posts are consistently available.
+",1465,2911,16,8,3,2,1,4.17,336,688,1024,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to view posts from other users on the social media platform.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to view posts from other users on the social media platform"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional software requirements:
+
+**Requirements:**
+
+**Functional Requirements (FR):**
+
+*   **FR-1:** The system shall display a feed of posts to the user upon login or navigation to the main page.
+*   **FR-2:** The system shall display each post with the following information:
+    *   **FR-2.1** Author's username (or display name).
+    *   **FR-2.2** Timestamp of when the post was created.
+    *   **FR-2.3** The content of the post (text, image, video, or links).
+*   **FR-3:** The system shall display the posts in chronological order (newest first) by default.
+*   **FR-4:** The system shall support pagination or infinite scrolling to load older posts beyond the initial display. (e.g., displaying 20 posts initially and loading more as the user scrolls).
+*   **FR-5:** The system shall provide the user with options to interact with a post.
+    *   **FR-5.1** The system shall allow users to like a post.
+    *   **FR-5.2** The system shall allow users to comment on a post.
+    *   **FR-5.3** The system shall allow users to share a post.
+*   **FR-6:** The system shall display a notification on a post when other users interact with it.
+    *   **FR-6.1** The system shall notify users of new comments.
+    *   **FR-6.2** The system shall notify users of new likes.
+*   **FR-7:** The system shall allow users to view posts from users they follow.
+*   **FR-8:** The system shall allow users to view posts from users they do not follow.
+    *   **FR-8.1** The system shall order the un-followed posts by popularity.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1:** The initial feed of posts (e.g., 20 posts) shall load within 3 seconds under normal network conditions.
+*   **NFR-2:** Loading additional posts via pagination or infinite scrolling shall complete within 2 seconds.
+*   **NFR-3:** The system shall support at least 10,000 concurrent users viewing posts without significant performance degradation (defined as loading times exceeding 5 seconds).
+*   **NFR-4:** The posts shall be displayed consistently across different web browsers (Chrome, Firefox, Safari, Edge) and mobile devices (iOS, Android).
+*   **NFR-5:** The displayed content shall adhere to accessibility guidelines (WCAG) to ensure usability for users with disabilities.
+*   **NFR-6:** The system shall ensure that sensitive information (e.g., user location if included in the post, IP addresses) is protected during data retrieval and display.
+*   **NFR-7:** The system shall filter out posts that violate community guidelines (e.g., hate speech, spam) within 1 second using automated content moderation.
+",1465,2817,15,7,2,1,1,4.29,336,717,1053,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall display a list of posts from other users on a dedicated ""Feed"" page.
+FR-2: Each post shall display the author's username, the post's content, and a timestamp indicating when the post was created.
+FR-3: The system shall display posts in reverse chronological order, with the most recent posts appearing first.
+FR-4: The system shall paginate the posts, displaying a maximum of 20 posts per page.
+FR-5: The system shall provide navigation controls (e.g., ""Next,"" ""Previous,"" page numbers) to allow the user to browse through the paginated posts.
+FR-6: The system shall display a visual indicator (e.g., a loading spinner) while posts are being retrieved from the database.
+FR-7: The system shall handle the scenario where no posts are available and display a message indicating that there are no posts to show.
+FR-8: The system shall filter posts to exclude posts from blocked users.
+FR-9: The system shall provide the ability to refresh the feed to display new posts.
+
+NFR-1: The ""Feed"" page shall load within 3 seconds.
+NFR-2: The system shall be able to handle at least 100 concurrent users viewing the ""Feed"" page without significant performance degradation.
+NFR-3: The ""Feed"" page shall be accessible and usable on desktop and mobile devices with common screen resolutions.
+NFR-4: The system shall ensure that posts are displayed securely, preventing unauthorized access or modification.
+NFR-5: The system shall maintain an uptime of 99.9% for the ""Feed"" page functionality.
+NFR-6: The system shall be designed to be easily maintainable and scalable to accommodate future growth in the number of users and posts.
+NFR-7: The font size and contrast of the posts shall adhere to accessibility guidelines (WCAG 2.1 AA) for readability.
+",1632,1758,16,7,3,2,1,2.90,380,421,801,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall display a list of posts from other users on a dedicated ""Feed"" page.
+FR-2: Each post shall display the author's username, post content (text and/or media), timestamp, and number of likes/comments.
+FR-3: The ""Feed"" page shall be accessible to any logged-in user.
+FR-4: The system shall display posts in reverse chronological order (newest first).
+FR-5: The system shall paginate the posts, displaying a maximum of 20 posts per page.
+FR-6: The system shall provide a ""Load More"" button or infinite scrolling functionality to load the next set of posts.
+FR-7: The system shall display an error message if no posts are available to display.
+FR-8: The system shall filter posts based on user relationships (e.g., posts from followed users only) if the user has set a preference for this.
+
+NFR-1: The ""Feed"" page shall load in under 3 seconds on a standard desktop browser with a 50 Mbps internet connection.
+NFR-2: The system shall be able to support at least 10,000 concurrent users viewing posts without performance degradation.
+NFR-3: The system shall ensure that posts are displayed securely, preventing unauthorized access or modification.
+NFR-4: The ""Feed"" page shall be responsive and render correctly on various screen sizes (desktop, tablet, mobile).
+NFR-5: The system shall be available 99.9% of the time during peak usage hours (6 PM - 10 PM local time).
+",1632,1384,13,5,3,2,1,2.43,380,348,728,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall display a list of posts from other users in reverse chronological order by default.
+FR-2: Each post shall display the author's username.
+FR-3: Each post shall display the timestamp indicating when it was published.
+FR-4: Each post shall display the text content of the post.
+FR-5: The system shall provide a mechanism for users to scroll through posts.
+FR-6: The system shall load a minimum of 10 posts per page.
+FR-7: The system shall provide a visual indication of loading additional posts as the user scrolls.
+FR-8: The system shall filter posts based on user privacy settings, ensuring a user can only view posts from other users if they have permission to do so (e.g., friends, public).
+
+NFR-1: The system shall load the first page of posts within 3 seconds.
+NFR-2: The system shall load subsequent pages of posts within 2 seconds.
+NFR-3: The system shall support at least 10,000 concurrent users viewing posts without performance degradation.
+NFR-4: The system shall be accessible on major web browsers (Chrome, Firefox, Safari, Edge) and mobile devices (iOS, Android).
+NFR-5: The post display shall be responsive and adapt to different screen sizes.
+NFR-6: The system shall ensure posts are displayed in a format that is readable and accessible to users with disabilities, adhering to WCAG guidelines.
+",1632,1332,14,6,3,2,1,2.31,380,320,700,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART software requirements for the user story, followed by an evaluation and final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve posts from the database using a SQL query with an index on the 'post_date' field.
+FR-2: The system shall display a maximum of 20 posts per page.
+FR-3: The system shall use the 'bcrypt' hashing algorithm to verify user authentication before displaying posts.
+NFR-1: The system shall retrieve and display posts within 500 milliseconds.
+NFR-2: The system shall support a minimum of 100 concurrent users viewing posts without performance degradation.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The user shall be able to view posts in reverse chronological order.
+FR-2: Each post shall display the author's username, timestamp, and content.
+FR-3: The user shall be able to scroll through posts continuously (infinite scroll).
+FR-4: The user shall be able to view a post's associated media (images, videos) inline.
+NFR-1: The posts shall load and be visible to the user within 2 seconds.
+NFR-2: The user interface shall be responsive and usable on devices with screen sizes ranging from 320px to 1920px width.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall only display posts from users that the current user is following.
+FR-2: The system shall filter out posts flagged as inappropriate based on community guidelines.
+FR-3: The system shall store the timestamp of each post in UTC format.
+FR-4: The system shall display a ""No posts available"" message if the user is not following anyone or if no posts meet the filtering criteria.
+NFR-1: The system shall ensure data consistency between the database and the displayed posts.
+NFR-2: The system shall log all post retrieval requests for auditing purposes.
+",1247,1875,17,6,4,3,1,3.07,275,447,722,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of SMART requirements, followed by the evaluation and final recommendation, presented as requested:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall retrieve posts from the database using a REST API endpoint `/posts`.
+FR-2: The system shall display a maximum of 20 posts per page.
+FR-3: The system shall implement pagination to allow users to navigate between pages of posts.
+NFR-1: The API endpoint `/posts` shall respond within 200ms under normal load (100 concurrent users).
+NFR-2: The system shall use a NoSQL database for storing posts.
+NFR-3: Post data shall be cached for 5 minutes to reduce database load.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The user shall be able to view posts in a chronological order, with the most recent post appearing first.
+FR-2: Each post shall display the author's username and profile picture.
+FR-3: The user shall be able to scroll continuously to load more posts (infinite scroll).
+FR-4: The user shall be able to report a post as inappropriate.
+NFR-1: Posts shall load within 2 seconds of the user navigating to the posts page or scrolling to load more.
+NFR-2: The user interface shall be responsive and adapt to different screen sizes (desktop, mobile, tablet).
+NFR-3: The system shall provide visual feedback (e.g., a loading indicator) while new posts are being loaded.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall only display posts from users who are followed by the current user or from public accounts.
+FR-2: The system shall filter posts based on a user's blocked accounts.
+FR-3: The system shall display posts that are no older than 30 days.
+FR-4: The system shall record the number of times each post is viewed.
+NFR-1: The system shall ensure that only authorized users can access post data.
+NFR-2: Post data shall be stored securely in accordance with data privacy regulations (e.g., GDPR).
+NFR-3: The system shall maintain an audit log of all post views and report actions.
+",1247,2052,20,9,3,2,2,3.56,275,503,778,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three different sets of S.M.A.R.T. software requirements for the user story, each focusing on a different approach, formatted as requested, followed by the evaluation criteria and final recommendation.
+
+**APPROACH 1: Focus on Technical Implementation Details**
+
+FR-1: The system shall retrieve posts from the database within 500ms.
+FR-2: The system shall display a maximum of 20 posts per page.
+FR-3: The system shall use a REST API endpoint `/posts` to retrieve posts.
+NFR-1: The `/posts` API endpoint shall be accessible only with a valid user authentication token.
+NFR-2: The system shall cache post data for 1 minute to reduce database load.
+NFR-3: The system shall support pagination for displaying large numbers of posts.
+
+**APPROACH 2: Focus on User Experience and Outcomes**
+
+FR-1: The user shall be able to view a list of posts in reverse chronological order.
+FR-2: Each post shall display the author's username and timestamp.
+FR-3: Each post shall display the post content (text, image, or video).
+FR-4: The user shall be able to scroll through a continuous feed of posts without needing to refresh the page.
+NFR-1: The posts shall load on the screen within 2 seconds.
+NFR-2: The user interface for displaying posts shall be responsive across different screen sizes (desktop, tablet, mobile).
+NFR-3: The post display shall be accessible to users with visual impairments, adhering to WCAG 2.1 AA guidelines.
+
+**APPROACH 3: Focus on Business Rules and Data Handling**
+
+FR-1: The system shall retrieve posts authored by users the current user follows.
+FR-2: The system shall filter posts based on user-defined keywords.
+FR-3: The system shall display posts marked as ""featured"" or ""promoted"" more prominently.
+FR-4: The system shall prioritize displaying posts that are less than 24 hours old.
+NFR-1: The system shall ensure that posts flagged as inappropriate by moderators are not displayed to regular users.
+NFR-2: The system shall log each post view with the user's ID and timestamp for analytics purposes.
+NFR-3: The system shall comply with data privacy regulations (e.g., GDPR) regarding user data associated with posts.
+",1247,2150,20,9,2,2,1,3.70,275,520,795,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will generate functional and non-functional requirements from the user story, ensuring they are SMART.
+
+FR-1: The system shall display a list of posts from other users in reverse chronological order (most recent first) within 1 second of the user navigating to the ""Posts"" page.
+FR-2: Each post displayed shall include the author's username, the post's timestamp, the post's content (text and/or media), and the number of likes and comments it has received.
+FR-3: The system shall allow the user to scroll through the list of posts indefinitely, loading additional posts as the user reaches the bottom of the current list, with each batch of 10 posts loading within 2 seconds.
+FR-4: The system shall display a maximum of 280 characters for each post. If the post exceeds 280 characters, the system shall truncate the post and display a ""Read More"" option.
+FR-5: The system shall display a placeholder image if the media content of the post fails to load within 5 seconds.
+FR-6: The system shall filter posts based on user privacy settings, ensuring that a user only sees posts from users they are following or posts that are publicly visible. This filtering must occur within 0.5 seconds.
+
+NFR-1: The ""Posts"" page shall be accessible and usable on all major web browsers (Chrome, Firefox, Safari, Edge) and mobile operating systems (iOS, Android) with a consistent user experience.
+NFR-2: The system shall maintain an average response time of less than 3 seconds for loading the initial set of posts during peak usage (defined as 10,000 concurrent users) until the end of Q4 2024.
+NFR-3: The system shall be able to handle at least 5,000 requests per second for retrieving posts without performance degradation, as measured by a load test completed by October 31, 2024.
+NFR-4: The system shall ensure the confidentiality of user data by encrypting all post content and metadata at rest and in transit using TLS 1.3 or higher, verified by a security audit by December 31, 2024.
+NFR-5: The system shall be available 99.9% of the time, excluding scheduled maintenance windows (maximum 2 hours per month), as measured monthly.
+NFR-6: The system shall adhere to WCAG 2.1 Level AA accessibility guidelines for displaying posts, ensuring usability for users with disabilities, verified by an accessibility audit by November 30, 2024.
+",789,2335,12,6,4,3,3,4.15,189,564,753,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements derived from the user story ""As a user, I want to be able to view posts from other users on the social media platform"":
+
+FR-1: The system shall display a list of posts from other users to the logged-in user within 2 seconds of the user navigating to the ""Posts"" section.
+
+FR-2: Each post displayed shall include the author's username, the post's timestamp, and the post's content.
+
+FR-3: The system shall display a maximum of 25 posts per page, with pagination allowing the user to navigate to older posts.
+
+FR-4: The system shall indicate the number of likes and comments associated with each post.
+
+FR-5: The system shall allow the user to view a specific post in detail, including all comments, by clicking on the post.
+
+FR-6: The system shall filter out posts from users that the logged-in user has blocked within 1 second of loading posts.
+
+NFR-1: The ""Posts"" section of the platform shall be available 99.9% of the time, measured weekly.
+
+NFR-2: The system shall ensure that posts are displayed in chronological order (newest first), with a maximum delay of 5 seconds between post creation and display to other users.
+
+NFR-3: The system shall securely retrieve and display posts, protecting against Cross-Site Scripting (XSS) vulnerabilities, validated through a monthly security scan.
+
+NFR-4: The system shall handle a peak load of 10,000 concurrent users viewing posts without performance degradation (response time remaining under 2 seconds), verified through load testing every quarter.
+
+NFR-5: The user interface for displaying posts shall be responsive and render correctly on desktop and mobile devices (iOS and Android) with screen sizes ranging from 320px to 1920px, verified through UI testing at the end of each sprint.
+",789,1793,11,5,5,2,3,3.10,189,415,604,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I'm ready to convert the user story ""As a user, I want to be able to view posts from other users on the social media platform"" into SMART software requirements.
+
+FR-1: The system shall display posts from other users in a chronological order, with the most recent post appearing first. (Relevance: User Story Compliance; Measurable: Order is verifiable; Achievable: Standard sorting algorithm; Time-bound: Within 0.5 seconds of page load; Specific: Chronological order).
+FR-2: The system shall display a maximum of 25 posts per page. (Relevance: Performance & Usability; Measurable: Number of posts; Achievable: Standard pagination; Time-bound: Page Load Speed; Specific: Maximum limit).
+FR-3: Each post shall display the username of the user who created the post. (Relevance: Identification; Measurable: Username present; Achievable: Direct data retrieval; Time-bound: On post load; Specific: User's username).
+FR-4: Each post shall display the date and time the post was created, formatted as ""YYYY-MM-DD HH:MM:SS"". (Relevance: Context; Measurable: Date and Time Format; Achievable: Standard Formatting; Time-bound: On post load; Specific: Specified format).
+FR-5: The system shall allow users to scroll through older posts using a pagination or infinite scroll mechanism. (Relevance: User experience; Measurable: Scroll functionality; Achievable: standard implementation; Time-bound: immediate on page load; Specific: infinite scroll or pagination).
+FR-6: The system shall prevent display of posts from users that the viewing user has blocked. (Relevance: Privacy; Measurable: Posts Hidden; Achievable: Blocking Functionality Integration; Time-bound: Before displaying content; Specific: Blocked user posts).
+FR-7: If a post contains an image or video, the system shall display the media content inline within the post. (Relevance: Media Support; Measurable: Media is displayed; Achievable: Media embedding; Time-bound: Within 2 seconds of post load; Specific: Image/Video display).
+FR-8: The system shall display a message indicating ""No more posts to display"" when the user has reached the end of available posts. (Relevance: User feedback; Measurable: Display of message; Achievable: Logic implemented; Time-bound: when all posts have been viewed; Specific: informative message).
+
+NFR-1: The system shall display posts within 2 seconds of the page loading, 95% of the time. (Relevance: Performance; Measurable: Response Time; Achievable: Optimized queries and caching; Time-bound: Page load duration; Specific: 2 seconds).
+NFR-2: The system shall be able to support at least 1000 concurrent users viewing posts without significant performance degradation (e.g., load times exceeding 5 seconds). (Relevance: Scalability; Measurable: Concurrent Users; Achievable: Load balancing and optimized infrastructure; Time-bound: Peak usage hours; Specific: 1000 concurrent users).
+NFR-3: The system shall be accessible from all major web browsers (Chrome, Firefox, Safari, Edge) and mobile browsers (Chrome Mobile, Safari Mobile). (Relevance: Compatibility; Measurable: Functionality on Browsers; Achievable: Cross-browser testing; Time-bound: Upon release; Specific: Specified browsers).
+NFR-4: The system shall ensure that posts are displayed securely, preventing any cross-site scripting (XSS) vulnerabilities. (Relevance: Security; Measurable: No XSS vulnerabilities; Achievable: Input validation and sanitization; Time-bound: Always; Specific: XSS Prevention).
+NFR-5: The system shall maintain an uptime of 99.9% for post viewing functionality. (Relevance: Availability; Measurable: Uptime Percentage; Achievable: Redundancy and monitoring; Time-bound: Monthly; Specific: 99.9% Uptime).
+NFR-6: The system shall log all post viewing events, including user ID, post ID, and timestamp, for auditing and analytics purposes, retaining logs for at least 6 months. (Relevance: Auditability; Measurable: Log data available; Achievable: Logging mechanism; Time-bound: 6-month retention; Specific: specified data logged).
+",789,4018,14,6,3,2,2,5.76,189,917,1106,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display posts from other users in a reverse chronological order based on the post creation timestamp.
+
+FR-2: The system shall display the following information for each post: username of the poster, timestamp of the post, post content (text and/or media), number of likes, number of comments.
+
+FR-3: The system shall support pagination, displaying a maximum of 25 posts per page.
+
+FR-4: The system shall allow users to filter posts based on the following criteria: users they follow, specific hashtags, specific keywords.
+
+FR-5: The system shall display an indicator if the current user has already liked a post.
+
+FR-6: The system shall retrieve posts from the database within an average response time of 200ms and a maximum response time of 500ms under normal load (defined as 10,000 concurrent users).
+
+FR-7: The system shall integrate with the user authentication service to verify the identity of the user viewing the posts.
+
+FR-8: The system shall integrate with the media storage service to retrieve and display media content (images, videos) associated with posts.
+
+FR-9: The system shall adhere to data privacy regulations (e.g., GDPR, CCPA) regarding the display of user data.
+
+FR-10: The system shall provide an audit log of all post views, including the user viewing the post, the post ID, and the timestamp of the view.
+
+NFR-1: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-2: The system shall be scalable to support up to 1 million concurrent users without significant performance degradation.
+
+NFR-3: The system shall be secure and protect against common web vulnerabilities, such as XSS and SQL injection, during post retrieval and display.
+
+NFR-4: The system shall be maintainable, with well-documented code and a modular architecture.
+
+NFR-5: The user interface for viewing posts shall be responsive and accessible on a variety of devices (desktops, tablets, smartphones).
+
+NFR-6: The system shall be monitored for performance and errors, with alerts generated for critical issues.
+
+NFR-7: The system shall comply with accessibility standards (e.g., WCAG) to ensure usability for users with disabilities.
+
+NFR-8: The system shall be deployed in a secure environment that is compliant with industry best practices.
+",1044,2295,18,8,3,3,1,3.74,229,519,748,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of posts from other users in reverse chronological order (newest first) on the user's home feed after successful login.
+
+FR-2: Each post displayed shall include the author's username, the post's timestamp, the post's text content, and the number of likes.
+
+FR-3: The system shall provide a mechanism for users to filter posts based on the following criteria: posts from users they follow, posts within a specific geographic location (if location services are enabled and permission granted), and posts containing specific keywords.
+
+FR-4: The system shall implement pagination or infinite scrolling to load posts in batches, ensuring optimal performance and minimizing initial loading time. Each batch shall contain a maximum of 25 posts.
+
+FR-5: The system shall allow users to view individual posts in a dedicated view by clicking or tapping on the post in the feed. The dedicated view shall include the same information as the feed view (author, timestamp, content, likes) and also display any comments associated with the post.
+
+FR-6: The system shall refresh the post feed automatically every 5 minutes to display new posts, or upon explicit user request (e.g., pull-to-refresh gesture).
+
+FR-7: The system shall support different types of posts, including text, images, and videos. Images and videos shall be displayed inline within the post feed.
+
+FR-8: The system shall integrate with the User Management System to retrieve user profile information (username, profile picture) for displaying post authors.
+
+FR-9: The system shall integrate with the Notification Service to notify users when their posts are liked or commented on.
+
+FR-10: The system shall implement reporting functionality for posts that violate the platform's community guidelines. Reported posts shall be flagged for review by moderators.
+
+NFR-1: The post feed shall load within 3 seconds on a stable network connection (minimum 10 Mbps).
+
+NFR-2: The system shall be able to handle a peak load of 10,000 concurrent users viewing posts without performance degradation.
+
+NFR-3: The system shall adhere to all relevant data privacy regulations (e.g., GDPR, CCPA) regarding the storage and display of user data.
+
+NFR-4: User posts shall be stored securely using encryption at rest and in transit.
+
+NFR-5: The post feed shall be accessible on all supported devices (iOS, Android, web) with a consistent user experience.
+
+NFR-6: The system shall be monitored 24/7 for performance and availability, with automated alerts triggered in case of errors or outages.
+
+NFR-7: The system shall be designed for maintainability, with clear code structure, comprehensive documentation, and automated testing.
+
+NFR-8: The system shall be scalable to accommodate future growth in the number of users and posts.
+
+NFR-9: The system shall be resilient to network failures and other unexpected events, with appropriate error handling and recovery mechanisms.
+
+NFR-10: The system shall undergo regular security audits to identify and address potential vulnerabilities.
+",1044,3056,20,10,3,1,1,4.71,229,653,882,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the requirements based on the user story:
+
+FR-1: The system shall display a feed of posts from other users on the home page after successful login.
+
+FR-2: Users shall be able to scroll through the feed to view older posts.
+
+FR-3: Each post in the feed shall display the author's username or display name.
+
+FR-4: Each post in the feed shall display the timestamp indicating when the post was created.
+
+FR-5: Each post in the feed shall display the content of the post (text, images, videos, or links).
+
+FR-6: Users shall be able to view at least the 50 most recent posts. (Consider a ""load more"" option for older posts)
+
+FR-7: The system shall provide a mechanism (e.g., a button or link) to refresh the feed and display new posts.
+
+FR-8: The system shall handle different types of content (text, images, videos, links) appropriately within the feed.
+
+FR-9: Users shall be able to click on a username within a post to navigate to that user's profile page.
+
+FR-10: The system shall provide mechanisms to report or flag inappropriate content (e.g., button for reporting).
+
+FR-11: The system shall filter the posts displayed according to user preference(s) if the user has set any (e.g. posts from followed users, specific topics, etc.)
+
+NFR-1: The feed shall load and display initial posts within 3 seconds of page load.
+
+NFR-2: The system shall support at least 10,000 concurrent users viewing the feed without significant performance degradation.
+
+NFR-3: The user feed shall be accessible on a variety of devices and screen sizes (responsive design).
+
+NFR-4: All user data displayed in the feed shall be retrieved and displayed securely, adhering to data privacy standards (e.g., GDPR, CCPA).
+
+NFR-5: The system shall be designed to ensure high availability, with a target uptime of 99.9%.
+
+NFR-6: The post feed shall be easily maintainable, with clear separation of concerns and well-documented code.
+
+NFR-7: The system shall implement appropriate rate limiting to prevent abuse and ensure fair usage of resources.
+
+NFR-8: The system shall be scalable to accommodate a growing number of users and posts.
+",1044,2119,19,8,3,2,1,3.68,229,515,744,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Contextual,precise,"
+BUSINESS CONTEXT:
+A social media platform
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The platform shall display posts from other users in a reverse chronological order on the user's home feed.
+FR-2: The platform shall allow users to view individual posts by clicking on them.
+FR-3: The platform shall display the username, timestamp, and content of each post.
+FR-4: The platform shall integrate with the user authentication system to verify user login before displaying posts.
+FR-5: The platform shall integrate with the database to retrieve post data.
+FR-6: The platform shall support displaying posts containing text, images, and videos.
+FR-7: The platform shall allow users to scroll through at least 50 posts on their home feed.
+FR-8: The platform shall display a ""Load More"" button or implement infinite scrolling to load additional posts.
+NFR-1: The home feed shall load within 2 seconds for 95% of users under normal load (up to 10,000 concurrent users).
+NFR-2: The home feed shall load within 5 seconds for 90% of users under peak load (up to 50,000 concurrent users).
+NFR-3: The system shall be able to handle at least 1,000 post requests per second during peak load without degradation of service.
+NFR-4: The platform shall monitor the average post retrieval time and error rate, alerting administrators if the average retrieval time exceeds 3 seconds or the error rate exceeds 1%.
+NFR-5: The platform shall log all errors related to post retrieval and display, including the user ID, timestamp, and error message.
+NFR-6: The platform shall display a user-friendly error message if a post cannot be loaded, such as ""Unable to load post. Please try again later.""
+NFR-7: The platform shall ensure that the displayed posts are visually appealing and easy to read on various screen sizes (desktop, tablet, mobile).
+NFR-8: The platform shall provide clear visual cues to indicate loading status when fetching posts.
+NFR-9: The platform shall adhere to accessibility guidelines (WCAG 2.1 AA) to ensure posts are accessible to users with disabilities.
+NFR-10: The platform shall ensure that images and videos are displayed with appropriate aspect ratios and resolutions to maintain visual quality.
+",744,2122,18,10,5,2,2,3.27,178,497,675,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Contextual,default,"
+BUSINESS CONTEXT:
+A social media platform
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of posts from other users in a reverse chronological order, limited to the most recent 50 posts.
+FR-2: The system shall allow users to scroll through the post feed to load an additional 25 posts per scroll, up to a maximum of 500 total posts.
+FR-3: The system shall display the author's username, timestamp (relative time, e.g., ""5 minutes ago""), and post content for each post.
+FR-4: The system shall integrate with the user authentication system to verify user login before displaying the post feed.
+FR-5: The system shall integrate with the media storage system to retrieve and display images and videos associated with each post.
+FR-6: The system shall integrate with the user relationship management system to display posts from users the logged-in user is following, and posts from public accounts.
+FR-7: The system shall allow the user to filter displayed posts based on specified keywords, with results appearing within 2 seconds of filter application.
+
+NFR-1: The post feed shall load the initial 50 posts within 3 seconds under normal load (defined as 1,000 concurrent users).
+NFR-2: The post feed shall maintain an average response time of under 5 seconds for loading additional posts during peak load (defined as 5,000 concurrent users).
+NFR-3: The system shall monitor the average loading time of the post feed every 5 minutes and trigger an alert if it exceeds 4 seconds for 3 consecutive monitoring periods.
+NFR-4: The system shall log any errors encountered while retrieving or displaying posts, including the error message, timestamp, and user ID.
+NFR-5: The system shall display a user-friendly error message (e.g., ""Unable to load posts. Please try again later."") if the post feed cannot be loaded due to a system error.
+NFR-6: The post feed shall be accessible on desktop and mobile devices with responsive design, adapting to different screen sizes and resolutions.
+NFR-7: The font size and contrast of the post content shall adhere to WCAG 2.1 Level AA accessibility guidelines for readability.
+NFR-8: The post feed shall support at least 10,000 concurrent users without degradation in performance, as measured by response time and error rate, by the end of Q3 2024.
+",744,2227,15,8,4,2,2,3.48,178,519,697,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Contextual,creative,"
+BUSINESS CONTEXT:
+A social media platform
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display posts from other users in a reverse chronological order on the user's home feed.
+
+FR-2: The system shall allow users to view individual posts by clicking on them.
+
+FR-3: The system shall integrate with the user authentication system to display the author's username and profile picture alongside each post.
+
+FR-4: The system shall integrate with the media storage service to display images and videos embedded in posts.
+
+FR-5: The system shall allow users to scroll through at least 50 posts on their home feed before requiring a refresh or ""load more"" action.
+
+FR-6: The system shall refresh the user's home feed with new posts every 60 seconds automatically when the user is actively viewing the feed.
+
+NFR-1: The system shall load the initial 20 posts on the user's home feed within 2 seconds, 95% of the time.
+
+NFR-2: The system shall maintain an average response time of less than 500ms for retrieving a single post, even during peak hours (defined as 5 PM - 9 PM local time).
+
+NFR-3: The system shall be able to handle a peak load of 10,000 requests per second for post retrieval without degradation of service (defined as an increase of average response time by more than 20%).
+
+NFR-4: The system shall log all errors related to post retrieval (e.g., database connection errors, media file errors) with severity levels (e.g., Error, Warning, Info) in a central logging system.
+
+NFR-5: The system shall implement error handling to gracefully handle cases where a post or its associated media is unavailable, displaying a generic error message to the user instead of crashing the application.
+
+NFR-6: The system shall ensure that the displayed posts are easily readable on mobile devices with screen sizes ranging from 320x568 pixels to 414x896 pixels.
+
+NFR-7: The system shall provide a consistent and intuitive user interface for viewing posts, adhering to the platform's design guidelines as documented in the style guide (version 2.0).
+",744,1976,13,7,4,2,2,3.28,178,469,647,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display posts from other users in a reverse chronological order by default.
+FR-2: The system shall allow users to scroll through a feed of posts.
+FR-3: Each post shall display the author's username.
+FR-4: Each post shall display the timestamp of when it was created.
+FR-5: Each post shall display the post content (text, image, video).
+FR-6: The system shall allow users to view at least 20 posts per page/scroll.
+FR-7: The system shall retrieve and display posts within 2 seconds.
+FR-8: The system shall display a ""No posts available"" message if there are no posts to display.
+FR-9: The system shall filter posts based on user privacy settings (e.g., only show posts from friends).
+FR-10: The system shall support displaying posts containing text, images, and videos.
+
+NFR-1: The system shall be available 99.9% of the time.
+NFR-2: The system shall be responsive and load posts within 2 seconds on a broadband connection.
+NFR-3: The system shall be scalable to support 1 million concurrent users.
+NFR-4: The system shall protect user data and privacy according to GDPR regulations.
+NFR-5: The system shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+NFR-6: The system shall be accessible to users with disabilities, adhering to WCAG 2.1 AA guidelines.
+NFR-7: The system shall log all errors and exceptions for monitoring and debugging purposes.
+NFR-8: The system shall be secure against common web vulnerabilities, such as XSS and SQL injection.
+",1728,1512,18,8,3,2,2,2.64,391,378,769,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display posts from other users in a chronological order, newest first, on a ""feed"" page.
+FR-2: The system shall display a maximum of 25 posts per page on the feed.
+FR-3: The system shall provide a mechanism (e.g., ""Load More"" button or infinite scrolling) to load additional posts when the user reaches the end of the current page.
+FR-4: Each post shall display the author's username, timestamp of posting, the post content (text and/or media), and the number of likes/reactions.
+FR-5: The system shall filter posts based on user's followed accounts, prioritizing posts from followed accounts over those from non-followed accounts.
+FR-6: The system shall allow users to like or react to posts.
+FR-7: The system shall display the number of comments on each post.
+FR-8: The system shall provide a link or button to view the comments on a specific post.
+
+NFR-1: The feed page shall load within 3 seconds.
+NFR-2: The system shall handle at least 10,000 concurrent users viewing the feed without significant performance degradation.
+NFR-3: The system shall ensure that user data (including post content and interactions) is stored securely, adhering to relevant privacy regulations (e.g., GDPR, CCPA).
+NFR-4: The system shall be available 99.9% of the time.
+NFR-5: The system shall log all errors and exceptions related to post retrieval and display for monitoring and debugging purposes.
+NFR-6: The user interface shall be responsive and adapt to different screen sizes (desktops, tablets, and mobile devices).
+",1728,1530,14,6,3,2,1,2.66,391,372,763,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The platform shall display posts from other users in a reverse chronological order by default.
+FR-2: Users shall be able to view at least the 20 most recent posts from other users on the main feed page.
+FR-3: Each post displayed shall include the author's username and the timestamp of when the post was created.
+FR-4: The platform shall provide a 'Load More' button or equivalent mechanism to load additional posts if available.
+FR-5: The platform shall display post content (text, images, videos) as intended by the author (e.g., respecting line breaks, displaying images correctly).
+FR-6: The platform shall filter posts based on privacy settings so a user only sees posts from other users they are allowed to.
+
+NFR-1: The loading of the initial 20 posts must occur within 3 seconds on a broadband connection (5 Mbps).
+NFR-2: The platform must ensure user's personal data is only shared with users they allow, as defined by privacy settings.
+NFR-3: The platform must ensure the post feed can handle at least 10,000 concurrent users without performance degradation.
+NFR-4: The platform shall log any errors that occur while fetching or displaying posts, including the user ID and timestamp, for monitoring purposes.
+NFR-5: User-generated content (text, images, videos) must be stored securely to prevent unauthorized access or modification.
+",1728,1349,11,5,4,2,2,2.35,391,311,702,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display posts from other users in a feed format.
+FR-2: The system shall allow users to scroll through the feed to view older posts.
+FR-3: The user must be logged in to view the feed.
+FR-4: The system shall retrieve posts from the database and display them in chronological order (newest first).
+FR-5: If no posts are available, the system shall display a message indicating that there are no posts to show.
+FR-6: The system shall notify the user if there is an error retrieving posts from the database.
+NFR-1: The feed shall load within 3 seconds.
+NFR-2: The user interface shall be intuitive and easy to navigate on both desktop and mobile devices.
+NFR-3: The system shall ensure that only authorized users can view posts.
+",1794,747,9,3,5,2,1,1.57,429,181,610,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display posts from other users to the logged-in user.
+FR-2: The system shall display posts in chronological order, with the most recent posts appearing first.
+FR-3: The system shall require the user to be logged in before viewing posts.
+FR-4: The system shall retrieve posts from the database and display them on the user's feed.
+FR-5: If no posts are available, the system shall display a message indicating that there are no posts to view.
+FR-6: The system shall notify the user if new posts are available while they are logged in, with a maximum delay of 5 minutes.
+NFR-1: The system shall load and display the initial set of posts within 3 seconds.
+NFR-2: The user interface shall provide a clear and intuitive way to scroll through and view posts.
+NFR-3: The system shall ensure that user posts are only visible to authorized users based on privacy settings.
+",1794,887,9,3,5,3,2,1.75,429,210,639,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to view posts from other users on the social media platform.', 'context': 'A social media platform'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to view posts from other users on the social media platform.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall display a list of posts from other users, including the post content, author's username, and timestamp, on the main feed.
+FR-2: The system shall allow users to scroll through the list of posts and load more posts as they reach the bottom of the list.
+FR-3: The system shall require the user to be logged in to view posts.
+FR-4: The system shall order posts chronologically, with the most recent posts appearing first.
+FR-5: If the system fails to retrieve posts, it shall display an error message ""Unable to retrieve posts. Please try again later.""
+FR-6: The system shall automatically refresh the list of posts every 5 minutes or upon user-initiated refresh.
+NFR-1: The system shall load the initial list of posts (at least 10) within 3 seconds.
+NFR-2: The user interface for viewing posts shall be responsive and adapt to different screen sizes and devices.
+NFR-3: The system shall ensure that posts from blocked users are not visible to the blocking user.
+",1794,982,9,3,4,1,2,1.91,429,233,662,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

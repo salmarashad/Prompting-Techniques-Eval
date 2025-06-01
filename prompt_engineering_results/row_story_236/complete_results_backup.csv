@@ -1,0 +1,1528 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to send a friend request to another user, identified by their unique user ID or username.
+FR-2: The system shall allow a user to accept or reject a friend request from another user within 72 hours of the request being sent.
+FR-3: The system shall allow a user to follow another user.
+FR-4: The system shall display a list of users a user is following.
+FR-5: The system shall display a list of followers for a user.
+FR-6: The system shall allow a user to unfollow another user.
+FR-7: The system shall limit the number of friend requests a user can send to 50 per day.
+FR-8: The system shall display the status of a friend request (e.g., pending, accepted, rejected) to both the sender and receiver.
+
+NFR-1: The system shall respond to friend request actions (send, accept, reject, follow, unfollow) within 2 seconds under normal load (defined as up to 1,000 concurrent users).
+NFR-2: The system shall ensure that friend connections and follower/following relationships are stored consistently and accurately in the database, with a data integrity rate of 99.99%.
+NFR-3: The system shall protect user privacy by only displaying friend connections and follower/following relationships to authorized users (e.g., the user themselves, their friends, or followers, depending on privacy settings).
+NFR-4: The system shall be scalable to support up to 1 million users and their connection requests without significant performance degradation (defined as response times exceeding 5 seconds).
+",629,1519,12,4,4,2,2,2.61,160,356,516,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to send a friend request to another user, identified by their unique user ID or username.
+
+FR-2: The system shall allow a user to follow another user, identified by their unique user ID or username.
+
+FR-3: The system shall display a ""Send Friend Request"" button on a user's profile page if the viewing user is not already friends with or has not already sent a friend request to the profile owner.
+
+FR-4: The system shall display a ""Follow"" button on a user's profile page if the viewing user is not already following the profile owner.
+
+FR-5: The system shall provide a mechanism for a user to accept or reject incoming friend requests within 2 seconds of the user clicking ""Accept"" or ""Reject"".
+
+FR-6: The system shall update the friend list of both users upon acceptance of a friend request.
+
+FR-7: The system shall prevent a user from sending multiple friend requests to the same user within a 24-hour period.
+
+FR-8: The system shall display a notification to a user when they receive a new friend request.
+
+FR-9: The system shall display a notification to a user when another user accepts their friend request.
+
+NFR-1: The system shall be able to process 100 friend requests per second during peak hours with an average response time of less than 500ms.
+
+NFR-2: The friend request and following functionality shall be available 99.9% of the time.
+
+NFR-3: The system shall store friend and follower relationships securely, protecting user data from unauthorized access.
+
+NFR-4: The user interface for sending and managing friend requests and follows shall be intuitive and easy to use, as measured by a System Usability Scale (SUS) score of 70 or higher.
+",629,1695,13,4,5,3,2,2.54,160,392,552,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to send a friend request to another user, identified by their unique username, display name, or email address.
+FR-2: The system shall provide a mechanism for a user to accept or reject an incoming friend request within 24 hours of the request being sent.
+FR-3: Upon acceptance of a friend request, both users will be considered 'friends' and be able to view content shared with ""friends-only"" privacy settings.
+FR-4: The system shall allow a user to ""follow"" another user.
+FR-5: The system shall display a list of users a user is following, sorted alphabetically by username.
+FR-6: The system shall display a list of followers for each user profile, visible to the profile owner, and sorted chronologically by follow date.
+FR-7: The system shall allow a user to ""unfriend"" or ""unfollow"" another user.
+FR-8: The system shall notify a user via an in-app notification and/or email within 5 minutes when they receive a friend request.
+
+NFR-1: The average response time for sending a friend request shall be less than 1 second, measured from the time the user clicks the ""Send Friend Request"" button to when the system confirms the request has been sent.
+NFR-2: The system shall support at least 10,000 concurrent users sending friend requests without performance degradation (average response time remaining under 1 second).
+NFR-3: Friend request and follow actions must be performed securely, protecting user data from unauthorized access and modification, as verified by penetration testing.
+NFR-4: The ""follow"" and ""friend request"" features shall be accessible and usable on all supported browsers (Chrome, Firefox, Safari, Edge) and mobile operating systems (iOS, Android).
+NFR-5: The system shall maintain an availability of 99.9% for sending and accepting friend requests and follow actions, measured monthly.
+",629,1848,13,5,5,2,3,3.13,160,421,581,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: User Search:** The system shall provide a search functionality that allows users to find other users by username, full name, or email address.
+*   **FR-2: User Profile Display:** The system shall display a user profile page for each user, accessible by clicking on their name or avatar in search results or other areas of the platform.
+*   **FR-3: Follow Functionality:** The system shall allow users to ""follow"" other users.
+*   **FR-4: Following List:** The system shall maintain a list of users that a given user is following.
+*   **FR-5: Followers List:** The system shall maintain a list of users that are following a given user.
+*   **FR-6: Friend Request Functionality:** The system shall allow users to send friend requests to other users.
+*   **FR-7: Friend Request Management:** The system shall provide a mechanism for users to accept or decline incoming friend requests.
+*   **FR-8: Friends List:** The system shall maintain a list of users who are ""friends"" (mutual connection) with a given user.
+*   **FR-9: Connection Status Display:** The system shall display the connection status between two users (e.g., ""Following,"" ""Friends,"" ""Pending Request,"" ""Not Connected"") on their profile page and in search results.
+*   **FR-10: Notification of Requests:** The system shall notify users when they receive a friend request.
+*   **FR-11: Privacy Settings:** The system shall allow users to control who can follow them and send them friend requests (e.g., ""Everyone,"" ""Friends of Friends,"" ""Only Me"").
+*   **FR-12: Blocking Functionality:** The system shall allow users to block other users, preventing them from following, sending friend requests, or interacting with them.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Search Performance:** User search results shall be displayed within 2 seconds.
+*   **NFR-2: Profile Load Time:** User profile pages shall load within 3 seconds.
+*   **NFR-3: Follow/Unfollow Response Time:** The action of following or unfollowing a user shall complete within 1 second.
+*   **NFR-4: Friend Request Response Time:** Sending, accepting, or declining a friend request shall complete within 1 second.
+*   **NFR-5: Scalability:** The system shall support at least 1 million concurrent users and their connections without significant performance degradation.
+*   **NFR-6: Data Consistency:** The system shall ensure that follower/following and friend relationships are consistent across all parts of the platform.
+*   **NFR-7: Notification Delivery:** Friend request notifications shall be delivered to users within 30 seconds of the request being sent.
+*   **NFR-8: Security:** The system shall protect user connection data (followers, friends) from unauthorized access.
+*   **NFR-9: Availability:** The connection features (following, friend requests) shall be available 99.9% of the time.
+",1521,3187,21,9,3,1,2,4.60,346,739,1085,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests"" into specific, measurable, achievable, relevant, and time-bound (SMART) functional and non-functional requirements:
+
+**Requirements:**
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Following Users:**
+    *   The system shall allow a user to ""follow"" another user.
+    *   The system shall display a ""Follow"" button/link on a user's profile page that is not the current user's profile.
+    *   The system shall update the follower count of the followed user.
+    *   The system shall add the followed user's public posts to the follower's newsfeed.
+*   **FR-2: Friend Requests:**
+    *   The system shall allow a user to send a friend request to another user.
+    *   The system shall display a ""Send Friend Request"" button/link on a user's profile page that is not the current user's profile.
+    *   The system shall notify the recipient user of the friend request.
+*   **FR-3: Friend Request Management:**
+    *   The system shall provide a mechanism for users to view pending friend requests.
+    *   The system shall allow users to accept or reject friend requests.
+*   **FR-4: Friend Status:**
+    *   The system shall display the friend status between two users (e.g., ""Friends,"" ""Request Sent,"" ""Follows You,"" ""Follows,"" ""Not Friends"").
+*   **FR-5: Friend List:**
+    *   The system shall maintain a list of a user's friends.
+    *   The system shall allow users to view their list of friends.
+*   **FR-6: Mutual Friends:**
+    *   The system shall display the number of mutual friends between the current user and any other user.
+*   **FR-7: Search Users:**
+    * The system shall provide a search functionality to search for other users on the platform using keywords, such as name or email.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Performance - Following:**
+    *   The system shall complete the ""follow"" action (including updating the follower count and adding the followed user to the follower's feed) within 1 second 95% of the time under normal load.
+*   **NFR-2: Performance - Friend Request:**
+    *   The system shall deliver a friend request notification to the recipient user within 2 seconds 95% of the time under normal load.
+*   **NFR-3: Scalability:**
+    *   The system shall support at least 1 million concurrent users sending friend requests without significant performance degradation (defined as an increase in average response time of more than 20%).
+*   **NFR-4: Security:**
+    *   The system shall prevent unauthorized users from sending friend requests on behalf of other users.
+*   **NFR-5: Availability:**
+    *   The features related to connecting with other users (following, sending friend requests, accepting/rejecting requests) shall be available 99.9% of the time.
+*   **NFR-6: User Interface:**
+    *   The ""Follow"" and ""Send Friend Request"" buttons/links shall be easily discoverable on a user's profile page.
+*   **NFR-7: Real-time Updates:**
+    * The number of followers and mutual friends shall update in real-time.
+",1521,3171,14,7,3,2,2,4.85,346,787,1133,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+","Okay, here's the breakdown of the user story ""As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: User Search:** The system shall provide a search functionality allowing users to find other users by username, name, or email address.
+*   **FR-2: User Profile Display:** The system shall display a user profile page for each user, accessible via search results or direct link, showing the user's profile information (e.g., name, username, profile picture, bio - if available).
+*   **FR-3: Follow Functionality:** The system shall allow users to follow other users.
+*   **FR-4: Following Confirmation:** Upon following a user, the system shall display a visual confirmation (e.g., a ""Following"" button or message).
+*   **FR-5: Unfollow Functionality:** The system shall allow users to unfollow users they are currently following.
+*   **FR-6: Friend Request Functionality:** The system shall allow users to send friend requests to other users.
+*   **FR-7: Friend Request Notification:** When a user receives a friend request, the system shall notify them (e.g., via a notification badge or email - if email notifications are enabled).
+*   **FR-8: Friend Request Acceptance:** The system shall allow users to accept friend requests. Upon acceptance, both users shall be considered friends.
+*   **FR-9: Friend Request Rejection:** The system shall allow users to reject friend requests.
+*   **FR-10: Friend List Display:** The system shall display a list of a user's friends.
+*   **FR-11: Follower List Display:** The system shall display a list of a user's followers (users who are following them).
+*   **FR-12: Following List Display:** The system shall display a list of users a user is following.
+*   **FR-13: Mutual Following Indication:** The system shall indicate on a user's profile page if the logged-in user is already following them (and vice-versa), or if they are friends.
+*   **FR-14: Block User:** The system shall allow a user to block another user, preventing interaction between them (e.g., friend requests, follows, messages - depending on platform functionality).
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Search Performance:** User search results shall be displayed within 2 seconds.
+*   **NFR-2: Profile Load Time:** A user profile page shall load within 3 seconds.
+*   **NFR-3: Follow/Unfollow Response Time:** The action of following or unfollowing a user shall complete and the confirmation displayed within 1 second.
+*   **NFR-4: Friend Request Processing Time:** Sending, accepting, or rejecting a friend request shall complete and the confirmation displayed within 1 second.
+*   **NFR-5: Scalability - Connections:** The system shall support at least 1 million users each with an average of 500 connections (friends and followers) without significant performance degradation.
+*   **NFR-6: Data Consistency:** The friend, following, and follower lists shall be updated immediately after a user accepts a friend request or follows another user.
+*   **NFR-7: Security - Blocking:** The blocking feature should prevent the blocked user from viewing the blocker's profile or any content posted by the blocker.
+*   **NFR-8: Notification Delivery:** Friend request notifications shall be delivered to the user within 30 seconds of the request being sent.
+*   **NFR-9: Availability:** The connection features (follow/friend request) shall be available 99.9% of the time.
+*   **NFR-10: Block Functionality:** The block functionality should block a user within 1 second of the block action being taken.
+",1521,3777,24,10,3,1,2,5.57,346,880,1226,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a user to send a friend request to another user.
+FR-2: The system shall allow a user to accept a friend request from another user.
+FR-3: The system shall allow a user to decline a friend request from another user.
+FR-4: The system shall allow a user to follow another user.
+FR-5: The system shall allow a user to unfollow another user.
+FR-6: The system shall display a list of pending friend requests for a user.
+FR-7: The system shall display a list of users that a user is following.
+FR-8: The system shall display a list of users that are following a user.
+FR-9: The system shall prevent a user from sending a friend request to a user they are already friends with.
+FR-10: The system shall notify a user when they receive a friend request.
+FR-11: The system shall notify a user when their friend request is accepted.
+FR-12: The system shall provide a search functionality to find other users on the platform.
+
+NFR-1: The system shall process a friend request within 2 seconds under normal load.
+NFR-2: The system shall support at least 10,000 concurrent users sending friend requests.
+NFR-3: The system shall ensure that friend connections are only visible to authorized users (friends or followers, based on privacy settings).
+NFR-4: The user interface for sending and managing friend requests shall be intuitive and easy to use, as measured by a System Usability Scale (SUS) score of at least 70.
+NFR-5: The system shall provide a mechanism to report abusive or unwanted friend requests.
+",1688,1522,17,5,4,2,1,2.40,390,370,760,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a user to send a friend request to another user.
+FR-2: The system shall allow a user to accept or decline a friend request.
+FR-3: The system shall allow a user to follow another user.
+FR-4: The system shall display a list of pending friend requests to a user.
+FR-5: The system shall display a list of users that a user is following.
+FR-6: The system shall display a list of followers for a given user.
+FR-7: The system shall prevent a user from sending a friend request to the same user more than once, unless the previous request was declined or withdrawn.
+FR-8: The system shall notify a user when they receive a friend request.
+FR-9: The system shall notify a user when their friend request is accepted.
+FR-10: The system shall provide a search functionality to find other users on the platform.
+FR-11: The system shall allow a user to unfollow another user.
+
+NFR-1: The system shall process friend requests within 2 seconds under normal load (up to 1000 requests per second).
+NFR-2: The system shall ensure that user connection data (friends and followers) is stored securely and accessible only to authorized users.
+NFR-3: The friend request and follow functionalities shall be accessible and usable on all supported devices (desktop, mobile web, and mobile apps) with a consistent user experience.
+NFR-4: The system shall be able to support at least 1 million concurrent users sending friend requests and following other users without significant performance degradation (response time exceeding 5 seconds).
+NFR-5: The system shall provide clear and concise error messages to the user if a friend request or follow operation fails.
+NFR-6: The user interface for managing connections (friend requests, followers, following) shall be intuitive and easy to navigate, as measured by a System Usability Scale (SUS) score of at least 70.
+NFR-7: The system shall send friend request notifications to users within 10 seconds of the request being sent.
+",1688,1979,18,7,5,2,2,3.01,390,454,844,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall allow a user to send a friend request to another user.
+FR-2: The system shall allow a user to accept a friend request from another user.
+FR-3: The system shall allow a user to decline a friend request from another user.
+FR-4: The system shall display a list of pending friend requests for a user.
+FR-5: The system shall allow a user to follow another user.
+FR-6: The system shall display a list of users that a user is following.
+FR-7: The system shall allow a user to unfollow another user.
+FR-8: The system shall send a notification to the user who received the friend request when another user sends them a friend request.
+FR-9: The system shall send a notification to the user who sent the friend request when the request is accepted or declined.
+FR-10: The system shall indicate the connection status (e.g., ""Friends"", ""Following"", ""Follower"", ""Request Sent"") between two users on their respective profiles.
+FR-11: The system shall prevent a user from sending a friend request to a user they are already friends with.
+FR-12: The system shall prevent a user from sending multiple friend requests to the same user before the first request is resolved.
+FR-13: The system shall implement a search feature to allow users to find other users by username or real name.
+
+NFR-1: The system shall process a friend request acceptance or decline within 2 seconds under normal load.
+NFR-2: The system shall support at least 1,000 concurrent users sending and receiving friend requests without performance degradation.
+NFR-3: The system shall ensure that friend connections and follower relationships are only visible to authorized users, based on privacy settings.
+NFR-4: The friend request functionality shall be accessible and usable on devices with a minimum screen resolution of 320x480 pixels.
+NFR-5: The system shall maintain 99.9% uptime for friend request and following functionality.
+NFR-6: The system shall ensure that all friend requests are transmitted over an encrypted connection (HTTPS).
+NFR-7: The user interface for managing friend requests and following shall be intuitive and easy to use, as measured by a System Usability Scale (SUS) score of at least 70.
+",1688,2191,20,7,4,2,1,3.37,390,507,897,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART requirements for the user story, followed by an evaluation and final recommendation, presented in the requested format.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/users/{user_id}/follow` that accepts a `user_id` as a path parameter.
+FR-2: The system shall update the database to record a ""following"" relationship between the requesting user and the target user when the `/users/{user_id}/follow` endpoint is called successfully.
+FR-3: The system shall provide an API endpoint `/users/{user_id}/friend_request` that accepts a `user_id` as a path parameter.
+FR-4: The system shall send a notification to the target user when a friend request is initiated.
+NFR-1: The `/users/{user_id}/follow` and `/users/{user_id}/friend_request` endpoints shall respond within 200ms under normal load (defined as 100 requests per second).
+NFR-2: The system shall support a maximum of 10,000 concurrent ""following"" relationships per user.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: A ""Follow"" button shall be displayed on each user's profile page, visible to other logged-in users.
+FR-2: Clicking the ""Follow"" button shall result in a visual confirmation (e.g., button changes to ""Following"") within 1 second.
+FR-3: A ""Send Friend Request"" button shall be displayed on each user's profile page, visible to other logged-in users who are not already friends.
+FR-4: Users shall receive a notification within 5 minutes when they receive a friend request.
+FR-5: Users shall be able to accept or decline friend requests from a dedicated ""Friend Requests"" section.
+NFR-1: The platform shall support a minimum of 99.9% uptime for the user connection features.
+NFR-2: The user interface shall be responsive and intuitive on desktop and mobile devices.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall prevent a user from following themselves.
+FR-2: The system shall allow a user to unfollow another user.
+FR-3: The system shall limit the number of friend requests a user can send per day to 50.
+FR-4: The system shall store the date and time when a user follows another user.
+FR-5: The system shall store the status of a friend request (pending, accepted, declined).
+NFR-1: All user connection data (followers, friends, requests) shall be stored securely and in compliance with privacy regulations (e.g., GDPR).
+NFR-2: The system shall provide audit logs for all user connection actions (following, unfollowing, friend requests).
+
+**FINAL RECOMMENDATION:**
+
+The most effective set of requirements is **APPROACH 2: Focus on user experience and outcomes.**
+",1303,2682,20,6,3,2,1,4.22,285,659,944,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/users/{user_id}/follow` that accepts a `POST` request to initiate a follow request.
+FR-2: The system shall persist follow relationships in a `follows` database table with columns `follower_id` and `followee_id`.
+FR-3: The system shall implement a message queue to process follow requests asynchronously.
+FR-4: The system shall update a user's ""following count"" and ""follower count"" within 500ms of a successful follow action.
+NFR-1: The API endpoint `/users/{user_id}/follow` shall have a maximum response time of 200ms.
+NFR-2: The system shall be able to handle 10,000 follow requests per minute without performance degradation.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The user interface shall display a ""Follow"" button on each user's profile page if the logged-in user is not already following them.
+FR-2: Upon clicking the ""Follow"" button, the button shall change to ""Following"" with a visual confirmation (e.g., a checkmark).
+FR-3: The platform shall provide a notification to the followed user when a new user starts following them.
+FR-4: Users shall be able to send friend requests to other users.
+FR-5: Users shall be able to accept or decline friend requests.
+FR-6: Users shall be able to view a list of their followers and following.
+NFR-1: The ""Follow"" button's click response time shall be less than 0.5 seconds.
+NFR-2: The notification system shall deliver notifications within 2 minutes of a follow action.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall prevent a user from following themselves.
+FR-2: The system shall allow a user to unfollow another user.
+FR-3: The system shall record the date and time of each follow action.
+FR-4: The system shall provide a mechanism for users to block other users.
+FR-5: Users must confirm their email address before being able to send friend requests.
+FR-6: Friend requests expire after 7 days if not acted upon.
+NFR-1: Data related to follow relationships shall be stored with 99.999% availability.
+NFR-2: The system shall comply with all applicable data privacy regulations regarding user connections.
+
+**FINAL RECOMMENDATION**
+
+Approach 2 provides the most effective set of requirements.
+",1303,2310,22,6,3,1,2,3.84,285,576,861,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of requirements generated based on your specified approaches, followed by the evaluation criteria and the final recommendation with justification:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/users/{user_id}/follow` that accepts a `PUT` request.
+FR-2: The `PUT` request to `/users/{user_id}/follow` shall require a valid user authentication token in the header.
+FR-3: Upon successful `PUT` request to `/users/{user_id}/follow`, the system shall record a new entry in the 'Followers' table with the follower's user ID and the followed user's ID.
+FR-4: The system shall implement a mechanism to prevent duplicate entries in the 'Followers' table for the same follower-followed pair.
+FR-5: The system shall provide an API endpoint `/users/{user_id}/friends/request` that accepts a `POST` request.
+FR-6:  The system shall send a notification to the target user when a friend request is received.
+NFR-1: The API endpoint `/users/{user_id}/follow` shall respond within 200ms under normal load.
+NFR-2: The 'Followers' table shall be indexed to optimize query performance for retrieving a user's followers and followees.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: A logged-in user shall be able to search for other users by username, display name, or email address.
+FR-2: Search results shall display a ""Follow"" button for users who are not already followed and a ""Friend Request"" button for users who are not already friends.
+FR-3: Clicking the ""Follow"" button shall immediately update the button to display ""Following.""
+FR-4: Clicking the ""Friend Request"" button shall change the button to display ""Request Sent"" and disable further clicks.
+FR-5:  Users shall receive notifications when they receive a friend request.
+FR-6:  Users shall have a dedicated ""Friend Requests"" page to accept or decline incoming friend requests.
+FR-7: A user shall be able to unfollow another user.
+NFR-1: The time taken to display the search results shall be less than 2 seconds.
+NFR-2: The ""Follow"" and ""Friend Request"" button actions shall complete within 1 second of the user's click.
+NFR-3: The user interface shall be responsive and render correctly on desktop and mobile devices.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall enforce a maximum limit of 5000 followed users per user.
+FR-2: The system shall maintain a record of all follow/unfollow events, including the timestamp, follower ID, and followed user ID.
+FR-3:  Friend requests shall expire after 7 days if not accepted or declined.
+FR-4: The system shall prevent a user from sending more than 50 friend requests per day.
+FR-5: A user cannot send a friend request to a user they already follow.
+FR-6: The system shall prevent users from following themselves.
+NFR-1: The system shall be able to process 1000 follow/unfollow events per minute without performance degradation.
+NFR-2: All follow/unfollow events shall be logged for auditing and reporting purposes.
+NFR-3: Data backups of the social graph (followers and friends) shall be performed daily.
+",1303,3140,27,8,3,2,1,4.70,285,766,1051,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Here are the functional and non-functional requirements derived from the user story, adhering to the SMART criteria:
+
+FR-1: The system shall allow a user to send a friend request to another user. (Measurable: User can initiate the request. Achievable: Within the platform's capabilities. Relevant: Directly addresses the user story. Time-bound: Within 1 second of clicking the ""Add Friend"" button.)
+
+FR-2: The system shall allow a user to follow another user. (Measurable: User can initiate the follow. Achievable: Within the platform's capabilities. Relevant: Directly addresses the user story. Time-bound: Within 1 second of clicking the ""Follow"" button.)
+
+FR-3: The system shall notify the recipient user upon receiving a friend request. (Measurable: Notification is displayed. Achievable: Notification system exists. Relevant: Informs the user of the request. Time-bound: Notification appears within 5 seconds of the request being sent.)
+
+FR-4: The system shall allow a user to accept or decline a friend request. (Measurable: User can perform both actions. Achievable: Buttons/options are available. Relevant: Completes the friend request process. Time-bound: Action is processed within 1 second of clicking accept/decline.)
+
+FR-5: The system shall display a list of users that a given user is following. (Measurable: List is displayed. Achievable: Data is stored and retrievable. Relevant: Allows users to see their connections. Time-bound: List loads within 2 seconds.)
+
+FR-6: The system shall display a list of users who are following a given user. (Measurable: List is displayed. Achievable: Data is stored and retrievable. Relevant: Allows users to see their followers. Time-bound: List loads within 2 seconds.)
+
+NFR-1: The system shall ensure that friend requests are delivered with a 99.9% success rate. (Measurable: Success rate is quantifiable. Achievable: Through robust messaging infrastructure. Relevant: Ensures reliable communication. Time-bound: Measured over a 30-day period.)
+
+NFR-2: The system shall respond to friend request and follow actions within 1 second under normal load (up to 10,000 concurrent users). (Measurable: Response time is quantifiable. Achievable: Through optimized database queries and server infrastructure. Relevant: Provides a responsive user experience. Time-bound: Under normal load conditions.)
+
+NFR-3: The system shall prevent a user from sending more than 5 friend requests to different users within a 1-minute period to mitigate spam. (Measurable: Number of requests is limited. Achievable: Through rate limiting. Relevant: Prevents abuse. Time-bound: 1-minute window.)
+
+NFR-4: The system shall ensure that user connection data (followers/following) is consistent across all devices and platforms within 5 seconds of a change. (Measurable: Data consistency is verifiable. Achievable: Through data synchronization mechanisms. Relevant: Provides a consistent user experience. Time-bound: Synchronization delay.)
+",845,2963,10,4,3,1,2,4.23,199,657,856,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will generate functional and non-functional requirements based on the user story ""As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests,"" ensuring each requirement is SMART.
+
+FR-1: The system shall allow a user to send a friend request to another user. (Specific: friend request, Measurable: success/failure status, Achievable: standard social media functionality, Relevant: directly supports user connection, Time-bound: within 1 second of request initiation).
+
+FR-2: The system shall allow a user to accept or decline a friend request from another user. (Specific: accept/decline action, Measurable: friend connection established/rejected, Achievable: standard social media functionality, Relevant: completes friend request process, Time-bound: within 1 second of user action).
+
+FR-3: The system shall display a list of pending friend requests to a user. (Specific: list of pending requests, Measurable: all pending requests visible, Achievable: standard social media functionality, Relevant: allows user to manage requests, Time-bound: upon user accessing the ""Friends"" section).
+
+FR-4: The system shall allow a user to follow another user without requiring mutual agreement (i.e., the followed user does not need to accept). (Specific: follow functionality, Measurable: user added to follower list, Achievable: standard social media functionality, Relevant: supports one-way connection, Time-bound: within 1 second of follow action).
+
+FR-5: The system shall display a list of users a user is following. (Specific: list of followed users, Measurable: all followed users visible, Achievable: standard social media functionality, Relevant: allows user to manage connections, Time-bound: upon user accessing the ""Following"" section).
+
+FR-6: The system shall allow a user to unfollow another user. (Specific: unfollow functionality, Measurable: user removed from follower list, Achievable: standard social media functionality, Relevant: allows user to manage connections, Time-bound: within 1 second of unfollow action).
+
+FR-7: The system shall provide a notification to a user when they receive a friend request. (Specific: friend request notification, Measurable: visible notification, Achievable: standard social media functionality, Relevant: informs users of incoming requests, Time-bound: within 5 seconds of the request being sent).
+
+NFR-1: The system shall ensure that friend requests and follow actions are processed with a success rate of 99.9% during peak usage hours (6 PM - 10 PM local time). (Specific: success rate, Measurable: percentage of successful actions, Achievable: realistic target, Relevant: reliability of core function, Time-bound: peak usage hours).
+
+NFR-2: The system shall ensure that the time taken to send or accept a friend request does not exceed 2 seconds under normal operating conditions. (Specific: latency, Measurable: time in seconds, Achievable: realistic target, Relevant: user experience, Time-bound: normal operating conditions).
+
+NFR-3: The system shall protect user privacy by only displaying the user's list of followers and followed users to the user themselves, unless the user explicitly configures the settings to allow others to view it. (Specific: privacy of follower/followed lists, Measurable: access control, Achievable: standard security practice, Relevant: data protection, Time-bound: always).
+
+NFR-4: The system shall be able to handle up to 10,000 concurrent friend requests per minute without performance degradation (response time exceeding 5 seconds). (Specific: scalability for friend requests, Measurable: number of concurrent requests, Achievable: realistic target based on platform size, Relevant: performance under load, Time-bound: per minute).
+
+NFR-5: The system shall maintain an audit log of all friend requests sent, accepted, and declined, including the timestamp and user IDs involved, for a period of 6 months for security and analysis purposes. (Specific: audit logging, Measurable: data retention period, Achievable: standard security practice, Relevant: security & auditing, Time-bound: 6 months).
+",845,4176,12,5,4,2,3,5.61,199,888,1087,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, I will convert the user story ""As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests"" into SMART functional and non-functional requirements.
+
+FR-1: **Follow User:** The system shall allow a logged-in user to follow another user. When a user initiates a follow request, the system shall record the follower/following relationship within 0.5 seconds and the followed user shall receive a notification (if configured by the followed user) within 1 minute. This functionality must be fully implemented by [Date: End of next sprint, e.g., 2024-05-03].
+
+FR-2: **Unfollow User:** The system shall allow a logged-in user to unfollow another user they are currently following. Upon initiation, the system shall remove the follower/following relationship within 0.5 seconds. The unfollowed user will not be notified. This functionality must be fully implemented by [Date: End of next sprint, e.g., 2024-05-03].
+
+FR-3: **Send Friend Request:** The system shall allow a logged-in user to send a friend request to another user. The friend request must be delivered to the recipient within 1 minute. This functionality must be fully implemented by [Date: End of next sprint + 1 week, e.g., 2024-05-10].
+
+FR-4: **Accept Friend Request:** The system shall allow a user to accept a friend request. Upon acceptance, the system shall establish a two-way friendship connection between the users in the database within 0.5 seconds, and both users shall be notified of the successful connection within 1 minute. This functionality must be fully implemented by [Date: End of next sprint + 1 week, e.g., 2024-05-10].
+
+FR-5: **Reject Friend Request:** The system shall allow a user to reject a friend request. Upon rejection, the system shall remove the pending friend request record from the database within 0.5 seconds, and the requesting user will not be notified. This functionality must be fully implemented by [Date: End of next sprint + 1 week, e.g., 2024-05-10].
+
+FR-6: **List Followers/Following:** The system shall allow a user to view a list of users who are following them (""followers"") and a list of users they are following (""following""). These lists should be displayed within 2 seconds and paginated to show a maximum of 20 users per page. This functionality must be fully implemented by [Date: End of next sprint + 2 weeks, e.g., 2024-05-17].
+
+NFR-1: **Scalability:** The system shall support at least 10,000 concurrent users sending and accepting friend requests without a noticeable performance degradation (response times should remain under 2 seconds for the 95th percentile of requests). This shall be demonstrated through load testing by [Date: End of next sprint + 3 weeks, e.g., 2024-05-24].
+
+NFR-2: **Security:** Friend requests and follow relationships must be protected against unauthorized modification. Only the intended recipient can accept/reject a friend request. Any attempt to manipulate these relationships by unauthorized users shall be logged and prevented. A security audit will verify this by [Date: End of next sprint + 4 weeks, e.g., 2024-05-31].
+
+NFR-3: **Availability:** The ""follow,"" ""unfollow,"" and ""friend request"" features shall be available 99.9% of the time, measured on a monthly basis. Monitoring and alerting systems will be in place by [Date: End of next sprint + 3 weeks, e.g., 2024-05-24] to ensure prompt issue detection and resolution.
+
+NFR-4: **Performance:** Sending a follow or friend request should take no longer than 1 second in 95% of cases, under normal operating conditions. This will be monitored continuously starting [Date: End of next sprint + 3 weeks, e.g., 2024-05-24].
+",845,3715,10,4,3,1,2,5.58,199,929,1128,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to send a friend request to another user, identified by their unique user ID or username.
+
+FR-2: The system shall allow a user to accept or decline a friend request.
+
+FR-3: The system shall allow a user to follow another user.
+
+FR-4: The system shall display a list of pending friend requests for the user.
+
+FR-5: The system shall display a list of users that a user is following.
+
+FR-6: The system shall display a list of followers for a user.
+
+FR-7: The system shall provide a search functionality to find other users based on username or real name.
+
+FR-8: The system shall notify a user when they receive a friend request.
+
+FR-9: The system shall notify a user when their friend request is accepted.
+
+FR-10: The system shall allow a user to remove a friend from their friend list.
+
+FR-11: The system shall allow a user to unfollow another user.
+
+FR-12: The system shall limit the number of friend requests a user can send per day to 100.
+
+FR-13: The system shall limit the number of users a user can follow to 5000.
+
+FR-14: The system shall provide privacy settings to control who can send a user friend requests (e.g., everyone, friends of friends, no one).
+
+FR-15: The system shall provide privacy settings to control who can see a user's followers and following lists (e.g., everyone, friends, only me).
+
+NFR-1: The system shall respond to friend request actions (send, accept, decline) within 200 milliseconds under normal load (defined as up to 10,000 concurrent users).
+
+NFR-2: The system shall be able to support up to 1 million concurrent users actively using the friend request and following features.
+
+NFR-3: All friend request and following data shall be stored securely, complying with GDPR and CCPA regulations regarding user data privacy.
+
+NFR-4: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-5: The friend request and following features shall be accessible and usable on all supported devices (desktop, mobile web, iOS, Android).
+
+NFR-6: The system shall log all friend request and following actions for auditing and security purposes. Logs shall be retained for 1 year.
+
+NFR-7: The system shall implement rate limiting to prevent abuse of the friend request and following features.
+
+NFR-8: The system shall be scalable to accommodate future growth in user base and activity.
+
+NFR-9: The user interface for friend request and following features shall adhere to the platform's existing design guidelines and accessibility standards (WCAG 2.1 AA).
+
+NFR-10: The system shall integrate seamlessly with the existing user authentication and authorization system.
+",1100,2652,25,10,3,2,1,4.03,239,632,871,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to send a connection request to another user, identified by their unique user ID or username.
+
+FR-2: The system shall allow a user to accept or reject a connection request from another user.
+
+FR-3: The system shall display a list of pending connection requests for each user.
+
+FR-4: The system shall allow a user to ""follow"" another user, establishing a one-way connection where the follower receives updates from the followed user.
+
+FR-5: The system shall allow a user to ""unfollow"" another user, terminating the one-way connection.
+
+FR-6: The system shall display a list of users that a user is following.
+
+FR-7: The system shall display a list of users that are following a user.
+
+FR-8: The system shall provide a search functionality allowing users to find other users based on username, full name, or other profile information (configurable by the platform administrator).
+
+FR-9: The system shall limit the number of connection requests a user can send within a 24-hour period to 100 (configurable by the platform administrator).
+
+FR-10: The system shall provide a mechanism for users to block other users, preventing any interaction between them.
+
+FR-11: The system shall prevent a user from sending a connection request to a user who has blocked them.
+
+FR-12: The system shall provide a notification to the recipient upon receiving a connection request.
+
+FR-13: The system shall record the date and time of each connection request, acceptance, rejection, follow, and unfollow action.
+
+NFR-1: The system shall respond to connection requests, acceptances, and rejections within 200 milliseconds under normal load (defined as up to 10,000 concurrent users).
+
+NFR-2: The system shall maintain a connection success rate (connection established after acceptance) of 99.9%.
+
+NFR-3: All connection-related data shall be stored securely, adhering to GDPR and CCPA privacy regulations.
+
+NFR-4: The system shall be scalable to support up to 10 million concurrent users without significant performance degradation (defined as exceeding 500ms response time for connection-related actions).
+
+NFR-5: The user interface for managing connections shall be intuitive and accessible, conforming to WCAG 2.1 Level AA accessibility guidelines.
+
+NFR-6: User connection data shall be backed up daily, with a recovery point objective (RPO) of 24 hours and a recovery time objective (RTO) of 4 hours.
+
+NFR-7: The connection feature shall be available 99.9% of the time (excluding scheduled maintenance).
+
+NFR-8: The system shall log all connection-related events (requests, acceptances, rejections, follows, unfollows, blocks) for auditing and security purposes. Log retention period shall be 1 year.
+
+NFR-9: The system shall implement rate limiting to prevent abuse and spamming of connection requests.
+
+NFR-10: All data transmitted during connection-related actions shall be encrypted using TLS 1.3 or higher.
+",1100,2929,23,10,4,2,2,5.10,239,674,913,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to send a friend request to another user.
+
+FR-2: The system shall allow a user to accept or decline a received friend request.
+
+FR-3: The system shall allow a user to follow another user.
+
+FR-4: The system shall allow a user to unfollow another user.
+
+FR-5: The system shall display a list of pending friend requests for each user.
+
+FR-6: The system shall display a list of users a user is following.
+
+FR-7: The system shall display a list of users following a user.
+
+FR-8: The system shall provide a search functionality to find other users based on username or name.
+
+FR-9: The system shall send a notification to a user upon receiving a friend request.
+
+FR-10: The system shall send a notification to a user when their friend request is accepted.
+
+FR-11: The system shall display the connection status (e.g., ""Friends,"" ""Following,"" ""Follower,"" ""Request Sent,"" ""Not Connected"") between two users on their profile pages.
+
+FR-12: The system shall limit the number of friend requests a user can send within a 24-hour period to prevent spam (configurable limit).
+
+FR-13: The system shall allow a user to block another user.
+
+FR-14: The system shall prevent blocked users from sending friend requests or following the blocking user.
+
+FR-15: The system shall provide a mechanism for users to report abuse related to connection requests (e.g., harassment).
+
+NFR-1: The system shall be able to handle up to 1 million concurrent user connections with an average response time of less than 200ms for connection-related actions (e.g., sending/accepting requests, following/unfollowing).
+
+NFR-2: The system shall ensure that friend requests are delivered to the recipient within 5 seconds of being sent 99.9% of the time.
+
+NFR-3: The system shall protect user privacy by ensuring that only friends or followers (depending on privacy settings) can view certain user-generated content.
+
+NFR-4: The system shall comply with all applicable data privacy regulations (e.g., GDPR, CCPA) regarding the storage and handling of user connection data.
+
+NFR-5: The system shall be designed to be scalable to accommodate future growth in the number of users and connections.
+
+NFR-6: The system shall be available 99.9% of the time.
+
+NFR-7: The connection functionality shall be compatible with all major web browsers (Chrome, Firefox, Safari, Edge) and mobile operating systems (iOS, Android).
+
+NFR-8: All connection-related data shall be encrypted both in transit and at rest.
+
+NFR-9: The system shall log all connection-related events (e.g., friend requests sent/accepted/declined, follows/unfollows, blocks) for auditing and debugging purposes.
+
+NFR-10: The system shall implement rate limiting to prevent abuse and protect against denial-of-service attacks on connection-related endpoints.
+
+NFR-11: The system shall provide an API for external applications to access connection information (subject to appropriate authentication and authorization).
+",1100,2966,26,11,3,2,1,4.40,239,697,936,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Contextual,precise,"
+BUSINESS CONTEXT:
+A social media platform
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to send friend requests to other users.
+FR-2: Users shall be able to accept or decline incoming friend requests.
+FR-3: Users shall be able to follow other users without requiring mutual acceptance.
+FR-4: Users shall be able to unfollow other users.
+FR-5: Users shall be able to search for other users by username or full name.
+FR-6: The system shall display a list of pending friend requests for each user.
+FR-7: The system shall display a list of a user's followers and followees.
+FR-8: The system shall integrate with the existing user authentication system to verify user identity before allowing connection requests.
+FR-9: The system shall integrate with the existing notification system to notify users of new friend requests, accepted friend requests, and new followers.
+FR-10: The system shall limit the number of friend requests a user can send per day to 100.
+
+NFR-1: The system shall be able to process 10,000 friend requests per minute during peak load (defined as 5 PM - 9 PM daily).
+NFR-2: The average response time for sending a friend request shall be less than 500ms.
+NFR-3: The average response time for accepting or declining a friend request shall be less than 500ms.
+NFR-4: The system shall maintain 99.9% uptime.
+NFR-5: The system shall log all friend request activities, including timestamps, user IDs, and request status, for auditing and debugging purposes.
+NFR-6: The system shall provide error messages to users when a friend request fails, including reasons for the failure (e.g., user not found, request limit exceeded).
+NFR-7: The user interface for sending, accepting, and declining friend requests shall be intuitive and easy to use, as measured by a System Usability Scale (SUS) score of 70 or higher after user testing with 10 participants.
+NFR-8: The user interface shall display the connection status (e.g., ""Friends,"" ""Following,"" ""Follower,"" ""Request Sent,"" ""Add Friend"") clearly and consistently across the platform.
+NFR-9: The system shall be implemented and deployed within 3 months.
+NFR-10: The system shall be scalable to support a 20% increase in user base within the next year without significant performance degradation.
+",800,2192,20,10,3,2,2,3.84,188,531,719,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Contextual,default,"
+BUSINESS CONTEXT:
+A social media platform
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to send friend requests to other users.
+FR-2: Users shall be able to accept or decline friend requests.
+FR-3: Users shall be able to follow other users without a reciprocal action required.
+FR-4: Users shall be able to unfollow other users.
+FR-5: Users shall be able to view a list of their followers.
+FR-6: Users shall be able to view a list of the users they are following.
+FR-7: The system shall display pending friend requests to the recipient user.
+FR-8: The system shall send a notification to the recipient user when a friend request is received.
+FR-9: The system shall update the follower/following counts for both users involved in a follow/unfollow action.
+FR-10: The system shall integrate with the existing user authentication system to verify user identities before allowing friend requests or follows.
+FR-11: The system shall integrate with the existing notification system to deliver friend request notifications.
+
+NFR-1: Friend requests shall be deliverable within 2 seconds 99% of the time under peak load (10,000 requests per second).
+NFR-2: The system shall support at least 50,000 concurrent active users sending or receiving friend requests and follows.
+NFR-3: The system shall maintain an average response time of less than 500ms for displaying follower/following lists.
+NFR-4: The system shall log all friend request and follow/unfollow actions with sufficient detail for auditing and troubleshooting.
+NFR-5: The system shall provide real-time monitoring of friend request and follow/unfollow activity, including error rates and performance metrics.
+NFR-6: Error messages related to friend requests and follows shall be user-friendly and informative.
+NFR-7: The user interface for sending friend requests and managing followers/following shall be intuitive and easy to navigate, achieving a System Usability Scale (SUS) score of at least 70.
+NFR-8: The friend request and follow/unfollow features shall be accessible on all supported devices (desktop, mobile web, iOS, Android) within one week of feature release.
+NFR-9: The database storing follower/following relationships shall be backed up daily, with a recovery point objective (RPO) of 24 hours and a recovery time objective (RTO) of 4 hours.
+NFR-10: The system shall implement rate limiting to prevent abuse of the friend request and follow/unfollow features (e.g., maximum 100 requests per minute per user).
+",800,2415,21,10,4,2,1,4.03,188,563,751,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Contextual,creative,"
+BUSINESS CONTEXT:
+A social media platform
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to send a follow request to another user.
+FR-2: Users shall be able to accept or reject a follow request from another user within 24 hours of the request being sent.
+FR-3: Users shall be able to search for other users by username or real name.
+FR-4: Users shall be able to view the profile page of other users, displaying their public information (profile picture, bio, public posts), after successful authentication.
+FR-5: Users shall be able to unfollow another user.
+FR-6: A user's follower count shall be updated in real-time on their profile page.
+FR-7: The system shall integrate with the existing user authentication system to verify user identity before allowing connection requests.
+FR-8: The ""Follow"" feature shall integrate with the notification system to notify users when they receive a new follow request.
+FR-9: The system should allow a user to have a maximum of 5000 follows.
+FR-10: A user should not be able to send more than 50 follow requests in a 5-minute period.
+
+NFR-1: The system shall handle at least 10,000 follow/unfollow requests per second during peak hours.
+NFR-2: The average response time for sending or accepting a follow request shall be less than 500 milliseconds.
+NFR-3: The system shall maintain 99.9% uptime, including scheduled maintenance.
+NFR-4: Error messages related to follow/unfollow actions shall be user-friendly and informative.
+NFR-5: The system shall log all follow/unfollow actions, including user ID, timestamp, and result (success/failure), for auditing and debugging purposes.
+NFR-6: The user interface for managing connections (following/followers) shall be intuitive and consistent with the platform's overall design.
+NFR-7: Follow requests shall be displayed in chronological order in the notifications section, with the most recent requests appearing first.
+NFR-8: The system shall validate all user inputs (e.g., usernames) to prevent malicious attacks.
+NFR-9: The system shall protect user privacy by only displaying public information to non-followers unless the user explicitly grants permission.
+NFR-10: The system shall be scalable to accommodate a 20% increase in user base within the next 6 months.
+",800,2190,20,10,4,2,2,3.73,188,522,710,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to send a friend request to another user.
+FR-2: Users shall be able to follow another user.
+FR-3: Users shall be able to accept or reject incoming friend requests.
+FR-4: Users shall be able to view a list of their followers.
+FR-5: Users shall be able to view a list of users they are following.
+FR-6: Users shall be able to search for other users by username or name.
+FR-7: Users shall be able to cancel a pending friend request.
+FR-8: Users shall be able to remove a follower.
+FR-9: Users shall be able to unfollow another user.
+FR-10: The system shall notify a user when they receive a friend request within 5 seconds.
+
+NFR-1: The system shall be able to handle 10,000 concurrent friend requests without performance degradation.
+NFR-2: User connection data (followers, following, friends) shall be stored securely and access restricted to authorized users.
+NFR-3: The user search functionality shall return results within 2 seconds.
+NFR-4: The system shall provide clear and informative error messages to the user in case of connection failures.
+NFR-5: The system shall comply with all relevant data privacy regulations (e.g., GDPR, CCPA) regarding user connection data.
+NFR-6: The system shall maintain an uptime of 99.9% for connection-related features.
+",1784,1284,16,6,3,1,2,2.37,401,323,724,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to send friend requests to other users.
+FR-2: Users shall be able to follow other users.
+FR-3: Users shall be able to accept or decline friend requests.
+FR-4: Users shall be able to view a list of their followers.
+FR-5: Users shall be able to view a list of users they are following.
+FR-6: Users shall be able to search for other users by username or name.
+FR-7: Users shall be able to unfollow other users.
+FR-8: Users shall be able to remove a follower from their follower list.
+FR-9: Users shall receive a notification when they receive a friend request.
+FR-10: Users shall receive a notification when another user starts following them.
+
+NFR-1: The system shall process friend requests within 2 seconds.
+NFR-2: The system shall support at least 1 million concurrent users using the connection feature.
+NFR-3: User connection data shall be stored securely, complying with privacy regulations (e.g., GDPR).
+NFR-4: The user interface for sending/accepting requests shall be accessible on desktop and mobile devices.
+NFR-5: The system shall maintain an uptime of 99.9% for connection-related functionalities.
+NFR-6: User search functionality shall return results within 3 seconds.
+NFR-7: The system shall prevent users from sending more than 10 friend requests per minute to prevent spam.
+",1784,1315,17,7,3,1,2,2.28,401,326,727,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow users to send friend requests to other users.
+FR-2: The system shall allow users to follow other users.
+FR-3: The system shall display a list of suggested users to connect with.
+FR-4: The system shall notify users when they receive a friend request.
+FR-5: The system shall allow users to accept or decline friend requests.
+FR-6: The system shall allow users to unfollow other users.
+FR-7: The system shall display a list of a user's followers and those they are following.
+
+NFR-1: The system shall process friend requests within 2 seconds.
+NFR-2: The system shall ensure user connections (friends/followers) are visible only to authorized users and the connected parties.
+NFR-3: The system shall support a minimum of 10,000 concurrent users sending connection requests.
+NFR-4: The system shall send connection request notifications within 5 seconds of the request being made.
+NFR-5: The system shall adhere to GDPR regulations regarding user data and privacy when handling connection information.
+",1784,1026,12,5,4,3,2,2.05,401,241,642,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to send a friend request to another user.
+FR-2: The system shall allow a user to follow another user.
+FR-3: The system shall require a user to be logged in before sending a friend request or following another user.
+FR-4: The system shall store the relationship (friend/follower) between users in a database.
+FR-5: The system shall display an error message if a user attempts to send a friend request to a user they have already sent a request to, or are already friends with.
+FR-6: The system shall notify the recipient user via an in-app notification when they receive a friend request.
+NFR-1: The system shall process friend requests and follow requests within 2 seconds.
+NFR-2: The user interface for sending friend requests and following users shall be intuitive and easy to use on both desktop and mobile devices.
+NFR-3: The system shall ensure that user connections (friends/followers) are only visible to authorized users, adhering to privacy settings.
+",1850,996,9,3,5,3,1,1.70,439,226,665,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: Users shall be able to send friend requests to other users within 1 second of clicking the ""Add Friend"" button.
+FR-2: Users shall be able to follow other users.
+FR-3: Users must have a valid and active account before sending friend requests or following other users.
+FR-4: The system shall store friend request status (pending, accepted, rejected) for each request.
+FR-5: If a friend request cannot be sent (e.g., user blocked), the system shall display an error message to the user within 2 seconds.
+FR-6: Users shall receive a notification within 5 seconds when a friend request is accepted.
+NFR-1: The system shall be able to handle 10,000 friend requests per minute during peak hours.
+NFR-2: The ""Add Friend"" and ""Follow"" buttons shall be clearly visible and easily accessible on user profiles.
+NFR-3: The system shall ensure that only authenticated users can send friend requests, preventing unauthorized access.
+",1850,924,9,3,4,3,2,1.72,439,222,661,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.', 'context': 'A social media platform'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a user, I want to be able to connect with other users on the social media platform, such as by following them or sending them friend requests.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user to send a friend request to another user.
+FR-2: The system shall allow a user to follow another user.
+FR-3: The system shall require users to be logged in before they can send friend requests or follow other users.
+FR-4: The system shall store the relationship between users (e.g., ""friend"", ""follower"") in a database.
+FR-5: The system shall display an error message if a user attempts to send a friend request to a user they have already sent a request to or are already friends with.
+FR-6: The system shall notify a user when they receive a friend request.
+NFR-1: The system shall process friend requests and follow requests within 2 seconds.
+NFR-2: The user interface shall clearly display the option to ""Add Friend"" or ""Follow"" on another user's profile.
+NFR-3: The system shall ensure that only mutual friends can view private posts, according to privacy settings.
+",1850,906,9,3,4,3,1,1.65,439,218,657,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

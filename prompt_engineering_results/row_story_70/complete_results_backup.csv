@@ -1,0 +1,1511 @@
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow team leads to create new tasks with a title (maximum 255 characters), description (maximum 1000 characters), assigned team member (selected from a list of active team members), due date (date and time), and priority (High, Medium, Low).
+FR-2: The system shall display a list of active team members for task assignment, populated from the user management module.
+FR-3: The system shall validate that all required fields (title, assigned team member, due date) are populated before a task can be created.
+FR-4: The system shall save the created task to the database with a unique task ID.
+FR-5: The system shall provide a confirmation message to the team lead upon successful task creation.
+FR-6: The system shall prevent team leads from assigning tasks to inactive team members.
+FR-7: The system shall automatically notify the assigned team member via email upon task creation, including the task title, description, due date, and priority.
+
+NFR-1: The task creation process shall complete within 3 seconds under normal operating conditions (up to 5 concurrent users).
+NFR-2: The system shall be accessible and usable on Chrome, Firefox, Safari, and Edge browsers.
+NFR-3: The system shall store task data securely, protecting it from unauthorized access, in compliance with GDPR.
+NFR-4: The system shall maintain an audit log of all task creation events, including the team lead who created the task and the timestamp of creation.
+",620,1459,11,4,4,3,1,2.85,160,327,487,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow team leads to create new tasks with a title (maximum 255 characters), description (maximum 1000 characters), assigned team member (selected from a list of active team members), due date (date and time), and priority (High, Medium, Low).
+FR-2: The system shall store the created task, including all attributes (title, description, assigned team member, due date, priority, creation timestamp), in a persistent data store.
+FR-3: The system shall display a list of active team members for task assignment. The list shall be sortable alphabetically by last name.
+FR-4: The system shall validate that the due date is not in the past.
+FR-5: The system shall notify the assigned team member via email upon task creation, containing the task title, description, due date, and priority.
+FR-6: The system shall provide a confirmation message to the team lead upon successful task creation.
+
+NFR-1: Task creation shall be completed within 3 seconds under normal load (up to 5 concurrent team leads creating tasks).
+NFR-2: The system shall be accessible via modern web browsers (Chrome, Firefox, Safari, Edge).
+NFR-3: The task creation interface shall conform to WCAG 2.1 Level AA accessibility guidelines.
+NFR-4: The system shall maintain data security by employing role-based access control, ensuring that only team leads can create tasks.
+",620,1359,10,4,3,3,1,4.19,160,312,472,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+OUTPUT FORMAT:
+1. List functional requirements (FR) first
+2. List non-functional requirements (NFR) second
+3. Each requirement should be specific, measurable, and testable
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow team leads to create new tasks with a title (maximum 255 characters).
+FR-2: The system shall allow team leads to assign a task to a specific team member from a list of available team members in their team.
+FR-3: The system shall allow team leads to set a due date for each task.
+FR-4: The system shall allow team leads to add a description (maximum 1000 characters) to each task.
+FR-5: The system shall allow team leads to set a priority level for each task (High, Medium, Low).
+FR-6: Upon task creation, the assigned team member shall receive a notification.
+FR-7: The system shall store all created tasks with their associated details (title, assignee, due date, description, priority) in a database.
+FR-8: The system shall display a list of all tasks created by a team lead, showing their status (e.g., To Do, In Progress, Completed).
+
+NFR-1: The task creation process shall be completed within 3 seconds.
+NFR-2: The system shall be accessible 24/7 with an availability of 99.9%.
+NFR-3: The system shall ensure that task data is securely stored and accessible only to authorized users (team lead and assigned team member).
+NFR-4: The task creation interface shall be usable on Chrome, Firefox, and Safari browsers.
+",620,1247,12,4,3,2,1,2.55,160,313,473,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Few-shot,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+","Okay, here's the breakdown of the user story ""As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements:
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Task Creation Interface:** The system shall provide a user interface accessible to team leads for creating new tasks.
+*   **FR-2: Task Details:** The task creation interface shall allow the team lead to specify the following task details:
+    *   Task Title (mandatory, maximum 255 characters)
+    *   Task Description (optional, maximum 1000 characters)
+    *   Assigned Team Member (mandatory, selectable from a list of team members)
+    *   Due Date (mandatory, date picker)
+    *   Priority (mandatory, selectable from a predefined list: High, Medium, Low)
+    *   Status (default value: ""To Do"")
+*   **FR-3: Task Assignment:** The system shall allow the team lead to assign a task to one or more team members.
+*   **FR-4: Task Persistence:** The system shall store all created task details in a persistent data store (e.g., database).
+*   **FR-5: Task Notification:** Upon task creation and assignment, the system shall send a notification (e.g., email, in-app notification) to the assigned team member(s). The notification shall include the task title, description, due date, and a link to view the task details.
+*   **FR-6: Task List Display:** The system shall display a list of tasks assigned to each team member, accessible to the team lead.
+*   **FR-7: Task Filtering:** The system shall allow the team lead to filter the task list by:
+    *   Assigned Team Member
+    *   Status
+    *   Due Date Range
+    *   Priority
+*   **FR-8: Task Sorting:** The system shall allow the team lead to sort the task list by:
+    *   Due Date (ascending/descending)
+    *   Priority (ascending/descending)
+    *   Status
+*   **FR-9: Task Editing:** The system shall allow the team lead to edit existing tasks, including all task details specified in FR-2.
+*   **FR-10: Task Deletion:** The system shall allow the team lead to delete tasks. A confirmation prompt shall be displayed before permanent deletion.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Task Creation Performance:** The system shall create a new task and save it to the database within 2 seconds under normal load conditions (defined as up to 5 concurrent task creation requests).
+*   **NFR-2: Task List Loading Performance:** The system shall load the task list for a team member (with up to 100 tasks) within 3 seconds under normal load conditions.
+*   **NFR-3: Notification Delivery:** The system shall deliver task assignment notifications within 1 minute of task creation 99% of the time.
+*   **NFR-4: Security:** Only authorized team leads shall be able to create, edit, and delete tasks for their team members. Access control mechanisms shall be implemented to enforce this.
+*   **NFR-5: Availability:** The task creation and management functionality shall be available 99.9% of the time during business hours (8 AM to 6 PM, Monday-Friday).
+*   **NFR-6: Scalability:** The system shall be able to handle up to 50 team leads creating tasks concurrently without significant performance degradation (defined as an increase of more than 1 second in task creation time).
+*   **NFR-7: Data Backup:** Task data shall be backed up daily to prevent data loss.
+*   **NFR-8: User Interface Responsiveness:** The user interface for task creation and management shall be responsive and provide feedback to the user within 0.5 seconds of any interaction.
+",1512,3658,18,8,5,2,2,5.10,346,880,1226,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Few-shot,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+","Okay, let's break down that user story and convert it into specific, measurable, achievable, relevant, and time-bound (SMART) functional and non-functional requirements.
+
+**User Story:** As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+**Requirements:**
+
+**Functional Requirements (FR):**
+
+*   **FR-1: Task Creation Interface:** The system shall provide a dedicated interface for team leads to create new tasks.
+*   **FR-2: Task Attributes:** The task creation interface shall allow the team lead to specify the following attributes for each task:
+    *   Task Title (mandatory, up to 255 characters)
+    *   Task Description (optional, up to 1000 characters)
+    *   Assignee (selection from a list of team members)
+    *   Due Date (date and time)
+    *   Priority (High, Medium, Low)
+    *   Status (To Do, In Progress, Blocked, Completed) - initially set to ""To Do""
+*   **FR-3: Assignee Selection:** The system shall provide a mechanism (e.g., dropdown list, searchable list) to select team members as assignees for a task. The list shall only display users who are members of the team led by the current user.
+*   **FR-4: Task Saving:** The system shall save the created task with all specified attributes to the task database.
+*   **FR-5: Task Notification:** Upon task creation and assignment, the system shall send a notification (e.g., email, in-app notification) to the assigned team member.  The notification shall include the task title, description, due date, and a link to view the task details.
+*   **FR-6: Task Listing:** The system shall display a list of tasks assigned to each team member, accessible to the team lead.
+*   **FR-7: Task Filtering:** The system shall allow the team lead to filter the task list by:
+    *   Assignee
+    *   Status
+    *   Due Date (range)
+    *   Priority
+*   **FR-8: Task Sorting:** The system shall allow the team lead to sort the task list by:
+    *   Due Date (ascending/descending)
+    *   Priority (ascending/descending)
+    *   Status
+*   **FR-9: Task Details View:** The system shall provide a detailed view of each task, displaying all attributes and allowing the team lead to update the task status.
+
+**Non-Functional Requirements (NFR):**
+
+*   **NFR-1: Task Creation Response Time:** The system shall save a new task within 2 seconds of the team lead submitting the task creation form.
+*   **NFR-2: Task List Loading Time:** The task list shall load within 3 seconds for a team with up to 20 members and 100 active tasks.
+*   **NFR-3: Notification Delivery:** Task assignment notifications shall be delivered to team members within 5 minutes of task creation.
+*   **NFR-4: Security - Access Control:** Only team leads shall be able to create and assign tasks to their team members. The system shall enforce role-based access control to prevent unauthorized task creation or modification.
+*   **NFR-5: Scalability:** The system shall be able to support up to 100 team leads, each managing teams of up to 20 members, without significant performance degradation.
+*   **NFR-6: Availability:** The task creation and management functionality shall be available 99.9% of the time (excluding scheduled maintenance).
+*   **NFR-7: Data Persistence:** All task data shall be stored persistently and reliably, with regular backups to prevent data loss.
+*   **NFR-8: Auditing:** The system shall log all task creation, assignment, and status updates, including the user who performed the action and the timestamp. This log shall be accessible to administrators for auditing purposes.
+
+**Explanation of choices and clarifications:**
+
+*   **Specificity:**  The requirements are very specific about what the system should do.  For example, FR-2 lists exactly what attributes the team lead needs to be able to set.
+*   **Measurability:**  The NFRs are measurable.  We have concrete targets for response times, loading times, and availability.
+*   **Achievability:** These requirements are realistic for a typical task management system.
+*   **Relevance:**  The requirements directly address the user story's need to create tasks, assign them, and track progress.
+*   **Time-bound:** The NFRs specify performance targets, which are implicitly time-bound.
+*   **Functional vs. Non-Functional:** The distinction is clear.  FRs describe *what* the system does, while NFRs describe *how well* it does it.
+*   **Assumptions:** I've made some assumptions about the scope of the system (e.g., it has user authentication, a database, and notification capabilities).  These assumptions would need to be validated in a real project.
+*   **Error Handling:**  Error handling requirements (e.g., what happens if a user tries to assign a task to someone who isn't on their team) could be added for even greater completeness.
+*   **UI/UX:** The requirements focus on functionality, but in a real project, you'd also need requirements for the user interface and user experience (e.g., ease of use, accessibility).
+
+This detailed breakdown should provide a solid foundation for developing the task creation and management functionality.  Remember to review and refine these requirements with stakeholders to ensure they accurately reflect their needs.
+",1512,5268,17,8,3,1,1,7.38,346,1234,1580,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Few-shot,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
+
+EXAMPLE 1:
+User Story: As a user, I want to log in with my email and password.
+
+Requirements:
+FR-1: The system shall provide a login form with fields for email and password.
+FR-2: The system shall validate that the email field contains a valid email format.
+FR-3: The system shall verify credentials against the user database within 2 seconds.
+FR-4: The system shall grant access to authorized functionality if credentials are correct.
+FR-5: The system shall display an error message if credentials are incorrect.
+NFR-1: The login process shall complete within 3 seconds under normal load conditions.
+NFR-2: The system shall encrypt password data during transmission.
+
+EXAMPLE 2:
+User Story: As an admin, I want to view reports of user activity.
+
+Requirements:
+FR-1: The system shall provide a dashboard displaying user activity metrics.
+FR-2: The system shall allow filtering of reports by date range and activity type.
+FR-3: The system shall enable exporting reports in CSV and PDF formats.
+NFR-1: The system shall generate reports within 5 seconds for data spanning up to 30 days.
+NFR-2: The dashboard shall refresh automatically every 5 minutes.
+
+Now convert this user story into similar well-structured requirements:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+","Okay, let's break down that user story ""As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress"" into specific, measurable, achievable, relevant, and time-bound functional and non-functional requirements.
+
+**Functional Requirements (FR)**
+
+*   **FR-1: Task Creation Interface:** The system shall provide a task creation interface accessible to users with the ""team lead"" role.
+
+*   **FR-2: Task Details:** The task creation interface shall allow the team lead to specify the following task details:
+    *   Task Title (text field, mandatory)
+    *   Task Description (rich text field, optional)
+    *   Assignee (dropdown list of team members, mandatory)
+    *   Due Date (date picker, mandatory)
+    *   Priority (dropdown: High, Medium, Low, mandatory)
+    *   Status (initial value: ""To Do"", non-editable by team lead upon creation)
+
+*   **FR-3: Task Assignment:** The system shall allow the team lead to assign the task to one specific team member from a list of available team members.
+
+*   **FR-4: Task Persistence:** The system shall save the created task with all specified details to the database.
+
+*   **FR-5: Task Notification:** The system shall send a notification (e.g., email, in-app notification) to the assigned team member upon task creation. The notification shall include the task title, description, due date, and a link to the task within the system.
+
+*   **FR-6: Task List Visibility:** The system shall display a list of tasks created by the team lead, showing the task title, assignee, due date, status, and priority.
+
+*   **FR-7: Task Filtering:** The system shall allow the team lead to filter the task list by:
+    *   Assignee
+    *   Status
+    *   Priority
+    *   Due Date Range
+
+*   **FR-8: Task Sorting:** The system shall allow the team lead to sort the task list by:
+    *   Due Date (Ascending/Descending)
+    *   Priority (Ascending/Descending)
+    *   Status
+    *   Assignee
+
+**Non-Functional Requirements (NFR)**
+
+*   **NFR-1: Response Time (Task Creation):** The system shall save a newly created task and redirect the team lead back to the task list within 2 seconds under normal load conditions (defined as < 50 concurrent users).
+
+*   **NFR-2: Notification Delivery:** Task creation notifications shall be delivered to the assigned team member within 5 minutes of task creation.
+
+*   **NFR-3: Task List Performance:** The task list shall load and display all tasks (up to 100 tasks) within 3 seconds.
+
+*   **NFR-4: Security (Access Control):** Only users with the ""team lead"" role shall be able to access the task creation interface.
+
+*   **NFR-5: Data Integrity:** The system shall prevent the creation of tasks with incomplete or invalid data (e.g., missing title, invalid due date format). Appropriate error messages shall be displayed to the user.
+
+*   **NFR-6: Usability:** The task creation interface shall be intuitive and easy to use, requiring minimal training for team leads.
+
+These requirements are specific, measurable (e.g., time limits), achievable, relevant to the user story, and time-bound (response times). They cover both the functionality needed (FR) and the quality attributes (NFR) of the system. Remember to tailor these further to your specific project context.
+",1512,3311,14,6,4,1,1,4.79,346,790,1136,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Chain-of-Thought,precise,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall provide a ""Create Task"" interface accessible to users with the ""Team Lead"" role.
+FR-2: The ""Create Task"" interface shall allow the Team Lead to specify a task title (maximum 255 characters).
+FR-3: The ""Create Task"" interface shall allow the Team Lead to assign the task to one or more team members from a list of available users.
+FR-4: The ""Create Task"" interface shall allow the Team Lead to set a due date for the task.
+FR-5: The ""Create Task"" interface shall allow the Team Lead to add a detailed description to the task (maximum 2000 characters).
+FR-6: The ""Create Task"" interface shall allow the Team Lead to set a priority level for the task (High, Medium, Low).
+FR-7: Upon task creation, the assigned team member(s) shall receive a notification (email and/or in-app) containing the task title, description, due date, and priority.
+FR-8: The system shall store all task information (title, assignee(s), due date, description, priority, creation date, status) in a persistent data store.
+FR-9: The system shall automatically set the task status to ""Open"" upon creation.
+FR-10: The system shall prevent Team Leads from creating tasks with a due date in the past.
+
+NFR-1: The ""Create Task"" interface shall load within 2 seconds.
+NFR-2: The system shall be able to support the creation of at least 1000 tasks per day.
+NFR-3: The task creation process shall be secure, ensuring that only authorized Team Leads can create tasks.
+NFR-4: The system shall provide role-based access control to ensure that only Team Leads can access the ""Create Task"" interface.
+NFR-5: The system shall maintain an audit log of all task creation events, including the Team Lead who created the task and the timestamp of creation.
+NFR-6: The system shall be usable on the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+",1679,1836,16,6,4,4,1,3.30,390,458,848,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Chain-of-Thought,default,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall provide a ""Create Task"" feature accessible to users with the ""Team Lead"" role.
+FR-2: The ""Create Task"" feature shall allow the Team Lead to specify a task title (maximum 255 characters).
+FR-3: The ""Create Task"" feature shall allow the Team Lead to select one or more team members from a pre-populated list of available users to assign to the task.
+FR-4: The ""Create Task"" feature shall allow the Team Lead to provide a detailed task description (maximum 2000 characters).
+FR-5: The ""Create Task"" feature shall allow the Team Lead to set a due date for the task.
+FR-6: The ""Create Task"" feature shall allow the Team Lead to set a priority level for the task (High, Medium, Low).
+FR-7: The system shall send a notification to the assigned team member(s) upon task creation.
+FR-8: The system shall store all created tasks in a database, associated with the creating Team Lead, assigned team member(s), and all specified task details.
+FR-9: The system shall validate that all required fields (title, assignee, due date) are populated before allowing task creation.
+FR-10: The system shall display an error message if required fields are missing or invalid.
+
+NFR-1: The ""Create Task"" feature shall respond to user input within 2 seconds.
+NFR-2: The system shall be accessible and usable on the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+NFR-3: The system shall ensure that only users with the ""Team Lead"" role can access the ""Create Task"" feature.
+NFR-4: The system shall maintain an audit log of all task creation events, including the Team Lead who created the task and the timestamp of creation.
+NFR-5: The system shall be able to support at least 100 concurrent Team Leads creating tasks without performance degradation.
+NFR-6: The system shall ensure that data is backed up daily to prevent data loss.
+",1679,1845,16,6,4,4,1,3.23,390,448,838,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Chain-of-Thought,creative,"
+Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+Follow these steps to derive the requirements:
+
+1. Identify the actor (Who is performing the action?)
+   - Who is the primary user in this story?
+   - What is their role in the system?
+
+2. Identify the action (What do they want to do?)
+   - What specific functionality is being requested?
+   - What system components would be involved?
+
+3. Identify the goal (Why do they want to do it?)
+   - What is the underlying user need?
+   - How does this relate to business objectives?
+
+4. Extract assumptions and constraints
+   - What implicit needs are not directly stated?
+   - What technical or business constraints might apply?
+
+5. Derive detailed functional requirements (FR) from the analysis performed in the previous steps.
+   - What specific behaviors must the system exhibit?
+   - What are the inputs, processes, and outputs?
+
+6. Derive non-functional requirements (NFR) from the analysis performed in the previous steps.
+   - What quality attributes are important (performance, security, usability)?
+   - What measurable criteria should apply?
+
+Based on the analysis performed in the steps above, provide a numbered list of clear, specific, and testable functional (FR) and non-functional (NFR) requirements.
+
+Output ONLY the functional (FR) and non-functional (NFR) requirements in the following format and do not share your reasoning with me:
+
+FR-1:
+FR-2:
+...
+NFR-1:
+NFR-2:
+...
+","FR-1: The system shall provide a ""Create Task"" feature accessible to users with the ""team lead"" role.
+FR-2: The ""Create Task"" feature shall require the team lead to input the following information: task title (maximum 255 characters), task description (maximum 2000 characters), assigned team member (selected from a list of team members), due date (date picker), priority (High, Medium, Low), and status (To Do).
+FR-3: The system shall validate all required fields during task creation and display appropriate error messages if any field is missing or invalid.
+FR-4: Upon successful task creation, the system shall save the task details to the database and display a confirmation message to the team lead.
+FR-5: Upon successful task creation, the system shall notify the assigned team member via email and in-app notification with the task title, description, and due date.
+FR-6: The system shall store the task creation date and time.
+FR-7: The system shall allow team leads to edit tasks they have created, including all fields defined in FR-2, within 7 days of the due date.
+FR-8: The system shall prevent team leads from assigning tasks to users who are not part of their team.
+
+NFR-1: The task creation process shall complete in under 3 seconds.
+NFR-2: The system shall be accessible via common web browsers (Chrome, Firefox, Safari, Edge).
+NFR-3: The system shall maintain data security and protect task information from unauthorized access through role-based access control.
+NFR-4: The system shall maintain an uptime of 99.9%.
+NFR-5: The ""Create Task"" feature shall be intuitive and easy to use, requiring minimal training for team leads. Measured by a system usability scale score of 70 or higher based on user testing with at least 5 team leads.
+NFR-6: Task data shall be backed up daily to prevent data loss.
+",1679,1821,14,6,4,3,2,2.96,390,428,818,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Self-Consistency,precise,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are three sets of SMART software requirements for the user story, followed by an evaluation and a final recommendation.
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/tasks` that accepts POST requests with a JSON payload containing task details.
+FR-2: The system shall store task data in a relational database with fields for task ID, title, description, assignee ID, status, creation date, and due date.
+FR-3: The system shall implement a background process to send email notifications to assignees 24 hours before the task due date.
+NFR-1: The API endpoint `/tasks` shall respond to POST requests within 200ms under normal load (up to 10 requests per second).
+NFR-2: The database shall be backed up daily to a geographically separate location.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The application shall provide a ""Create Task"" button on the team lead's dashboard.
+FR-2: The ""Create Task"" form shall include fields for task title, description, assignee selection from a list of team members, due date (using a date picker), and priority (High, Medium, Low).
+FR-3: Upon successful task creation, a confirmation message shall be displayed to the team lead.
+FR-4: The newly created task shall be immediately visible in the team lead's task list and the assignee's task list.
+NFR-1: The ""Create Task"" form shall be accessible and usable on desktop and mobile devices.
+NFR-2: The task creation process shall be intuitive and require no more than 3 minutes for a first-time user to complete.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall enforce that only users with the ""Team Lead"" role can create tasks.
+FR-2: The system shall validate that the assignee selected for a task is a member of the same team as the team lead.
+FR-3: The system shall prevent the creation of tasks with a due date in the past.
+FR-4: The system shall automatically assign a unique task ID to each newly created task.
+NFR-1: The system shall maintain an audit log of all task creation events, including the user who created the task and the timestamp.
+NFR-2: The system shall ensure data integrity by preventing duplicate task IDs.
+",1294,2238,17,6,3,3,2,3.68,285,527,812,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Self-Consistency,default,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide a ""Create Task"" button on the team lead dashboard.
+FR-2: Upon clicking ""Create Task,"" a modal window shall appear containing fields for task title, description, assignee, due date, and priority.
+FR-3: The system shall store task data in a relational database with fields for task ID (auto-incrementing integer), title (varchar(255)), description (text), assignee ID (integer), due date (date), priority (integer), status (varchar(20)), and creation timestamp (timestamp).
+FR-4: The system shall use AJAX to asynchronously submit the task data to the server upon clicking a ""Save Task"" button within the modal.
+NFR-1: The task creation process shall complete within 2 seconds.
+NFR-2: The database shall be backed up daily.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The team lead shall be able to create a new task within 3 clicks from the team dashboard.
+FR-2: The task creation form shall provide clear and concise labels for all input fields.
+FR-3: The system shall provide a mechanism for the team lead to assign a task to a specific team member from a list of available members.
+FR-4: The system shall provide visual feedback to the team lead upon successful task creation.
+FR-5: The team lead shall be able to set a due date for the task using a calendar widget.
+NFR-1: The task creation workflow shall be intuitive and easy to use, as measured by a System Usability Scale (SUS) score of 70 or higher.
+NFR-2: The system shall support keyboard navigation within the task creation form.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall prevent the creation of tasks with a due date in the past.
+FR-2: The system shall require a task title and assignee to be specified before a task can be created.
+FR-3: The system shall allow the team lead to assign a priority level (High, Medium, Low) to each task.
+FR-4: The system shall automatically assign a ""New"" status to newly created tasks.
+FR-5: The system shall record the user ID of the team lead who created the task.
+NFR-1: The system shall maintain an audit log of all task creation events, including the user who created the task, the timestamp, and the task details.
+NFR-2: The system shall ensure that task data is consistent and accurate, preventing data corruption or loss.
+",1294,2375,20,6,4,2,1,3.68,285,570,855,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Self-Consistency,creative,"
+Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+APPROACH 1: Focus on technical implementation details
+[Generate requirements with emphasis on system behaviors and technical specifications]
+
+APPROACH 2: Focus on user experience and outcomes
+[Generate requirements with emphasis on user interactions and success criteria]
+
+APPROACH 3: Focus on business rules and data handling
+[Generate requirements with emphasis on business logic and data flow]
+
+EVALUATION CRITERIA:
+- Completeness: Covers all aspects of the user story
+- Clarity: Unambiguous and specific
+- Testability: Can be verified through testing
+- Feasibility: Realistic to implement
+- Alignment: Supports the core user need
+
+FINAL RECOMMENDATION:
+Based on the evaluation, provide the most effective set of requirements with justification for your choice.
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the three sets of requirements, followed by the evaluation and final recommendation, presented in the format you requested:
+
+**APPROACH 1: Focus on technical implementation details**
+
+FR-1: The system shall provide an API endpoint `/tasks` that accepts POST requests to create new tasks.
+FR-2: The `/tasks` endpoint shall accept a JSON payload with the following fields: `title` (string, required), `description` (string), `assigneeId` (integer, required), `dueDate` (date, YYYY-MM-DD), `priority` (integer, 1-5).
+FR-3: Upon successful task creation, the system shall return a 201 Created HTTP status code and the ID of the newly created task in the response body.
+FR-4: The system shall store tasks in a relational database table named `tasks` with columns corresponding to the JSON payload fields.
+NFR-1: The `/tasks` API endpoint shall respond to requests within 200ms on average.
+NFR-2: The system shall use SHA-256 to hash sensitive data.
+
+**APPROACH 2: Focus on user experience and outcomes**
+
+FR-1: The application shall provide a ""Create Task"" button on the team lead's dashboard.
+FR-2: Clicking the ""Create Task"" button shall display a modal or page with fields for ""Task Title"", ""Description"", ""Assignee"", ""Due Date"", and ""Priority"".
+FR-3: The Assignee field shall provide a dropdown list of all team members.
+FR-4: The user shall receive a confirmation message upon successfully creating a task, displaying the task title and assignee.
+FR-5: Newly created tasks shall be immediately visible in the team's task list, sorted by due date.
+NFR-1: The ""Create Task"" modal/page shall load within 2 seconds.
+NFR-2: The application shall be responsive and accessible on desktop and tablet devices.
+NFR-3: The application shall adhere to WCAG 2.1 AA accessibility standards for form elements.
+
+**APPROACH 3: Focus on business rules and data handling**
+
+FR-1: The system shall prevent team leads from assigning tasks to users who are not members of their team.
+FR-2: The system shall enforce a maximum length of 255 characters for the ""Task Title"" field.
+FR-3: The system shall automatically set the task status to ""Open"" upon creation.
+FR-4: The system shall prevent the creation of tasks with a due date in the past.
+FR-5: The system shall record the team lead's user ID as the task creator in the `created_by` field.
+NFR-1: All task creation events shall be logged in an audit log with timestamp, user ID, and task details.
+NFR-2: The system shall perform data validation on all input fields to prevent invalid data from being stored.
+
+**FINAL RECOMMENDATION**
+
+To generate the most effective set of requirements, it would require choosing the best from all sets provided.
+",1294,2692,21,7,3,2,1,4.37,285,661,946,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",System Prompt,precise,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task with a unique title (maximum 255 characters) by 2024-01-31.
+FR-2: The system shall allow a team lead to assign a task to one or more team members by 2024-01-31.
+FR-3: The system shall allow a team lead to set a due date for a task, with a granularity of one day, by 2024-01-31.
+FR-4: The system shall allow a team lead to add a detailed description (maximum 2000 characters) to a task by 2024-01-31.
+FR-5: The system shall allow a team lead to set the priority of a task (High, Medium, Low) by 2024-01-31.
+FR-6: The system shall allow a team lead to view a list of all tasks they have created, displaying at minimum the task title, assigned team members, due date, and priority, sortable by due date or priority, by 2024-02-07.
+FR-7: The system shall prevent a team lead from creating a task with a title that already exists for tasks assigned to the same team within the system by 2024-02-07.
+FR-8: The system shall provide an error message to the team lead if any required field (title, assignee) is missing when creating a task by 2024-02-07.
+
+NFR-1: The system shall respond to a task creation request within 3 seconds under normal operating conditions (up to 5 concurrent users) by 2024-02-14.
+NFR-2: The task creation feature shall be accessible and usable on Chrome, Firefox, and Safari web browsers by 2024-02-14.
+NFR-3: The system shall ensure that task data is backed up daily to prevent data loss by 2024-02-14.
+NFR-4: The task creation feature shall adhere to role-based access control, ensuring only users with the ""team lead"" role can access and utilize it by 2024-02-14.
+NFR-5: The system shall log all task creation events, including the team lead who created the task, the timestamp, and the task details, for auditing purposes by 2024-02-14.
+",836,1822,13,5,5,1,1,3.81,199,560,759,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",System Prompt,default,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task with a title, description, assigned team member, due date, and priority level. (Achievable, Relevant)
+
+FR-2: The system shall provide a searchable list of team members to select from when assigning a task. (Specific, Achievable)
+
+FR-3: The system shall save the task creation date and time automatically upon creation. (Specific, Achievable)
+
+FR-4: The system shall send a notification to the assigned team member upon task creation within 5 minutes. (Specific, Measurable, Time-bound)
+
+FR-5: The system shall allow the team lead to edit existing tasks, modifying the title, description, assigned team member, due date, and priority level. (Specific, Achievable, Relevant)
+
+FR-6: The system shall provide validation to ensure the due date is in the future. (Specific, Achievable)
+
+FR-7: The system shall allow the team lead to delete tasks. (Specific, Achievable)
+
+FR-8: The system shall display a confirmation message to the team lead after a task is successfully created, edited, or deleted. (Specific, Achievable)
+
+NFR-1: The task creation process shall be completed within 3 seconds on average under normal operating conditions (<= 50 concurrent users). (Specific, Measurable, Time-bound)
+
+NFR-2: The system shall be accessible via common web browsers (Chrome, Firefox, Safari, Edge). (Specific, Achievable)
+
+NFR-3: User authentication for task creation shall be secured using industry-standard encryption protocols (e.g., TLS 1.2 or higher). (Specific, Achievable)
+
+NFR-4: The system shall maintain an audit log of all task creation, modification, and deletion events, including the user who performed the action and the timestamp. (Specific, Achievable, Relevant)
+
+NFR-5: The system shall be available 99.9% of the time, excluding scheduled maintenance. (Specific, Measurable)
+",836,1845,13,5,3,2,2,3.06,199,436,635,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",System Prompt,creative,"
+You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
+- Extracting implicit needs from vague descriptions
+- Ensuring requirements are testable and measurable
+- Addressing both functional and quality aspects of the system
+- Anticipating edge cases and exception handling needs
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+INSTRUCTIONS:
+1. Generate functional requirements (FR)
+2. Generate non-functional requirements (NFR)
+3. Ensure each requirement is specific, measurable, achievable, relevant, and time-bound (SMART)
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task with a title, description, assigned team member, priority level (High, Medium, Low), due date, and status (To Do, In Progress, Blocked, Done).
+FR-2: The system shall provide a searchable list of team members for task assignment.
+FR-3: The system shall automatically notify the assigned team member via email and in-app notification upon task creation.
+FR-4: The system shall save the task creation date and the team lead that created the task to the task audit trail.
+FR-5: The system shall prevent team leads from creating tasks with a due date in the past, displaying an error message if attempted.
+FR-6: The system shall allow team leads to view all tasks they have created, filtered by status, due date, assigned team member, and priority, with response times of less than 3 seconds.
+
+NFR-1: The system shall be accessible via modern web browsers (Chrome, Firefox, Safari, Edge) ensuring consistent functionality across these browsers.
+NFR-2: The system shall maintain an uptime of 99.9% during business hours (8 AM - 6 PM, Monday-Friday, excluding public holidays) as measured by system monitoring tools.
+NFR-3: The task creation feature shall be secured using role-based access control, ensuring only users with the ""Team Lead"" role can access it.
+NFR-4: The system shall store all task-related data securely, complying with GDPR regulations for data privacy and protection, with regular security audits conducted quarterly.
+NFR-5: The system shall be scalable to support up to 500 team leads creating and managing tasks concurrently without performance degradation.
+NFR-6: The system shall provide an intuitive user interface for task creation, requiring no more than 15 minutes of training for new team leads, based on usability testing feedback.
+",836,1817,12,6,3,2,2,3.16,199,408,607,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Role Prompt,precise,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a user with the ""team lead"" role to create a new task.
+
+FR-2: The system shall require the following information for task creation: Task Title (mandatory, maximum 255 characters), Task Description (mandatory, maximum 4000 characters), Assigned User (mandatory, selectable from a list of team members), Due Date (mandatory, date/time picker), Priority (mandatory, selectable from: High, Medium, Low), Status (default value: To Do).
+
+FR-3: The system shall validate that the Due Date is not in the past.
+
+FR-4: The system shall display an error message to the team lead if any mandatory fields are missing or invalid during task creation.
+
+FR-5: Upon successful task creation, the system shall save the task details to the database.
+
+FR-6: Upon successful task creation, the system shall display a success message to the team lead.
+
+FR-7: The system shall send a notification (email and/or in-app notification, configurable by the user) to the assigned user upon task creation. The notification shall include the Task Title, Task Description, Due Date, and a link to the task within the system.
+
+FR-8: The system shall allow the team lead to view a list of all tasks assigned to their team members.
+
+FR-9: The task list shall display the following information for each task: Task Title, Assigned User, Due Date, Priority, and Status.
+
+FR-10: The task list shall be sortable by Task Title, Assigned User, Due Date, Priority, and Status.
+
+FR-11: The task list shall be filterable by Assigned User, Priority, and Status.
+
+FR-12: The system shall allow the team lead to edit existing tasks.
+
+FR-13: The system shall allow the team lead to delete tasks. Deletion shall require confirmation from the team lead.
+
+FR-14: The system shall maintain an audit log of all task creations, edits, and deletions, including the user who performed the action and the timestamp.
+
+NFR-1: The system shall respond to task creation requests within 2 seconds under normal load (defined as up to 5 concurrent task creation requests).
+
+NFR-2: The system shall be accessible via a modern web browser (Chrome, Firefox, Safari, Edge) on desktop and mobile devices.
+
+NFR-3: The task data shall be stored securely, adhering to industry best practices for data encryption at rest and in transit.
+
+NFR-4: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-5: The system shall be scalable to support up to 100 team leads and 1000 team members.
+
+NFR-6: The system shall integrate with the existing user authentication system.
+
+NFR-7: The system shall comply with all relevant data privacy regulations (e.g., GDPR, CCPA).
+
+NFR-8: The system shall provide role-based access control to ensure that only authorized users can create, edit, and delete tasks.
+
+NFR-9: The system shall be designed for maintainability, with clear code documentation and modular architecture.
+
+NFR-10: The system shall be tested thoroughly to ensure functionality, performance, security, and usability.
+",1091,3006,24,10,4,2,1,4.50,239,707,946,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Role Prompt,default,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall provide a user interface (UI) for team leads to create new tasks.
+
+FR-2: The task creation UI shall include fields for: Task Title (mandatory, max 255 characters), Task Description (mandatory, rich text editor), Assigned Team Member (mandatory, dropdown list of active team members), Due Date (mandatory, date picker), Priority (mandatory, dropdown list: High, Medium, Low), Status (default: To Do), and Attachments (optional, max 5 files, max 10MB per file, accepted types: .pdf, .doc, .docx, .xls, .xlsx, .png, .jpg, .jpeg).
+
+FR-3: The system shall validate all mandatory fields upon task creation attempt. An error message shall be displayed for each invalid field.
+
+FR-4: The system shall store the created task information in a persistent data store.
+
+FR-5: Upon successful task creation, the system shall display a confirmation message to the team lead.
+
+FR-6: The system shall send an email notification to the assigned team member upon task creation, containing the Task Title, Task Description, Due Date, and a link to view the task in the system.
+
+FR-7: The system shall provide team leads with the ability to edit existing tasks, modifying all fields except for the Assigned Team Member if the task has already been started (status not equal to 'To Do'). Changing the Assigned Team Member will be allowed only if the task hasn't been started.
+
+FR-8: The system shall maintain an audit log of all task creation and modification events, including the user performing the action and the timestamp.
+
+FR-9: The system shall provide a search functionality allowing team leads to search for tasks based on Task Title, Assigned Team Member, and Status.
+
+FR-10: The system shall integrate with the existing user authentication and authorization system to ensure that only authorized team leads can create and manage tasks.
+
+FR-11: The system shall provide a mechanism for team leads to add comments to tasks and for assigned team members to respond.
+
+FR-12: The system shall provide a reporting feature allowing team leads to view the number of tasks assigned and completed by each team member within a specified date range.
+
+NFR-1: The task creation process shall complete in under 3 seconds under normal operating conditions (defined as fewer than 100 concurrent users).
+
+NFR-2: The system shall be available 99.9% of the time, excluding scheduled maintenance windows.
+
+NFR-3: All task data shall be encrypted at rest and in transit using AES-256 encryption.
+
+NFR-4: The system shall comply with all relevant data privacy regulations, including GDPR and CCPA.
+
+NFR-5: The system shall be designed for scalability to support an increasing number of users and tasks.
+
+NFR-6: The user interface shall be responsive and accessible on all supported devices (desktop, tablet, mobile).
+
+NFR-7: The system shall be compatible with the latest versions of Chrome, Firefox, Safari, and Edge browsers.
+
+NFR-8: The email notification system shall be reliable and ensure that notifications are delivered within 5 minutes of task creation.
+
+NFR-9: The system shall be designed for maintainability, with clear code documentation and modular architecture.
+
+NFR-10: The system shall be regularly backed up to prevent data loss. Backups shall be stored offsite in a secure location.
+",1091,3291,22,10,3,2,1,4.70,239,734,973,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Role Prompt,creative,"
+You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
+
+APPROACH THIS TASK AS A PROFESSIONAL WOULD:
+- Consider system architecture implications
+- Think about integration points with other systems
+- Address security and compliance needs
+- Consider maintenance and supportability
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+Produce a set of professional-grade specific, measurable, achievable, relevant, and time-bound requirements that would be ready for development team implementation. Include:
+1. Numbered functional requirements (with FR prefix)
+2. Numbered non-functional requirements (with NFR prefix)
+3. Potential risks or dependencies
+
+I want you to only share the functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","Okay, here are the functional and non-functional requirements for the user story: ""As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.""
+
+FR-1: The system shall allow team leads to create new tasks.
+
+FR-2: The system shall allow the team lead to assign a task to one or more team members.
+
+FR-3: The system shall allow the team lead to define a task description, including details about the work to be performed.
+
+FR-4: The system shall allow the team lead to set a due date for the task.
+
+FR-5: The system shall allow the team lead to set a priority level for the task (e.g., High, Medium, Low).
+
+FR-6: The system shall allow the team lead to define the status of the task (e.g., To Do, In Progress, Blocked, Completed).
+
+FR-7: The system shall allow the team lead to add comments or notes to a task.
+
+FR-8: The system shall allow the team lead to view all tasks created by them.
+
+FR-9: The system shall allow the team lead to filter and sort tasks based on assignee, status, priority, and due date.
+
+FR-10: The system shall send a notification to the assigned team member upon task creation, including task details.
+
+FR-11: The system shall support the ability to attach relevant files to a task.
+
+FR-12: The system shall provide an audit log for task creation, assignment, and status changes, including the user who made the change and the timestamp.
+
+NFR-1: The system shall respond to task creation requests within 2 seconds under normal load (defined as X number of concurrent users).
+
+NFR-2: The system shall be accessible through a web browser with support for the latest two versions of Chrome, Firefox, Safari, and Edge.
+
+NFR-3: The system shall adhere to role-based access control, ensuring only team leads can create and assign tasks.
+
+NFR-4: Task data shall be stored securely, complying with relevant data privacy regulations (e.g., GDPR, CCPA).
+
+NFR-5: The system shall be designed for maintainability, with clear code structure and documentation.
+
+NFR-6: The system shall be available 99.9% of the time, excluding scheduled maintenance.
+
+NFR-7: The system shall integrate with the existing user authentication system.
+
+NFR-8: The system shall provide data validation to prevent the entry of invalid data.
+
+NFR-9: The system shall be scalable to handle an increase of 50% in the number of users and tasks within the next year.
+",1091,2426,21,9,3,1,1,3.77,239,583,822,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Contextual,precise,"
+BUSINESS CONTEXT:
+A task management application
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task with the following attributes: title (max 255 characters), description (max 1000 characters), assignee (selected from a list of team members), due date (date/time), priority (High, Medium, Low), and status (To Do).
+
+FR-2: The system shall display a list of team members from the existing user management system for task assignment.
+
+FR-3: The system shall send an email notification to the assigned team member upon task creation, including the task title, description, due date, and a link to the task within the application.
+
+FR-4: The system shall allow team leads to view all tasks created by them, filtered by assignee, status, and due date.
+
+FR-5: The system shall allow team leads to edit the title, description, assignee, due date, and priority of a task within 5 seconds.
+
+NFR-1: The system shall be able to handle the creation of 1000 new tasks per hour during peak load (10:00 AM - 11:00 AM).
+
+NFR-2: The system shall respond to task creation requests within 2 seconds 95% of the time.
+
+NFR-3: The system shall log all task creation errors, including the user ID of the team lead attempting to create the task, the task details, and the error message.
+
+NFR-4: The system shall provide a clear and intuitive user interface for task creation, with all fields clearly labeled and easily accessible.
+
+NFR-5: The system shall display error messages in a user-friendly format, providing guidance on how to resolve the issue.
+
+NFR-6: The task creation form shall be accessible and usable on desktop and mobile devices (responsive design).
+
+NFR-7: The system shall integrate with the existing authentication system to ensure only authorized team leads can create tasks.
+
+NFR-8: The system shall maintain an audit log of all task creations, including the team lead who created the task, the date and time of creation, and the task details.
+",797,1904,13,8,5,3,2,3.16,188,452,640,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Contextual,default,"
+BUSINESS CONTEXT:
+A task management application
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task by providing a task name (max 255 characters), description (max 1000 characters), assignee (selected from a list of team members), due date, and priority level (High, Medium, Low) within 5 seconds.
+
+FR-2: The system shall send an email notification to the assignee when a new task is assigned to them within 2 minutes.
+
+FR-3: The system shall allow a team lead to view all tasks assigned to a specific team member within 3 seconds.
+
+FR-4: The system shall integrate with the existing user authentication system to verify the team lead's role and permissions before allowing them to create tasks within 1 second.
+
+FR-5: The system shall allow a team lead to set recurring tasks (daily, weekly, monthly) with customizable recurrence patterns within 5 seconds.
+
+NFR-1: The system shall maintain a 99.9% uptime during business hours (8 AM - 6 PM, Monday-Friday).
+
+NFR-2: The system shall be able to handle 100 concurrent team leads creating tasks without performance degradation (response time exceeding 5 seconds).
+
+NFR-3: The system shall log all task creation attempts, including successful and failed attempts, with timestamps and user IDs for auditing purposes.
+
+NFR-4: The system shall display user-friendly error messages to the team lead if any input validation fails during task creation within 2 seconds.
+
+NFR-5: The task creation form shall be accessible and usable on desktop and mobile devices (responsive design) with a page load time of less than 3 seconds.
+
+NFR-6: The system shall store task data securely, complying with GDPR regulations, with data encryption at rest and in transit.
+",797,1660,11,6,5,3,5,2.76,188,383,571,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Contextual,creative,"
+BUSINESS CONTEXT:
+A task management application
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+TASK:
+Using the business context provided, convert the user story into specific, measurable, achievable, relevant, and time-bound software requirements that address:
+1. Core functionality needed
+2. Integration with existing systems
+3. Performance considerations under peak load
+4. Monitoring and error handling requirements
+5. User experience factors
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functiona functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create new tasks with the following attributes: title (max 255 characters), description (max 1000 characters), assignee (selected from a list of team members), due date (date and time), priority (high, medium, low), and status (to do, in progress, completed).
+
+FR-2: The system shall display a list of team members for task assignment, populated from the existing user authentication system.
+
+FR-3: The system shall send an email notification to the assignee upon task creation, confirming the task details and due date, with a response time of less than 5 seconds.
+
+FR-4: The system shall provide a user interface that allows team leads to view all tasks created by them, filtered and sorted by due date, priority, status, and assignee.
+
+FR-5: The system shall allow team leads to modify the attributes of existing tasks, excluding the task creator.
+
+FR-6: The system shall integrate with the existing user authentication system to verify the team lead's role and permissions before allowing task creation and assignment.
+
+FR-7: The system shall store task data in a relational database, ensuring data consistency and integrity.
+
+NFR-1: The system shall be able to handle the creation of 100 new tasks per minute during peak load times (e.g., Monday mornings) with an average response time of less than 2 seconds.
+
+NFR-2: The system shall monitor task creation failures (e.g., database errors, invalid user IDs) and log these errors with sufficient detail for debugging, with alerts triggered for error rates exceeding 5% per hour.
+
+NFR-3: The system shall provide a responsive user interface with a page load time of less than 3 seconds under normal network conditions.
+
+NFR-4: The system shall ensure that the task creation process is accessible to users with disabilities, adhering to WCAG 2.1 Level AA guidelines, to be verified through accessibility testing within 2 weeks of deployment.
+
+NFR-5: The system shall securely store task data, protecting it from unauthorized access and modification, with regular security audits conducted quarterly.
+
+NFR-6: The system shall be available 99.9% of the time, excluding scheduled maintenance windows (maximum 2 hours per month, scheduled off-peak).
+",797,2242,13,6,4,3,2,3.47,188,496,684,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Tree of Thoughts,precise,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task with a title, description, assignee, due date, and priority.
+FR-2: The system shall allow a team lead to assign a task to one or more team members.
+FR-3: The system shall display a list of tasks assigned to each team member.
+FR-4: The system shall allow a team lead to set the status of a task (e.g., To Do, In Progress, Completed).
+FR-5: The system shall allow a team lead to add comments or attachments to a task.
+FR-6: The system shall notify the assigned team member(s) via email and in-app notification upon task creation and assignment within 5 minutes.
+FR-7: The system shall allow the team lead to edit task details (title, description, assignee, due date, priority, status) after creation.
+FR-8: The system shall allow the team lead to delete a task.
+
+NFR-1: The task creation process shall be completed within 3 seconds.
+NFR-2: The system shall be accessible on desktop and mobile devices (responsive design).
+NFR-3: The system shall ensure that only team leads have the permission to create and assign tasks.
+NFR-4: The system shall maintain an audit log of all task creation, assignment, and modification activities.
+NFR-5: The system shall be available 99.9% of the time during business hours (8 AM - 6 PM, Monday-Friday).
+NFR-6: Task data shall be backed up daily to prevent data loss.
+",1775,1362,14,6,4,2,2,2.58,401,347,748,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Tree of Thoughts,default,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task with a title, description, assignee, due date, and priority level.
+FR-2: The system shall allow a team lead to assign a task to one or more team members.
+FR-3: The system shall display a list of tasks assigned to a team lead's team.
+FR-4: The system shall allow the team lead to update the status of a task (e.g., To Do, In Progress, Completed).
+FR-5: The system shall send a notification to the assigned team member upon task creation.
+
+NFR-1: The task creation process shall be completed within 5 seconds.
+NFR-2: The system shall be accessible on all major web browsers (Chrome, Firefox, Safari, Edge).
+NFR-3: User roles and permissions shall be enforced to prevent unauthorized access to task management features.
+NFR-4: Task data shall be backed up daily to prevent data loss.
+NFR-5: The system shall provide a responsive design that adapts to different screen sizes (desktop, tablet, mobile).
+",1775,960,10,5,4,2,1,2.33,401,238,639,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",Tree of Thoughts,creative,"
+Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+TREE OF THOUGHTS:
+
+Branch 1: Core Functionality
+- What is the primary action or functionality being requested?
+- What triggers this functionality?
+- What systems or components are involved?
+- What are the expected outcomes or results?
+- Branch 1 Requirements: [requirements focused on core functionality]
+
+Branch 2: User Experience Considerations
+- How will users interact with this feature?
+- What information should be presented to users?
+- What design/interface elements are needed?
+- How does this impact the overall user experience?
+- Branch 2 Requirements: [requirements focused on user experience]
+
+Branch 3: Data Management
+- What data needs to be captured or processed?
+- Where and how is data stored?
+- How is data security and privacy maintained?
+- What data transformations or calculations are required?
+- Branch 3 Requirements: [requirements focused on data handling]
+
+Branch 4: Error Handling and Edge Cases
+- What can go wrong with this functionality?
+- How should errors be managed and communicated?
+- What alternative paths or fallbacks exist?
+- How are exceptions logged and monitored?
+- Branch 4 Requirements: [requirements focused on error handling]
+
+CONSOLIDATED REQUIREMENTS:
+[Combine the most important requirements from each branch into a cohesive set]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task with a title, description, and assigned team member.
+FR-2: The system shall allow the team lead to set a due date for each task.
+FR-3: The system shall allow the team lead to assign a priority level (e.g., High, Medium, Low) to each task.
+FR-4: The system shall display a list of tasks assigned to each team member.
+FR-5: The system shall notify the assigned team member upon task creation.
+FR-6: The system shall allow the team lead to update the task status (e.g., To Do, In Progress, Completed, Blocked).
+FR-7: The system shall allow the team lead to add comments or notes to the task.
+FR-8: The system shall provide a search functionality to find tasks by title, description, or assigned team member.
+
+NFR-1: The task creation process shall take no more than 5 seconds.
+NFR-2: The system shall be accessible on all major web browsers (Chrome, Firefox, Safari, Edge).
+NFR-3: The system shall be available 99.9% of the time.
+NFR-4: Task data shall be backed up daily.
+NFR-5: User authentication shall be required to access task creation functionality.
+NFR-6: The system shall be scalable to accommodate up to 1000 team leads and 10,000 team members.
+",1775,1214,14,6,3,1,1,2.14,401,324,725,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",ReAct,precise,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task, specifying a title, description, assignee (from a list of team members), due date, and priority.
+FR-2: The system shall store the created task with all specified attributes (title, description, assignee, due date, priority, creation date, status).
+FR-3: The system shall require the team lead to be authenticated and authorized to create tasks for the specified team.
+FR-4: The system shall automatically set the task status to ""Open"" upon creation.
+FR-5: The system shall display an error message if the team lead attempts to create a task with missing required fields (title, assignee, due date).
+FR-6: The system shall send a notification to the assignee upon task creation, including the task title, description, and due date.
+NFR-1: The task creation process shall complete within 3 seconds.
+NFR-2: The task creation form shall be accessible and usable on desktop and mobile devices.
+NFR-3: The system shall ensure that only authorized team leads can create tasks for their respective teams, preventing unauthorized task creation.
+",1841,1099,9,3,4,4,1,2.04,439,245,684,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",ReAct,default,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task with a title, description, assigned team member, due date, and priority.
+FR-2: The system shall store task information, including creation date, last modified date, status (e.g., To Do, In Progress, Completed), and any associated files or links.
+FR-3: The team lead must be authenticated and have sufficient privileges (e.g., be designated as a team lead for a specific team) before creating a task.
+FR-4: Upon task creation, the assigned team member shall receive a notification (e.g., email, in-app notification) with the task details.
+FR-5: If task creation fails (e.g., due to invalid data or system error), the system shall display a clear and informative error message to the team lead.
+FR-6: The system shall provide a mechanism for the team lead to edit or delete tasks, with appropriate auditing of changes.
+NFR-1: Task creation should complete within 3 seconds under normal load.
+NFR-2: The task creation form should be user-friendly and intuitive, with clear labels and input fields.
+NFR-3: The system shall ensure that only the team lead and the assigned team member can view the details of a task.
+",1841,1173,9,3,2,2,1,2.45,439,279,718,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+"{'text': 'As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.', 'context': 'A task management application'}",ReAct,creative,"
+Let's solve this requirement engineering task using a Reasoning-Action loop.
+
+USER STORY:
+As a team lead, I want to be able to create tasks for my team members, so that I can assign responsibilities and keep track of progress.
+
+REASONING STEP 1:
+Let's identify the core functionality requested in this user story. What is the primary action or outcome the user expects?
+
+ACTION STEP 1:
+FR-1: [Primary functional requirement based on the core need]
+FR-2: [Secondary functional requirement that supports the core need]
+
+REASONING STEP 2:
+Now let's consider the triggers, conditions, and context for this functionality. What needs to happen before, during, and after the main function?
+
+ACTION STEP 2:
+FR-3: [Requirement related to preconditions or triggers]
+FR-4: [Requirement related to process steps or data handling]
+
+REASONING STEP 3:
+We need to consider reliability, error conditions, and alternative paths. What happens when things don't work as expected?
+
+ACTION STEP 3:
+FR-5: [Requirement addressing error handling or alternative flows]
+FR-6: [Requirement addressing backup functionality or notifications]
+NFR-1: [Non-functional requirement related to performance or timing]
+
+REASONING STEP 4:
+Let's consider user experience, accessibility, and other quality attributes important for this feature.
+
+ACTION STEP 4:
+NFR-2: [Non-functional requirement related to user interface or experience]
+NFR-3: [Non-functional requirement related to quality attributes like accessibility or security]
+
+FINAL REQUIREMENTS:
+[Comprehensive list of all requirements developed through the reasoning-action process]
+
+I want you to only share the specific, measurable, achievable, relevant, and time-bound functional (FR) and nonfunctional (NFR) requirements as follows and do not share your reasoning with me: : 
+
+FR-1: 
+FR-2:
+NFR-1: 
+NFR-2:
+and so on..
+","FR-1: The system shall allow a team lead to create a new task, specifying a title, description, assignee (team member), due date, and priority.
+FR-2: The system shall display a list of tasks assigned to each team member, showing their title, due date, and status.
+FR-3: The system shall require the team lead to be authenticated and authorized to create tasks for their assigned team.
+FR-4: Upon creation of a task, the system shall store the task details in a persistent data store.
+FR-5: The system shall display an error message if the team lead attempts to create a task with missing or invalid data (e.g., empty title, invalid due date).
+FR-6: The system shall notify the assigned team member via email and in-app notification upon creation of a new task.
+NFR-1: The task creation process shall complete within 2 seconds.
+NFR-2: The task creation form shall be intuitive and easy to use, with clear labels and instructions.
+NFR-3: The system shall ensure that only authorized team leads can create tasks for their team members, protecting task data from unauthorized access.
+
+FINAL REQUIREMENTS:
+FR-1: The system shall allow a team lead to create a new task, specifying a title, description, assignee (team member), due date, and priority.
+FR-2: The system shall display a list of tasks assigned to each team member, showing their title, due date, and status.
+FR-3: The system shall require the team lead to be authenticated and authorized to create tasks for their assigned team.
+FR-4: Upon creation of a task, the system shall store the task details in a persistent data store.
+FR-5: The system shall display an error message if the team lead attempts to create a task with missing or invalid data (e.g., empty title, invalid due date).
+FR-6: The system shall notify the assigned team member via email and in-app notification upon creation of a new task.
+NFR-1: The task creation process shall complete within 2 seconds.
+NFR-2: The task creation form shall be intuitive and easy to use, with clear labels and instructions.
+NFR-3: The system shall ensure that only authorized team leads can create tasks for their team members, protecting task data from unauthorized access.
+",1841,2181,18,6,3,3,1,3.25,439,502,941,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"

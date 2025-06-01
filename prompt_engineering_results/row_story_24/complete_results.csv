@@ -1,4 +1,4 @@
-User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details
+User Story,Strategy,Config,Prompt,Output,Prompt Length,Output Length,FR Count,NFR Count,Specificity Score,Testability Score,Measurability Score,Latency (seconds),Prompt Tokens ,Completion Tokens ,Total Tokens ,Config Details,ai-specificity,ai-measurability,ai-accuracy,ai-completeness
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Zero-shot,precise,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
 
 USER STORY:
@@ -33,7 +33,7 @@ NFR-2: The recommendation engine shall maintain 99.9% uptime during peak shoppin
 NFR-3: The system shall ensure that product recommendations are relevant to the customer, as measured by a click-through rate (CTR) of at least 2% on recommended products.
 
 NFR-4: The system shall be able to handle recommendation requests for up to 10,000 concurrent users without performance degradation (defined as latency exceeding 1 second).
-",599,1384,9,4,4,3,5,2.15,151,308,459,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+",599,1384,9,4,4,3,5,2.15,151,308,459,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Zero-shot,default,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
 
 USER STORY:
@@ -66,7 +66,7 @@ NFR-1: The system shall generate product recommendations with an average latency
 NFR-2: The product recommendation engine shall maintain 99.9% availability during peak shopping hours (6 PM - 9 PM local time).
 
 NFR-3: The system shall ensure that product recommendations are relevant to the customer based on a relevance score of >=70%, as measured by A/B testing with a control group receiving random product recommendations.
-",599,1038,8,3,3,3,4,1.83,151,233,384,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+",599,1038,8,3,3,3,4,1.83,151,233,384,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Zero-shot,creative,"Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements:
 
 USER STORY:
@@ -103,7 +103,7 @@ NFR-1: The product recommendation system shall generate recommendations within 2
 NFR-2: The product recommendation system shall maintain 99.9% uptime.
 
 NFR-3: The recommendation engine shall be able to handle 10,000 concurrent users without performance degradation.
-",599,921,10,3,3,3,3,1.59,151,213,364,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+",599,921,10,3,3,3,3,1.59,151,213,364,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}",4,4,4,3
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Few-shot,precise,"
 Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
 
@@ -169,7 +169,7 @@ As a customer, I want to be able to receive recommendations for products based o
 *   **Customer Feedback:** FR-7 allows the system to learn and improve over time.
 
 This breakdown provides a solid foundation for developing and testing the product recommendation feature. Remember that these requirements may need to be refined further based on more detailed analysis and discussions with stakeholders.
-",1491,4534,16,7,3,1,1,5.10,337,922,1259,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+",1491,4534,16,7,3,1,1,5.1,337,922,1259,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Few-shot,default,"
 Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
 
@@ -235,7 +235,7 @@ As a customer, I want to be able to receive recommendations for products based o
 *   **Privacy:**  NFR-4 highlights the importance of protecting customer data.
 
 This breakdown provides a solid foundation for developing and testing the product recommendation feature. Remember to adapt these requirements based on the specific context of your project.
-",1491,3507,14,6,3,2,2,4.45,337,753,1090,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+",1491,3507,14,6,3,2,2,4.45,337,753,1090,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}",5,5,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Few-shot,creative,"
 Convert the following user story into specific, measurable, achievable, relevant, and time-bound, functional and non-functional software requirements.
 
@@ -283,7 +283,7 @@ As a customer, I want to be able to receive recommendations for products based o
 *   **NFR-4: Scalability:** The system shall be able to handle a growing number of customers and products without significant degradation in performance. The recommendation engine should support up to 1 million users and 100,000 products.
 *   **NFR-5: Data Storage:** The system shall retain browsing history data for a minimum of 12 months to improve long-term recommendation accuracy.
 *   **NFR-6: System Availability:** The recommendation service must be available 99.9% of the time.
-",1491,2855,13,6,3,2,2,3.78,337,590,927,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+",1491,2855,13,6,3,2,2,3.78,337,590,927,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Chain-of-Thought,precise,"
 Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
 
@@ -344,7 +344,7 @@ NFR-4: The system shall be able to handle 10,000 concurrent users without perfor
 NFR-5: The product recommendations shall be displayed in a clear and easily understandable format on the website.
 NFR-6: The recommendation engine shall be scalable to accommodate a 50% increase in customer base within one year.
 NFR-7: The accuracy of the recommendations, measured by click-through rate, shall be at least 5% within 3 months of launch.
-",1658,1992,17,7,3,2,2,2.96,381,428,809,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+",1658,1992,17,7,3,2,2,2.96,381,428,809,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Chain-of-Thought,default,"
 Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
 
@@ -403,7 +403,7 @@ NFR-2: The system shall maintain a recommendation accuracy rate of at least 70%,
 NFR-3: The system shall be able to handle up to 1 million concurrent users without performance degradation.
 NFR-4: The system shall protect customer browsing and purchase history data using encryption at rest and in transit.
 NFR-5: The recommendation engine shall be scalable to accommodate a 50% increase in product catalog size within 6 months.
-",1658,1809,15,5,4,3,3,2.59,381,384,765,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+",1658,1809,15,5,4,3,3,2.59,381,384,765,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Chain-of-Thought,creative,"
 Convert the following user story into specific, measurable, achievable, relevant, and time-bound software requirements by following these steps:
 
@@ -461,7 +461,7 @@ NFR-3: Customer browsing and purchase history data shall be encrypted at rest an
 NFR-4: The system shall comply with GDPR regulations regarding data privacy and user consent for data collection and usage.
 NFR-5: The user interface for displaying product recommendations shall be responsive and accessible on desktop and mobile devices.
 NFR-6: The product recommendation algorithm shall be evaluated monthly, with a target of maintaining a click-through rate of at least 2%.
-",1658,1808,14,6,2,2,2,2.71,381,370,751,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+",1658,1808,14,6,2,2,2,2.71,381,370,751,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Self-Consistency,precise,"
 Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
 
@@ -540,7 +540,7 @@ FR-3: Users shall be able to dismiss individual recommendations.
 FR-4: The system shall provide a ""Why am I seeing this?"" explanation for each recommendation.
 NFR-1: The recommendation section shall load within 2 seconds of page load.
 NFR-2: User satisfaction with recommendations shall be measured via a post-session survey, targeting a score of 4.0 out of 5.
-",1273,2772,24,8,3,1,1,4.00,276,634,910,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+",1273,2772,24,8,3,1,1,4.0,276,634,910,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Self-Consistency,default,"
 Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
 
@@ -606,7 +606,7 @@ FR-5:  The system shall update the recommendation model daily based on new brows
 NFR-1:  The system shall maintain a data retention policy of 2 years for browsing and purchase history.
 NFR-2:  The recommendation model training process shall complete within 4 hours.
 NFR-3:  Data used for recommendations shall comply with GDPR regulations.
-",1273,2472,23,9,3,2,2,3.65,276,560,836,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+",1273,2472,23,9,3,2,2,3.65,276,560,836,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}",3,3,3,3
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Self-Consistency,creative,"
 Generate three different sets of specific, measurable, achievable, relevant, and time-bound software requirements for the following user story, then evaluate them and select the most effective set.
 
@@ -670,7 +670,7 @@ FR-4: The system shall exclude recommendations for products in categories explic
 NFR-1: The recommendation engine shall comply with all applicable data privacy regulations.
 NFR-2: The system shall log all recommendation events, including user ID, product ID, recommendation source, and timestamp, for auditing purposes.
 NFR-3: The system should refresh the recommendation data set every 24 hours.
-",1273,2649,21,9,3,2,3,3.68,276,594,870,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+",1273,2649,21,9,3,2,3,3.68,276,594,870,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}",3,3,3,3
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",System Prompt,precise,"
 You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
 - Extracting implicit needs from vague descriptions
@@ -716,7 +716,7 @@ NFR-3: The system shall protect customer browsing and purchase history data usin
 NFR-4: The recommendation algorithm's accuracy, measured by click-through rate on recommended products, shall improve by at least 5% within the first 6 months of deployment.
 
 NFR-5: The system shall be scalable to handle a 50% increase in user traffic within the next year without significant performance degradation, as demonstrated through load testing.
-",815,2062,11,5,4,1,3,3.16,190,431,621,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+",815,2062,11,5,4,1,3,3.16,190,431,621,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",System Prompt,default,"
 You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
 - Extracting implicit needs from vague descriptions
@@ -760,7 +760,7 @@ NFR-3: The system shall ensure the privacy of customer browsing and purchase dat
 NFR-4: The recommendation algorithm shall be robust to ""cold start"" problems (i.e., new users with little or no browsing or purchase history) by leveraging popular product data and trending categories until sufficient individual data is available, with a fallback to generic recommendations for new users for the first 7 days.
 
 NFR-5: The system shall be available 99.9% of the time, excluding scheduled maintenance (occurring between 2 AM and 4 AM UTC on Sundays), monitored through uptime monitoring tools and reported monthly.
-",815,2629,10,5,4,2,3,4.09,190,570,760,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+",815,2629,10,5,4,2,3,4.09,190,570,760,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",System Prompt,creative,"
 You are RequirementsGPT, a specialized AI assistant designed to convert user stories into software requirements. You excel at:
 - Extracting implicit needs from vague descriptions
@@ -806,7 +806,7 @@ NFR-3: The system shall ensure customer browsing and purchase data used for reco
 NFR-4: The system shall be able to handle a peak load of 10,000 concurrent users accessing recommendations without performance degradation (response time exceeding 3 seconds), tested via load testing by the end of Q2 2024.
 
 NFR-5: The system will log all recommendation generation events, including user ID, products viewed/purchased, recommendations provided, and user feedback, for auditing and analysis purposes, retaining logs for a period of 12 months.
-",815,2588,11,5,4,2,3,3.88,190,565,755,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+",815,2588,11,5,4,2,3,3.88,190,565,755,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Role Prompt,precise,"
 You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
 
@@ -874,7 +874,7 @@ NFR-8: The system shall be designed to minimize the impact on the performance of
 NFR-9: The recommendation engine shall be monitored for performance and errors, with alerts generated for critical issues.
 
 NFR-10: The system shall be resilient to failures, with appropriate error handling and recovery mechanisms in place.
-",1070,2885,22,10,3,2,1,3.95,230,607,837,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+",1070,2885,22,10,3,2,1,3.95,230,607,837,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Role Prompt,default,"
 You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
 
@@ -944,7 +944,7 @@ NFR-8: The system shall be designed for maintainability, with clear code documen
 NFR-9: The system shall provide monitoring capabilities to track system performance, error rates, and resource utilization.
 
 NFR-10: The recommendation algorithm shall be regularly evaluated and updated to improve its accuracy and relevance.
-",1070,3000,20,10,4,2,1,4.43,230,665,895,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+",1070,3000,20,10,4,2,1,4.43,230,665,895,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Role Prompt,creative,"
 You are a Senior Requirements Engineer with 15 years of experience in software development. Your expertise is in translating business needs into technical specifications that bridge business goals and development work.
 
@@ -1003,7 +1003,7 @@ NFR-5: The system shall be testable, with automated unit and integration tests c
 NFR-6: The system shall integrate seamlessly with the existing e-commerce platform's user authentication and product catalog services. API integration latency must not exceed 50ms.
 
 NFR-7: The system shall be performance-optimized to minimize resource consumption (CPU, memory, storage) to reduce operational costs.
-",1070,3032,16,7,3,1,2,4.91,230,634,864,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+",1070,3032,16,7,3,1,2,4.91,230,634,864,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Contextual,precise,"
 BUSINESS CONTEXT:
 Online food ordering service
@@ -1047,7 +1047,7 @@ NFR-4: The system shall provide a dashboard to monitor the performance of the re
 NFR-5: The recommendation engine shall gracefully handle errors from the user profile service or product catalog service by displaying a generic ""Recommended for you"" section with a fallback list of popular items, rather than displaying an error message.
 
 NFR-6: The recommendation list shall be displayed in a visually appealing and easily understandable format, with clear product images and descriptions, adhering to existing UI/UX guidelines.
-",775,2110,11,6,5,3,5,3.37,179,443,622,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+",775,2110,11,6,5,3,5,3.37,179,443,622,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Contextual,default,"
 BUSINESS CONTEXT:
 Online food ordering service
@@ -1093,7 +1093,7 @@ NFR-4: The recommendation engine shall handle up to 100 failed API calls to the 
 NFR-5: The recommendation algorithm shall maintain a click-through rate (CTR) of at least 2% on recommended products within the first month of launch.
 
 NFR-6: The system shall provide a clear visual distinction between recommended products and other products on the platform.
-",775,1652,12,6,4,2,2,2.66,179,357,536,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+",775,1652,12,6,4,2,2,2.66,179,357,536,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}",4,4,4,3
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Contextual,creative,"
 BUSINESS CONTEXT:
 Online food ordering service
@@ -1133,7 +1133,7 @@ NFR-4: The system shall log recommendation generation errors and their impact on
 NFR-5: The recommendation display shall be accessible via keyboard navigation and screen readers.
 NFR-6: The recommendation algorithm shall be retrained weekly to maintain accuracy and relevance.
 NFR-7: The ""Homepage"" and ""Product Details"" page load time, including recommendations, should not exceed 3 seconds during peak load.
-",775,1825,16,7,3,2,2,3.71,179,404,583,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+",775,1825,16,7,3,2,2,3.71,179,404,583,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Tree of Thoughts,precise,"
 Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
 
@@ -1193,7 +1193,7 @@ NFR-3: The recommendation engine shall be scalable to handle a 50% increase in u
 NFR-4: The system shall log all recommendation requests and responses for auditing and debugging purposes.
 NFR-5: The recommendation algorithm shall be evaluated monthly for accuracy and relevance, with a target of 70% click-through rate on recommendations.
 NFR-6: The system shall encrypt all customer data at rest and in transit using AES-256 encryption.
-",1754,1478,12,6,3,2,2,2.45,392,338,730,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+",1754,1478,12,6,3,2,2,2.45,392,338,730,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Tree of Thoughts,default,"
 Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
 
@@ -1256,7 +1256,7 @@ NFR-4: The system shall comply with all relevant data privacy regulations (e.g.,
 NFR-5: The system shall be scalable to handle a 50% increase in user traffic within the next year without performance degradation.
 NFR-6: Recommendation accuracy, measured by click-through rate, shall be monitored and reported monthly.
 NFR-7: The system shall log all recommendation generation events for auditing and debugging purposes, retaining logs for 1 year.
-",1754,1734,15,7,3,2,2,2.72,392,380,772,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+",1754,1734,15,7,3,2,2,2.72,392,380,772,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}",4,4,4,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",Tree of Thoughts,creative,"
 Let's approach this user story by exploring multiple thought branches to ensure comprehensive requirements.
 
@@ -1317,7 +1317,7 @@ NFR-2: The product recommendation algorithm shall achieve a minimum click-throug
 NFR-3: All user data used for recommendations shall be encrypted at rest and in transit, in compliance with GDPR.
 NFR-4: The recommendation system shall be available 99.9% of the time.
 NFR-5: The system shall be scalable to handle 10x the current volume of user browsing data within 6 months.
-",1754,1313,14,5,4,2,3,2.10,392,305,697,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+",1754,1313,14,5,4,2,3,2.1,392,305,697,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",ReAct,precise,"
 Let's solve this requirement engineering task using a Reasoning-Action loop.
 
@@ -1372,7 +1372,7 @@ FR-6: The system shall log all recommendation generation events, including the c
 NFR-1: The system shall generate product recommendations within 2 seconds of the customer accessing the recommendations page.
 NFR-2: The product recommendations shall be displayed in a clear and visually appealing manner, with product images and descriptions.
 NFR-3: The system shall protect customer browsing and purchase history data according to GDPR guidelines.
-",1820,1213,9,3,3,3,2,1.93,430,241,671,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}"
+",1820,1213,9,3,3,3,2,1.93,430,241,671,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.2, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",ReAct,default,"
 Let's solve this requirement engineering task using a Reasoning-Action loop.
 
@@ -1427,7 +1427,7 @@ FR-6: The system shall log all recommendation generation attempts, including suc
 NFR-1: The system shall generate product recommendations within 2 seconds of the customer accessing the recommendations page.
 NFR-2: The product recommendations shall be displayed in a clear and visually appealing manner, including product images and relevant information.
 NFR-3: The system shall ensure that recommendations are generated using secure algorithms to protect customer privacy and prevent unauthorized access to browsing and purchase history.
-",1820,1208,9,3,3,4,2,1.89,430,228,658,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}"
+",1820,1208,9,3,3,4,2,1.89,430,228,658,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 0.7, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
 "{'text': 'As a customer, I want to be able to receive recommendations for products based on my browsing and purchase history.', 'context': 'Online food ordering service'}",ReAct,creative,"
 Let's solve this requirement engineering task using a Reasoning-Action loop.
 
@@ -1482,4 +1482,4 @@ FR-6: The system shall maintain a log of recommendation generation errors and al
 NFR-1: The system shall generate and display product recommendations within 2 seconds of the trigger event (login or product view).
 NFR-2: The product recommendations shall be presented in a clear and concise manner with product images and concise descriptions.
 NFR-3: The system shall ensure that all product recommendations adhere to security standards and do not violate user privacy.
-",1820,1259,9,3,3,3,2,1.88,430,251,681,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}"
+",1820,1259,9,3,3,3,2,1.88,430,251,681,"{'model_name': 'gemini-2.0-flash-001', 'temperature': 1.0, 'top_p': 0.95, 'top_k': 40}",4,4,5,4
